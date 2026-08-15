@@ -406,31 +406,75 @@ def entry_html(e, audio_map, new_tone):
     return "".join(h)
 
 # ----------------------------------------------------------------------------- page shell
-def page(title, body, depth_note="", extra=""):
+def page(title, body, depth_note="", extra="", syl=None):
+    attrs = ' class="has-pn" data-syl="%s"' % esc(syl) if syl else ""
     return """<!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s — 海南话字典</title>
-<link rel="stylesheet" href="site.css"></head><body>
+<link rel="stylesheet" href="site.css"></head><body%s>
 %s
 <footer>海南话字典 · 由主表自动生成，请勿直接改动网页。%s</footer>
-<script src="site.js"></script>%s</body></html>""" % (esc(title), body, depth_note, extra)
+<script src="site.js"></script>%s</body></html>""" % (esc(title), attrs, body, depth_note, extra)
 
-def syllable_page(syl, entries, audio_map, all_syls):
+def panel_shell(n_chars):
+    """Empty panel. site.js fetches suoyin_panel.html once and fills it — inlining the
+    index into all 517 pages would weigh several hundred megabytes."""
+    return ('<div class="pn-scrim"></div>'
+            '<aside class="pn" id="pn">'
+            '<div class="pn-top"><span class="t">音序索引</span>'
+            '<span class="n">%d 字</span>'
+            '<a class="pn-home" href="index.html">首页</a>'
+            '<button class="pn-x" type="button" aria-label="收起索引">&times;</button></div>'
+            '<div class="pn-filter"><input id="pn-q" type="search" '
+            'placeholder="筛选音节或汉字" autocomplete="off"></div>'
+            '<div class="pn-body" id="pn-body">'
+            '<div class="pn-loading">索引载入中…</div></div></aside>' % n_chars)
+
+def panel_fragment(by_syl, letters):
+    """The one-column 音序索引, written once and shared by every page."""
+    h = []
+    for k, syls in letters.items():
+        h.append('<div class="pn-L"><div class="pn-letter">%s</div>' % esc(k))
+        for s in syls:
+            h.append('<div class="pn-g" data-syl="%s">'
+                     '<div class="pn-gh">%s<em>(%s)</em><span class="ct">%d</span></div>'
+                     % (esc(s), esc(s.upper()), esc(s), len(by_syl[s])))
+            for e in by_syl[s]:
+                h.append('<a class="pn-r" data-c="%s" href="%s.html#%s">'
+                         '<span class="z">%s</span><i>%d</i><span class="dots"></span>'
+                         '<span class="pg">%s</span></a>'
+                         % (esc(e.ch), e.syllable, e.anchor, esc(e.ch), e.tone,
+                            esc(str(e.page or ""))))
+            h.append('</div>')
+        h.append('</div>')
+    return "".join(h)
+
+def syllable_page(syl, entries, audio_map, all_syls, n_chars):
     tones = sorted({e.tone for e in entries})
     chips = "".join('<a href="#" data-t="%d">%s<sup>%d</sup></a>' % (t, esc(syl), t)
                     for t in tones)
-    body = ['<div class="bar"><div class="bar-in">'
-            '<div class="bar-row"><a class="home" href="index.html">≡</a>'
-            '<div class="syl">%s<small>音节</small></div>'
-            '<input id="q" class="qbox" placeholder="搜字 · 海南话 · 拼音" autocomplete="off">'
-            '</div><div class="jump">%s</div><div id="res" class="res"></div>'
-            '</div></div>' % (esc(syl), chips)]
+    body = [panel_shell(n_chars)]
+    body.append('<div class="bar"><div class="bar-in">'
+                '<div class="bar-row">'
+                '<button class="pn-toggle" type="button">≡ 索引</button>'
+                '<div class="syl" id="bar-syl">%s<small>音节</small></div>'
+                '<input id="q" class="qbox" placeholder="搜字 · 海南话 · 拼音" autocomplete="off">'
+                '</div><div class="jump" id="jump">%s</div><div id="res" class="res"></div>'
+                '</div></div>' % (esc(syl), chips))
     body.append('<div class="wrap">')
+    body.append('<div class="ss-gate" id="ss-gate-top"></div>')
+    body.append('<div id="stream"><section class="ss" data-syl="%s">' % esc(syl))
+    body.append('<div class="ss-head"><span class="ss-syl">%s<small>音节</small></span>'
+                '<span class="ss-n">%d 读音</span></div>' % (esc(syl), len(entries)))
     prev = None
     for e in entries:
         body.append(entry_html(e, audio_map, e.tone != prev))
         prev = e.tone
+    body.append('</section></div>')
+    body.append('<div class="ss-gate" id="ss-gate"></div>')
+    body.append('<div class="ss-load" id="ss-note"></div>')
+    # prev/next remain as the no-JS fallback; site.js removes them once streaming is live
     i = all_syls.index(syl)
     prev_s = all_syls[i - 1] if i else None
     next_s = all_syls[i + 1] if i + 1 < len(all_syls) else None
@@ -439,7 +483,7 @@ def syllable_page(syl, entries, audio_map, all_syls):
     nav.append('<a href="index.html">全部音节</a>')
     if next_s: nav.append('<a href="%s.html">%s →</a>' % (next_s, next_s))
     body.append('<div class="pagenav">%s</div></div>' % " · ".join(nav))
-    return page(syl, "".join(body))
+    return page(syl, "".join(body), syl=syl)
 
 # ----------------------------------------------------------------------------- main
 def main():
@@ -524,9 +568,16 @@ def main():
     for f in ("site.css", "site.js"):
         shutil.copy(os.path.join(a.assets, f), os.path.join(out, f))
 
+    n_chars = len({e.ch for e in entries})
+    letters_ix = OrderedDict()
+    for s in all_syls:
+        letters_ix.setdefault(s[0].upper(), []).append(s)
+    with open(os.path.join(out, "suoyin_panel.html"), "w", encoding="utf-8") as fh:
+        fh.write(panel_fragment(by_syl, letters_ix))
+
     for syl in all_syls:
         with open(os.path.join(out, syl + ".html"), "w", encoding="utf-8") as fh:
-            fh.write(syllable_page(syl, by_syl[syl], audio_map, all_syls))
+            fh.write(syllable_page(syl, by_syl[syl], audio_map, all_syls, n_chars))
 
     # search index
     idx, seen = [], set()

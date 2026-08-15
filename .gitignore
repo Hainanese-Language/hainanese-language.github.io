@@ -3,3 +3,6 @@
 !/docs/
 !/source/
 !/.gitignore
+
+__pycache__/
+*.pyc

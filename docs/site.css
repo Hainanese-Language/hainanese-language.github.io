@@ -188,3 +188,104 @@ footer{max-width:760px;margin:0 auto;padding:26px 20px 60px;font-family:var(--sa
 .ci .hai.sm{font-size:17px}
 .cidef{flex:1 1 100%;font-size:15px;margin-top:2px}
 .cidef .en{display:block;font-size:13.5px;color:var(--ink-soft);margin-top:1px}
+
+/* ==========================================================================
+   音序索引 side panel + continuous reading
+   ========================================================================== */
+:root{--pnw:300px; --barh:96px; --band:#EDF3F1}
+
+.pn{position:fixed;left:0;top:0;bottom:0;width:var(--pnw);z-index:35;background:#fff;
+    border-right:1px solid var(--rule-strong);display:flex;flex-direction:column;
+    transition:transform .2s ease}
+.pn-top{flex:0 0 auto;border-bottom:1px solid var(--rule-strong);padding:9px 12px;
+        display:flex;align-items:center;gap:8px;background:#fff}
+.pn-top .t{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--hai-deep);
+           letter-spacing:.5px}
+.pn-top .n{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--man)}
+.pn-home{margin-left:auto;font-family:var(--sans);font-size:11px;letter-spacing:.1em;
+  color:var(--hai);text-decoration:none;border:1px solid var(--rule-strong);
+  border-radius:5px;padding:3px 8px}
+.pn-home:hover{background:var(--hai);color:#fff;border-color:var(--hai)}
+.pn-x{background:none;border:1px solid var(--rule-strong);border-radius:5px;font-size:15px;
+      line-height:1;color:var(--ink-soft);cursor:pointer;padding:3px 8px}
+.pn-x:hover{background:var(--hai);color:#fff;border-color:var(--hai)}
+.pn-filter{flex:0 0 auto;padding:8px 12px;border-bottom:1px solid var(--rule);background:#fff}
+.pn-filter input{width:100%;font-family:var(--sans);font-size:13px;padding:5px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink)}
+.pn-filter input:focus{outline:none;border-color:var(--hai);box-shadow:0 0 0 3px var(--hai-bg)}
+
+/* one column, and it never scrolls sideways */
+.pn-body{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;
+         padding-bottom:40px}
+.pn-loading{font-family:var(--sans);font-size:12.5px;color:var(--man);padding:14px 12px}
+.pn-L{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.pn-letter{position:sticky;top:0;z-index:2;background:var(--band);color:var(--hai-deep);
+  font-family:var(--serif);font-weight:700;font-size:14px;letter-spacing:2px;padding:3px 12px;
+  border-top:2px solid var(--hai);border-bottom:1px solid var(--rule-strong)}
+.pn-g{margin:0 0 9px}
+.pn-gh{position:sticky;top:26px;z-index:1;background:#fff;font-family:var(--serif);
+  font-size:13px;font-weight:700;color:var(--hai-deep);letter-spacing:.4px;
+  border-bottom:1px solid var(--rule);padding:3px 12px 2px;
+  display:flex;align-items:baseline;gap:5px}
+.pn-gh em{font-style:normal;font-family:var(--mono);font-size:10.5px;font-weight:400;
+          color:var(--man);letter-spacing:0}
+.pn-gh .ct{margin-left:auto;font-family:var(--sans);font-size:9.5px;color:var(--man);
+           font-weight:400}
+.pn-g.cur .pn-gh{background:var(--hai);color:#fff;border-color:var(--hai)}
+.pn-g.cur .pn-gh em,.pn-g.cur .pn-gh .ct{color:#CFE4E0}
+.pn-r{display:grid;grid-template-columns:1.45em 1.5em 1fr auto;align-items:baseline;gap:6px;
+  text-decoration:none;color:var(--ink);padding:1px 12px}
+.pn-r:hover,.pn-r:focus-visible{background:var(--hai-bg);outline:none}
+.pn-r .z{font-size:17px;line-height:1.4}
+.pn-r i{font-style:normal;background:var(--hai);color:#fff;font-family:var(--mono);
+  font-size:9.5px;font-weight:700;width:15px;height:15px;line-height:15px;text-align:center;
+  border-radius:50%;justify-self:start}
+.pn-r .dots{border-bottom:1px dotted var(--rule-strong);transform:translateY(-4px);min-width:6px}
+.pn-r .pg{font-family:var(--mono);font-size:11px;color:var(--man);
+          font-variant-numeric:tabular-nums}
+.pn-r.here{background:var(--hai-bg);box-shadow:inset 3px 0 0 var(--hai)}
+.pn-hide{display:none}
+.pn-scrim{display:none;position:fixed;inset:0;background:rgba(23,32,31,.4);z-index:34}
+.pn-empty{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);padding:14px 12px}
+.pn-toggle{font-family:var(--sans);font-size:12.5px;color:var(--hai);background:#fff;
+  border:1px solid var(--rule-strong);border-radius:5px;padding:4px 10px;cursor:pointer}
+.pn-toggle:hover{background:var(--hai);color:#fff;border-color:var(--hai)}
+
+/* open by default on wide screens, a drawer on narrow ones */
+@media(min-width:1000px){
+  body.has-pn{padding-left:var(--pnw)}
+  body.has-pn.pn-closed{padding-left:0}
+  body.has-pn.pn-closed .pn{transform:translateX(-100%)}
+  body:not(.pn-closed) .pn-toggle{display:none}
+  /* .wrap/.bar-in are centred by margin:0 auto, which would strand the column in
+     the middle of the space left over. Sit beside the index instead. */
+  body.has-pn .wrap,body.has-pn .bar-in{margin-left:0;margin-right:auto;max-width:840px;
+    padding-left:26px;padding-right:26px}
+  body.has-pn.pn-closed .wrap,body.has-pn.pn-closed .bar-in{margin-left:auto;max-width:760px}
+}
+@media(max-width:999px){
+  .pn{transform:translateX(-100%);box-shadow:0 0 26px rgba(0,0,0,.18)}
+  body.pn-open .pn{transform:none}
+  body.pn-open .pn-scrim{display:block}
+}
+@media(prefers-reduced-motion:reduce){.pn{transition:none}}
+
+/* we hold scroll position ourselves when prepending, so the browser's own scroll
+   anchoring must stay out of it or both fire and the view jumps a full section */
+#stream{overflow-anchor:none}
+.ss-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-top:2px solid var(--hai);
+  background:var(--band);padding:7px 14px;margin:0 0 4px}
+.ss-syl{font-family:var(--serif);font-size:23px;font-weight:700;color:var(--hai-deep);
+        letter-spacing:1px}
+.ss-syl small{font-family:var(--sans);font-size:10px;letter-spacing:.14em;color:var(--ink-soft);
+              margin-left:7px;text-transform:uppercase}
+.ss-n{margin-left:auto;font-family:var(--sans);font-size:10.5px;letter-spacing:.12em;
+      color:var(--ink-soft);text-transform:uppercase}
+.ss-load{text-align:center;font-family:var(--sans);font-size:12px;color:var(--man);padding:16px 0}
+.ss-gate{text-align:center}
+.ss-more{display:inline-block;margin:22px auto;font-family:var(--sans);font-size:13px;
+  color:var(--hai);background:#fff;border:1px solid var(--rule-strong);border-radius:6px;
+  padding:9px 22px;cursor:pointer;letter-spacing:.04em}
+.ss-more:hover{background:var(--hai);color:#fff;border-color:var(--hai)}
+.ss-end{text-align:center;font-family:var(--serif);font-size:14px;color:var(--ink-soft);
+  padding:30px 0 10px;border-top:1px solid var(--rule-strong);margin-top:26px}
