@@ -52,6 +52,11 @@
          width:20px;height:20px;text-align:center;border-radius:50%;
          vertical-align:8px;margin-left:3px}
   .homo{font-family:var(--serif);font-size:13px;color:var(--ink-soft)}
+  /* the headword reading is itself 文读/俗读/… — a qualifier on this reading,
+     so it is amber, distinct from the teal chips that point at other readings */
+  .selfmark{font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--amber);
+            background:var(--amber-bg);border:1px solid #E4CFA4;border-radius:2px;
+            padding:1px 6px;cursor:help;flex:0 0 auto}
   /* audio pill */
   .play{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--rule-strong);
         background:#fff;border-radius:6px;padding:3px 9px;cursor:pointer;flex:0 0 auto;

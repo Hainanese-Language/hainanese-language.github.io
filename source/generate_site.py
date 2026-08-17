@@ -180,6 +180,7 @@ class Entry:
         self.head_alts = []      # [(marker, rom)]
         self.pointer = None      # rom of the canonical entry
         self.others = []         # 另见 roms
+        self.self_mark = None    # this reading is itself 文读/俗读/… in the source
         self.ci = []             # 常用词: [{w,rom,cn,en}]
     @property
     def tone(self):
@@ -234,6 +235,9 @@ def build_entries(row, ci_map):
     for rom, bl in groups.items():
         e = Entry(ch, rom, page, pinyin, None)
         e.homo = next((b.homo for b in bl if b.homo), "")
+        # a reading that exists only as a marked variant keeps its own label —
+        # 打's pa⁶ is 俗读 in the source and must not be shown as a plain reading
+        e.self_mark = next((b.marker for b in bl if b.marker), None)
         pb = next((b for b in bl if b.paren), None)
         if pb:
             e.paren, e.paren_rom = pb.paren, pb.alt_rom
@@ -259,11 +263,18 @@ def build_entries(row, ci_map):
         for e in entries[1:]:
             e.units, e.pointer = [], canon.rom
 
-    # attach marked readings
+    # Attach marked readings only where the source marks them. A variant carrying ㊀ belongs
+    # to the ㊀ entry and nowhere else; one carrying no ㊀㊁ at all is unscoped, so it goes on
+    # the canonical entry rather than being repeated on every reading of the character.
+    # 发 [㊀读pad⁷][㊁读pad⁷] still shows on both, because the source marks it twice.
+    emarks = {rom: (set().union(*[b.markers for b in bl]) if bl else set())
+              for rom, bl in groups.items()}
     for b in marked:
-        targets = [e for e in entries
-                   if not b.markers or any(m in b.markers for m in
-                       set().union(*[x.markers for x in groups[e.rom]]) or {""})] or entries
+        if b.markers:
+            targets = [e for e in entries if b.markers & emarks.get(e.rom, set())]
+        else:
+            targets = list(entries)
+        targets = targets[:1] or entries[:1]
         for e in targets:
             if b.scopes and e.units:
                 flat = [s for _, ss in e.units for s in ss]
@@ -370,6 +381,9 @@ def entry_html(e, audio_map, new_tone):
     h.append('<div class="r-hai"><span class="tag-hai tip" data-tip="海南话读音，以文昌县城音为代表；'
              '个别字另注其他地方的读法。">海南话</span>%s%s' % (reading_html(e.rom),
                                                         audio_btn(e.rom, audio_map)))
+    if e.self_mark:
+        h.append('<span class="selfmark tip" data-tip="%s">%s</span>'
+                 % (esc(MARK_TIP.get(e.self_mark, "")), esc(e.self_mark)))
     if e.homo:
         h.append('<span class="homo tip" data-tip="这个字的海南话读音跟这个字完全相同。">音同「%s」</span>'
                  % esc(e.homo))
