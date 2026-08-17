@@ -101,6 +101,8 @@ def parse_f(cell):
             alt = re.findall(r"[a-z]+[" + SUP + r"]?", b.paren)
             if alt:
                 b.alt_rom = "".join(alt)
+        # a span like ❶一❻ — drop the separator, or it survives into the homophone
+        body = re.sub("([" + FILLED + r"])\s*[一—\-~～]\s*([" + FILLED + "])", r"\1\2", body)
         # marker word: sits before the latin
         head = re.split(r"[a-z]", body, 1)[0]
         for k, v in MARKERS.items():
@@ -219,10 +221,25 @@ def build_entries(row, ci_map):
                      and not (b.markers & promoted):
             primary.append(b)
             promoted |= b.markers
-        else:
-            marked.append(b)
+            continue
+        marked.append(b)
     if not primary:                       # everything is marked: promote the first
         primary, marked = blocks[:1], blocks[1:]
+
+    # Same thing one level down, and it must run after the fallback above: a marked
+    # reading covering senses no entry reaches is the only reading there, so it needs
+    # an entry of its own. 一 [❶一❻yiag⁸][❼❽又id⁷乙][❾yi⁵遇] — nothing else reaches ❼❽;
+    # 断 [❶❷俗ddui⁵][❸❹读dduan⁴] — both marked, so ❸❹ would have had no entry at all.
+    rest = []
+    for b in marked:
+        peers = [x for x in primary
+                 if not b.markers or not x.markers or (b.markers & x.markers)]
+        if b.scopes and peers and all(x.scopes for x in peers) \
+                    and (b.scopes - set().union(*[x.scopes for x in peers])):
+            primary.append(b)
+        else:
+            rest.append(b)
+    marked = rest
 
     # group primary blocks by identical romanization (a merge)
     groups = OrderedDict()
@@ -249,16 +266,53 @@ def build_entries(row, ci_map):
             flag = "markers in column F not found in the definition"
         e.pinyin = " / ".join([u.pinyin for u in sel_cn if u.pinyin]) or \
                    re.sub("[" + CIRCLED + "]", "", str(pinyin or "")).replace("\n", " / ").strip()
+        # ❶❷ on a reading limits it to those senses, counted within its own ㊀㊁ block:
+        # 着's [㊁❶❷ziog⁸][㊁❸ddo⁵][㊁❹❺ddio⁵] divides ㊁'s five senses three ways.
+        # Two numbers per sense: pos matches the scopes, num is the display number,
+        # which keeps running across a merged entry as it always has.
+        num, want_any = 0, False
         for i, u in enumerate(sel_cn):
             eu = sel_en[i] if i < len(sel_en) else None
+            want, unscoped = set(), False
+            for b in bl:
+                if b.markers and u.marks and not (b.markers & u.marks):
+                    continue                       # that block belongs to another ㊀㊁
+                if b.scopes:
+                    want |= b.scopes
+                else:
+                    unscoped = True
+            if not want and not unscoped:
+                unscoped = True                    # no block names this unit: take it whole
             senses = []
             for j, s in enumerate(u.senses):
-                senses.append([s, (eu.senses[j] if eu and j < len(eu.senses) else ""), []])
-            e.units.append([u.pinyin, senses])
+                num += 1
+                if not unscoped and (j + 1) not in want:
+                    continue
+                senses.append([s, (eu.senses[j] if eu and j < len(eu.senses) else ""),
+                               [], num, j + 1])
+            if senses:
+                e.units.append([u.pinyin, senses, u.marks])
+                want_any = True
+        if not want_any and sel_cn:
+            flag = "sense scope out of range"
+        # a scope naming a sense its ㊀㊁ block does not have — 和's [㊃❷❸gue⁴] where ㊃
+        # only runs to ❷ — would drop silently, so say so in the build report
+        for b in bl:
+            if not b.scopes:
+                continue
+            hit = set()
+            for _py, ss, umarks in e.units:
+                if b.markers and umarks and not (b.markers & umarks):
+                    continue
+                hit |= {s[4] for s in ss}
+            if b.scopes - hit:
+                flag = "sense %s has no such sense in the definition" % \
+                       "".join(str(n) for n in sorted(b.scopes - hit))
         entries.append(e)
 
-    # several unmarked readings covering the same senses -> pointer entries
-    if len(entries) > 1 and all(not b.markers for b in primary):
+    # several unmarked readings covering the same senses -> pointer entries.
+    # A reading scoped to particular senses covers different ground, so it keeps its own.
+    if len(entries) > 1 and all(not b.markers and not b.scopes for b in primary):
         canon = entries[0]
         for e in entries[1:]:
             e.units, e.pointer = [], canon.rom
@@ -273,19 +327,29 @@ def build_entries(row, ci_map):
         if b.markers:
             targets = [e for e in entries if b.markers & emarks.get(e.rom, set())]
         else:
-            targets = list(entries)
-        targets = targets[:1] or entries[:1]
+            targets = list(entries)   # no ㊀㊁ given: the variant covers every reading
+        targets = targets or entries[:1]
+        placed = False
         for e in targets:
             if b.scopes and e.units:
-                flat = [s for _, ss in e.units for s in ss]
-                for n in sorted(b.scopes):
-                    if 1 <= n <= len(flat):
-                        flat[n - 1][2].append((b.marker, b.rom))
-                    else:
-                        flag = "sense scope out of range"
+                # scopes count within their own ㊀㊁ block, so match on pos in that unit
+                for _py, ss, umarks in e.units:
+                    if b.markers and umarks and not (b.markers & umarks):
+                        continue
+                    for s in ss:
+                        if s[4] in b.scopes:
+                            if (b.marker, b.rom) not in s[2]:
+                                s[2].append((b.marker, b.rom))
+                            placed = True
             else:
                 if (b.marker, b.rom) not in e.head_alts:
                     e.head_alts.append((b.marker, b.rom))
+                placed = True
+        if not placed:                # scope hit no sense anywhere: keep it on the headword
+            e0 = targets[0]
+            if (b.marker, b.rom) not in e0.head_alts:
+                e0.head_alts.append((b.marker, b.rom))
+            flag = "sense scope out of range"
 
     # a definition block that no entry claims would vanish from the site silently
     claimed = set()
@@ -418,12 +482,11 @@ def entry_html(e, audio_map, new_tone):
     elif not e.units:
         h.append('<div class="pointer">释义待补</div>')
     else:
-        n = 1
-        multi = len([1 for p, _ in e.units if p]) > 1
-        for py, senses in e.units:
+        multi = len([1 for p, _s, _m in e.units if p]) > 1
+        for py, senses, _marks in e.units:
             if py and multi:
                 h.append('<div class="subblock">〔%s〕</div>' % esc(py))
-            for cn, en, chips_ in senses:
+            for cn, en, chips_, n, _pos in senses:   # n is the number shown to the reader
                 bits = "".join(
                     '<span class="altread"><span class="lbl tip" data-tip="%s">%s</span>%s%s</span>'
                     % (esc(MARK_TIP.get(mk, "")), esc(mk), reading_html(rm, "sm"),
@@ -433,7 +496,6 @@ def entry_html(e, audio_map, new_tone):
                          % (NUM_CH[n] if n < len(NUM_CH) else "(%d)" % n,
                             mark_labels(cn), bits,
                             '<span class="en">%s</span>' % mark_labels(en) if en else ""))
-                n += 1
     h.append('<div class="sec-h">常用词</div>')
     if e.ci:
         for w in e.ci:
@@ -629,7 +691,8 @@ def main():
         pin = strip_tone_marks(str(e.pinyin or "").replace("\n", " "))
         idx.append({"c": e.ch, "r": rom_plain(e.rom), "t": e.tone,
                     "d": rom_digit(e.rom), "p": pin, "u": url})
-        alts = list(e.head_alts) + [(m, r) for _, ss in e.units for s_ in ss for m, r in s_[2]]
+        alts = list(e.head_alts) + [(m, r) for _p, ss, _m in e.units
+                                    for s_ in ss for m, r in s_[2]]
         for mk, rom in alts:
             if (e.ch, rom) in seen:
                 continue

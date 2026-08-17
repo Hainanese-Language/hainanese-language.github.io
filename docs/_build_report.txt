@@ -1,5 +1,6 @@
-entries: 5837
+entries: 5839
 characters: 4975
 syllables: 517
-flagged rows: 0
+flagged rows: 1
 
+p371	和	sense 3 has no such sense in the definition
