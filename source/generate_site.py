@@ -198,8 +198,28 @@ def build_entries(row, ci_map):
         return [], "no reading parsed"
     cn_units = parse_def(cn)
     en_units = parse_def(en)
-    primary  = [b for b in blocks if not b.marker]
-    marked   = [b for b in blocks if b.marker]
+    # Marked readings (文读 俗读 …) are normally chips on the entry they vary from. But a
+    # ㊀㊁ group whose readings are *all* marked has no entry to hang off, and its senses
+    # would never be shown — 打 is the case: ㊀ is 俗pa⁶ + 读dda³ with nothing plain, while
+    # ㊁da⁶ is plain. So promote the first reading of any group no plain reading covers.
+    # Marker sets overlap (a [㊀㊁…] block covers both), hence coverage rather than grouping.
+    plain = [b for b in blocks if not b.marker]
+    covered, covers_all = set(), False
+    for b in plain:
+        if b.markers:
+            covered |= b.markers
+        else:
+            covers_all = True             # an unmarked reading with no ㊀㊁ covers everything
+    primary, marked, promoted = list(plain), [], set()
+    for b in blocks:
+        if not b.marker:
+            continue
+        if b.markers and not covers_all and not (b.markers & covered) \
+                     and not (b.markers & promoted):
+            primary.append(b)
+            promoted |= b.markers
+        else:
+            marked.append(b)
     if not primary:                       # everything is marked: promote the first
         primary, marked = blocks[:1], blocks[1:]
 
@@ -255,6 +275,15 @@ def build_entries(row, ci_map):
             else:
                 if (b.marker, b.rom) not in e.head_alts:
                     e.head_alts.append((b.marker, b.rom))
+
+    # a definition block that no entry claims would vanish from the site silently
+    claimed = set()
+    for rom, bl in groups.items():
+        for u in select_units(cn_units, set().union(*[b.markers for b in bl]) if bl else set()):
+            claimed.add(id(u))
+    orphaned = sum(len(u.senses) for u in cn_units if id(u) not in claimed)
+    if orphaned:
+        flag = "%d sense(s) belong to no reading and are not shown" % orphaned
 
     roms = [e.rom for e in entries]
     for e in entries:
