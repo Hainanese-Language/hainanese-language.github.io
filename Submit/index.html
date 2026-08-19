@@ -1,1 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>海南话词语征集 · Hainanese Word Collection</title>
+<meta name="description" content="Collecting the Hainanese words people use every day.">
+<style>
+  :root{
+    --ink:#17211F; --ink-2:#4E5A56; --ink-3:#7C8783;
+    --teal:#0F6B66; --teal-d:#07474A; --teal-w:#E6F1EF;
+    --paper:#FCFAF5; --card:#FFFFFF; --rule:#E2DCD0;
+    --rec:#B33A2B; --ok:#1E7A4A; --wa:#128C7E;
+    --font-cn:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+    --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","PingFang SC","Microsoft YaHei",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-ui);
+       font-size:18px;line-height:1.6;padding-bottom:env(safe-area-inset-bottom)}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 
+  /* language switching */
+  .t{display:none}
+  html[data-lang="zh"] .t.zh, html[data-lang="en"] .t.en, html[data-lang="ms"] .t.ms{display:block}
+  .t.i{display:none}
+  html[data-lang="zh"] .t.i.zh, html[data-lang="en"] .t.i.en, html[data-lang="ms"] .t.i.ms{display:inline}
+
+  .wrap{max-width:560px;margin:0 auto;padding:0 16px}
+  header{padding:18px 0 2px}
+  .langbar{display:flex;gap:6px;justify-content:center;margin-bottom:18px}
+  .langbar button{flex:1;max-width:140px;font:600 15.5px/1 var(--font-ui);padding:11px 6px;
+    border:1px solid var(--rule);background:var(--card);color:var(--ink-2);border-radius:999px;cursor:pointer}
+  .langbar button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+
+  h1{font-family:var(--font-cn);font-size:27px;line-height:1.25;font-weight:700;margin:0 0 12px}
+  html[data-lang="en"] h1, html[data-lang="ms"] h1{font-family:var(--font-ui);font-size:24px}
+  .intro p{margin:0 0 11px;font-size:16.5px;color:var(--ink-2)}
+  .intro p:last-child{margin-bottom:0}
+
+  .walink{display:flex;align-items:center;justify-content:center;gap:9px;
+    margin:14px 0 0;padding:14px;border-radius:12px;text-decoration:none;
+    background:#fff;border:1.5px solid var(--wa);color:var(--wa);
+    font:700 16.5px/1 var(--font-ui)}
+  .walink svg{width:21px;height:21px;flex:none}
+
+  .skipnote{margin:18px 0 0;padding:11px 14px;background:var(--teal-w);
+    border-left:3px solid var(--teal);border-radius:0 8px 8px 0;
+    font-size:16px;color:var(--teal-d)}
+  .skipnote p{margin:0}
+
+  /* ---------- cards: required vs optional ---------- */
+  .card{border-radius:14px;padding:17px 16px 19px;margin:16px 0}
+  .card.req{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal)}
+  .card.opt{background:transparent;border:1.5px dashed #CFC9BB}
+  .card.bad{border-color:var(--rec)}
+
+  .badge{display:inline-flex;align-items:center;gap:6px;font:700 13px/1 var(--font-ui);
+    padding:6px 12px;border-radius:99px;margin-bottom:10px;letter-spacing:.04em}
+  .badge.b-req{background:var(--teal);color:#fff}
+  .badge.b-opt{background:transparent;color:var(--ink-3);border:1.5px dashed #CFC9BB}
+  .badge .n{opacity:.7}
+
+  .q{font-size:20px;font-weight:700;margin:0 0 5px;line-height:1.4}
+  .hint{color:var(--ink-2);font-size:15.5px;margin:0 0 13px}
+  .cap{text-align:center;font-size:14.5px;color:var(--ink-3);margin:8px 0 0}
+
+  /* ---------- combo box: type OR record, one frame ---------- */
+  .combo{border:2px solid var(--teal);border-radius:12px;background:#fff;overflow:hidden}
+  .combo.bad{border-color:var(--rec)}
+  .combo input.wordin,.combo textarea{
+    width:100%;border:0;background:transparent;padding:16px 14px;
+    font-family:var(--font-ui);color:var(--ink);resize:none}
+  .combo input.wordin:focus,.combo textarea:focus{outline:none}
+  .combo input.wordin{
+    font-family:var(--font-cn);font-size:38px;font-weight:600;line-height:1.35;
+    color:var(--teal-d);text-align:center;letter-spacing:.08em;padding:18px 12px}
+  .combo input.wordin.mid{font-size:27px;letter-spacing:.04em}
+  .combo input.wordin.small{font-size:21px;letter-spacing:0;text-align:left;line-height:1.5}
+  .combo input.wordin::placeholder{color:#DCE3E1;font-size:21px;letter-spacing:.06em}
+  .combo textarea{font-size:18px;line-height:1.55;min-height:110px}
+  .combo textarea::placeholder{color:#C3CBC9}
+
+  .cdiv{display:flex;align-items:center;gap:12px;padding:2px 16px 0;
+    color:var(--teal);font:800 16px/1 var(--font-ui);letter-spacing:.14em}
+  .cdiv::before,.cdiv::after{content:"";flex:1;border-top:1.5px solid var(--rule)}
+
+  .recbtn{width:100%;display:flex;align-items:center;justify-content:center;gap:11px;
+    font:700 18px/1 var(--font-ui);padding:18px 14px;cursor:pointer;
+    border:0;background:transparent;color:var(--teal-d)}
+  .recbtn svg{width:24px;height:24px;flex:none}
+  .rec.recording .recbtn{background:var(--rec);color:#fff}
+  .rec.recording .recbtn svg{animation:pulse 1.1s infinite}
+  @keyframes pulse{50%{opacity:.3}}
+  @media (prefers-reduced-motion:reduce){.rec.recording .recbtn svg{animation:none}}
+  .rec .lbl-stop{display:none}
+  .rec.recording .lbl-idle{display:none}
+  .rec.recording .lbl-stop{display:inline}
+  .timer{font-family:ui-monospace,Menlo,monospace;font-size:16px;color:var(--rec);
+    text-align:center;padding:0 0 12px}
+  .playback{padding:12px 14px 14px}
+  .playback audio{width:100%}
+  .linkbtn{background:none;border:0;color:var(--teal);font:600 15px var(--font-ui);
+    text-decoration:underline;cursor:pointer;padding:8px 0}
+
+  /* ---------- plain optional input ---------- */
+  input[type=text]{width:100%;font:400 18px/1.5 var(--font-ui);color:var(--ink);
+    background:#fff;border:1.5px solid var(--rule);border-radius:10px;padding:13px 14px}
+  input[type=text]:focus{border-color:var(--teal);outline:none}
+  label.fld{display:block;margin:14px 0 0}
+  .flabel{font-size:15px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+
+  /* ---------- chips ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{position:relative;border:1.5px solid var(--rule);border-radius:99px;background:#fff;
+    padding:10px 15px;font-size:16.5px;cursor:pointer;line-height:1.2}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip.sel{border-color:var(--teal);background:var(--teal-w);color:var(--teal-d);font-weight:600}
+  .chip .rom{font-size:12px;color:var(--ink-3);margin-left:5px}
+  .chip.sel .rom{color:var(--teal)}
+
+  /* ---------- drawer ---------- */
+  details.more{border:1.5px dashed #CFC9BB;border-radius:14px;margin:16px 0}
+  details.more>summary{list-style:none;cursor:pointer;padding:16px;font-weight:600;
+    font-size:17px;color:var(--ink-2);display:flex;justify-content:space-between;align-items:center;gap:10px}
+  details.more>summary::-webkit-details-marker{display:none}
+  details.more>summary::after{content:"＋";color:var(--teal);font-size:21px;font-weight:400;flex:none}
+  details.more[open]>summary::after{content:"－"}
+  .more-body{padding:0 16px 18px}
+
+  /* ---------- send ---------- */
+  .btn{font:700 19px/1 var(--font-ui);padding:19px 20px;border-radius:12px;cursor:pointer;
+       border:1.5px solid transparent;width:100%}
+  .btn.pri{background:var(--teal);color:#fff}
+  .btn.pri:disabled{background:#B9C6C4;cursor:not-allowed}
+  .sendwrap{margin:22px 0 8px}
+  .fineprint{text-align:center;font-size:14px;color:var(--ink-3);margin:11px 0 0}
+
+  .err{margin-top:12px;padding:12px 14px;border-radius:10px;background:#FCEDEA;
+    border-left:3px solid var(--rec);color:#7E2318;font-size:15.5px;display:none}
+  .err.on{display:block}
+
+  #done{display:none;text-align:center;padding:36px 14px}
+  #done .tick{width:66px;height:66px;border-radius:99px;background:var(--ok);color:#fff;
+    font-size:35px;line-height:66px;margin:0 auto 16px}
+  #done h2{font-size:22px;margin:0 0 8px}
+  .refno{font-family:ui-monospace,Menlo,monospace;font-size:17px;letter-spacing:.08em;
+    background:var(--teal-w);color:var(--teal-d);display:inline-block;
+    padding:7px 14px;border-radius:8px;margin:8px 0 18px}
+
+  footer{padding:10px 0 34px;text-align:center;font-size:14.5px;color:var(--ink-3)}
+  footer a{color:var(--teal)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="langbar" role="group" aria-label="Language">
+    <button type="button" data-set="zh" aria-pressed="true">中文</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+    <button type="button" data-set="ms" aria-pressed="false">Bahasa/Melayu</button>
+  </div>
+
+  <h1>
+    <span class="t zh">海南话词语征集</span>
+    <span class="t en">Hainanese Word Collection</span>
+    <span class="t ms">Pengumpulan Kosakata Bahasa Hainan</span>
+  </h1>
+
+  <div class="intro">
+    <p class="t zh">我们正在收集海南人日常使用的海南话词语，希望能够整理成海南词典。</p>
+    <p class="t en">We're collecting the Hainanese words people use every day, to gather into a Hainanese dictionary.</p>
+    <p class="t ms">Kami sedang mengumpulkan kata dan ungkapan dalam bahasa Hainan yang digunakan dalam kehidupan sehari-hari untuk disusun menjadi kamus bahasa Hainan.</p>
+
+    <p class="t zh">欢迎把您所知道的海南词汇告诉我们，知道多少就提供多少，不会写汉字也没关系。您可以打字、录音、写同音字，或用自己习惯的拼法。</p>
+    <p class="t en">Tell us any Hainanese words you know — as many or as few as you like. It doesn't matter if you can't write the characters. You can type, record your voice, write a similar-sounding character, or spell it your own way.</p>
+    <p class="t ms">Silakan bagikan kata-kata bahasa Hainan yang Anda ketahui. Berapa pun jumlahnya akan sangat membantu. Tidak tahu cara menuliskannya dalam aksara Mandarin juga tidak masalah. Anda dapat mengetik, mengirim rekaman suara, menulis dengan aksara Mandarin yang bunyinya mirip, atau menggunakan ejaan yang biasa Anda gunakan.</p>
+
+    <p class="t zh">不方便填表？也可以直接通过 WhatsApp 发文字或语音给我们。</p>
+    <p class="t en">Can't manage the form? Send us text or a voice note on WhatsApp instead.</p>
+    <p class="t ms">Tidak nyaman mengisi formulir? Anda juga dapat langsung mengirimkan teks atau pesan suara kepada kami melalui WhatsApp.</p>
+  </div>
+
+  <a class="walink wa" href="https://wa.me/6594587052">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4C8.7 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg>
+    <span>
+      <span class="t i zh">用 WhatsApp 提交</span>
+      <span class="t i en">Send by WhatsApp</span>
+      <span class="t i ms">Kirim melalui WhatsApp</span>
+    </span>
+  </a>
+
+  <div class="skipnote">
+    <p class="t zh">不确定也没关系，可以跳过。</p>
+    <p class="t en">Not sure about something? Just skip it.</p>
+    <p class="t ms">Jika tidak yakin, tidak masalah. Bagian tersebut boleh dilewati.</p>
+  </div>
+</header>
+
+<main id="form">
+
+  <!-- ===== 1. WORD — required ===== -->
+  <section class="card req" id="cWord">
+    <span class="badge b-req">
+      <span class="t i zh">必填</span><span class="t i en">Required</span><span class="t i ms">Wajib diisi</span>
+      <span class="n">1</span>
+    </span>
+    <p class="q">
+      <span class="t zh">海南词语或句子</span>
+      <span class="t en">Hainanese word or sentence</span>
+      <span class="t ms">Kata, ungkapan, atau kalimat dalam bahasa Hainan</span>
+    </p>
+
+    <div class="combo rec" data-rec="word" id="comboWord">
+      <input type="text" id="word" class="wordin" maxlength="30" autocomplete="off"
+        data-ph-zh="海南词语或句子" data-ph-en="海南词语或句子" data-ph-ms="海南词语或句子" aria-label="Word">
+      <div class="cdiv">
+        <span class="t i zh">或者</span><span class="t i en">or</span><span class="t i ms">atau</span>
+      </div>
+      <button type="button" class="recbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14c1.7 0 3-1.3 3-3V6c0-1.7-1.3-3-3-3S9 4.3 9 6v5c0 1.7 1.3 3 3 3z"/><path d="M17.9 11c-.5 0-.9.4-1 .9-.3 2.5-2.4 4.4-4.9 4.4s-4.6-1.9-4.9-4.4c-.1-.5-.5-.9-1-.9-.6 0-1.1.5-1 1.1.4 3 2.7 5.4 5.6 5.9V20H9.6c-.6 0-1 .4-1 1s.4 1 1 1h4.8c.6 0 1-.4 1-1s-.4-1-1-1H13v-1.9c2.9-.5 5.2-2.9 5.6-5.9.1-.6-.3-1.1-.9-1.2z"/></svg>
+        <span class="lbl-idle">
+          <span class="t i zh">直接念给我们听</span>
+          <span class="t i en">Just say it to us</span>
+          <span class="t i ms">Ucapkan dan rekam langsung untuk kami</span>
+        </span>
+        <span class="lbl-stop">
+          <span class="t i zh">按一下停止</span><span class="t i en">Tap to stop</span><span class="t i ms">Tekan untuk berhenti merekam</span>
+        </span>
+      </button>
+      <div class="timer" hidden></div>
+      <div class="playback" hidden>
+        <audio controls></audio>
+        <button type="button" class="linkbtn redo">
+          <span class="t i zh">重新录</span><span class="t i en">Record again</span><span class="t i ms">Rekam ulang</span>
+        </button>
+      </div>
+    </div>
+    <p class="cap">
+      <span class="t zh">单字多字都可以。</span>
+      <span class="t en">One character or several — both fine.</span>
+      <span class="t ms">Boleh satu kata ataupun beberapa kata.</span>
+    </p>
+    <div class="err" id="eWord"></div>
+  </section>
+
+  <!-- ===== 2. MEANING — required ===== -->
+  <section class="card req" id="cMean">
+    <span class="badge b-req">
+      <span class="t i zh">必填</span><span class="t i en">Required</span><span class="t i ms">Wajib diisi</span>
+      <span class="n">2</span>
+    </span>
+    <p class="q">
+      <span class="t zh">意思，或者一句用到它的话</span>
+      <span class="t en">The meaning, or a sentence using it</span>
+      <span class="t ms">Artinya, atau satu contoh kalimat yang menggunakan kata tersebut</span>
+    </p>
+    <p class="hint">
+      <span class="t zh">两样有一样就够。普通话、英文、马来文都可以。</span>
+      <span class="t en">Either one is enough. Mandarin, English or Bahasa — whichever is easiest.</span>
+      <span class="t ms">Cukup isi salah satu. Boleh menggunakan bahasa Mandarin, Inggris, atau Melayu/Indonesia.</span>
+    </p>
+
+    <div class="combo rec" data-rec="meaning" id="comboMean">
+      <textarea id="meaning" rows="4"
+        data-ph-zh="意思是……　／　例句：今天出汗，衫～～"
+        data-ph-en="it means…  /  e.g. it's hot today, my shirt feels ～～"
+        data-ph-ms="maksudnya…  /  cth. hari ini panas, baju saya rasa ～～"></textarea>
+      <div class="cdiv">
+        <span class="t i zh">或者</span><span class="t i en">or</span><span class="t i ms">atau</span>
+      </div>
+      <button type="button" class="recbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14c1.7 0 3-1.3 3-3V6c0-1.7-1.3-3-3-3S9 4.3 9 6v5c0 1.7 1.3 3 3 3z"/><path d="M17.9 11c-.5 0-.9.4-1 .9-.3 2.5-2.4 4.4-4.9 4.4s-4.6-1.9-4.9-4.4c-.1-.5-.5-.9-1-.9-.6 0-1.1.5-1 1.1.4 3 2.7 5.4 5.6 5.9V20H9.6c-.6 0-1 .4-1 1s.4 1 1 1h4.8c.6 0 1-.4 1-1s-.4-1-1-1H13v-1.9c2.9-.5 5.2-2.9 5.6-5.9.1-.6-.3-1.1-.9-1.2z"/></svg>
+        <span class="lbl-idle">
+          <span class="t i zh">直接说给我们听</span>
+          <span class="t i en">Just tell us out loud</span>
+          <span class="t i ms">Jelaskan langsung melalui rekaman suara</span>
+        </span>
+        <span class="lbl-stop">
+          <span class="t i zh">按一下停止</span><span class="t i en">Tap to stop</span><span class="t i ms">Tekan untuk berhenti merekam</span>
+        </span>
+      </button>
+      <div class="timer" hidden></div>
+      <div class="playback" hidden>
+        <audio controls></audio>
+        <button type="button" class="linkbtn redo">
+          <span class="t i zh">重新录</span><span class="t i en">Record again</span><span class="t i ms">Rekam ulang</span>
+        </button>
+      </div>
+    </div>
+    <div class="err" id="eMean"></div>
+  </section>
+
+  <!-- ===== 3. PRONUNCIATION — optional ===== -->
+  <section class="card opt">
+    <span class="badge b-opt">
+      <span class="t i zh">可不填</span><span class="t i en">Optional</span><span class="t i ms">Boleh dikosongkan</span>
+    </span>
+    <p class="q">
+      <span class="t zh">怎么念</span><span class="t en">How it sounds</span><span class="t ms">Cara pengucapan</span>
+    </p>
+    <p class="hint">
+      <span class="t zh">写同音字，或用自己习惯的拼法。已经录了音的话，这里可以跳过。</span>
+      <span class="t en">A similar-sounding character, or your own spelling. If you recorded your voice, you can skip this.</span>
+      <span class="t ms">Anda dapat menulis dengan aksara Mandarin yang bunyinya mirip atau menggunakan ejaan yang biasa Anda gunakan. Jika sudah mengirim rekaman suara, bagian ini boleh dilewati.</span>
+    </p>
+    <input type="text" id="pron" maxlength="60" autocomplete="off"
+      data-ph-zh="比如：同乡 或 Soo Kee" data-ph-en="for example: 同乡 或 Soo Kee" data-ph-ms="contoh: 同乡 或 Soo Kee">
+  </section>
+
+  <!-- ===== 4. DIALECT AREA — optional ===== -->
+  <section class="card opt">
+    <span class="badge b-opt">
+      <span class="t i zh">可不填</span><span class="t i en">Optional</span><span class="t i ms">Boleh dikosongkan</span>
+    </span>
+    <p class="q">
+      <span class="t zh">您的海南话是哪里的？</span>
+      <span class="t en">Where is your Hainanese from?</span>
+      <span class="t ms">Bahasa Hainan Anda berasal dari daerah mana?</span>
+    </p>
+    <p class="hint">
+      <span class="t zh">祖籍，或家里讲的口音。</span>
+      <span class="t en">Your ancestral district, or the accent spoken at home.</span>
+      <span class="t ms">Daerah asal leluhur atau logat yang digunakan dalam keluarga.</span>
+    </p>
+    <div class="chips" id="areaChips"></div>
+  </section>
+
+  <!-- ===== 5. DRAWER — optional ===== -->
+  <details class="more">
+    <summary>
+      <span>
+        <span class="t i zh">关于您（全部可不填）</span>
+        <span class="t i en">About you (all optional)</span>
+        <span class="t i ms">Tentang Anda (semuanya boleh dikosongkan)</span>
+      </span>
+    </summary>
+    <div class="more-body">
+      <div class="flabel">
+        <span class="t zh">年龄段</span><span class="t en">Age range</span><span class="t ms">Kelompok usia</span>
+      </div>
+      <div class="chips" id="ageChips"></div>
+
+      <div class="flabel" style="margin-top:18px">
+        <span class="t zh">署名方式</span><span class="t en">How we credit you</span><span class="t ms">Cara mencantumkan nama</span>
+      </div>
+      <div class="chips" id="creditChips"></div>
+
+      <label class="fld" id="nameFld" hidden>
+        <span class="flabel">
+          <span class="t zh">署名</span><span class="t en">Name to credit</span><span class="t ms">Nama</span>
+        </span>
+        <input type="text" id="creditName" maxlength="60" autocomplete="name">
+      </label>
+
+      <label class="fld">
+        <span class="flabel">
+          <span class="t zh">联系方式（只用于跟进询问，不公开）</span>
+          <span class="t en">Contact (only if we need a follow-up; never published)</span>
+          <span class="t ms">Informasi kontak (hanya digunakan jika kami perlu mengajukan pertanyaan lanjutan dan tidak akan dipublikasikan)</span>
+        </span>
+        <input type="text" id="contact" maxlength="80" autocomplete="off"
+          data-ph-zh="电话或电邮，可留空" data-ph-en="phone or email — may leave blank" data-ph-ms="nomor telepon atau email — boleh dikosongkan">
+      </label>
+      <div class="hp"><label>Leave blank<input type="text" id="hp" tabindex="-1" autocomplete="off"></label></div>
+    </div>
+  </details>
+
+  <div class="sendwrap">
+    <button type="button" class="btn pri" id="send">
+      <span class="t i zh">提交</span><span class="t i en">Send</span><span class="t i ms">Kirim</span>
+    </button>
+    <p class="fineprint">
+      <span class="t zh">可匿名 · 随时可要求删除</span>
+      <span class="t en">May stay anonymous · Removal on request</span>
+      <span class="t ms">Boleh dikirim secara anonim · Anda dapat meminta agar kiriman Anda dihapus kapan saja</span>
+    </p>
+    <div class="err" id="eSend"></div>
+  </div>
+</main>
+
+<section id="done">
+  <div class="tick">✓</div>
+  <h2>
+    <span class="t zh">收到了，谢谢您！</span>
+    <span class="t en">Received — thank you!</span>
+    <span class="t ms">Sudah kami terima. Terima kasih!</span>
+  </h2>
+  <div class="refno" id="refno">—</div>
+  <p class="hint" style="margin:0 0 18px">
+    <span class="t zh">如要删除这条提交，请用上面的编号联系我们。</span>
+    <span class="t en">To have this submission removed, quote the reference above.</span>
+    <span class="t ms">Untuk menghapus kiriman ini, sebutkan nomor rujukan di atas.</span>
+  </p>
+  <button type="button" class="btn pri" id="again">
+    <span class="t i zh">再提交一个词</span>
+    <span class="t i en">Submit another word</span>
+    <span class="t i ms">Kirim kata lainnya</span>
+  </button>
+</section>
+
+<footer>
+  <p>
+    <span class="t zh">也可以用 <a class="wa" href="https://wa.me/6594587052">WhatsApp</a> 发文字或语音给我们。</span>
+    <span class="t en">You can also send text or a voice note by <a class="wa" href="https://wa.me/6594587052">WhatsApp</a>.</span>
+    <span class="t ms">Anda juga dapat mengirimkan teks atau pesan suara melalui <a class="wa" href="https://wa.me/6594587052">WhatsApp</a>.</span>
+  </p>
+</footer>
+
+</div>
+
+<script>
+/* ============================================================
+   SET THIS to your Apps Script Web App URL (ends in /exec)
+   ============================================================ */
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbxLF6Utu8xks5-AwEr-BorI1yfIMNmwPj4HtIzqr2fAKf--ZmGUQeG9clebnpArWRHpZw/exec";
+
+/* WhatsApp: number in full international form, no + and no spaces.
+   The prefill puts an empty template in the contributor's message box. */
+const WA_NUM = "6594587052";
+const WA_PREFILL = {
+  zh: "海南话词语\n词：\n意思：\n例句：\n口音：",
+  en: "Hainanese word\nWord:\nMeaning:\nExample:\nDialect area:",
+  ms: "Kosakata bahasa Hainan\nKata:\nArti:\nContoh kalimat:\nDaerah:"
+};
+function waHref(l){ return "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(WA_PREFILL[l] || WA_PREFILL.zh); }
+const MAX_SEC  = { word: 20, meaning: 60 };
+
+const AREAS = [
+  {v:"文昌", zh:"文昌", en:"Wenchang", ms:"Wenchang"},
+  {v:"海口", zh:"海口", en:"Haikou",   ms:"Haikou"},
+  {v:"琼山", zh:"琼山", en:"Qiongshan",ms:"Qiongshan"},
+  {v:"定安", zh:"定安", en:"Ding'an",  ms:"Ding'an"},
+  {v:"万宁", zh:"万宁", en:"Wanning",  ms:"Wanning"},
+  {v:"澄迈", zh:"澄迈", en:"Chengmai", ms:"Chengmai"},
+  {v:"屯昌", zh:"屯昌", en:"Tunchang", ms:"Tunchang"},
+  {v:"琼海", zh:"琼海", en:"Qionghai", ms:"Qionghai"},
+  {v:"其他", zh:"其他", en:"Other",    ms:"Lainnya"},
+  {v:"不确定", zh:"不确定", en:"Not sure", ms:"Tidak yakin"}];
+const AGES = [
+  {v:"<40",  zh:"40 以下", en:"Under 40",    ms:"Di bawah 40"},
+  {v:"40-59",zh:"40–59",   en:"40–59",       ms:"40–59"},
+  {v:"60-74",zh:"60–74",   en:"60–74",       ms:"60–74"},
+  {v:"75+",  zh:"75 以上", en:"75 and over", ms:"75 tahun ke atas"}];
+const CREDITS = [
+  {v:"anon",     zh:"匿名",           en:"Anonymous",        ms:"Anonim"},
+  {v:"initials", zh:"只用姓氏或缩写", en:"Surname/initials", ms:"Hanya nama keluarga atau inisial"},
+  {v:"full",     zh:"用我的全名",     en:"My full name",     ms:"Menggunakan nama lengkap saya"}];
+
+const MSG = {
+  needWord: {zh:"请写下这个词，或按录音念一次。", en:"Please write the word, or record yourself saying it.", ms:"Silakan tulis kata tersebut, atau rekam suara Anda mengucapkannya."},
+  needMean: {zh:"请写下意思或例句，或按录音说一次。", en:"Please write the meaning or an example, or record it.", ms:"Silakan tulis artinya atau satu contoh kalimat, atau kirim rekaman suara."},
+  micDenied:{zh:"没有麦克风权限。请改成打字。", en:"No microphone permission. Please type instead.", ms:"Mikrofon tidak diizinkan. Silakan mengetik saja."},
+  micNone:  {zh:"这个浏览器不能录音。请改成打字。", en:"This browser can't record. Please type instead.", ms:"Peramban ini tidak dapat merekam. Silakan mengetik saja."},
+  sendFail: {zh:"提交不了。请检查网络，再按一次「提交」。", en:"Couldn't send. Check your connection and tap Send again.", ms:"Gagal terkirim. Periksa koneksi Anda, lalu tekan Kirim sekali lagi."},
+  sending:  {zh:"正在提交…", en:"Sending…", ms:"Sedang mengirim…"}
+};
+
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+let lang = "zh";
+let sel  = { area:"", age:"", credit:"anon" };
+const blobs = { word:null, meaning:null };
+const mimes = { word:"",   meaning:"" };
+
+/* ---------- language ---------- */
+function setLang(l){
+  lang = l;
+  document.documentElement.setAttribute("data-lang", l);
+  document.documentElement.setAttribute("lang", l === "zh" ? "zh" : (l === "ms" ? "ms" : "en"));
+  $$(".langbar button").forEach(b => b.setAttribute("aria-pressed", b.dataset.set === l));
+  $$("[data-ph-zh]").forEach(i => i.placeholder = i.dataset["ph" + l[0].toUpperCase() + l.slice(1)] || "");
+  $$("a.wa").forEach(a => a.href = waHref(l));
+  buildChips();
+  save();
+}
+$$(".langbar button").forEach(b => b.onclick = () => setLang(b.dataset.set));
+
+/* ---------- word field auto-shrink ---------- */
+const wordIn = $("#word");
+function fitWord(){
+  const n = [...wordIn.value].length;
+  wordIn.classList.toggle("mid",   n > 4 && n <= 9);
+  wordIn.classList.toggle("small", n > 9);
+}
+wordIn.addEventListener("input", fitWord);
+
+/* ---------- chips ---------- */
+function chip(group, value, main, sub){
+  const on = sel[group] === value ? " sel" : "";
+  return `<label class="chip${on}" data-g="${group}" data-v="${value}">
+    <input type="radio" name="${group}" ${on?"checked":""}><span>${main}</span>${sub?`<span class="rom">${sub}</span>`:""}</label>`;
+}
+function buildChips(){
+  $("#areaChips").innerHTML   = AREAS.map(a => chip("area", a.v, a[lang], lang==="zh"?"":a.zh)).join("");
+  $("#ageChips").innerHTML    = AGES.map(a => chip("age", a.v, a[lang], "")).join("");
+  $("#creditChips").innerHTML = CREDITS.map(c => chip("credit", c.v, c[lang], "")).join("");
+  $$(".chip").forEach(c => c.onclick = e => {
+    e.preventDefault();
+    const g = c.dataset.g;
+    sel[g] = (sel[g] === c.dataset.v && g !== "credit") ? "" : c.dataset.v;
+    buildChips(); save();
+  });
+  $("#nameFld").hidden = (sel.credit === "anon");
+}
+
+/* ---------- errors ---------- */
+const EBOX = { word:"#eWord", meaning:"#eMean", send:"#eSend" };
+function showErr(key, msgKey){
+  const box = $(EBOX[key] || "#eSend");
+  box.textContent = MSG[msgKey][lang];
+  box.classList.add("on");
+}
+function clearErr(){
+  $$(".err").forEach(b => b.classList.remove("on"));
+  $$(".card,.combo").forEach(c => c.classList.remove("bad"));
+}
+
+/* ---------- recorders ---------- */
+$$(".rec").forEach(root => {
+  const key   = root.dataset.rec;
+  const btn   = root.querySelector(".recbtn");
+  const timer = root.querySelector(".timer");
+  const play  = root.querySelector(".playback");
+  const audio = root.querySelector("audio");
+  const redo  = root.querySelector(".redo");
+  const cdiv  = root.querySelector(".cdiv");
+  const cap   = MAX_SEC[key];
+  let mr = null, chunks = [], tick = null, secs = 0;
+
+  redo.onclick = () => {
+    blobs[key] = null;
+    play.hidden = true;
+    btn.hidden = false;
+    cdiv.hidden = false;
+    root.classList.remove("recording");
+    timer.hidden = true;
+  };
+
+  btn.onclick = async () => {
+    if (mr && mr.state === "recording"){ mr.stop(); return; }
+    if (!navigator.mediaDevices || !window.MediaRecorder){ showErr(key, "micNone"); return; }
+    try{
+      const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+      chunks = []; secs = 0;
+      mr = new MediaRecorder(stream);
+      mimes[key] = mr.mimeType || "audio/webm";
+      mr.ondataavailable = ev => { if (ev.data.size) chunks.push(ev.data); };
+      mr.onstop = () => {
+        clearInterval(tick);
+        stream.getTracks().forEach(t => t.stop());
+        blobs[key] = new Blob(chunks, {type:mimes[key]});
+        audio.src = URL.createObjectURL(blobs[key]);
+        play.hidden = false;
+        btn.hidden = true;
+        cdiv.hidden = true;
+        root.classList.remove("recording");
+        timer.hidden = true;
+        clearErr();
+      };
+      mr.start();
+      root.classList.add("recording");
+      timer.hidden = false;
+      timer.textContent = `0:00 / 0:${String(cap).padStart(2,"0")}`;
+      tick = setInterval(() => {
+        secs++;
+        timer.textContent = `0:${String(secs).padStart(2,"0")} / 0:${String(cap).padStart(2,"0")}`;
+        if (secs >= cap) mr.stop();
+      }, 1000);
+    } catch(err){ showErr(key, "micDenied"); }
+  };
+});
+
+/* ---------- autosave (text only) ---------- */
+const FIELDS = ["word","meaning","pron","creditName","contact"];
+function save(){
+  const d = {lang, sel};
+  FIELDS.forEach(f => d[f] = $("#"+f).value);
+  try{ localStorage.setItem("hndict_draft", JSON.stringify(d)); }catch(e){}
+}
+function restore(){
+  let d; try{ d = JSON.parse(localStorage.getItem("hndict_draft")||"null"); }catch(e){}
+  if (!d) return;
+  FIELDS.forEach(f => { if (d[f]) $("#"+f).value = d[f]; });
+  if (d.sel) sel = Object.assign(sel, d.sel);
+  if (d.lang) setLang(d.lang);
+  fitWord();
+}
+$$("input,textarea").forEach(el => el.addEventListener("input", save));
+
+/* ---------- send ---------- */
+function b64(blob){
+  return new Promise((res,rej) => {
+    const r = new FileReader();
+    r.onload = () => res(String(r.result).split(",")[1]);
+    r.onerror = rej;
+    r.readAsDataURL(blob);
+  });
+}
+$("#send").onclick = async () => {
+  clearErr();
+  if ($("#hp").value) return;
+
+  const hasWord = !!$("#word").value.trim()    || !!blobs.word;
+  const hasMean = !!$("#meaning").value.trim() || !!blobs.meaning;
+
+  let bad = false;
+  if (!hasWord){ showErr("word","needWord"); $("#cWord").classList.add("bad"); $("#comboWord").classList.add("bad"); bad = true; }
+  if (!hasMean){ showErr("meaning","needMean"); $("#cMean").classList.add("bad"); $("#comboMean").classList.add("bad"); bad = true; }
+  if (bad){
+    (hasWord ? $("#cMean") : $("#cWord")).scrollIntoView({behavior:"smooth", block:"center"});
+    return;
+  }
+
+  const btn = $("#send");
+  btn.disabled = true;
+  btn.textContent = MSG.sending[lang];
+
+  const payload = {
+    lang, ts: new Date().toISOString(),
+    word:       $("#word").value.trim(),
+    meaning:    $("#meaning").value.trim(),
+    pron:       $("#pron").value.trim(),
+    area:       sel.area,
+    age:        sel.age,
+    credit:     sel.credit,
+    creditName: sel.credit === "anon" ? "" : $("#creditName").value.trim(),
+    contact:    $("#contact").value.trim(),
+    ua:         navigator.userAgent.slice(0,120)
+  };
+  if (blobs.word){    payload.audioWord    = await b64(blobs.word);    payload.audioWordMime    = mimes.word; }
+  if (blobs.meaning){ payload.audioMeaning = await b64(blobs.meaning); payload.audioMeaningMime = mimes.meaning; }
+
+  try{
+    const r = await fetch(ENDPOINT, {method:"POST", body: JSON.stringify(payload)});
+    const j = await r.json();
+    if (!j || !j.ok) throw new Error("bad");
+    $("#refno").textContent = j.ref || "—";
+    try{ localStorage.removeItem("hndict_draft"); }catch(e){}
+    $("#form").style.display = "none";
+    $("#done").style.display = "block";
+    window.scrollTo({top:0, behavior:"instant"});
+  } catch(err){
+    showErr("send","sendFail");
+    btn.disabled = false;
+    btn.innerHTML = `<span class="t i zh">提交</span><span class="t i en">Send</span><span class="t i ms">Kirim</span>`;
+  }
+};
+
+/* ---------- another ---------- */
+$("#again").onclick = () => {
+  ["word","meaning","pron"].forEach(f => $("#"+f).value = "");
+  $$(".rec .redo").forEach(b => b.click());
+  fitWord();
+  const s = $("#send");
+  s.disabled = false;
+  s.innerHTML = `<span class="t i zh">提交</span><span class="t i en">Send</span><span class="t i ms">Kirim</span>`;
+  clearErr();
+  $("#done").style.display = "none";
+  $("#form").style.display = "block";
+  window.scrollTo({top:0, behavior:"instant"});
+  save();
+};
+
+/* ---------- boot ---------- */
+(function(){
+  const n = (navigator.language||"zh").toLowerCase();
+  let d = "zh";
+  if (n.startsWith("ms") || n.startsWith("id")) d = "ms";
+  else if (!n.startsWith("zh")) d = "en";
+  setLang(d);
+  restore();
+})();
+</script>
+</body>
+</html>
