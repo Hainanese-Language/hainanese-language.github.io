@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Full site build: generate docs/, then put back the audio the generator's clean wipe
+Full site build: generate hainanese-dictionary/, then put back the audio the generator's clean wipe
 removes. Run this rather than generate_site.py on its own.
 
     python build.py
@@ -16,11 +16,11 @@ except AttributeError:
     pass
 
 HERE  = os.path.dirname(os.path.abspath(__file__))
-DOCS  = os.path.abspath(os.path.join(HERE, "..", "docs"))
+SITE  = os.path.abspath(os.path.join(HERE, "..", "hainanese-dictionary"))
 AUDIO = os.path.join(HERE, "audio")
 
 env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
-r = subprocess.run([sys.executable, "generate_site.py", "--out", DOCS],
+r = subprocess.run([sys.executable, "generate_site.py", "--out", SITE],
                    cwd=HERE, env=env, capture_output=True, text=True, encoding="utf-8")
 sys.stdout.write(r.stdout or "")
 if r.returncode:
@@ -29,11 +29,11 @@ if r.returncode:
 
 # every audio file the built pages actually ask for
 want = set()
-for f in glob.glob(os.path.join(DOCS, "*.html")):
+for f in glob.glob(os.path.join(SITE, "*.html")):
     with open(f, encoding="utf-8") as fh:
         want.update(re.findall(r'data-src="audio/([^"]+)"', fh.read()))
 
-dest = os.path.join(DOCS, "audio")
+dest = os.path.join(SITE, "audio")
 os.makedirs(dest, exist_ok=True)
 copied = missing = 0
 missing_names = []

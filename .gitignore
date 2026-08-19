@@ -1,7 +1,11 @@
-# Only the generated site and its source are tracked in this repo.
+# Only the published site and its source are tracked in this repo.
 /*
+!/hainanese-dictionary/
+!/submit/
 !/docs/
 !/source/
+!/index.html
+!/.nojekyll
 !/.gitignore
 
 __pycache__/

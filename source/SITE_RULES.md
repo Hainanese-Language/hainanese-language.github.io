@@ -87,10 +87,25 @@ its own reading, audio, Chinese and English definitions straight from its master
   for now so their definitions are not lost.
 - Entries with no 常用词 show an empty placeholder, ready for later expansion.
 
-## 10. Maintenance
+## 10. Where the site lives
+
+The repo is the organisation's GitHub Pages site, served from the **root of `master`**:
+
+| Folder | URL |
+|---|---|
+| `hainanese-dictionary/` | <https://hainanese-language.github.io/hainanese-dictionary/> |
+| `submit/` | <https://hainanese-language.github.io/submit/> |
+| `index.html` (root) | <https://hainanese-language.github.io/> — landing page linking to both |
+| `docs/` | redirect stub only; the old `/docs/` links bounce to `/hainanese-dictionary/` |
+
+Every link inside the generated pages is relative, so the dictionary folder can be renamed
+and only `build.py` needs to know. `.nojekyll` at the root keeps Pages from running Jekyll
+over the generated files.
+
+## 11. Maintenance
 
 1. Edit the Excel.
-2. Run `python3 generate_site.py`.
+2. Run `python3 build.py` (it writes `hainanese-dictionary/` and restores the audio).
 3. Push to GitHub; the host publishes automatically.
 
 Always regenerate everything — it takes seconds, and a partial rebuild leaves stale 另见 links.
