@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>反 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>反</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">pan³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">fǎn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">pan³</span>
+<button class="play" onclick="play('phan3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pan3.html">同音字 2</a></div>
+<p class="rb-py">fǎn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">翻转；颠倒。～复、易如～掌、～败为胜。</span><span class="en">To turn over; to reverse. 反复 repeatedly; 反败为胜 to turn defeat into victory.</span></span></li><li><span class="num">②</span><span><span class="zh">方向相背，跟"正"相对。～面、～方向、相～。</span><span class="en">Opposite in direction — the opposite of 正. 反面 the reverse side; 相反 contrary.</span></span></li><li><span class="num">③</span><span><span class="zh">抵制；反对。～抗、～攻、造～。</span><span class="en">To resist; to oppose. 反抗 to revolt; 造反 to rebel.</span></span></li><li><span class="num">④</span><span><span class="zh">类推。举一～三。</span><span class="en">To infer by analogy. 举一反三 to draw inferences from one instance.</span></span></li><li><span class="num">⑤</span><span><span class="zh">回；还。～问、～省、～躬自问。</span><span class="en">Back; in return. 反问 to ask in return; 反躬自问 to examine oneself.</span></span></li><li><span class="num">⑥</span><span><span class="zh">反而；相反地。～之、画虎不成～类犬。</span><span class="en">On the contrary. 反之 conversely; 画虎不成反类犬 to draw a tiger and end with a dog.</span></span></li><li><span class="num">⑦</span><span><span class="zh">旧时的注音方法，反切。</span><span class="en">A former method of indicating pronunciation, 反切.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

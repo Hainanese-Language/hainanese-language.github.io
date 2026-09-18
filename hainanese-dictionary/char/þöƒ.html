@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>生</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">de¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">shēng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">de¹</span>
+<button class="play" onclick="play('te1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/de1.html">同音字 3</a></div>
+<p class="rb-py">shēng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">生育；出生。～孩子、～日、出～。</span><span class="en">To give birth; to be born. 生孩子 to bear a child; 出生 to be born.</span></span></li><li><span class="num">②</span><span><span class="zh">生长。～根、～芽、土～土长。</span><span class="en">To grow. 生根 to take root; 土生土长 born and bred locally.</span></span></li><li><span class="num">③</span><span><span class="zh">活着；有生命力。～存、～物、贪～怕死。</span><span class="en">Alive; living. 生存 to survive; 贪生怕死 to cling to life and fear death.</span></span></li><li><span class="num">④</span><span><span class="zh">生命。丧～、舍～取义。</span><span class="en">Life. 丧生 to lose one's life; 舍生取义 to die for a just cause.</span></span></li><li><span class="num">⑤</span><span><span class="zh">一辈子。今～、一～一世。</span><span class="en">A lifetime. 今生 this life; 一生一世 all one's life.</span></span></li><li><span class="num">⑥</span><span><span class="zh">产生；发生。～病、～锈、～事。</span><span class="en">To produce; to arise. 生病 to fall ill; 生锈 to rust.</span></span></li><li><span class="num">⑦</span><span><span class="zh">使燃料燃烧。～火、～炉子。</span><span class="en">To light a fire. 生火 to make a fire; 生炉子 to light a stove.</span></span></li><li><span class="num">⑧</span><span><span class="zh">没有煮熟的。～饭、夹～。</span><span class="en">Uncooked. 生饭 half-cooked rice; 夹生 underdone.</span></span></li><li><span class="num">⑨</span><span><span class="zh">没有加工过的。～铁、～石灰、～丝。</span><span class="en">Unprocessed; raw. 生铁 pig iron; 生丝 raw silk.</span></span></li><li><span class="num">⑩</span><span><span class="zh">不熟悉；不熟练。～人、～疏、～字。</span><span class="en">Unfamiliar; unpractised. 生人 a stranger; 生字 a new word.</span></span></li><li><span class="num">⑪</span><span><span class="zh">学习的人。学～、师～、招～。</span><span class="en">A student. 学生 a pupil; 师生 teachers and students.</span></span></li><li><span class="num">⑫</span><span><span class="zh">戏曲角色行当之一。小～、老～、武～。
+⑬ 后缀，用在某些副词后。好～、怎～是好。</span><span class="en">A role type in Chinese opera. 小生 a young male role; 武生 a martial role.
+⑬ Suffix after certain adverbs. 好生 carefully; 怎生是好 what is to be done?</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

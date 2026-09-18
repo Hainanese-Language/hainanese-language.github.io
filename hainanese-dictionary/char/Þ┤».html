@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>贯 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>贯</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">guan⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">guàn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">guan⁴</span>
+<button class="play" onclick="play('kuan4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/guan4.html">同音字 8</a></div>
+<p class="rb-py">guàn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">穿过；连通。～穿、～通、横～。</span><span class="en">to pass through; run right through.</span></span></li><li><span class="num">②</span><span><span class="zh">连续；一个接一个。～串、鱼～而入。</span><span class="en">continuous; one after another.</span></span></li><li><span class="num">③</span><span><span class="zh">世代居住的地方。籍～、乡～。</span><span class="en">the place where a family has lived for generations.</span></span></li><li><span class="num">④</span><span><span class="zh">旧时穿钱的绳子，也指一千个钱。万～家财。</span><span class="en">a string for copper coins in former times; also a thousand coins.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

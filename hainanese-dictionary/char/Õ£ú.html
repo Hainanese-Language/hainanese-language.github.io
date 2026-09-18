@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>圣 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>圣</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">deng⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">shèng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">deng⁴</span>
+<button class="play" onclick="play('teng4.mp3')">&#9654;</button></div>
+<p class="rb-py">shèng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">品德最高尚、智慧最高超的。～人、～贤、神～。</span><span class="en">Of the highest virtue and wisdom. 圣人 a sage; 圣贤 sages and worthies; 神圣 sacred.</span></span></li><li><span class="num">②</span><span><span class="zh">称在学问或技艺上有极高成就的人。诗～、棋～。</span><span class="en">One who has reached the summit of a field. 诗圣 the sage of poetry; 棋圣 a master of chess.</span></span></li><li><span class="num">③</span><span><span class="zh">旧时称帝王的。～旨、～上。</span><span class="en">Belonging to the emperor, in former times. 圣旨 an imperial edict; 圣上 His Majesty.</span></span></li><li><span class="num">④</span><span><span class="zh">宗教徒尊称跟教主有关的事物。～经、～诞、～地。</span><span class="en">Applied by believers to things connected with the founder of their faith. 圣经 the Bible; 圣诞 the Nativity; 圣地 a holy place.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

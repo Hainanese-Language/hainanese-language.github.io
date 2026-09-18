@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">i¹</div>
+<div class="cnt">15 个同音字<br>15 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('i1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/i1.html">i¹</a><a class="chip" href="/hainanese-dictionary/syl/i2.html">i²</a><a class="chip" href="/hainanese-dictionary/syl/i3.html">i³</a><a class="chip" href="/hainanese-dictionary/syl/i4.html">i⁴</a><a class="chip" href="/hainanese-dictionary/syl/i6.html">i⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/于.html">
+<div class="ch">于</div><div class="body">
+<span class="py">yú</span>
+<div class="gl zh">介词，表示时间、处所、范围、对象等。生～北京、乐～助人、有利～健康。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/伊.html">
+<div class="ch">伊</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">〈书〉第三人称代词，他；她。～人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/依.html">
+<div class="ch">依</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">靠着。～靠、～偎、～山傍水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/医.html">
+<div class="ch">医</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">医生。军～、～护人员。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/噫.html">
+<div class="ch">噫</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">〈书〉叹词，表示感慨或悲痛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/她.html">
+<div class="ch">她</div><div class="body">
+<span class="py">tā</span>
+<div class="gl zh">人称代词，称自己和对方以外的女性。</div><div class="also">另读 <i>ha¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/它.html">
+<div class="ch">它</div><div class="body">
+<span class="py">tā</span>
+<div class="gl zh">代词，指人以外的事物。～是一只猫、其～。</div><div class="also">另读 <i>ha¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/淤.html">
+<div class="ch">淤</div><div class="body">
+<span class="py">yū</span>
+<div class="gl zh">泥沙沉积；沉积的泥沙。～积、～泥、河道～塞。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/漪.html">
+<div class="ch">漪</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">水面的细小波纹。涟～、清～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/瘀.html">
+<div class="ch">瘀</div><div class="body">
+<span class="py">yū</span>
+<div class="gl zh">血液滞积不通。～血、～肿、化～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/衣.html">
+<div class="ch">衣</div><div class="body">
+<span class="py">yī · yì</span>
+<div class="gl zh">穿在身上的东西。～服、上～、～冠。</div><div class="also">另读 <i>i⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/迂.html">
+<div class="ch">迂</div><div class="body">
+<span class="py">yū</span>
+<div class="gl zh">曲折；绕远。～回、～道而行。</div><div class="also">另读 <i>u¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/铱.html">
+<div class="ch">铱</div><div class="body">
+<span class="py">yī</span>
+<div class="gl zh">金属元素，符号Ir。～金笔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/他.html">
+<div class="ch">他</div><div class="body">
+<span class="py">tā</span>
+<div class="gl zh">人称代词，称自己和对方以外的某个人。～们、告诉～一声。</div><div class="also">主读 <i>ha¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/椅.html">
+<div class="ch">椅</div><div class="body">
+<span class="py">yǐ · yī</span>
+<div class="gl zh">有靠背的坐具。～子、～背、藤～。  yī 山桐子，落叶乔木，木材可制器具。～树。</div><div class="also">主读 <i>i³</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

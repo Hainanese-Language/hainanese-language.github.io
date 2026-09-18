@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lan² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">lan²</div>
+<div class="cnt">9 个同音字<br>9 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('lan2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/lan2.html">lan²</a><a class="chip" href="/hainanese-dictionary/syl/lan3.html">lan³</a><a class="chip" href="/hainanese-dictionary/syl/lan6.html">lan⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/兰.html">
+<div class="ch">兰</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">兰花，花朵素雅有清香。～花、幽～、～草。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/拦.html">
+<div class="ch">拦</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">阻挡；不让通过。阻～、～住、～路、～截。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/斓.html">
+<div class="ch">斓</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">用于"斑斓"，形容色彩错杂灿烂。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/栏.html">
+<div class="ch">栏</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">遮拦的东西。～杆、栅～、凭～远眺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/澜.html">
+<div class="ch">澜</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">大波浪。波～、力挽狂～、推波助～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/阑.html">
+<div class="ch">阑</div><div class="body">
+<span class="py">lán</span>
+<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/鳞.html">
+<div class="ch">鳞</div><div class="body">
+<span class="py">lín</span>
+<div class="gl zh">鱼、蛇等身体表面的角质小薄片。鱼～、～片、～甲。</div><div class="also">另读 <i>lin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/铃.html">
+<div class="ch">铃</div><div class="body">
+<span class="py">líng</span>
+<div class="gl zh">金属制的响器，摇动或受击发声。～铛、门～、按～。</div><div class="also">主读 <i>leng²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/零.html">
+<div class="ch">零</div><div class="body">
+<span class="py">líng</span>
+<div class="gl zh">数目"0"。～点、三～五号。</div><div class="also">主读 <i>leng²</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

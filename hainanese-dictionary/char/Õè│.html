@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>劳 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>劳</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">lao²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">láo</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">lao²</span>
+<button class="play" onclick="play('lau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lao2.html">同音字 10</a></div>
+<p class="rb-py">láo</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">劳动；工作。～力、～作、按～分配、不～而获。</span><span class="en">Labour; work. 劳力 manpower; 劳作 to toil; 按劳分配 distribution according to work; 不劳而获 to reap without sowing.</span></span></li><li><span class="num">②</span><span><span class="zh">疲累。疲～、～累、积～成疾。</span><span class="en">Weary. 疲劳 tired; 劳累 worn out; 积劳成疾 to fall ill from overwork.</span></span></li><li><span class="num">③</span><span><span class="zh">烦劳，请人做事的客气话。～驾、～您费心。</span><span class="en">A polite word used when asking a favour. 劳驾 excuse me; 劳您费心 sorry to trouble you.</span></span></li><li><span class="num">④</span><span><span class="zh">功绩。功～、汗马之～。</span><span class="en">Meritorious service. 功劳 merit; 汗马之劳 distinguished service in the field.</span></span></li><li><span class="num">⑤</span><span><span class="zh">慰劳。～军、犒～。</span><span class="en">To reward with comforts. 劳军 to bring comforts to the troops; 犒劳 to reward with food and drink.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

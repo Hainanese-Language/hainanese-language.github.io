@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>偏 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>偏</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">pin¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">piān</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">pin¹</span>
+<button class="play" onclick="play('phien1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pin1.html">同音字 5</a></div>
+<p class="rb-py">piān</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">不正；歪向一边；跟"正"相对。～斜、～旁、太阳～西。</span><span class="en">Slanting; leaning to one side; the opposite of 正. 偏斜 aslant; 偏旁 a character component at the side; 太阳偏西 the sun is past its height.</span></span></li><li><span class="num">②</span><span><span class="zh">不公正。～心、～袒、～爱、不～不倚。</span><span class="en">Partial; unfair. 偏心 biased; 偏袒 to take sides; 偏爱 to favour; 不偏不倚 impartial.</span></span></li><li><span class="num">③</span><span><span class="zh">副词，表示故意跟要求或情理相反。～不听、你越急他～慢。</span><span class="en">Deliberately contrary to what is asked or expected. 偏不听 to refuse to listen out of contrariness; 你越急他偏慢 the more you hurry him the slower he goes.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

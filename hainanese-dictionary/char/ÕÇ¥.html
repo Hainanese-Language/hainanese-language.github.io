@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>倾 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>倾</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">heng²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">qīng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">heng²</span>
+<button class="play" onclick="play('heng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/heng2.html">同音字 15</a></div>
+<p class="rb-py">qīng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">歪；斜。～斜、～听、身子向前～。</span><span class="en">To lean; to tilt. 倾斜 to slant; 倾听 to listen attentively; 身子向前倾 to lean forward.</span></span></li><li><span class="num">②</span><span><span class="zh">使器物歪斜，让里面的东西出来。～盆大雨、～箱倒箧。</span><span class="en">To tip a vessel so that its contents come out. 倾盆大雨 a downpour; 倾箱倒箧 to empty out every box and case.</span></span></li><li><span class="num">③</span><span><span class="zh">全部拿出。～诉、～吐、～囊相助、～巢出动。</span><span class="en">To pour out everything one has. 倾诉 to pour out one's heart; 倾吐 to unburden oneself; 倾囊相助 to give all one has to help; 倾巢出动 to turn out in full force.</span></span></li><li><span class="num">④</span><span><span class="zh">压倒；胜过。～轧、～国～城。</span><span class="en">To overwhelm; to surpass. 倾轧 to engage in infighting; 倾国倾城 of surpassing beauty.</span></span></li><li><span class="num">⑤</span><span><span class="zh">倒塌。～覆、大厦将～。</span><span class="en">To collapse. 倾覆 to overturn; 大厦将倾 the great house is about to fall.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

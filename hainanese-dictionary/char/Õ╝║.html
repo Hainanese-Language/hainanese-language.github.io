@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>强 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>强</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hiang²</span> <span class="r">hiang³</span> <span class="r">giang⁵</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">qiáng · qiǎng · jiàng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hiang²</span>
+<button class="play" onclick="play('hiang2.mp3')">&#9654;</button></div>
+<p class="rb-py">qiáng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">力量大；跟"弱"相对。～大、～壮、～国。</span><span class="en">Strong; the opposite of 弱. 强大 powerful; 强壮 robust; 强国 a strong nation.</span></span></li><li><span class="num">②</span><span><span class="zh">感情或意志坚定。～硬、责任心～。</span><span class="en">Firm in feeling or will. 强硬 unyielding; 责任心强 with a keen sense of duty.</span></span></li><li><span class="num">③</span><span><span class="zh">使用强力。～占、～攻、～渡。</span><span class="en">By force. 强占 to seize by force; 强攻 to storm; 强渡 to force a crossing.</span></span></li><li><span class="num">④</span><span><span class="zh">优越；好。要～、他比我～。</span><span class="en">Better; superior. 要强 eager to excel; 他比我强 he is better than I am.</span></span></li><li><span class="num">⑤</span><span><span class="zh">表示略多于某个数目。三分之一～。</span><span class="en">Marking slightly more than a stated figure. 三分之一强 a little over a third.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">hiang³</span>
+<button class="play" onclick="play('hiang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hiang3.html">同音字 3</a></div>
+<p class="rb-py">qiǎng</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">勉强。～求、～迫、～词夺理。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">giang⁵</span>
+<button class="play" onclick="play('kiang5.mp3')">&#9654;</button></div>
+<p class="rb-py">jiàng</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">固执；不服劝导。倔～、～嘴。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

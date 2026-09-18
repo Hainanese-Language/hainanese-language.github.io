@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hao² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">hao²</div>
+<div class="cnt">9 个同音字<br>9 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('hau2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hao1.html">hao¹</a><a class="chip on" href="/hainanese-dictionary/syl/hao2.html">hao²</a><a class="chip" href="/hainanese-dictionary/syl/hao3.html">hao³</a><a class="chip" href="/hainanese-dictionary/syl/hao4.html">hao⁴</a><a class="chip" href="/hainanese-dictionary/syl/hao6.html">hao⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/头.html">
+<div class="ch">头</div><div class="body">
+<span class="py">tóu</span>
+<div class="gl zh">人身最上部或动物最前部长着口、鼻、眼等器官的部分。～部、点～、昂～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/拷.html">
+<div class="ch">拷</div><div class="body">
+<span class="py">kǎo</span>
+<div class="gl zh">打(多指用刑)。～打、～问、～掠。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/掏.html">
+<div class="ch">掏</div><div class="body">
+<span class="py">tāo</span>
+<div class="gl zh">伸进去取出。～钱、～口袋、～耳朵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/淘.html">
+<div class="ch">淘</div><div class="body">
+<span class="py">táo</span>
+<div class="gl zh">用水冲洗，去掉杂质。～米、～金、～沙。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/萄.html">
+<div class="ch">萄</div><div class="body">
+<span class="py">táo</span>
+<div class="gl zh">仅用于"葡～"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/讨.html">
+<div class="ch">讨</div><div class="body">
+<span class="py">tǎo</span>
+<div class="gl zh">索取；请求。～债、～饶、～教。</div><div class="also">另读 <i>ho³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/逃.html">
+<div class="ch">逃</div><div class="body">
+<span class="py">táo</span>
+<div class="gl zh">为躲避不利的环境而离开。～跑、～亡、～荒、～难。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/陶.html">
+<div class="ch">陶</div><div class="body">
+<span class="py">táo · yáo</span>
+<div class="gl zh">用黏土烧制的器物。～器、～瓷、～俑。</div><div class="also">另读 <i>yiao²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/首.html">
+<div class="ch">首</div><div class="body">
+<span class="py">shǒu</span>
+<div class="gl zh">头。～饰、昂～阔步、～当其冲。</div><div class="also">主读 <i>diu³</i> · <i>diu²</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

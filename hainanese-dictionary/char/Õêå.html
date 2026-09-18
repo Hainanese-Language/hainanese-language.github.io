@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>分</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">bun¹</span> <span class="r">hhun¹</span> <span class="r">pun⁶</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">fēn · fèn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">bun¹</span>
+<button class="play" onclick="play('pon1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bun1.html">同音字 3</a></div>
+<p class="rb-py">fēn</p><p class="scope">用于第 ❶❷❸❹ 义</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">使整体变成几部分；跟"合"相对。～开、～割、～成两组。</span><span class="en">To divide a whole into parts; the opposite of 合. 分开 to separate; 分割 to carve up; 分成两组 to split into two groups.</span></span></li><li><span class="num">②</span><span><span class="zh">分配；分派。～发、～工、～给他一半。</span><span class="en">To distribute; to assign. 分发 to hand out; 分工 to divide the work; 分给他一半 to give him half.</span></span></li><li><span class="num">③</span><span><span class="zh">辨别。～辨、～清是非、不～好坏。</span><span class="en">To tell apart. 分辨 to distinguish; 分清是非 to tell right from wrong; 不分好坏 to make no distinction between good and bad.</span></span></li><li><span class="num">④</span><span><span class="zh">由整体分出的。～店、～会、～队。</span><span class="en">Branching off from a whole. 分店 a branch shop; 分会 a branch association; 分队 a detachment.</span></span></li><li><span class="num">⑤</span><span><span class="zh">分数。三～之二、百～之五。</span><span class="en">A fraction. 三分之二 two thirds; 百分之五 five per cent.</span></span></li><li><span class="num">⑥</span><span><span class="zh">计量单位，用于时间、货币、长度、成绩等。十～钟、一角二～、得九十～。</span><span class="en">A unit of measure, used for time, money, length and marks. 十分钟 ten minutes; 一角二分 one jiao two fen; 得九十分 to score ninety.</span></span></li></ul><div class="alt"><span class="r2">hhun¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhon1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺❻ 义</span></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">pun⁶</span>
+<button class="play" onclick="play('phon6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pun6.html">同音字 2</a></div>
+<p class="rb-py">fèn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">成分。水～、养～、糖～。</span><span class="en">A component. 水分 moisture; 养分 nutrients; 糖分 sugar content.</span></span></li><li><span class="num">②</span><span><span class="zh">职责或权利的限度。本～、过～、～内之事、恰如其～。</span><span class="en">The limit of one's duty or entitlement. 本分 one's proper duty; 过分 excessive; 分内之事 one's own business; 恰如其分 apt and proper.</span></span></li><li><span class="num">③</span><span><span class="zh">情分；情谊。看在老朋友的～上。</span><span class="en">Affection between people. 看在老朋友的分上 for the sake of an old friendship.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

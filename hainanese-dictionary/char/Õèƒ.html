@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>功 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>功</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">gang¹</span> <span class="r">gong¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">gōng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">gang¹</span>
+<button class="play" onclick="play('kang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gang1.html">同音字 8</a></div>
+<p class="rb-py">gōng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">功劳；贡献；跟"过"相对。立～、～臣、～过分明。</span><span class="en">Merit; a contribution; the opposite of 过. 立功 to render meritorious service; 功臣 one who has rendered great service; 功过分明 to draw a clear line between merit and fault.</span></span></li><li><span class="num">②</span><span><span class="zh">成效；成就。成～、事半～倍、大～告成。</span><span class="en">Result; achievement. 成功 success; 事半功倍 half the effort for twice the result; 大功告成 the task is accomplished.</span></span></li><li><span class="num">③</span><span><span class="zh">技术和技术修养。～夫、唱～、基本～。</span><span class="en">Skill and its cultivation. 功夫 skill acquired by training; 唱功 singing technique; 基本功 basic skills.</span></span></li><li><span class="num">④</span><span><span class="zh">物理学上指力使物体移动所做的量。～率、做～。</span><span class="en">In physics, work. 功率 power; 做功 to do work.</span></span></li></ul><div class="alt"><span class="r2">gong¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kong1.mp3')">&#9654;</button></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

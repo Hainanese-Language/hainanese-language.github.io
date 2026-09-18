@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hhin² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">hhin²</div>
+<div class="cnt">8 个同音字<br>8 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('yien2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hhin1.html">hhin¹</a><a class="chip on" href="/hainanese-dictionary/syl/hhin2.html">hhin²</a><a class="chip" href="/hainanese-dictionary/syl/hhin3.html">hhin³</a><a class="chip" href="/hainanese-dictionary/syl/hhin4.html">hhin⁴</a><a class="chip" href="/hainanese-dictionary/syl/hhin5.html">hhin⁵</a><a class="chip" href="/hainanese-dictionary/syl/hhin6.html">hhin⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/弦.html">
+<div class="ch">弦</div><div class="body">
+<span class="py">xián</span>
+<div class="gl zh">弓背两端之间的绳。弓～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/悬.html">
+<div class="ch">悬</div><div class="body">
+<span class="py">xuán</span>
+<div class="gl zh">挂。～挂、～梁、～灯结彩。</div><div class="also">另读 <i>hhin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/炫.html">
+<div class="ch">炫</div><div class="body">
+<span class="py">xuàn</span>
+<div class="gl zh">强烈的光照射。光彩～目。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/玄.html">
+<div class="ch">玄</div><div class="body">
+<span class="py">xuán</span>
+<div class="gl zh">黑色。～狐、～青。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/眩.html">
+<div class="ch">眩</div><div class="body">
+<span class="py">xuàn</span>
+<div class="gl zh">眼睛昏花；感到旋转。～晕、头晕目～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/舷.html">
+<div class="ch">舷</div><div class="body">
+<span class="py">xián</span>
+<div class="gl zh">船或飞机两侧的边。～窗、左～、～梯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/贤.html">
+<div class="ch">贤</div><div class="body">
+<span class="py">xián</span>
+<div class="gl zh">有德行、有才能的。～明、～能、～人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/晕.html">
+<div class="ch">晕</div><div class="body">
+<span class="py">yùn · yūn</span>
+<div class="gl zh">日光或月光经云层折射形成的光圈。日～、月～。</div><div class="also">主读 <i>yun⁵</i> · <i>hhun¹</i> · <i>yun¹</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

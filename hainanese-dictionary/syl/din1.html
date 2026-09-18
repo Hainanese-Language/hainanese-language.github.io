@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>din¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">din¹</div>
+<div class="cnt">15 个同音字<br>15 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('tien1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/din1.html">din¹</a><a class="chip" href="/hainanese-dictionary/syl/din2.html">din²</a><a class="chip" href="/hainanese-dictionary/syl/din3.html">din³</a><a class="chip" href="/hainanese-dictionary/syl/din4.html">din⁴</a><a class="chip" href="/hainanese-dictionary/syl/din5.html">din⁵</a><a class="chip" href="/hainanese-dictionary/syl/din6.html">din⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/仙.html">
+<div class="ch">仙</div><div class="body">
+<span class="py">xiān</span>
+<div class="gl zh">神话中长生不老、有神通的人。～人、神～、～境。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/伸.html">
+<div class="ch">伸</div><div class="body">
+<span class="py">shēn</span>
+<div class="gl zh">舒展开；跟"屈"相对。～手、～腰、～缩、能屈能～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/娠.html">
+<div class="ch">娠</div><div class="body">
+<span class="py">shēn</span>
+<div class="gl zh">用于"妊娠"，指怀孕。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/新.html">
+<div class="ch">新</div><div class="body">
+<span class="py">xīn</span>
+<div class="gl zh">刚出现的；跟"旧"相对。～鲜、～闻、崭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/申.html">
+<div class="ch">申</div><div class="body">
+<span class="py">shēn</span>
+<div class="gl zh">说明；陈述。～述、～请、～辩。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/籼.html">
+<div class="ch">籼</div><div class="body">
+<span class="py">xiān</span>
+<div class="gl zh">稻的一种，米粒细长，黏性小。～米、～稻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/绅.html">
+<div class="ch">绅</div><div class="body">
+<span class="py">shēn</span>
+<div class="gl zh">〈旧〉地方上有势力、有地位的人。～士、乡～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/膻.html">
+<div class="ch">膻</div><div class="body">
+<span class="py">shān</span>
+<div class="gl zh">像羊肉那样的气味。～味、～气、腥～。</div><div class="also">另读 <i>hhin⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/莘.html">
+<div class="ch">莘</div><div class="body">
+<span class="py">shēn · xīn</span>
+<div class="gl zh">多用于"～～"，形容众多。～～学子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/薪.html">
+<div class="ch">薪</div><div class="body">
+<span class="py">xīn</span>
+<div class="gl zh">柴火。～柴、卧～尝胆、釜底抽～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/身.html">
+<div class="ch">身</div><div class="body">
+<span class="py">shēn</span>
+<div class="gl zh">人或动物的躯体。～体、全～、～高。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/辛.html">
+<div class="ch">辛</div><div class="body">
+<span class="py">xīn</span>
+<div class="gl zh">辣。～辣、～味。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/锌.html">
+<div class="ch">锌</div><div class="body">
+<span class="py">xīn</span>
+<div class="gl zh">金属元素，符号Zn。～板、镀～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/先.html">
+<div class="ch">先</div><div class="body">
+<span class="py">xiān</span>
+<div class="gl zh">时间或次序在前的；跟"后"相对。～后、～来后到、～进。</div><div class="also">主读 <i>dai¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/莘.html">
+<div class="ch">莘</div><div class="body">
+<span class="py">shēn · xīn</span>
+<div class="gl zh">多用于"～～"，形容众多。～～学子。</div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

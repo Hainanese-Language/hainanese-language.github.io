@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ga⁶ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">ga⁶</div>
+<div class="cnt">6 个同音字<br>6 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('ka6.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ga1.html">ga¹</a><a class="chip" href="/hainanese-dictionary/syl/ga3.html">ga³</a><a class="chip" href="/hainanese-dictionary/syl/ga4.html">ga⁴</a><a class="chip on" href="/hainanese-dictionary/syl/ga6.html">ga⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/咬.html">
+<div class="ch">咬</div><div class="body">
+<span class="py">yǎo</span>
+<div class="gl zh">上下牙用力对着，使东西破碎或夹住。～一口、～紧牙关。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/岬.html">
+<div class="ch">岬</div><div class="body">
+<span class="py">jiǎ</span>
+<div class="gl zh">伸入海中的尖形陆地。海～、～角。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/甲.html">
+<div class="ch">甲</div><div class="body">
+<span class="py">jiǎ</span>
+<div class="gl zh">天干的第一位；也表示第一。～等、桂林山水～天下。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/胛.html">
+<div class="ch">胛</div><div class="body">
+<span class="py">jiǎ</span>
+<div class="gl zh">肩胛，背部两侧上方的部位。～骨、肩～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/钾.html">
+<div class="ch">钾</div><div class="body">
+<span class="py">jiǎ</span>
+<div class="gl zh">金属元素，符号K。～肥、氯化～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/绞.html">
+<div class="ch">绞</div><div class="body">
+<span class="py">jiǎo</span>
+<div class="gl zh">把两股以上的条状物拧在一起。～绳子、～在一起。</div><div class="also">主读 <i>giao³</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

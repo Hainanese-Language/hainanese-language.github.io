@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>向 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>向</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hhio⁴</span> <span class="r">hhiang⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">xiàng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhio⁴</span>
+<button class="play" onclick="play('yio4.mp3')">&#9654;</button></div>
+<p class="rb-py">xiàng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">方向；目标。风～、志～、方～。</span><span class="en">A direction; an aim. 风向 wind direction; 志向 aspiration.</span></span></li><li><span class="num">②</span><span><span class="zh">对着；朝着，跟"背"相对。～阳、面～大海、～前看。</span><span class="en">To face — the opposite of 背. 向阳 facing the sun; 向前看 to look ahead.</span></span></li><li><span class="num">③</span><span><span class="zh">表示动作的方向。～东走、～群众学习。</span><span class="en">Marks the direction of an action. 向东走 to go east; 向群众学习 to learn from the masses.</span></span></li><li><span class="num">④</span><span><span class="zh">偏袒。偏～、别老～着他。</span><span class="en">To take sides with. 偏向 to be partial; 别老向着他 stop taking his side.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉从来；一向。～有研究、～无此例。</span><span class="en">〈lit.〉 All along. 向无此例 there has never been such a precedent.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhiang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiang4.mp3')">&#9654;</button></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

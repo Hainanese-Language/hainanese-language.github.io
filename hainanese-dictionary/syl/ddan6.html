@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ddan⁶ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">ddan⁶</div>
+<div class="cnt">4 个同音字<br>4 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('dan6.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ddan1.html">ddan¹</a><a class="chip" href="/hainanese-dictionary/syl/ddan2.html">ddan²</a><a class="chip" href="/hainanese-dictionary/syl/ddan3.html">ddan³</a><a class="chip" href="/hainanese-dictionary/syl/ddan4.html">ddan⁴</a><a class="chip" href="/hainanese-dictionary/syl/ddan5.html">ddan⁵</a><a class="chip on" href="/hainanese-dictionary/syl/ddan6.html">ddan⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/弹.html">
+<div class="ch">弹</div><div class="body">
+<span class="py">dàn · tán</span>
+<div class="gl zh">可以发射的丸形物。～丸、泥～、～弓。</div><div class="also">另读 <i>han²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/惮.html">
+<div class="ch">惮</div><div class="body">
+<span class="py">dàn</span>
+<div class="gl zh">怕；畏惧。忌～、肆无忌～、不～其烦。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/旦.html">
+<div class="ch">旦</div><div class="body">
+<span class="py">dàn</span>
+<div class="gl zh">天亮；早晨。～暮、通宵达～、枕戈待～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/诞.html">
+<div class="ch">诞</div><div class="body">
+<span class="py">dàn</span>
+<div class="gl zh">出生；生日。～生、～辰、寿～。</div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

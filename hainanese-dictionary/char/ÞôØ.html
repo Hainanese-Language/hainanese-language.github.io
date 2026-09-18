@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>蓝 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>蓝</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">lam²</span> <span class="r">lam²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">lán · la</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">lam²</span>
+<button class="play" onclick="play('lam2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lam2.html">同音字 5</a></div>
+<p class="rb-py">lán</p>
+<ul class="senses"><li><span class="pyhead">〔lán〕</span></li><li><span class="num">①</span><span><span class="zh">像晴天天空的颜色。～天、蔚～、～图。</span><span class="en">Blue, the colour of a clear sky. 蓝天 blue sky; 蔚蓝 azure; 蓝图 blueprint.</span></span></li><li><span class="num">②</span><span><span class="zh">蓼蓝，草本植物，叶可制蓝色染料。～靛、青出于～。</span><span class="en">The indigo plant, whose leaves yield a blue dye. 蓝靛 indigo; 青出于蓝 the pupil surpasses the master.</span></span></li><li><span class="pyhead">〔la〕</span></li><li><span class="num">③</span><span><span class="zh">用于"苤蓝"，一种蔬菜。</span><span class="en">Used in 苤蓝 (kohlrabi), a vegetable.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hheng² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">hheng²</div>
+<div class="cnt">8 个同音字<br>8 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('hheng2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hheng1.html">hheng¹</a><a class="chip on" href="/hainanese-dictionary/syl/hheng2.html">hheng²</a><a class="chip" href="/hainanese-dictionary/syl/hheng4.html">hheng⁴</a><a class="chip" href="/hainanese-dictionary/syl/hheng5.html">hheng⁵</a><a class="chip" href="/hainanese-dictionary/syl/hheng6.html">hheng⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/刑.html">
+<div class="ch">刑</div><div class="body">
+<span class="py">xíng</span>
+<div class="gl zh">依照法律对犯人施行的处罚。～罚、判～、死～、缓～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/型.html">
+<div class="ch">型</div><div class="body">
+<span class="py">xíng</span>
+<div class="gl zh">铸造器物的模子。砂～、模～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/形.html">
+<div class="ch">形</div><div class="body">
+<span class="py">xíng</span>
+<div class="gl zh">样子。～状、～式、圆～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/桁.html">
+<div class="ch">桁</div><div class="body">
+<span class="py">héng</span>
+<div class="gl zh">架在房梁上托住椽子的横木。～条、～架。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/邢.html">
+<div class="ch">邢</div><div class="body">
+<span class="py">xíng</span>
+<div class="gl zh">姓。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/陉.html">
+<div class="ch">陉</div><div class="body">
+<span class="py">xíng</span>
+<div class="gl zh">山脉中断的地方，多用于地名。井～（在河北）。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/鲸.html">
+<div class="ch">鲸</div><div class="body">
+<span class="py">jīng</span>
+<div class="gl zh">生活在海洋中的大型哺乳动物，形状像鱼。～鱼、～吞。</div><div class="also">另读 <i>geng¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/行.html">
+<div class="ch">行</div><div class="body">
+<span class="py">xíng · háng</span>
+<div class="gl zh">走。步～、～走、日～千里。</div><div class="also">主读 <i>gia²</i> · <i>o²</i> · <i>hhang²</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

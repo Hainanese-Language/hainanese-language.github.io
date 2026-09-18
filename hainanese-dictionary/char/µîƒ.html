@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>挟 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>挟</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hhiab⁸</span> <span class="r">giab⁸</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">xié · jiā</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhiab⁸</span>
+<button class="play" onclick="play('yiab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhiab8.html">同音字 11</a></div>
+<p class="rb-py">xié</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用胳膊夹住。～持、～在腋下。</span><span class="en">To hold under the arm. 挟持; 挟在腋下.</span></span></li><li><span class="num">②</span><span><span class="zh">倚仗势力强迫别人服从。要～、～制、～天子以令诸侯。</span><span class="en">To coerce by force of position. 要挟; 挟制; 挟天子以令诸侯.</span></span></li><li><span class="num">③</span><span><span class="zh">心里怀着(怨恨)。～嫌、～恨报复。</span><span class="en">To harbour a grudge. 挟嫌; 挟恨报复.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">giab⁸</span>
+<button class="play" onclick="play('kiab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/giab8.html">同音字 4</a></div>
+<p class="rb-py">jiā</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"夹"，从两旁钳住。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

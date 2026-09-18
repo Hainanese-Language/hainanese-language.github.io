@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>便 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>便</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">bin⁵</span> <span class="r">pin²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">biàn · pián</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">bin⁵</span>
+<button class="play" onclick="play('pien5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bin5.html">同音字 3</a></div>
+<p class="rb-py">biàn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">方便；容易。～利、～于携带、轻～。</span><span class="en">Convenient; easy. 便利 handy; 便于携带 easy to carry; 轻便 light and easy to use.</span></span></li><li><span class="num">②</span><span><span class="zh">简单的；非正式的。～饭、～服、～条。</span><span class="en">Simple; informal. 便饭 a plain meal; 便服 everyday clothes; 便条 an informal note.</span></span></li><li><span class="num">③</span><span><span class="zh">屎或尿；排泄。大～、小～、～秘。</span><span class="en">Excrement or urine; to relieve oneself. 大便 stool; 小便 urine; 便秘 constipation.</span></span></li><li><span class="num">④</span><span><span class="zh">副词，就。说完～走、一说～明白。</span><span class="en">Then; straight away. 说完便走 to leave as soon as one has spoken; 一说便明白 to grasp it at once.</span></span></li><li><span class="num">⑤</span><span><span class="zh">顺便的时机。～中捎来、乘～。</span><span class="en">A convenient occasion. 便中捎来 to send it along when convenient; 乘便 when convenient.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">pin²</span>
+<button class="play" onclick="play('phien2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pin2.html">同音字 7</a></div>
+<p class="rb-py">pián</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"便宜"，指价钱低，也指不该得的好处。～宜货、占～宜。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>值 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>值</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">zeg⁸</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">zhí</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">zeg⁸</span>
+<button class="play" onclick="play('ceg8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zeg8.html">同音字 2</a></div>
+<p class="rb-py">zhí</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">价值；数值。产～、比～、币～。</span><span class="en">Value; a numerical value. 产值 output value; 比值 a ratio; 币值 the value of a currency.</span></span></li><li><span class="num">②</span><span><span class="zh">价钱是；相当于。这本书～二十元、不～一提。</span><span class="en">To be worth. 这本书值二十元 this book costs twenty yuan; 不值一提 not worth mentioning.</span></span></li><li><span class="num">③</span><span><span class="zh">遇到；碰上。正～节日、～此之际。</span><span class="en">To happen upon. 正值节日 just at the time of the festival; 值此之际 at this juncture.</span></span></li><li><span class="num">④</span><span><span class="zh">轮流担任一定时间的工作。～班、～日、～勤、～夜。</span><span class="en">To take one's turn on duty. 值班 to be on duty; 值日 to be on daily duty; 值勤 to be on the job; 值夜 to keep night watch.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

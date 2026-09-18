@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ou¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">ou¹</div>
+<div class="cnt">9 个同音字<br>9 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('ou1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/ou1.html">ou¹</a><a class="chip" href="/hainanese-dictionary/syl/ou2.html">ou²</a><a class="chip" href="/hainanese-dictionary/syl/ou3.html">ou³</a></div><a class="hrow" href="/hainanese-dictionary/char/欧.html">
+<div class="ch">欧</div><div class="body">
+<span class="py">ōu</span>
+<div class="gl zh">指欧洲。～洲、西～、～化。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/殴.html">
+<div class="ch">殴</div><div class="body">
+<span class="py">ōu</span>
+<div class="gl zh">打人。～打、～斗、斗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/瓯.html">
+<div class="ch">瓯</div><div class="body">
+<span class="py">ōu</span>
+<div class="gl zh">小盆；小碗。茶～、～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/芋.html">
+<div class="ch">芋</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">一种草本植物，地下块茎可以吃。～头、山～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/讴.html">
+<div class="ch">讴</div><div class="body">
+<span class="py">ōu</span>
+<div class="gl zh">歌唱；歌颂。～歌。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/鸥.html">
+<div class="ch">鸥</div><div class="body">
+<span class="py">ōu</span>
+<div class="gl zh">水鸟，多生活在海边。海～、～鸟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/黑.html">
+<div class="ch">黑</div><div class="body">
+<span class="py">hēi</span>
+<div class="gl zh">像煤那样的颜色，跟"白"相对。～色、～发、漆～。</div><div class="also">另读 <i>hheg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/区.html">
+<div class="ch">区</div><div class="body">
+<span class="py">qū · ōu</span>
+<div class="gl zh">分别。～分、～别。</div><div class="also">主读 <i>hi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/沤.html">
+<div class="ch">沤</div><div class="body">
+<span class="py">òu · ōu</span>
+<div class="gl zh">长时间浸泡使变质。～肥、～麻。  ōu 〈书〉水中的泡沫。浮～。</div><div class="also">主读 <i>ao⁶</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>本</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">bun³</span> <span class="r">bui³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">běn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">bun³</span>
+<button class="play" onclick="play('pon3.mp3')">&#9654;</button></div>
+<p class="rb-py">běn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">草木的根或茎干。草～、木～、无～之木。</span><span class="en">the root or stem of a plant.</span></span></li><li><span class="num">②</span><span><span class="zh">事物的根源；基础。～源、忘～、治标不治～。</span><span class="en">the origin of a thing; its foundation.</span></span></li><li><span class="num">③</span><span><span class="zh">主要的；中心的。～部、～题。</span><span class="en">main; central.</span></span></li><li><span class="num">④</span><span><span class="zh">自己这方面的。～人、～国、～单位。</span><span class="en">one's own; of this side.</span></span></li><li><span class="num">⑤</span><span><span class="zh">现今的。～月、～年度。</span><span class="en">current; present.</span></span></li><li><span class="num">⑥</span><span><span class="zh">根据。～着原则办事、有所～。</span><span class="en">capital; principal.</span></span></li><li><span class="num">⑦</span><span><span class="zh">原来；本来。～该如此、～想不去。</span><span class="en">a book; a notebook.</span></span></li><li><span class="num">⑧</span><span><span class="zh">本钱。成～、够～、～金。</span><span class="en">an edition.</span></span></li><li><span class="num">⑨</span><span><span class="zh">册子。课～、笔记～、剧～。</span><span class="en">grounds; a basis to act on.</span></span></li><li><span class="num">⑩</span><span><span class="zh">版本。～子、善～、足～。</span><span class="en">measure word for books and volumes.</span></span></li><li><span class="num">⑪</span><span><span class="zh">量词，用于书籍簿册。三～书、一～词典。</span><span class="en">originally; in the first place.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">bui³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pui3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❽❾❿⓫ 义</span></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

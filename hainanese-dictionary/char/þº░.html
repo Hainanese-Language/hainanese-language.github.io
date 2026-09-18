@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>称 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>称</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">seng¹</span> <span class="r">sin⁴</span> <span class="r">seng⁴</span> <span class="r">sin⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">chēng · chèn · chèng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">seng¹</span>
+<button class="play" onclick="play('seng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng1.html">同音字 9</a></div>
+<p class="rb-py">chēng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">叫；叫作。～呼、～号、～为。</span><span class="en">To call; to name.</span></span></li><li><span class="num">②</span><span><span class="zh">说。～病、连声～好、拍手～快。</span><span class="en">To say; to state.</span></span></li><li><span class="num">③</span><span><span class="zh">测定重量。～体重、把米～一～。</span><span class="en">To weigh.</span></span></li><li><span class="num">④</span><span><span class="zh">赞扬。～赞、～道。</span><span class="en">To praise.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">sin⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">seng⁴</span>
+<button class="play" onclick="play('seng4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng4.html">同音字 2</a></div>
+<p class="rb-py">chèn</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">适合；相当。～心、对～、匀～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">sin⁴</span>
+<button class="play" onclick="play('sien4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sin4.html">同音字 6</a></div>
+<p class="rb-py">chèng</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"秤"。～杆。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

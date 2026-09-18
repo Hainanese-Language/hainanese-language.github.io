@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>毛 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>毛</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">mao²</span> <span class="r">mo²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">máo</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">mao²</span>
+<button class="play" onclick="play('mau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mao2.html">同音字 7</a></div>
+<p class="rb-py">máo</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">动植物表皮上长的丝状物。羽～、～发、～笔。</span><span class="en">hair; fur; feathers; down on a plant.</span></span></li><li><span class="num">②</span><span><span class="zh">东西上长的霉菌。馒头长～了、发～。</span><span class="en">mould growing on something.</span></span></li><li><span class="num">③</span><span><span class="zh">粗糙的；未加工的。～坯、～重、～糙。</span><span class="en">rough; unfinished.</span></span></li><li><span class="num">④</span><span><span class="zh">慌张；发慌。心里发～、吓～了。</span><span class="en">flustered; panicky.</span></span></li><li><span class="num">⑤</span><span><span class="zh">小；细碎。～孩子、～～雨。</span><span class="en">small; fine.</span></span></li><li><span class="num">⑥</span><span><span class="zh">货币贬值。钱～了。</span><span class="en">(of currency) to lose value.</span></span></li><li><span class="num">⑦</span><span><span class="zh">货币单位角的俗称。一～钱、五～。</span><span class="en">colloquial name for the 角, a unit of currency.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">mo²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

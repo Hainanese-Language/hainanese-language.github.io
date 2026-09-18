@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>中</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">dong¹</span> <span class="r">dong⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">zhōng · zhòng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">dong¹</span>
+<button class="play" onclick="play('tong1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dong1.html">同音字 13</a></div>
+<p class="rb-py">zhōng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">跟四周距离相等；中心。～央、～心、居～。</span><span class="en">The centre, equidistant from all sides. 中央 the centre; 居中 in the middle.</span></span></li><li><span class="num">②</span><span><span class="zh">在一定范围内；里面。空～、家～、水～。</span><span class="en">Within; inside. 空中 in the air; 家中 at home.</span></span></li><li><span class="num">③</span><span><span class="zh">位置在两端之间的。～层、～游、～旬。</span><span class="en">Between two ends. 中层 the middle layer; 中旬 the middle ten days of a month.</span></span></li><li><span class="num">④</span><span><span class="zh">等级在两端之间的。～等、～级、～学。</span><span class="en">Of middling grade. 中等 medium; 中学 a secondary school.</span></span></li><li><span class="num">⑤</span><span><span class="zh">不偏不倚。～立、适～、～庸。</span><span class="en">Impartial. 中立 neutral; 中庸 the golden mean.</span></span></li><li><span class="num">⑥</span><span><span class="zh">指中国。～文、～医、古今～外。</span><span class="en">China. 中文 the Chinese language; 古今中外 in all ages and countries.</span></span></li><li><span class="num">⑦</span><span><span class="zh">表示动作正在进行。研究～、发展～。</span><span class="en">Marks an action in progress. 研究中 under study.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">dong⁴</span>
+<button class="play" onclick="play('tong4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dong4.html">同音字 2</a></div>
+<p class="rb-py">zhòng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">正对上；恰好合上。～肯、猜～了、正～下怀。</span><span class="en">To hit; to fit exactly. 中肯 to the point; 猜中了 guessed right.</span></span></li><li><span class="num">②</span><span><span class="zh">受到；遭受。～毒、～暑、～弹。</span><span class="en">To suffer; to be struck by. 中毒 to be poisoned; 中暑 to get sunstroke.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

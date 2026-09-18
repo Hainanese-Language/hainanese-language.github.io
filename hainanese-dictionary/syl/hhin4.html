@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hhin⁴ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">hhin⁴</div>
+<div class="cnt">7 个同音字<br>7 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('yien4.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hhin1.html">hhin¹</a><a class="chip" href="/hainanese-dictionary/syl/hhin2.html">hhin²</a><a class="chip" href="/hainanese-dictionary/syl/hhin3.html">hhin³</a><a class="chip on" href="/hainanese-dictionary/syl/hhin4.html">hhin⁴</a><a class="chip" href="/hainanese-dictionary/syl/hhin5.html">hhin⁵</a><a class="chip" href="/hainanese-dictionary/syl/hhin6.html">hhin⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/宪.html">
+<div class="ch">宪</div><div class="body">
+<span class="py">xiàn</span>
+<div class="gl zh">法令。～令、～章。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/献.html">
+<div class="ch">献</div><div class="body">
+<span class="py">xiàn</span>
+<div class="gl zh">恭敬地送上。～花、～礼、贡～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/现.html">
+<div class="ch">现</div><div class="body">
+<span class="py">xiàn</span>
+<div class="gl zh">显露出来。出～、原形毕～、～出笑容。</div><div class="also">另读 <i>hhin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/绚.html">
+<div class="ch">绚</div><div class="body">
+<span class="py">xuàn</span>
+<div class="gl zh">色彩华丽。～丽、～烂。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/衅.html">
+<div class="ch">衅</div><div class="body">
+<span class="py">xìn</span>
+<div class="gl zh">争端；嫌隙。寻～、挑～、～端。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/膻.html">
+<div class="ch">膻</div><div class="body">
+<span class="py">shān</span>
+<div class="gl zh">像羊肉那样的气味。～味、～气、腥～。</div><div class="also">主读 <i>din¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/见.html">
+<div class="ch">见</div><div class="body">
+<span class="py">jiàn · xiàn</span>
+<div class="gl zh">看到。看～、～闻、～多识广。</div><div class="also">主读 <i>gi⁴</i> · <i>gin⁴</i> · <i>hhin⁵</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

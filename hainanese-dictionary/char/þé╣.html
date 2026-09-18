@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>点 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>点</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">ddiam³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">diǎn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">ddiam³</span>
+<button class="play" onclick="play('diam3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddiam3.html">同音字 2</a></div>
+<p class="rb-py">diǎn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">液体的小滴。雨～、水～。</span><span class="en">A drop of liquid. 雨点 raindrops; 水点 droplets.</span></span></li><li><span class="num">②</span><span><span class="zh">细小的痕迹。斑～、污～、黑～。</span><span class="en">A small mark. 斑点 a speck; 污点 a stain; 黑点 a black spot.</span></span></li><li><span class="num">③</span><span><span class="zh">汉字的笔画"丶"；也指小数点。三～水、三～五。</span><span class="en">The stroke 丶 in Chinese characters; also the decimal point. 三点水 the water radical; 三点五 three point five.</span></span></li><li><span class="num">④</span><span><span class="zh">几何学上指只有位置而没有大小的图形。～线面。</span><span class="en">In geometry, a point. 点线面 point, line and plane.</span></span></li><li><span class="num">⑤</span><span><span class="zh">一定的地方或标志。地～、起～、沸～。</span><span class="en">A fixed place or marker. 地点 a location; 起点 a starting point; 沸点 boiling point.</span></span></li><li><span class="num">⑥</span><span><span class="zh">事物的方面或部分。优～、重～、特～。</span><span class="en">An aspect or part of something. 优点 a merit; 重点 the key point; 特点 a characteristic.</span></span></li><li><span class="num">⑦</span><span><span class="zh">用笔加上点子。～题、画龙～睛。</span><span class="en">To mark with a dot. 点题 to bring out the theme; 画龙点睛 to add the finishing touch.</span></span></li><li><span class="num">⑧</span><span><span class="zh">一下一下地向下动。～头、～穴。</span><span class="en">To move downward briefly. 点头 to nod; 点穴 to press an acupoint.</span></span></li><li><span class="num">⑨</span><span><span class="zh">使液体一滴一滴地落下。～眼药。</span><span class="en">To let fall drop by drop. 点眼药 to put in eye drops.</span></span></li><li><span class="num">⑩</span><span><span class="zh">引着火。～火、～灯、～燃。</span><span class="en">To light. 点火 to kindle; 点灯 to light a lamp; 点燃 to ignite.</span></span></li><li><span class="num">⑪</span><span><span class="zh">一个一个地查对。～名、清～、～货。</span><span class="en">To check one by one. 点名 to call the roll; 清点 to take stock; 点货 to check goods.</span></span></li><li><span class="num">⑫</span><span><span class="zh">指示；启发。～破、指～、～拨。
+⑬ 计时单位；规定的时刻。五～钟、误～。
+⑭ 量词，表示少量。一～小事、有～冷。</span><span class="en">To hint; prompt. 点破 to lay bare; 指点 to give guidance; 点拨 to coach.
+⑬ An hour; an appointed time. 五点钟 five o'clock; 误点 behind schedule.
+⑭ Measure word for a small amount. 一点小事 a trifling matter; 有点冷 a bit cold.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

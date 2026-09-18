@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hang² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">hang²</div>
+<div class="cnt">10 个同音字<br>10 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('hang2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hang1.html">hang¹</a><a class="chip on" href="/hainanese-dictionary/syl/hang2.html">hang²</a><a class="chip" href="/hainanese-dictionary/syl/hang3.html">hang³</a><a class="chip" href="/hainanese-dictionary/syl/hang4.html">hang⁴</a><a class="chip" href="/hainanese-dictionary/syl/hang5.html">hang⁵</a><a class="chip" href="/hainanese-dictionary/syl/hang6.html">hang⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/唐.html">
+<div class="ch">唐</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">中国朝代名。～诗、～代、盛～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/扛.html">
+<div class="ch">扛</div><div class="body">
+<span class="py">káng · gāng</span>
+<div class="gl zh">用肩膀承担。～枪、～行李、～麻袋。</div><div class="also">另读 <i>gang¹</i> · <i>go¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/搪.html">
+<div class="ch">搪</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">抵挡；应付。～塞、～饥。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/棠.html">
+<div class="ch">棠</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">棠梨，即杜梨，落叶乔木。～梨。</div><div class="also">另读 <i>ho²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/膛.html">
+<div class="ch">膛</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">胸腔。胸～、开～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/虫.html">
+<div class="ch">虫</div><div class="body">
+<span class="py">chóng</span>
+<div class="gl zh">昆虫和类似昆虫的小动物。～子、害～、毛毛～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/螳.html">
+<div class="ch">螳</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">仅用于"螳螂"，一种前腿像镰刀的昆虫。～臂当车。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/堂.html">
+<div class="ch">堂</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">正房；高大的房子。～屋、厅～、礼～、殿～。</div><div class="also">主读 <i>ddo²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/塘.html">
+<div class="ch">塘</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">堤岸；堤防。河～、海～。</div><div class="also">主读 <i>ddo²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/糖.html">
+<div class="ch">糖</div><div class="body">
+<span class="py">táng</span>
+<div class="gl zh">从甘蔗、甜菜等中提取的甜味食品。白～、～果、～水。</div><div class="also">主读 <i>ho²</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

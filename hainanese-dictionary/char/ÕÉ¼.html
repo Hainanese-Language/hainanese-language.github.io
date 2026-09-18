@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>听 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>听</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hia¹</span> <span class="r">heng⁴</span> <span class="r">din⁶</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">tīng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hia¹</span>
+<button class="play" onclick="play('hia1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hia1.html">同音字 2</a></div>
+<p class="rb-py">tīng</p><p class="scope">用于第 ❶❷❸ 义</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用耳朵接受声音。～广播、～见、倾～。</span><span class="en">To hear; listen. 听广播 to listen to the radio; 倾听 to listen attentively.</span></span></li><li><span class="num">②</span><span><span class="zh">听从；接受。～话、～劝、言～计从。</span><span class="en">To obey; heed. 听话 obedient; 言听计从 to follow another's every word.</span></span></li><li><span class="num">③</span><span><span class="zh">治理；判断。～政、～讼。</span><span class="en">To administer; adjudicate. 听政 to attend to affairs of state; 听讼 to try a case.</span></span></li><li><span class="num">④</span><span><span class="zh">任凭；随便。～任、～便、～之任之。</span><span class="en">To let be; leave to. 听任 to allow; 听之任之 to let things drift.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈外〉量词，用于罐装的食品、饮料。一～可乐。</span><span class="en">〈loan〉 Measure word for tinned food and drink. 一听可乐 a can of cola.</span></span></li></ul><div class="alt"><span class="r2">heng⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('heng4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div><div class="alt"><span class="r2">din⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tien6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

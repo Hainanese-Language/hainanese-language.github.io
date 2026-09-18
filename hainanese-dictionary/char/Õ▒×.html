@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>属 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>属</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">dog⁸</span> <span class="r">ziag⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">shǔ · zhǔ</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">dog⁸</span>
+<button class="play" onclick="play('tog8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dog8.html">同音字 5</a></div>
+<p class="rb-py">shǔ</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">类别。金～、吾～。</span><span class="en">A category. 金属 metals; 吾属 we; our sort.</span></span></li><li><span class="num">②</span><span><span class="zh">生物分类的一个等级。豹～。</span><span class="en">A genus in biological classification. 豹属 the genus Panthera.</span></span></li><li><span class="num">③</span><span><span class="zh">归属；隶属。～于、直～、附～。</span><span class="en">To belong to; come under. 属于 to pertain to; 直属 directly subordinate.</span></span></li><li><span class="num">④</span><span><span class="zh">家属；亲属。军～、眷～。</span><span class="en">Family members. 军属 a serviceman's family; 眷属 dependants.</span></span></li><li><span class="num">⑤</span><span><span class="zh">是。查明～实、纯～虚构。</span><span class="en">To be. 查明属实 verified as true; 纯属虚构 pure fabrication.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">ziag⁷</span>
+<button class="play" onclick="play('ciag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziag7.html">同音字 10</a></div>
+<p class="rb-py">zhǔ</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">连缀；连接。～文、前后相～。</span><span class="en">To join; link. 属文 to compose writing; 前后相属 joined end to end.</span></span></li><li><span class="num">②</span><span><span class="zh">集中在一点。～意、～目。</span><span class="en">To fix on one point. 属意 to have one's heart set on; 属目 to fix one's eyes on.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

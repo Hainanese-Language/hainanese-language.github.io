@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>给 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>给</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">gib⁷</span> <span class="r">gib⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">gěi · jǐ</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">gib⁷</span>
+<button class="play" onclick="play('kiob7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gib7.html">同音字 9</a></div>
+<p class="rb-py">gěi</p>
+<ul class="senses"><li><span class="pyhead">〔gěi〕</span></li><li><span class="num">①</span><span><span class="zh">使对方得到。～他一本书、送～。</span><span class="en">To give. 给他一本书 to give him a book; 送给 to present to.</span></span></li><li><span class="num">②</span><span><span class="zh">叫；让。～我看看。</span><span class="en">To let; allow. 给我看看 let me have a look.</span></span></li><li><span class="num">③</span><span><span class="zh">介词，替；为。～大家帮忙。</span><span class="en">Preposition: for; on behalf of. 给大家帮忙 to help everyone out.</span></span></li><li><span class="num">④</span><span><span class="zh">介词，向；对。～老师问好。</span><span class="en">Preposition: to. 给老师问好 to send one's regards to the teacher.</span></span></li><li><span class="num">⑤</span><span><span class="zh">助词，用在动词前，加强语气。碗～打了。</span><span class="en">Particle before a verb, adding emphasis. 碗给打了 the bowl got broken.</span></span></li><li><span class="pyhead">〔jǐ〕</span></li><li><span class="num">⑥</span><span><span class="zh">供应。供～、补～、自～自足。</span><span class="en">To supply. 供给 to provide; 补给 to replenish; 自给自足 self-sufficient.</span></span></li><li><span class="num">⑦</span><span><span class="zh">富裕；充足。家～人足。</span><span class="en">Well provided; ample. 家给人足 every household well off.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

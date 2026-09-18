@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>远 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>远</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">yuan³</span> <span class="r">hhui⁵</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">yuǎn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">yuan³</span>
+<button class="play" onclick="play('juan3.mp3')">&#9654;</button></div>
+<p class="rb-py">yuǎn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">距离长(跟"近"相对)。～方、～处、路很～、～离。</span><span class="en">Far (opposite of 近). 远方; 远处; 路很远; 远离.</span></span></li><li><span class="num">②</span><span><span class="zh">时间长。～古、长～、～景。</span><span class="en">Long in time. 远古; 长远; 远景.</span></span></li><li><span class="num">③</span><span><span class="zh">关系疏；不亲密。～亲、疏～、～房。</span><span class="en">Distant, of a relationship. 远亲; 疏远; 远房.</span></span></li><li><span class="num">④</span><span><span class="zh">差别大。相差很～、～不如。</span><span class="en">Greatly different. 相差很远; 远不如.</span></span></li><li><span class="num">⑤</span><span><span class="zh">不接近。敬而～之。</span><span class="en">To keep at a distance. 敬而远之.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">hhui⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('wui5.mp3')">&#9654;</button></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

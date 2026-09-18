@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>吃 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>吃</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">zia⁶</span> <span class="r">hid⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">chī</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">zia⁶</span>
+<button class="play" onclick="play('cia6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zia6.html">同音字 3</a></div>
+<p class="rb-py">chī</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把食物放进嘴里咀嚼咽下。～饭、～药。</span><span class="en">To eat. 吃饭 to have a meal; 吃药 to take medicine.</span></span></li><li><span class="num">②</span><span><span class="zh">在某处进食。～食堂、～馆子。</span><span class="en">To take one's meals somewhere. 吃食堂 to eat in the canteen; 吃馆子 to eat out.</span></span></li><li><span class="num">③</span><span><span class="zh">依靠某种事物生活。靠山～山、～老本。</span><span class="en">To live off something. 靠山吃山 to live off what is at hand; 吃老本 to rest on past gains.</span></span></li><li><span class="num">④</span><span><span class="zh">消灭。～掉敌人一个团。</span><span class="en">To wipe out. 吃掉敌人一个团 to destroy an enemy regiment.</span></span></li><li><span class="num">⑤</span><span><span class="zh">吸收（液体）。这纸不～墨。</span><span class="en">To absorb (liquid). 这纸不吃墨 this paper does not take ink.</span></span></li><li><span class="num">⑥</span><span><span class="zh">承受；禁受。～苦、～亏、～不消。</span><span class="en">To bear; suffer. 吃苦 to endure hardship; 吃亏 to come off badly.</span></span></li><li><span class="num">⑦</span><span><span class="zh">领会。～透文件精神。</span><span class="en">To grasp fully. 吃透文件精神 to master the substance of a document.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hid⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hiet7.mp3')">&#9654;</button></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

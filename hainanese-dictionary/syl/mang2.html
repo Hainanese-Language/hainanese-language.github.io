@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mang² · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">mang²</div>
+<div class="cnt">9 个同音字<br>9 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('mang2.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/mang1.html">mang¹</a><a class="chip on" href="/hainanese-dictionary/syl/mang2.html">mang²</a><a class="chip" href="/hainanese-dictionary/syl/mang3.html">mang³</a><a class="chip" href="/hainanese-dictionary/syl/mang5.html">mang⁵</a><a class="chip" href="/hainanese-dictionary/syl/mang6.html">mang⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/忙.html">
+<div class="ch">忙</div><div class="body">
+<span class="py">máng</span>
+<div class="gl zh">事情多；不得空(跟"闲"相对)。～碌、工作很～、～不过来。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/盲.html">
+<div class="ch">盲</div><div class="body">
+<span class="py">máng</span>
+<div class="gl zh">眼睛看不见。～人、～文、色～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/芒.html">
+<div class="ch">芒</div><div class="body">
+<span class="py">máng · wáng</span>
+<div class="gl zh">某些禾本科植物子实壳上的细刺。麦～、～刺在背。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/茫.html">
+<div class="ch">茫</div><div class="body">
+<span class="py">máng</span>
+<div class="gl zh">模糊不清。～然、迷～、～无头绪。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/莽.html">
+<div class="ch">莽</div><div class="body">
+<span class="py">mǎng</span>
+<div class="gl zh">密生的草。草～、～原。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/虻.html">
+<div class="ch">虻</div><div class="body">
+<span class="py">méng</span>
+<div class="gl zh">昆虫，形状像蝇而稍大，吸食牲畜的血。牛～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/蟒.html">
+<div class="ch">蟒</div><div class="body">
+<span class="py">mǎng</span>
+<div class="gl zh">一种无毒的大蛇。～蛇。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/氓.html">
+<div class="ch">氓</div><div class="body">
+<span class="py">méng · máng</span>
+<div class="gl zh">〈书〉百姓。～隶。  máng 用于"流氓"，指不务正业、为非作歹的人。</div><div class="also">主读 <i>mong²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/芒.html">
+<div class="ch">芒</div><div class="body">
+<span class="py">máng · wáng</span>
+<div class="gl zh">某些禾本科植物子实壳上的细刺。麦～、～刺在背。</div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

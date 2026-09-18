@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>deng¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">deng¹</div>
+<div class="cnt">9 个同音字<br>9 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('teng1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/deng1.html">deng¹</a><a class="chip" href="/hainanese-dictionary/syl/deng2.html">deng²</a><a class="chip" href="/hainanese-dictionary/syl/deng3.html">deng³</a><a class="chip" href="/hainanese-dictionary/syl/deng4.html">deng⁴</a><a class="chip" href="/hainanese-dictionary/syl/deng5.html">deng⁵</a></div><a class="hrow" href="/hainanese-dictionary/char/惺.html">
+<div class="ch">惺</div><div class="body">
+<span class="py">xīng</span>
+<div class="gl zh">多用于"～忪"，形容刚睡醒眼睛模糊。睡眼～忪。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/牲.html">
+<div class="ch">牲</div><div class="body">
+<span class="py">shēng</span>
+<div class="gl zh">家畜。～畜、～口。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/猩.html">
+<div class="ch">猩</div><div class="body">
+<span class="py">xīng</span>
+<div class="gl zh">用于"猩猩"，一种类人猿。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/笙.html">
+<div class="ch">笙</div><div class="body">
+<span class="py">shēng</span>
+<div class="gl zh">一种簧管乐器，由若干竹管和斗子组成。～歌、吹～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/腥.html">
+<div class="ch">腥</div><div class="body">
+<span class="py">xīng</span>
+<div class="gl zh">像鱼虾那样的难闻气味。～味、血～、～气。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/升.html">
+<div class="ch">升</div><div class="body">
+<span class="py">shēng</span>
+<div class="gl zh">容量单位，一斗的十分之一。</div><div class="also">主读 <i>zin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/声.html">
+<div class="ch">声</div><div class="body">
+<span class="py">shēng</span>
+<div class="gl zh">物体振动发出的音。～音、歌～、～响、掌～。</div><div class="also">主读 <i>dia¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/星.html">
+<div class="ch">星</div><div class="body">
+<span class="py">xīng</span>
+<div class="gl zh">夜空中发光或反射光的天体。～星、恒～、～空。</div><div class="also">主读 <i>se¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/胜.html">
+<div class="ch">胜</div><div class="body">
+<span class="py">shèng · shēng</span>
+<div class="gl zh">赢；跟"负""败"相对。～利、战～、～负。</div><div class="also">主读 <i>deng⁵</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

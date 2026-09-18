@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>包 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>包</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">bao¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">bāo</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">bao¹</span>
+<button class="play" onclick="play('pau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bao1.html">同音字 7</a></div>
+<p class="rb-py">bāo</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用纸、布等裹起来。～饺子、～扎、～装。</span><span class="en">To wrap in paper, cloth and the like. 包饺子 to make dumplings; 包扎 to bind up; 包装 to package.</span></span></li><li><span class="num">②</span><span><span class="zh">包装好的东西。药～、邮～、～裹。</span><span class="en">A wrapped parcel. 药包 a packet of medicine; 邮包 a postal parcel; 包裹 a package.</span></span></li><li><span class="num">③</span><span><span class="zh">装东西的口袋。书～、皮～、背～。</span><span class="en">A bag for carrying things. 书包 a satchel; 皮包 a briefcase; 背包 a rucksack.</span></span></li><li><span class="num">④</span><span><span class="zh">量词，用于成包的东西。一～糖、两～水泥。</span><span class="en">Measure word for things in packets. 一包糖 a packet of sweets; 两包水泥 two bags of cement.</span></span></li><li><span class="num">⑤</span><span><span class="zh">容纳在内；总括在一起。～含、～括、无所不～。</span><span class="en">To contain; to take in together. 包含 to comprise; 包括 to include; 无所不包 all-embracing.</span></span></li><li><span class="num">⑥</span><span><span class="zh">承担；担保。～办、～干、～在我身上。</span><span class="en">To take on; to guarantee. 包办 to take sole charge of; 包干 to be responsible for a task; 包在我身上 leave it to me.</span></span></li><li><span class="num">⑦</span><span><span class="zh">约定专用。～车、～场、～机。</span><span class="en">To hire for exclusive use. 包车 to hire a car; 包场 to book the whole house; 包机 a chartered flight.</span></span></li><li><span class="num">⑧</span><span><span class="zh">物体上鼓起的疙瘩。头上碰了个～。</span><span class="en">A lump raised on something. 头上碰了个包 to raise a bump on one's head.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

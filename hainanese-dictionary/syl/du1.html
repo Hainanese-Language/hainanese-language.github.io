@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>du¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">du¹</div>
+<div class="cnt">13 个同音字<br>13 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('tu1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/du1.html">du¹</a><a class="chip" href="/hainanese-dictionary/syl/du2.html">du²</a><a class="chip" href="/hainanese-dictionary/syl/du3.html">du³</a><a class="chip" href="/hainanese-dictionary/syl/du4.html">du⁴</a><a class="chip" href="/hainanese-dictionary/syl/du6.html">du⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/书.html">
+<div class="ch">书</div><div class="body">
+<span class="py">shū</span>
+<div class="gl zh">装订成册的著作。～籍、看～、一本～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/侏.html">
+<div class="ch">侏</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">用于"侏儒"，指身材异常矮小的人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/字.html">
+<div class="ch">字</div><div class="body">
+<span class="py">zì</span>
+<div class="gl zh">记录语言的符号。汉～、～母、写～、～典。</div><div class="also">另读 <i>se⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/朱.html">
+<div class="ch">朱</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">大红色。～笔、～红、～门。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/株.html">
+<div class="ch">株</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">露出地面的树根。守～待兔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/潴.html">
+<div class="ch">潴</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">〈书〉水积聚；水积聚的地方。～留、～水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/狙.html">
+<div class="ch">狙</div><div class="body">
+<span class="py">jū</span>
+<div class="gl zh">暗中埋伏，伺机袭击。～击、～击手。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/珠.html">
+<div class="ch">珠</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">珍珠。～宝、～光宝气、鱼目混～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/疽.html">
+<div class="ch">疽</div><div class="body">
+<span class="py">jū</span>
+<div class="gl zh">中医指局部皮肉肿硬而深的毒疮。痈～、脱～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/蛛.html">
+<div class="ch">蛛</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">蜘蛛。～网、～丝马迹。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/诛.html">
+<div class="ch">诛</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">杀死。～戮、伏～、罪不容～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/铢.html">
+<div class="ch">铢</div><div class="body">
+<span class="py">zhū</span>
+<div class="gl zh">古代重量单位，二十四～为一两。锱～必较。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/输.html">
+<div class="ch">输</div><div class="body">
+<span class="py">shū</span>
+<div class="gl zh">运送。运～、～送、～血。</div><div class="also">主读 <i>si¹</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zin⁴ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">zin⁴</div>
+<div class="cnt">7 个同音字<br>7 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('cien4.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/zin1.html">zin¹</a><a class="chip" href="/hainanese-dictionary/syl/zin3.html">zin³</a><a class="chip on" href="/hainanese-dictionary/syl/zin4.html">zin⁴</a><a class="chip" href="/hainanese-dictionary/syl/zin5.html">zin⁵</a><a class="chip" href="/hainanese-dictionary/syl/zin6.html">zin⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/晋.html">
+<div class="ch">晋</div><div class="body">
+<span class="py">jìn</span>
+<div class="gl zh">进；向前。～级、～升、～见。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/煎.html">
+<div class="ch">煎</div><div class="body">
+<span class="py">jiān</span>
+<div class="gl zh">把食物放在少量热油里弄熟。～鱼、～鸡蛋。</div><div class="also">另读 <i>zi⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/缙.html">
+<div class="ch">缙</div><div class="body">
+<span class="py">jìn</span>
+<div class="gl zh">用于"缙绅"，〈旧〉指官员或有声望的士大夫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/荐.html">
+<div class="ch">荐</div><div class="body">
+<span class="py">jiàn</span>
+<div class="gl zh">推举；介绍。推～、～举、举～、自～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/赈.html">
+<div class="ch">赈</div><div class="body">
+<span class="py">zhèn</span>
+<div class="gl zh">救济。～灾、～济、以工代～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/进.html">
+<div class="ch">进</div><div class="body">
+<span class="py">jìn</span>
+<div class="gl zh">向前移动(跟"退"相对)。前～、～军、～步。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/颤.html">
+<div class="ch">颤</div><div class="body">
+<span class="py">chàn · zhàn</span>
+<div class="gl zh">物体振动。～动、～抖、声音发～。  zhàn 同"战"，发抖。～栗、打～。</div><div class="also">另读 <i>zin⁵</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

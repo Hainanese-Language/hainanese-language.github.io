@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>带 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>带</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">ddua⁴</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">dài</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">ddua⁴</span>
+<button class="play" onclick="play('dua4.mp3')">&#9654;</button></div>
+<p class="rb-py">dài</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">带子；像带子的长条物。皮～、鞋～、传送～。</span><span class="en">A belt or strip. 皮带 a leather belt; 鞋带 a shoelace; 传送带 a conveyor belt.</span></span></li><li><span class="num">②</span><span><span class="zh">轮胎。车～、内～。</span><span class="en">A tyre. 车带 a tyre; 内带 an inner tube.</span></span></li><li><span class="num">③</span><span><span class="zh">区域。热～、沿海一～。</span><span class="en">A zone; an area. 热带 the tropics; 沿海一带 the coastal region.</span></span></li><li><span class="num">④</span><span><span class="zh">随身拿着。～钱、～行李、携～。</span><span class="en">To carry on one's person. 带钱 to bring money; 携带 to take along.</span></span></li><li><span class="num">⑤</span><span><span class="zh">捎；顺便做。～个信、～一句话。</span><span class="en">To take along in passing. 带个信 to pass on a message.</span></span></li><li><span class="num">⑥</span><span><span class="zh">呈现；含有。面～笑容、～有酸味。</span><span class="en">To show; contain. 面带笑容 with a smile on one's face; 带有酸味 slightly sour.</span></span></li><li><span class="num">⑦</span><span><span class="zh">引导；领。～路、～队、～徒弟。</span><span class="en">To lead; guide. 带路 to show the way; 带队 to lead a team; 带徒弟 to train an apprentice.</span></span></li><li><span class="num">⑧</span><span><span class="zh">连着；附带。连说～笑、～叶的橘子。</span><span class="en">Together with; accompanied by. 连说带笑 talking and laughing; 带叶的橘子 oranges with the leaves on.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

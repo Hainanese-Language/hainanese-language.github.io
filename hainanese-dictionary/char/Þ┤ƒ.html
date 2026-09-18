@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>负 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>负</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">pu⁶</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">fù</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">pu⁶</span>
+<button class="play" onclick="play('phu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pu6.html">同音字 5</a></div>
+<p class="rb-py">fù</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">背；用背驮。～重、～荆请罪。</span><span class="en">To carry on the back. 负重 to bear a heavy load; 负荆请罪 to offer a humble apology.</span></span></li><li><span class="num">②</span><span><span class="zh">担负；承担。～责、～担、身～重任。</span><span class="en">To shoulder; to bear. 负责 to be responsible; 负担 a burden; 身负重任 to carry heavy responsibilities.</span></span></li><li><span class="num">③</span><span><span class="zh">遭受。～伤、～屈。</span><span class="en">To suffer. 负伤 to be wounded; 负屈 to suffer a wrong.</span></span></li><li><span class="num">④</span><span><span class="zh">依仗。～险固守、～隅顽抗。</span><span class="en">To rely on. 负险固守 to hold out behind natural defences; 负隅顽抗 to put up a desperate last stand.</span></span></li><li><span class="num">⑤</span><span><span class="zh">亏欠。～债、～心。</span><span class="en">To owe. 负债 to be in debt; 负心 to be unfaithful in love.</span></span></li><li><span class="num">⑥</span><span><span class="zh">失败；跟"胜"相对。胜～、～于对手。</span><span class="en">To lose; the opposite of 胜. 胜负 victory or defeat; 负于对手 to lose to one's opponent.</span></span></li><li><span class="num">⑦</span><span><span class="zh">小于零的；跟"正"相对。～数、～号。</span><span class="en">Less than zero; the opposite of 正. 负数 a negative number; 负号 a minus sign.</span></span></li><li><span class="num">⑧</span><span><span class="zh">带负电的。～极、～离子。</span><span class="en">Negatively charged. 负极 the negative pole; 负离子 an anion.</span></span></li><li><span class="num">⑨</span><span><span class="zh">违背；辜负。～约、忘恩～义、不～众望。</span><span class="en">To go back on; to fail. 负约 to break an agreement; 忘恩负义 to be ungrateful; 不负众望 to live up to what is expected.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

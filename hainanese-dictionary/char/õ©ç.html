@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>万 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>万</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">van¹</span> <span class="r">mog⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">wàn · mò</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">van¹</span>
+<button class="play" onclick="play('ban1.mp3')">&#9654;</button></div>
+<p class="rb-py">wàn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">数目，十个一千。～里长城。</span><span class="en">The number ten thousand. 万里长城 the Great Wall.</span></span></li><li><span class="num">②</span><span><span class="zh">极多。～分、～能、气象～千。</span><span class="en">Very many. 万分 extremely; 气象万千 a scene of infinite variety.</span></span></li><li><span class="num">③</span><span><span class="zh">极；很。～难、～不得已。</span><span class="en">Extremely. 万难 extremely difficult; 万不得已 as a last resort.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">mog⁷</span>
+<button class="play" onclick="play('mog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mog7.html">同音字 8</a></div>
+<p class="rb-py">mò</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于复姓"万俟"。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

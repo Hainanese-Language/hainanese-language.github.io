@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>肉 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>肉</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hhiog⁸</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">ròu</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhiog⁸</span>
+<button class="play" onclick="play('yiog8.mp3')">&#9654;</button></div>
+<p class="rb-py">ròu</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">人或动物体内红色柔软的组织。肌～、猪～、～食。</span><span class="en">The soft red tissue of a human or animal body. 肌肉 muscle; 猪肉 pork; 肉食 a meat diet.</span></span></li><li><span class="num">②</span><span><span class="zh">某些瓜果里可以吃的部分。果～、桂圆～。</span><span class="en">The edible part of certain fruits. 果肉 pulp; 桂圆肉 dried longan flesh.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉不脆；性子慢。这西瓜～、～脾气。</span><span class="en">〈dial.〉 Not crisp; slow in temperament. 这西瓜肉 this melon is mushy; 肉脾气 a sluggish nature.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

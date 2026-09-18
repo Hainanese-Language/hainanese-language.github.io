@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>se⁶ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">se⁶</div>
+<div class="cnt">7 个同音字<br>7 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('se6.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/se1.html">se¹</a><a class="chip" href="/hainanese-dictionary/syl/se2.html">se²</a><a class="chip" href="/hainanese-dictionary/syl/se3.html">se³</a><a class="chip" href="/hainanese-dictionary/syl/se4.html">se⁴</a><a class="chip" href="/hainanese-dictionary/syl/se5.html">se⁵</a><a class="chip on" href="/hainanese-dictionary/syl/se6.html">se⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/仕.html">
+<div class="ch">仕</div><div class="body">
+<span class="py">shì</span>
+<div class="gl zh">做官。～途、出～、～宦。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/似.html">
+<div class="ch">似</div><div class="body">
+<span class="py">sì · shì</span>
+<div class="gl zh">像；如同。相～、类～、～曾相识、归心～箭。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/册.html">
+<div class="ch">册</div><div class="body">
+<span class="py">cè</span>
+<div class="gl zh">装订成的本子。～子、手～、画～、注～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/士.html">
+<div class="ch">士</div><div class="body">
+<span class="py">shì</span>
+<div class="gl zh">〈古〉介于大夫和庶民之间的阶层。～农工商。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/巳.html">
+<div class="ch">巳</div><div class="body">
+<span class="py">sì</span>
+<div class="gl zh">地支的第六位。～时。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/惜.html">
+<div class="ch">惜</div><div class="body">
+<span class="py">xī</span>
+<div class="gl zh">爱惜；重视。珍～、爱～、～时如金。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/字.html">
+<div class="ch">字</div><div class="body">
+<span class="py">zì</span>
+<div class="gl zh">记录语言的符号。汉～、～母、写～、～典。</div><div class="also">主读 <i>du¹</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>光 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>光</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">guang¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">guāng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">guang¹</span>
+<button class="play" onclick="play('kuang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/guang1.html">同音字 2</a></div>
+<p class="rb-py">guāng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">使人能看见东西的一种能量。日～、～线、阳～。</span><span class="en">Light, the energy that makes things visible. 日光 sunlight; 光线 a ray.</span></span></li><li><span class="num">②</span><span><span class="zh">明亮。～明、～亮。</span><span class="en">Bright. 光明 bright; 光亮 shining.</span></span></li><li><span class="num">③</span><span><span class="zh">荣耀；使荣耀。～荣、为国争～、～宗耀祖。</span><span class="en">Glory; to bring glory to. 光荣 honour; 为国争光 to win honour for one's country.</span></span></li><li><span class="num">④</span><span><span class="zh">平滑；没有毛发。～滑、～溜、头剃～了。</span><span class="en">Smooth; bare. 光滑 slippery; 头剃光了 the head is shaved bare.</span></span></li><li><span class="num">⑤</span><span><span class="zh">一点不剩。吃～、卖～、钱花～了。</span><span class="en">Used up; with nothing left. 吃光 to eat up; 卖光 to sell out.</span></span></li><li><span class="num">⑥</span><span><span class="zh">只；单。～说不做、～剩他一个。</span><span class="en">Only; merely. 光说不做 all talk and no action.</span></span></li><li><span class="num">⑦</span><span><span class="zh">敬辞，称对方的到来。～临、～顾。</span><span class="en">Polite word for another's visit. 光临 to honour with your presence; 光顾 to patronise.</span></span></li><li><span class="num">⑧</span><span><span class="zh">景物。风～、春～。</span><span class="en">Scenery. 风光 a view; 春光 spring scenery.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>总 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>总</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">dong³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">zǒng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">dong³</span>
+<button class="play" onclick="play('tong3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dong3.html">同音字 5</a></div>
+<p class="rb-py">zǒng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">聚合；汇集。汇～、～起来说。</span><span class="en">To gather together. 汇总 to compile; 总起来说 to sum up.</span></span></li><li><span class="num">②</span><span><span class="zh">全部的；概括全部的。～数、～结、～共。</span><span class="en">Total; overall. 总数 the total; 总结 a summing-up; 总共 altogether.</span></span></li><li><span class="num">③</span><span><span class="zh">领导；负主要责任的。～司令、～经理。</span><span class="en">Chief; in overall charge. 总司令 commander-in-chief; 总经理 general manager.</span></span></li><li><span class="num">④</span><span><span class="zh">一直；一向。～是迟到、他～不肯说。</span><span class="en">Always. 总是迟到 always late; 他总不肯说 he will never say.</span></span></li><li><span class="num">⑤</span><span><span class="zh">毕竟；终究。～会明白的、～要解决。</span><span class="en">After all; in the end. 总会明白的 you will understand in time; 总要解决 it has to be settled sooner or later.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

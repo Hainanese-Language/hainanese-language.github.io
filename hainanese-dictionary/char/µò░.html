@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>数</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">diao⁴</span> <span class="r">do⁴</span> <span class="r">diao⁴</span> <span class="r">duag⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">shù · shǔ · shuò</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">diao⁴</span>
+<button class="play" onclick="play('tiau4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/diao4.html">同音字 2</a></div>
+<p class="rb-py">shù</p><p class="scope">用于第 ❶❷❸ 义</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">数目；数量。～量、次～、人～。</span><span class="en">Number; quantity. 数量 quantity; 次数 number of times; 人数 number of people.</span></span></li><li><span class="num">②</span><span><span class="zh">数学上表示数量的概念。整～、分～、代～。</span><span class="en">In mathematics, a concept representing quantity. 整数 integer; 分数 fraction; 代数 algebra.</span></span></li><li><span class="num">③</span><span><span class="zh">天命；命运。气～、在～难逃。</span><span class="en">Fate; destiny. 气数 one's allotted fate; 在数难逃 destined to be unavoidable.</span></span></li><li><span class="num">④</span><span><span class="zh">表示不确定的少量。～人、～次、～日之后。</span><span class="en">Used to indicate an indefinite small number. 数人 several people; 数次 several times; 数日之后 after several days.</span></span></li></ul><div class="alt"><span class="r2">do⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('to4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">diao⁴</span>
+<button class="play" onclick="play('tiau4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/diao4.html">同音字 2</a></div>
+<p class="rb-py">shǔ</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">点算；计算数目。～钱、不可胜～。</span><span class="en">To count; to calculate the number of. 数钱 to count money; 不可胜数 too many to count.</span></span></li><li><span class="num">②</span><span><span class="zh">比较起来最突出或最值得一提。～一～二、就～他能干。</span><span class="en">To rank as the most outstanding or noteworthy. 数一数二 among the very best; 就数他能干 he is the most capable of them.</span></span></li><li><span class="num">③</span><span><span class="zh">列举；责备。～落、历～其罪。</span><span class="en">To enumerate; to criticize or reproach. 数落 to scold or criticize; 历数其罪 to enumerate someone's offences.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">duag⁷</span>
+<button class="play" onclick="play('tuag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/duag7.html">同音字 9</a></div>
+<p class="rb-py">shuò</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉屡次；频繁。～见不鲜、频～。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yeg⁸ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">yeg⁸</div>
+<div class="cnt">12 个同音字<br>12 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('jeg8.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/yeg7.html">yeg⁷</a><a class="chip on" href="/hainanese-dictionary/syl/yeg8.html">yeg⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/亦.html">
+<div class="ch">亦</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/役.html">
+<div class="ch">役</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">需要出力的事。劳～、苦～、兵～。</div><div class="also">另读 <i>yud⁸</i> · <i>hhia⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/掖.html">
+<div class="ch">掖</div><div class="body">
+<span class="py">yè · yē</span>
+<div class="gl zh">〈书〉扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/疫.html">
+<div class="ch">疫</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">流行性的传染病。～情、防～、瘟～。</div><div class="also">另读 <i>muad⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/绎.html">
+<div class="ch">绎</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">理出头绪；推演。演～、寻～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/翌.html">
+<div class="ch">翌</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">〈书〉次于今日、今年的。～日、～年。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/翼.html">
+<div class="ch">翼</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">翅膀。羽～、机～、～展。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/腋.html">
+<div class="ch">腋</div><div class="body">
+<span class="py">yè</span>
+<div class="gl zh">胳膊跟胸膛相连处的下面。～下、～窝、～毛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/蜴.html">
+<div class="ch">蜴</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">仅用于"蜥蜴"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/驿.html">
+<div class="ch">驿</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">古代传递公文的人换马、歇宿的处所。～站、～道。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/掖.html">
+<div class="ch">掖</div><div class="body">
+<span class="py">yè · yē</span>
+<div class="gl zh">〈书〉扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/易.html">
+<div class="ch">易</div><div class="body">
+<span class="py">yì</span>
+<div class="gl zh">容易；跟"难"相对。轻而～举、简～、平～近人。</div><div class="also">主读 <i>yi⁵</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

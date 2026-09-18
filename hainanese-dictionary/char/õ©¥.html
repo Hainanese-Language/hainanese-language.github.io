@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>举 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>举</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">gi³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">jǔ</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">gi³</span>
+<button class="play" onclick="play('ki3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi3.html">同音字 9</a></div>
+<p class="rb-py">jǔ</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">往上托；抬起。～手、～重、高～。</span><span class="en">To raise; to lift. 举手 to raise one's hand; 举重 weightlifting.</span></span></li><li><span class="num">②</span><span><span class="zh">兴起；发动。～事、～兵、～办。</span><span class="en">To start; to launch. 举事 to rise in revolt; 举办 to hold an event.</span></span></li><li><span class="num">③</span><span><span class="zh">推选；推荐。推～、选～、～贤。</span><span class="en">To elect; to recommend. 推举 to nominate; 选举 to elect.</span></span></li><li><span class="num">④</span><span><span class="zh">提出。～例、～证、列～。</span><span class="en">To put forward. 举例 to give an example; 列举 to enumerate.</span></span></li><li><span class="num">⑤</span><span><span class="zh">行为；动作。～止、～动、壮～。</span><span class="en">Conduct; a deed. 举止 bearing; 壮举 a heroic act.</span></span></li><li><span class="num">⑥</span><span><span class="zh">全；整个。～国、～世闻名。</span><span class="en">Whole; entire. 举国 the whole nation; 举世闻名 world-renowned.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

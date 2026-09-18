@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>zin¹ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">zin¹</div>
+<div class="cnt">11 个同音字<br>11 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('cien1.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/zin1.html">zin¹</a><a class="chip" href="/hainanese-dictionary/syl/zin3.html">zin³</a><a class="chip" href="/hainanese-dictionary/syl/zin4.html">zin⁴</a><a class="chip" href="/hainanese-dictionary/syl/zin5.html">zin⁵</a><a class="chip" href="/hainanese-dictionary/syl/zin6.html">zin⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/升.html">
+<div class="ch">升</div><div class="body">
+<span class="py">shēng</span>
+<div class="gl zh">容量单位，一斗的十分之一。</div><div class="also">另读 <i>deng¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/榛.html">
+<div class="ch">榛</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">榛树，落叶灌木或小乔木，果实可食。～子、～树。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/毡.html">
+<div class="ch">毡</div><div class="body">
+<span class="py">zhān</span>
+<div class="gl zh">用羊毛等压制成的片状物。～子、～帽、毛～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/津.html">
+<div class="ch">津</div><div class="body">
+<span class="py">jīn</span>
+<div class="gl zh">唾液等体液。～液、生～止渴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/珍.html">
+<div class="ch">珍</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">珠玉等宝物。～宝、奇～异宝、如数家～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/甄.html">
+<div class="ch">甄</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">〈书〉鉴别；审查。～别、～选、～拔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/真.html">
+<div class="ch">真</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">与客观事实相符，跟"假""伪"相对。～相、～情、～金不怕火炼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/笺.html">
+<div class="ch">笺</div><div class="body">
+<span class="py">jiān</span>
+<div class="gl zh">小幅的纸；信纸。信～、便～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/胗.html">
+<div class="ch">胗</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">禽类的胃。鸡～、鸭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/臻.html">
+<div class="ch">臻</div><div class="body">
+<span class="py">zhēn</span>
+<div class="gl zh">〈书〉达到；来到。日～完善、渐～佳境。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/溅.html">
+<div class="ch">溅</div><div class="body">
+<span class="py">jiàn · jiān</span>
+<div class="gl zh">液体受冲击向四外飞射。～水、水花四～、油～了一身。  jiān 〈书〉多用于"～～"，形容水急流的声音。</div><div class="also">主读 <i>zin³</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

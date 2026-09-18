@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yiog⁷ · 同音字</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/hainanese-dictionary/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="syl-head"><div class="big">yiog⁷</div>
+<div class="cnt">6 个同音字<br>6 characters read this way</div>
+<button class="play" style="margin-left:auto" onclick="play('jiog7.mp3')">&#9654;</button>
+</div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/yiog7.html">yiog⁷</a><a class="chip" href="/hainanese-dictionary/syl/yiog8.html">yiog⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/毓.html">
+<div class="ch">毓</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">〈书〉同"育"，养育；培育。钟灵～秀。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/浴.html">
+<div class="ch">浴</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">洗澡。沐～、～室、～血奋战。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/玉.html">
+<div class="ch">玉</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">一种温润有光泽的美石。～器、～镯、抛砖引～。</div><div class="also">另读 <i>yi⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/育.html">
+<div class="ch">育</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">生育。～龄、节～、生儿～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/鬻.html">
+<div class="ch">鬻</div><div class="body">
+<span class="py">yù</span>
+<div class="gl zh">〈书〉卖。卖官～爵、～文为生。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/谷.html">
+<div class="ch">谷</div><div class="body">
+<span class="py">gǔ · yù</span>
+<div class="gl zh">两山之间狭长而有出口的地带。山～、峡～、～地。</div><div class="also">主读 <i>gog⁷</i></div></div></a><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>和 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>和</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">hhua²</span> <span class="r">hho⁵</span> <span class="r">hhua²</span> <span class="r">hhua²</span> <span class="r">gue⁴</span> <span class="r">hhu²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">hé · hè · huó · huò · hú</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhua²</span>
+<button class="play" onclick="play('wua2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhua2.html">同音字 8</a></div>
+<p class="rb-py">hé</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">平和；温和。温～、～气、～风细雨。</span><span class="en">Gentle; mild.</span></span></li><li><span class="num">②</span><span><span class="zh">和睦；和谐。～好、～睦、～谐。</span><span class="en">Harmonious; on good terms.</span></span></li><li><span class="num">③</span><span><span class="zh">结束争端。～谈、讲～、～约。</span><span class="en">To end a conflict; to make peace.</span></span></li><li><span class="num">④</span><span><span class="zh">不分胜负。～棋、～局。</span><span class="en">A draw; a tie.</span></span></li><li><span class="num">⑤</span><span><span class="zh">连词、介词，表示联合或比较。你～我、～去年一样。</span><span class="en">Conjunction and preposition: and; with; compared with.</span></span></li><li><span class="num">⑥</span><span><span class="zh">数学上指相加的结果。总～、求～。</span><span class="en">In mathematics, a sum.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">hho⁵</span>
+<button class="play" onclick="play('hho5.mp3')">&#9654;</button></div>
+<p class="rb-py">hè</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">跟着别人唱。附～、一唱百～。</span><span class="en">To join in singing; to echo another.</span></span></li><li><span class="num">②</span><span><span class="zh">依照别人诗词的题材、韵脚作诗。～诗、唱～。</span><span class="en">To write a poem to another's theme and rhymes.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhua²</span>
+<button class="play" onclick="play('wua2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhua2.html">同音字 8</a></div>
+<p class="rb-py">huó</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">在粉状物中加水搅拌，使黏在一起。～面、～泥。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhua²</span>
+<button class="play" onclick="play('wua2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhua2.html">同音字 8</a></div>
+<p class="rb-py">huò</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">粉状或粒状物掺在一起。～药、～稀泥。</span><span class="en">To mix powders or granules together.</span></span></li><li><span class="num">②</span><span><span class="zh">量词，用于洗东西换水或煎药的次数。洗了三～、头～药。</span><span class="en">Measure word for changes of water in washing or brewings of medicine.</span></span></li></ul><div class="alt"><span class="r2">gue⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kue4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">hhu²</span>
+<button class="play" onclick="play('wu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhu2.html">同音字 12</a></div>
+<p class="rb-py">hú</p>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">打麻将或斗纸牌时赢了。～了。</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>
