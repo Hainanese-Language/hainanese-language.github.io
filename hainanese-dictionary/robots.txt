@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hainanhua.org/hainanese-dictionary/sitemap.xml
