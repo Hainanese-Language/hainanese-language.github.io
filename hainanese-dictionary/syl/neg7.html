@@ -15,7 +15,7 @@
 <div class="gl zh">隐藏；不让人知道。～名、藏～、隐～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6426.html">
 <div class="ch">搦</div><div class="body">
 <span class="py">nuò</span>
-<div class="gl zh">〈书〉握；持。～管(指执笔)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6eba.html">
+<div class="gl zh">握；持。～管(指执笔)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6eba.html">
 <div class="ch">溺</div><div class="body">
 <span class="py">nì · niào</span>
 <div class="gl zh">淹没在水里。～水、～死。</div><div class="also">另读 <i>niao⁶</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

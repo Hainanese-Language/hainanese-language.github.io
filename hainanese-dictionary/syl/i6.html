@@ -18,7 +18,7 @@
 <div class="gl zh">食物堵住食道。～住了、因～废食。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f22.html">
 <div class="ch">缢</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉吊死；勒死。自～、～杀。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c25.html">
+<div class="gl zh">吊死；勒死。自～、～杀。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c25.html">
 <div class="ch">谥</div><div class="body">
 <span class="py">shì</span>
 <div class="gl zh">古代帝王、贵族、大臣等死后，依其生平事迹给予的称号。～号、追～。</div><div class="also">主读 <i>di⁶</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

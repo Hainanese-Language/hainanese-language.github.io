@@ -15,7 +15,8 @@
 <span class="rbig">ddan¹</span>
 <button class="play" onclick="play('dan1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddan1.html">同音字 5</a></div>
 <p class="rb-py">dān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">一个；独一。～身、～独、～枪匹马、～行本。</span><span class="en">Single; sole. 单身 unmarried; 单独 alone; 单枪匹马 single-handed; 单行本 a separate edition.</span></span></li><li><span class="num">②</span><span><span class="zh">奇数的；跟"双"相对。～数、～日、～号。</span><span class="en">Odd-numbered; the opposite of 双. 单数 an odd number; 单日 odd-numbered days; 单号 odd numbers.</span></span></li><li><span class="num">③</span><span><span class="zh">只；仅。～说不做、～凭这一点还不够。</span><span class="en">Only; merely. 单说不做 to talk without acting; 单凭这一点还不够 this alone is not enough.</span></span></li><li><span class="num">④</span><span><span class="zh">不复杂。～纯、简～、～调。</span><span class="en">Uncomplicated. 单纯 simple; 简单 plain; 单调 monotonous.</span></span></li><li><span class="num">⑤</span><span><span class="zh">薄弱。～薄、势～力孤。</span><span class="en">Weak; thin. 单薄 flimsy; 势单力孤 weak and isolated.</span></span></li><li><span class="num">⑥</span><span><span class="zh">只有一层的。～衣、～裤、被～。</span><span class="en">Of a single layer. 单衣 unlined clothing; 单裤 unlined trousers; 被单 a bed sheet.</span></span></li><li><span class="num">⑦</span><span><span class="zh">记载事项的纸片。名～、账～、清～、菜～。</span><span class="en">A slip recording items. 名单 a name list; 账单 a bill; 清单 an itemized list; 菜单 a menu.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddua¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dua1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">一个；独一。～身、～独、～枪匹马、～行本。</span><span class="en">Single; sole. 单身 unmarried; 单独 alone; 单枪匹马 single-handed; 单行本 a separate edition.</span></span></li><li><span class="num">②</span><span><span class="zh">奇数的；跟"双"相对。～数、～日、～号。</span><span class="en">Odd-numbered; the opposite of 双. 单数 an odd number; 单日 odd-numbered days; 单号 odd numbers.</span></span></li><li><span class="num">③</span><span><span class="zh">只；仅。～说不做、～凭这一点还不够。</span><span class="en">Only; merely. 单说不做 to talk without acting; 单凭这一点还不够 this alone is not enough.</span></span></li><li><span class="num">④</span><span><span class="zh">不复杂。～纯、简～、～调。</span><span class="en">Uncomplicated. 单纯 simple; 简单 plain; 单调 monotonous.</span></span></li><li><span class="num">⑤</span><span><span class="zh">薄弱。～薄、势～力孤。</span><span class="en">Weak; thin. 单薄 flimsy; 势单力孤 weak and isolated.</span></span></li><li><span class="num">⑥</span><span><span class="zh">只有一层的。～衣、～裤、被～。</span><span class="en">Of a single layer. 单衣 unlined clothing; 单裤 unlined trousers; 被单 a bed sheet.</span></span></li><li><span class="num">⑦</span><span><span class="zh">记载事项的纸片。名～、账～、清～、菜～。</span><span class="en">A slip recording items. 名单 a name list; 账单 a bill; 清单 an itemized list; 菜单 a menu.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddua¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dua1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">din⁵</span>
 <button class="play" onclick="play('tien5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/din5.html">同音字 4</a></div>
 <p class="rb-py">shàn</p>
@@ -25,6 +26,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">yi²</span>
 <button class="play" onclick="play('ji2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi2.html">同音字 44</a></div>
 <p class="rb-py">yí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">古代对东方各族的称呼；后泛指外族。</span><span class="en">In antiquity, the peoples of the east; later, foreign peoples generally.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉平坦；平安。化险为～。</span><span class="en">〈lit.〉 Level; safe. 化险为夷 to turn danger into safety.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉铲平；消灭。～为平地。</span><span class="en">〈lit.〉 To raze; to wipe out. 夷为平地 to level to the ground.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">古代对东方各族的称呼；后泛指外族。</span><span class="en">In antiquity, the peoples of the east; later, foreign peoples generally.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>平坦；平安。化险为～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Level; safe. 化险为夷 to turn danger into safety.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>铲平；消灭。～为平地。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To raze; to wipe out. 夷为平地 to level to the ground.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

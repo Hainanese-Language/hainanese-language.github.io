@@ -15,12 +15,19 @@
 <span class="rbig">yud⁸</span>
 <button class="play" onclick="play('jot8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yud8.html">同音字 2</a></div>
 <p class="rb-py">yì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">需要出力的事。劳～、苦～、兵～。</span><span class="en">Labour that must be performed. 劳役 forced labour; 兵役 military service.</span></span></li><li><span class="num">②</span><span><span class="zh">战事。战～。</span><span class="en">A campaign; a battle. 战役 a campaign.</span></span></li><li><span class="num">③</span><span><span class="zh">使唤；驱使。奴～、～使。</span><span class="en">To order about; press into service. 奴役 to enslave; 役使 to drive.</span></span></li><li><span class="num">④</span><span><span class="zh">〈旧〉供使唤的人。差～、仆～。</span><span class="en">〈former〉 A person kept for menial work. 差役 a runner; 仆役 a servant.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">yeg⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('jeg8.mp3')">&#9654;</button></div><div class="alt"><span class="r2">hhia⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yia5.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">需要出力的事。劳～、苦～、兵～。</span><span class="en">Labour that must be performed. 劳役 forced labour; 兵役 military service.</span></span></li><li><span class="num">②</span><span><span class="zh">战事。战～。</span><span class="en">A campaign; a battle. 战役 a campaign.</span></span></li><li><span class="num">③</span><span><span class="zh">使唤；驱使。奴～、～使。</span><span class="en">To order about; press into service. 奴役 to enslave; 役使 to drive.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>供使唤的人。差～、仆～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A person kept for menial work. 差役 a runner; 仆役 a servant.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">yeg⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('jeg8.mp3')">&#9654;</button></div><div class="alt"><span class="r2">hhia⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yia5.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

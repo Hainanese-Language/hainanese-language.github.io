@@ -15,19 +15,19 @@
 <div class="gl zh">姓。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5a06.html">
 <div class="ch">娆</div><div class="body">
 <span class="py">ráo · rǎo</span>
-<div class="gl zh">用于"妖娆"，形容娇艳美好。  rǎo 〈书〉烦扰。</div><div class="also">另读 <i>yiao³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c27.html">
+<div class="gl zh">用于"妖娆"，形容娇艳美好。  rǎo 烦扰。</div><div class="also">另读 <i>yiao³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c27.html">
 <div class="ch">尧</div><div class="body">
 <span class="py">yáo</span>
 <div class="gl zh">传说中上古的帝王名。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5fad.html">
 <div class="ch">徭</div><div class="body">
 <span class="py">yáo</span>
-<div class="gl zh">〈旧〉官府强制百姓承担的无偿劳役。～役。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6447.html">
+<div class="gl zh">官府强制百姓承担的无偿劳役。～役。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6447.html">
 <div class="ch">摇</div><div class="body">
 <span class="py">yáo</span>
 <div class="gl zh">使物体来回或上下移动。～头、～船、动～、～旗呐喊。</div><div class="also">另读 <i>io²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7476.html">
 <div class="ch">瑶</div><div class="body">
 <span class="py">yáo</span>
-<div class="gl zh">〈书〉美玉。～池、琼～、～琴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a91.html">
+<div class="gl zh">美玉。～池、琼～、～琴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a91.html">
 <div class="ch">窑</div><div class="body">
 <span class="py">yáo</span>
 <div class="gl zh">烧制砖瓦陶瓷的建筑物。砖～、瓷～、～厂。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ed5.html">
@@ -57,6 +57,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

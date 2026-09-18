@@ -15,12 +15,18 @@
 <span class="rbig">zi¹</span>
 <button class="play" onclick="play('ci1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zi1.html">同音字 17</a></div>
 <p class="rb-py">zhī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">灵芝，一种蕈类。～草、灵～。</span><span class="en">The lingzhi fungus. 芝草; 灵芝.</span></span></li><li><span class="num">②</span><span><span class="zh">〈古〉指白芷一类的香草。～兰之室。</span><span class="en">〈arch.〉 A fragrant herb of the angelica kind. 芝兰之室.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">灵芝，一种蕈类。～草、灵～。</span><span class="en">The lingzhi fungus. 芝草; 灵芝.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>指白芷一类的香草。～兰之室。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> A fragrant herb of the angelica kind. 芝兰之室.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

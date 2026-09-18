@@ -15,12 +15,19 @@
 <span class="rbig">guai²</span>
 <button class="play" onclick="play('kuai2.mp3')">&#9654;</button></div>
 <p class="rb-py">gāo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">从下向上距离大，跟"低""矮"相对。～山、～楼、身材～。</span><span class="en">Tall; high — the opposite of 低 and 矮. 高山 a high mountain; 身材高 tall in stature.</span></span></li><li><span class="num">②</span><span><span class="zh">高度。身～、这堵墙两米～。</span><span class="en">Height. 身高 one's height; 这堵墙两米高 this wall is two metres high.</span></span></li><li><span class="num">③</span><span><span class="zh">在一般标准之上的。～速、～温、～质量。</span><span class="en">Above the ordinary standard. 高速 high-speed; 高质量 high quality.</span></span></li><li><span class="num">④</span><span><span class="zh">等级在上的。～级、～等、～年级。</span><span class="en">Of a higher grade. 高级 advanced; 高年级 the senior years.</span></span></li><li><span class="num">⑤</span><span><span class="zh">声音响亮。～声、～歌。</span><span class="en">Loud. 高声 aloud; 高歌 to sing lustily.</span></span></li><li><span class="num">⑥</span><span><span class="zh">敬辞，称别人的事物。～见、～寿。</span><span class="en">Polite prefix for another's affairs. 高见 your opinion; 高寿 your venerable age.</span></span></li><li><span class="num">⑦</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">gao¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kau1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">从下向上距离大，跟"低""矮"相对。～山、～楼、身材～。</span><span class="en">Tall; high — the opposite of 低 and 矮. 高山 a high mountain; 身材高 tall in stature.</span></span></li><li><span class="num">②</span><span><span class="zh">高度。身～、这堵墙两米～。</span><span class="en">Height. 身高 one's height; 这堵墙两米高 this wall is two metres high.</span></span></li><li><span class="num">③</span><span><span class="zh">在一般标准之上的。～速、～温、～质量。</span><span class="en">Above the ordinary standard. 高速 high-speed; 高质量 high quality.</span></span></li><li><span class="num">④</span><span><span class="zh">等级在上的。～级、～等、～年级。</span><span class="en">Of a higher grade. 高级 advanced; 高年级 the senior years.</span></span></li><li><span class="num">⑤</span><span><span class="zh">声音响亮。～声、～歌。</span><span class="en">Loud. 高声 aloud; 高歌 to sing lustily.</span></span></li><li><span class="num">⑥</span><span><span class="zh">敬辞，称别人的事物。～见、～寿。</span><span class="en">Polite prefix for another's affairs. 高见 your opinion; 高寿 your venerable age.</span></span></li><li><span class="num">⑦</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">gao¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kau1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

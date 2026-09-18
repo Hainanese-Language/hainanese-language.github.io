@@ -15,12 +15,19 @@
 <span class="rbig">dia¹</span>
 <button class="play" onclick="play('tia1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dia1.html">同音字 4</a></div>
 <p class="rb-py">shēng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体振动发出的音。～音、歌～、～响、掌～。</span><span class="en">A sound. 声音; 歌声; 声响; 掌声.</span></span></li><li><span class="num">②</span><span><span class="zh">说出来；宣布。～明、～称、～讨、不～不响。</span><span class="en">To say out; to declare. 声明; 声称; 声讨; 不声不响.</span></span></li><li><span class="num">③</span><span><span class="zh">名誉；名望。名～、～望、～誉。</span><span class="en">Reputation; standing. 名声; 声望; 声誉.</span></span></li><li><span class="num">④</span><span><span class="zh">汉语的字调。～调、四～、平～。</span><span class="en">The tone of a Chinese syllable. 声调; 四声; 平声.</span></span></li><li><span class="num">⑤</span><span><span class="zh">量词，用于声音发出的次数。喊了两～、一～不吭。</span><span class="en">Measure word for utterances. 喊了两声; 一声不吭.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">deng¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('teng1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体振动发出的音。～音、歌～、～响、掌～。</span><span class="en">A sound. 声音; 歌声; 声响; 掌声.</span></span></li><li><span class="num">②</span><span><span class="zh">说出来；宣布。～明、～称、～讨、不～不响。</span><span class="en">To say out; to declare. 声明; 声称; 声讨; 不声不响.</span></span></li><li><span class="num">③</span><span><span class="zh">名誉；名望。名～、～望、～誉。</span><span class="en">Reputation; standing. 名声; 声望; 声誉.</span></span></li><li><span class="num">④</span><span><span class="zh">汉语的字调。～调、四～、平～。</span><span class="en">The tone of a Chinese syllable. 声调; 四声; 平声.</span></span></li><li><span class="num">⑤</span><span><span class="zh">量词，用于声音发出的次数。喊了两～、一～不吭。</span><span class="en">Measure word for utterances. 喊了两声; 一声不吭.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">deng¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('teng1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

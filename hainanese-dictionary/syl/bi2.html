@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/bi1.html">bi¹</a><a class="chip on" href="/hainanese-dictionary/syl/bi2.html">bi²</a><a class="chip" href="/hainanese-dictionary/syl/bi3.html">bi³</a><a class="chip" href="/hainanese-dictionary/syl/bi4.html">bi⁴</a><a class="chip" href="/hainanese-dictionary/syl/bi5.html">bi⁵</a><a class="chip" href="/hainanese-dictionary/syl/bi6.html">bi⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u59a3.html">
 <div class="ch">妣</div><div class="body">
 <span class="py">bǐ</span>
-<div class="gl zh">〈书〉去世的母亲。先～、如丧考～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f7c.html">
+<div class="gl zh">去世的母亲。先～、如丧考～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f7c.html">
 <div class="ch">彼</div><div class="body">
 <span class="py">bǐ</span>
 <div class="gl zh">那；那个；跟"此"相对。～岸、顾此失～、由此及～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u813e.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

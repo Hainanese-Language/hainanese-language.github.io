@@ -15,16 +15,22 @@
 <span class="rbig">se³</span>
 <button class="play" onclick="play('se3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se3.html">同音字 19</a></div>
 <p class="rb-py">qiě</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">尚；还。～慢、～不说、死～不怕。</span><span class="en">Yet; still. 且慢 wait a moment; 死且不怕 not even afraid to die.</span></span></li><li><span class="num">②</span><span><span class="zh">并且；而且。既高～大、～战～走。</span><span class="en">And; moreover. 既高且大 both tall and large; 且战且走 to fight and withdraw at once.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉表示时间长。这笔～用呢。</span><span class="en">〈dial.〉 Marks a long time. 这笔且用呢 this pen will last a good while.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">尚；还。～慢、～不说、死～不怕。</span><span class="en">Yet; still. 且慢 wait a moment; 死且不怕 not even afraid to die.</span></span></li><li><span class="num">②</span><span><span class="zh">并且；而且。既高～大、～战～走。</span><span class="en">And; moreover. 既高且大 both tall and large; 且战且走 to fight and withdraw at once.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>表示时间长。这笔～用呢。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Marks a long time. 这笔且用呢 this pen will last a good while.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">su¹</span>
 <button class="play" onclick="play('su1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/su1.html">同音字 8</a></div>
 <p class="rb-py">jū</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉助词，用于句末。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>助词，用于句末。</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">si⁵</span>
 <button class="play" onclick="play('si5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/si5.html">同音字 4</a></div>
 <p class="rb-py">shì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">集中买卖货物的场所。菜～、～场、夜～。</span><span class="en">A market. 菜市 a food market; 市场 a marketplace; 夜市 a night market.</span></span></li><li><span class="num">②</span><span><span class="zh">城市。～区、～容、都～。</span><span class="en">A city. 市区 the urban area; 都市 a metropolis.</span></span></li><li><span class="num">③</span><span><span class="zh">行政区划单位。直辖～、～长。</span><span class="en">A municipality, an administrative division. 直辖市 a municipality directly under the central government.</span></span></li><li><span class="num">④</span><span><span class="zh">市制的。～尺、～斤、～亩。</span><span class="en">Of the traditional Chinese system of weights and measures. 市尺 a Chinese foot; 市斤 a catty.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉买。～恩。</span><span class="en">〈lit.〉 To buy. 市恩 to buy goodwill.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">集中买卖货物的场所。菜～、～场、夜～。</span><span class="en">A market. 菜市 a food market; 市场 a marketplace; 夜市 a night market.</span></span></li><li><span class="num">②</span><span><span class="zh">城市。～区、～容、都～。</span><span class="en">A city. 市区 the urban area; 都市 a metropolis.</span></span></li><li><span class="num">③</span><span><span class="zh">行政区划单位。直辖～、～长。</span><span class="en">A municipality, an administrative division. 直辖市 a municipality directly under the central government.</span></span></li><li><span class="num">④</span><span><span class="zh">市制的。～尺、～斤、～亩。</span><span class="en">Of the traditional Chinese system of weights and measures. 市尺 a Chinese foot; 市斤 a catty.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>买。～恩。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To buy. 市恩 to buy goodwill.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">gai⁴</span>
 <button class="play" onclick="play('kai4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gai4.html">同音字 8</a></div>
 <p class="rb-py">xiè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">器物；工具。器～、机～。</span><span class="en">an implement; a tool.</span></span></li><li><span class="num">②</span><span><span class="zh">武器。军～、～斗、缴～。</span><span class="en">a weapon.</span></span></li><li><span class="num">③</span><span><span class="zh">〈古〉镣铐一类的刑具。～系。</span><span class="en">〈arch.〉 fetters and other instruments of punishment.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">器物；工具。器～、机～。</span><span class="en">an implement; a tool.</span></span></li><li><span class="num">②</span><span><span class="zh">武器。军～、～斗、缴～。</span><span class="en">a weapon.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>镣铐一类的刑具。～系。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> fetters and other instruments of punishment.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

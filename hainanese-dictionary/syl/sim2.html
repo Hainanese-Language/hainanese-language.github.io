@@ -21,7 +21,7 @@
 <div class="gl zh">沉没；向下落；跟"浮"相对。下～、～船、石～大海。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d94.html">
 <div class="ch">涔</div><div class="body">
 <span class="py">cén</span>
-<div class="gl zh">〈书〉多用于"～～"，形容汗、泪不断流下。汗～～、泪～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9c9f.html">
+<div class="gl zh">多用于"～～"，形容汗、泪不断流下。汗～～、泪～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9c9f.html">
 <div class="ch">鲟</div><div class="body">
 <span class="py">xún</span>
 <div class="gl zh">仅用于"鲟鱼"，一种大型鱼，卵可以制鱼子酱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e29.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

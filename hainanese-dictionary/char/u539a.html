@@ -15,12 +15,19 @@
 <span class="rbig">gao⁵</span>
 <button class="play" onclick="play('kau5.mp3')">&#9654;</button></div>
 <p class="rb-py">hòu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">扁平物上下两面的距离大，跟"薄"相对。～纸、～棉衣。</span><span class="en">Thick — the opposite of 薄. 厚纸 thick paper; 厚棉衣 a heavy padded coat.</span></span></li><li><span class="num">②</span><span><span class="zh">厚度。三尺～、～薄不均。</span><span class="en">Thickness. 三尺厚 three feet thick; 厚薄不均 of uneven thickness.</span></span></li><li><span class="num">③</span><span><span class="zh">感情深。深情～谊、～爱。</span><span class="en">Deep in feeling. 深情厚谊 deep affection; 厚爱 your kind regard.</span></span></li><li><span class="num">④</span><span><span class="zh">优待；重视。～待、～此薄彼。</span><span class="en">To favour. 厚待 to treat generously; 厚此薄彼 to favour one and slight another.</span></span></li><li><span class="num">⑤</span><span><span class="zh">不刻薄；忠厚。～道、宽～。</span><span class="en">Generous; not mean. 厚道 kind and honest; 宽厚 magnanimous.</span></span></li><li><span class="num">⑥</span><span><span class="zh">味道浓。酒味很～。</span><span class="en">Strong in flavour. 酒味很厚 the wine is full-bodied.</span></span></li><li><span class="num">⑦</span><span><span class="zh">财物多；利润大。～礼、～利、家底～。</span><span class="en">Ample; large. 厚礼 a generous gift; 厚利 a handsome profit; 家底厚 well-off.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">hhou⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhou6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❹ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">扁平物上下两面的距离大，跟"薄"相对。～纸、～棉衣。</span><span class="en">Thick — the opposite of 薄. 厚纸 thick paper; 厚棉衣 a heavy padded coat.</span></span></li><li><span class="num">②</span><span><span class="zh">厚度。三尺～、～薄不均。</span><span class="en">Thickness. 三尺厚 three feet thick; 厚薄不均 of uneven thickness.</span></span></li><li><span class="num">③</span><span><span class="zh">感情深。深情～谊、～爱。</span><span class="en">Deep in feeling. 深情厚谊 deep affection; 厚爱 your kind regard.</span></span></li><li><span class="num">④</span><span><span class="zh">优待；重视。～待、～此薄彼。</span><span class="en">To favour. 厚待 to treat generously; 厚此薄彼 to favour one and slight another.</span></span></li><li><span class="num">⑤</span><span><span class="zh">不刻薄；忠厚。～道、宽～。</span><span class="en">Generous; not mean. 厚道 kind and honest; 宽厚 magnanimous.</span></span></li><li><span class="num">⑥</span><span><span class="zh">味道浓。酒味很～。</span><span class="en">Strong in flavour. 酒味很厚 the wine is full-bodied.</span></span></li><li><span class="num">⑦</span><span><span class="zh">财物多；利润大。～礼、～利、家底～。</span><span class="en">Ample; large. 厚礼 a generous gift; 厚利 a handsome profit; 家底厚 well-off.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">hhou⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhou6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <span class="rbig">dud⁷</span>
 <button class="play" onclick="play('tot7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dud7.html">同音字 6</a></div>
 <p class="rb-py">shuài</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">带领；统领。～领、～队、～军。</span><span class="en">To lead; to command. 率领 to lead; 率队 to lead a team.</span></span></li><li><span class="num">②</span><span><span class="zh">直爽；坦白。直～、坦～。</span><span class="en">Frank; candid. 直率 straightforward; 坦率 candid.</span></span></li><li><span class="num">③</span><span><span class="zh">不慎重；轻浮。草～、轻～。</span><span class="en">Careless; hasty. 草率 sloppy; 轻率 rash.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉大致；一般。～皆如此。</span><span class="en">〈lit.〉 Roughly; generally. 率皆如此 roughly all the same.</span></span></li><li><span class="num">⑤</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">带领；统领。～领、～队、～军。</span><span class="en">To lead; to command. 率领 to lead; 率队 to lead a team.</span></span></li><li><span class="num">②</span><span><span class="zh">直爽；坦白。直～、坦～。</span><span class="en">Frank; candid. 直率 straightforward; 坦率 candid.</span></span></li><li><span class="num">③</span><span><span class="zh">不慎重；轻浮。草～、轻～。</span><span class="en">Careless; hasty. 草率 sloppy; 轻率 rash.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>大致；一般。～皆如此。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Roughly; generally. 率皆如此 roughly all the same.</span></span></li><li><span class="num">⑤</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">lud⁸</span>
 <button class="play" onclick="play('lot8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lud8.html">同音字 4</a></div>
 <p class="rb-py">lǜ</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

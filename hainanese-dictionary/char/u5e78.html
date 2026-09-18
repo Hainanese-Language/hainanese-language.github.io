@@ -15,12 +15,18 @@
 <span class="rbig">hheng⁶</span>
 <button class="play" onclick="play('hheng6.mp3')">&#9654;</button></div>
 <p class="rb-py">xìng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">幸运；意外地得到好处。～运、荣～、～免于难。</span><span class="en">Lucky; fortunate. 幸运; 荣幸; 幸免于难.</span></span></li><li><span class="num">②</span><span><span class="zh">高兴。庆～、欣～。</span><span class="en">Glad. 庆幸; 欣幸.</span></span></li><li><span class="num">③</span><span><span class="zh">希望。～勿推辞。</span><span class="en">To hope. 幸勿推辞.</span></span></li><li><span class="num">④</span><span><span class="zh">〈旧〉帝王到达某地。巡～、临～。</span><span class="en">〈former〉 For a monarch to visit a place. 巡幸; 临幸.</span></span></li><li><span class="num">⑤</span><span><span class="zh">宠爱。宠～、～臣。</span><span class="en">To favour. 宠幸; 幸臣.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">幸运；意外地得到好处。～运、荣～、～免于难。</span><span class="en">Lucky; fortunate. 幸运; 荣幸; 幸免于难.</span></span></li><li><span class="num">②</span><span><span class="zh">高兴。庆～、欣～。</span><span class="en">Glad. 庆幸; 欣幸.</span></span></li><li><span class="num">③</span><span><span class="zh">希望。～勿推辞。</span><span class="en">To hope. 幸勿推辞.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>帝王到达某地。巡～、临～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> For a monarch to visit a place. 巡幸; 临幸.</span></span></li><li><span class="num">⑤</span><span><span class="zh">宠爱。宠～、～臣。</span><span class="en">To favour. 宠幸; 幸臣.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

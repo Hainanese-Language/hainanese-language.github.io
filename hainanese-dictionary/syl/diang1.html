@@ -27,10 +27,10 @@
 <div class="gl zh">用于水名。～江(在湖南)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8944.html">
 <div class="ch">襄</div><div class="body">
 <span class="py">xiāng</span>
-<div class="gl zh">〈书〉帮助。～助、～办、共～盛举。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u89de.html">
+<div class="gl zh">帮助。～助、～办、共～盛举。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u89de.html">
 <div class="ch">觞</div><div class="body">
 <span class="py">shāng</span>
-<div class="gl zh">〈书〉酒杯；饮酒。举～、滥～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9576.html">
+<div class="gl zh">酒杯；饮酒。举～、滥～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9576.html">
 <div class="ch">镶</div><div class="body">
 <span class="py">xiāng</span>
 <div class="gl zh">把物体嵌入或围在另一物体的边缘。～嵌、～牙、～边。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53a2.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

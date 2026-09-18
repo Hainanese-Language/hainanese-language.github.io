@@ -15,12 +15,19 @@
 <span class="rbig">ddai⁶</span>
 <button class="play" onclick="play('dai6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddai6.html">同音字 8</a></div>
 <p class="rb-py">dài</p><p class="scope">用于第 ❶ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">替。～替、～办、～课、～人受过。</span><span class="en">To take the place of. 代替 to replace; 代办 to act on another's behalf; 代课 to teach in someone's stead; 代人受过 to take the blame for another.</span></span></li><li><span class="num">②</span><span><span class="zh">历史的分期；朝代。古～、现～、汉～、年～。</span><span class="en">A period of history; a dynasty. 古代 antiquity; 现代 modern times; 汉代 the Han dynasty; 年代 a decade.</span></span></li><li><span class="num">③</span><span><span class="zh">家族世系的辈分。第二～、后～、传～。</span><span class="en">A generation in a family line. 第二代 the second generation; 后代 descendants; 传代 to pass on to later generations.</span></span></li></ul><div class="alt"><span class="r2">ddai⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dai5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❸ 义</span></div><div class="alt"><span class="pill">又读</span><span class="r2">dde¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('de1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">替。～替、～办、～课、～人受过。</span><span class="en">To take the place of. 代替 to replace; 代办 to act on another's behalf; 代课 to teach in someone's stead; 代人受过 to take the blame for another.</span></span></li><li><span class="num">②</span><span><span class="zh">历史的分期；朝代。古～、现～、汉～、年～。</span><span class="en">A period of history; a dynasty. 古代 antiquity; 现代 modern times; 汉代 the Han dynasty; 年代 a decade.</span></span></li><li><span class="num">③</span><span><span class="zh">家族世系的辈分。第二～、后～、传～。</span><span class="en">A generation in a family line. 第二代 the second generation; 后代 descendants; 传代 to pass on to later generations.</span></span></li></ul><div class="alt"><span class="r2">ddai⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dai5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❸ 义</span></div><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">dde¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('de1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

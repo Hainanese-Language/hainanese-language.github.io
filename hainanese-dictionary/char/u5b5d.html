@@ -15,12 +15,18 @@
 <span class="rbig">hhiao⁴</span>
 <button class="play" onclick="play('yiau4.mp3')">&#9654;</button></div>
 <p class="rb-py">xiào</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">尽心奉养和顺从父母。～顺、～敬、忠～。</span><span class="en">Filial devotion to one's parents. 孝顺 dutiful; 孝敬 to show filial respect; 忠孝 loyalty and filial piety.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉尊长死后守丧的礼俗。守～、戴～、～服。</span><span class="en">〈former〉 Mourning for a deceased elder. 守孝 to observe mourning; 孝服 mourning dress.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">尽心奉养和顺从父母。～顺、～敬、忠～。</span><span class="en">Filial devotion to one's parents. 孝顺 dutiful; 孝敬 to show filial respect; 忠孝 loyalty and filial piety.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>尊长死后守丧的礼俗。守～、戴～、～服。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> Mourning for a deceased elder. 守孝 to observe mourning; 孝服 mourning dress.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

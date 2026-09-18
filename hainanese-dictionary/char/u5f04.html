@@ -15,12 +15,18 @@
 <span class="rbig">long⁶</span>
 <button class="play" onclick="play('long6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/long6.html">同音字 2</a></div>
 <p class="rb-py">nòng</p>
-<ul class="senses"><li><span class="pyhead">〔nòng〕</span></li><li><span class="num">①</span><span><span class="zh">拿着；摆弄。摆～、～笔杆、别乱～。</span><span class="en">to hold; handle; fiddle with.</span></span></li><li><span class="num">②</span><span><span class="zh">做；干；办。～饭、～清楚、～个明白。</span><span class="en">to do; make; see to.</span></span></li><li><span class="num">③</span><span><span class="zh">设法取得。～点钱、～张票。</span><span class="en">to get hold of; obtain.</span></span></li><li><span class="num">④</span><span><span class="zh">耍；玩。玩～、戏～、～虚作假。</span><span class="en">to play with; toy with.</span></span></li><li><span class="pyhead">〔lòng〕</span></li><li><span class="num">⑤</span><span><span class="zh">〈方〉小巷；胡同。～堂、里～。</span><span class="en">〈dial.〉 a lane; an alley.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔nòng〕</span></li><li><span class="num">①</span><span><span class="zh">拿着；摆弄。摆～、～笔杆、别乱～。</span><span class="en">to hold; handle; fiddle with.</span></span></li><li><span class="num">②</span><span><span class="zh">做；干；办。～饭、～清楚、～个明白。</span><span class="en">to do; make; see to.</span></span></li><li><span class="num">③</span><span><span class="zh">设法取得。～点钱、～张票。</span><span class="en">to get hold of; obtain.</span></span></li><li><span class="num">④</span><span><span class="zh">耍；玩。玩～、戏～、～虚作假。</span><span class="en">to play with; toy with.</span></span></li><li><span class="pyhead">〔lòng〕</span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>小巷；胡同。～堂、里～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> a lane; an alley.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

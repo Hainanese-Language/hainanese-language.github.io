@@ -18,7 +18,7 @@
 <div class="gl zh">深远；僻静。～深、～静、～谷。</div><div class="also">另读 <i>hhiu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6003.html">
 <div class="ch">怃</div><div class="body">
 <span class="py">wǔ</span>
-<div class="gl zh">〈书〉失意；怅然。～然。</div><div class="also">另读 <i>vu²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f18.html">
+<div class="gl zh">失意；怅然。～然。</div><div class="also">另读 <i>vu²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f18.html">
 <div class="ch">优</div><div class="body">
 <span class="py">yōu</span>
 <div class="gl zh">美好的；出众的；跟"劣"相对。～良、～秀、～点、～势。</div><div class="also">主读 <i>hhiu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67da.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>咖喱 · 海南话字典</title><meta name="description" content="咖喱 的海南话读音 ga¹li²、ga¹ddi²，普通话 gālí。〈外〉用姜黄、胡椒等制成的调味品，色黄味辣。～牛肉。">
+<title>咖喱 · 海南话字典</title><meta name="description" content="咖喱 的海南话读音 ga¹li²、ga¹ddi²，普通话 gālí。用姜黄、胡椒等制成的调味品，色黄味辣。～牛肉。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">ga¹li²</span>
 <button class="play" onclick="play('ka1.mp3|li2.mp3')">&#9654;</button></div>
 <p class="rb-py">gālí</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈外〉用姜黄、胡椒等制成的调味品，色黄味辣。～牛肉。</span></span></li></ul><div class="alt"><span class="r2">ga¹ddi²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka1.mp3|di2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>用姜黄、胡椒等制成的调味品，色黄味辣。～牛肉。</span><span class="en"><span class="pill tip" data-tip="Loanword. Borrowed or transliterated from a foreign language.">loan</span> Curry, a yellow, pungent seasoning made from turmeric, pepper and other spices. 咖喱牛肉 beef curry.</span></span></li></ul><div class="alt"><span class="r2">ga¹ddi²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka1.mp3|di2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

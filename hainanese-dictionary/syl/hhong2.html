@@ -21,7 +21,7 @@
 <div class="gl zh">长久；持久。永～、～心、～久。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6cd3.html">
 <div class="ch">泓</div><div class="body">
 <span class="py">hóng</span>
-<div class="gl zh">〈书〉水深而清。～澄。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8679.html">
+<div class="gl zh">水深而清。～澄。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8679.html">
 <div class="ch">虹</div><div class="body">
 <span class="py">hóng · jiàng</span>
 <div class="gl zh">雨后天空出现的彩色圆弧。彩～、～霓。  jiàng 同，用于口语。天上出～了。</div><div class="also">另读 <i>hiang⁵</i> · <i>hiang⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8861.html">
@@ -45,12 +45,18 @@
 <div class="gl zh">像血的颜色。～旗、～花、脸～了。</div><div class="also">主读 <i>ang²</i> · <i>gong¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u857b.html">
 <div class="ch">蕻</div><div class="body">
 <span class="py">hòng · hóng</span>
-<div class="gl zh">用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 〈方〉某些蔬菜的花茎。菜～、油菜～。</div><div class="also">主读 <i>hhong⁶</i></div></div></a><footer>
+<div class="gl zh">用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 某些蔬菜的花茎。菜～、油菜～。</div><div class="also">主读 <i>hhong⁶</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

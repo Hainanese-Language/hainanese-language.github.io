@@ -15,12 +15,18 @@
 <span class="rbig">yin⁶</span>
 <button class="play" onclick="play('jien6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yin6.html">同音字 4</a></div>
 <p class="rb-py">rèn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">刀剑的锋利部分。刀～、～口、迎～而解。</span><span class="en">The cutting edge of a blade. 刀刃 the edge of a knife; 刃口 the cutting edge; 迎刃而解 to be readily solved.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉用刀杀。手～仇敌。</span><span class="en">〈lit.〉 To kill with a blade. 手刃仇敌 to slay one's enemy with one's own hand.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">刀剑的锋利部分。刀～、～口、迎～而解。</span><span class="en">The cutting edge of a blade. 刀刃 the edge of a knife; 刃口 the cutting edge; 迎刃而解 to be readily solved.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>用刀杀。手～仇敌。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To kill with a blade. 手刃仇敌 to slay one's enemy with one's own hand.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

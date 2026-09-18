@@ -18,7 +18,7 @@
 <div class="gl zh">掉进；坠入。～入泥里、～进去。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9894.html">
 <div class="ch">颔</div><div class="body">
 <span class="py">hán</span>
-<div class="gl zh">〈书〉下巴；点头。～首、～之而已。</div><div class="also">另读 <i>am⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8303.html">
+<div class="gl zh">下巴；点头。～首、～之而已。</div><div class="also">另读 <i>am⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8303.html">
 <div class="ch">范</div><div class="body">
 <span class="py">fàn</span>
 <div class="gl zh">模子。铜～、～型。</div><div class="also">主读 <i>ham⁵</i> · <i>pan⁵</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

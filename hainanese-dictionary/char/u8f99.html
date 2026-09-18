@@ -15,12 +15,18 @@
 <span class="rbig">sid⁷</span>
 <button class="play" onclick="play('siet7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sid7.html">同音字 16</a></div>
 <p class="rb-py">zhé</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">车轮压出的痕迹。车～、覆～、如出一～。</span><span class="en">a wheel rut.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉办法；主意。没～了、想～。</span><span class="en">〈dial.〉 a way out; an idea.</span></span></li><li><span class="num">③</span><span><span class="zh">戏曲、歌词所押的韵。合～押韵、十三～。</span><span class="en">the rhyme scheme of an opera libretto or song.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">车轮压出的痕迹。车～、覆～、如出一～。</span><span class="en">a wheel rut.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>办法；主意。没～了、想～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> a way out; an idea.</span></span></li><li><span class="num">③</span><span><span class="zh">戏曲、歌词所押的韵。合～押韵、十三～。</span><span class="en">the rhyme scheme of an opera libretto or song.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

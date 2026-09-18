@@ -15,12 +15,18 @@
 <span class="rbig">yin⁶</span>
 <button class="play" onclick="play('jien6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yin6.html">同音字 4</a></div>
 <p class="rb-py">rèn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">引线穿针。～针、缝～。</span><span class="en">To thread a needle. 纫针 to thread a needle; 缝纫 sewing.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉深深感佩。至～高谊。</span><span class="en">〈lit.〉 To be deeply grateful. 至纫高谊 most obliged for your kindness.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">引线穿针。～针、缝～。</span><span class="en">To thread a needle. 纫针 to thread a needle; 缝纫 sewing.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>深深感佩。至～高谊。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To be deeply grateful. 至纫高谊 most obliged for your kindness.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

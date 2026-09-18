@@ -15,12 +15,18 @@
 <span class="rbig">mui³</span>
 <button class="play" onclick="play('mui3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mui3.html">同音字 3</a></div>
 <p class="rb-py">měi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">指全体中的任何一个。～人、～天、～次。</span><span class="en">Each; every. 每人 each person; 每天 every day.</span></span></li><li><span class="num">②</span><span><span class="zh">表示反复动作中的任何一次。～逢佳节倍思亲。</span><span class="en">Marks any one of a repeated occasion. 每逢佳节倍思亲 at every festival one misses one's kin the more.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉常常。～有心得。</span><span class="en">〈lit.〉 Often. 每有心得 often to gain some insight.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">指全体中的任何一个。～人、～天、～次。</span><span class="en">Each; every. 每人 each person; 每天 every day.</span></span></li><li><span class="num">②</span><span><span class="zh">表示反复动作中的任何一次。～逢佳节倍思亲。</span><span class="en">Marks any one of a repeated occasion. 每逢佳节倍思亲 at every festival one misses one's kin the more.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>常常。～有心得。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Often. 每有心得 often to gain some insight.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

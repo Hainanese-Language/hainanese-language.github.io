@@ -42,10 +42,10 @@
 <div class="gl zh">沉在液体底下的杂质。渣～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7949.html">
 <div class="ch">祉</div><div class="body">
 <span class="py">zhǐ</span>
-<div class="gl zh">〈书〉幸福。福～、休～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79ed.html">
+<div class="gl zh">幸福。福～、休～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79ed.html">
 <div class="ch">秭</div><div class="body">
 <span class="py">zǐ</span>
-<div class="gl zh">〈书〉古代数目名，指极大的数。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c7d.html">
+<div class="gl zh">古代数目名，指极大的数。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c7d.html">
 <div class="ch">籽</div><div class="body">
 <span class="py">zǐ</span>
 <div class="gl zh">植物的种子。菜～、棉～、～棉。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7d2b.html">
@@ -69,6 +69,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -18,10 +18,10 @@
 <div class="gl zh">时间；时候。～刻、当～、及～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77e2.html">
 <div class="ch">矢</div><div class="body">
 <span class="py">shǐ</span>
-<div class="gl zh">〈书〉箭。有的放～、飞～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c55.html">
+<div class="gl zh">箭。有的放～、飞～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c55.html">
 <div class="ch">豕</div><div class="body">
 <span class="py">shǐ</span>
-<div class="gl zh">〈书〉猪。狼奔～突。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ca5.html">
+<div class="gl zh">猪。狼奔～突。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ca5.html">
 <div class="ch">鲥</div><div class="body">
 <span class="py">shí</span>
 <div class="gl zh">仅用于"鲥鱼"，一种春夏溯河产卵的鱼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5319.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

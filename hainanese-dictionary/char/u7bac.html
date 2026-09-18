@@ -15,12 +15,18 @@
 <span class="rbig">yiag⁷</span>
 <button class="play" onclick="play('jiag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yiag7.html">同音字 8</a></div>
 <p class="rb-py">ruò</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">一种竹子，叶子宽大，可以包粽子。～竹、～叶。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">一种竹子，叶子宽大，可以包粽子。～竹、～叶。</span><span class="en">A broad-leaved bamboo whose leaves are used to wrap zongzi.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

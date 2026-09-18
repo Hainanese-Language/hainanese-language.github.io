@@ -18,7 +18,7 @@
 <div class="gl zh">和好；相处融洽。和～、～邻友好。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a46.html">
 <div class="ch">穆</div><div class="body">
 <span class="py">mù</span>
-<div class="gl zh">〈书〉恭敬；严肃。肃～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ed8.html">
+<div class="gl zh">恭敬；严肃。肃～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ed8.html">
 <div class="ch">默</div><div class="body">
 <span class="py">mò</span>
 <div class="gl zh">不说话；不出声。沉～、～读、～契。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u563f.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">pui³</span>
 <button class="play" onclick="play('phui3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pui3.html">同音字 3</a></div>
 <p class="rb-py">fěi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">强盗；抢劫的坏人。土～、～徒、盗～。</span><span class="en">A bandit. 土匪 a brigand; 匪徒 a gangster; 盗匪 robbers.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉不；不是。获益～浅、～夷所思。</span><span class="en">〈lit.〉 Not. 获益匪浅 to benefit not a little; 匪夷所思 beyond ordinary imagination.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">强盗；抢劫的坏人。土～、～徒、盗～。</span><span class="en">A bandit. 土匪 a brigand; 匪徒 a gangster; 盗匪 robbers.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>不；不是。获益～浅、～夷所思。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Not. 获益匪浅 to benefit not a little; 匪夷所思 beyond ordinary imagination.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

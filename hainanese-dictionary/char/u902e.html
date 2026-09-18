@@ -15,12 +15,18 @@
 <span class="rbig">ddai⁶</span>
 <button class="play" onclick="play('dai6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddai6.html">同音字 8</a></div>
 <p class="rb-py">dài</p>
-<ul class="senses"><li><span class="pyhead">〔dài〕</span></li><li><span class="num">①</span><span><span class="zh">捉住；捕获。～捕、～捕归案。</span><span class="en">To catch; to arrest. 逮捕; 逮捕归案.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉及；到。力有未～。</span><span class="en">〈lit.〉 To reach; to extend to. 力有未逮.</span></span></li><li><span class="pyhead">〔dǎi〕</span></li><li><span class="num">③</span><span><span class="zh">捉(口语)。～蚊子、～老鼠、猫～耗子。</span><span class="en">To catch (colloquial). 逮蚊子; 逮老鼠; 猫逮耗子.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔dài〕</span></li><li><span class="num">①</span><span><span class="zh">捉住；捕获。～捕、～捕归案。</span><span class="en">To catch; to arrest. 逮捕; 逮捕归案.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>及；到。力有未～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To reach; to extend to. 力有未逮.</span></span></li><li><span class="pyhead">〔dǎi〕</span></li><li><span class="num">③</span><span><span class="zh">捉(口语)。～蚊子、～老鼠、猫～耗子。</span><span class="en">To catch (colloquial). 逮蚊子; 逮老鼠; 猫逮耗子.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

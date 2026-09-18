@@ -15,12 +15,18 @@
 <span class="rbig">ddam¹</span>
 <button class="play" onclick="play('dam1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddam1.html">同音字 3</a></div>
 <p class="rb-py">dān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"眈眈"，形容注视的样子。虎视～～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"眈眈"，形容注视的样子。虎视～～。</span><span class="en">Only used in 眈眈, describing a fixed, watchful gaze.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

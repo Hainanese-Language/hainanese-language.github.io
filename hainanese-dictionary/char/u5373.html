@@ -15,12 +15,18 @@
 <span class="rbig">zeg⁷</span>
 <button class="play" onclick="play('ceg7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zeg7.html">同音字 38</a></div>
 <p class="rb-py">jí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">就是。非此～彼、～是。</span><span class="en">To be precisely. 非此即彼 either this or that; 即是 that is to say.</span></span></li><li><span class="num">②</span><span><span class="zh">就；便。一触～发、招之～来、～将。</span><span class="en">At once; then. 一触即发 ready to go off at a touch; 招之即来 to come the moment one is called; 即将 about to.</span></span></li><li><span class="num">③</span><span><span class="zh">靠近；接触。～位、若～若离、可望而不可～。</span><span class="en">To draw near; to come into contact with. 即位 to ascend the throne; 若即若离 to keep at arm's length; 可望而不可即 within sight but out of reach.</span></span></li><li><span class="num">④</span><span><span class="zh">当时；当下。～日、～刻、～席。</span><span class="en">At that very time. 即日 that same day; 即刻 immediately; 即席 impromptu.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉即使。～便、～或。</span><span class="en">〈lit.〉 Even if. 即便 even though; 即或 even supposing.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">就是。非此～彼、～是。</span><span class="en">To be precisely. 非此即彼 either this or that; 即是 that is to say.</span></span></li><li><span class="num">②</span><span><span class="zh">就；便。一触～发、招之～来、～将。</span><span class="en">At once; then. 一触即发 ready to go off at a touch; 招之即来 to come the moment one is called; 即将 about to.</span></span></li><li><span class="num">③</span><span><span class="zh">靠近；接触。～位、若～若离、可望而不可～。</span><span class="en">To draw near; to come into contact with. 即位 to ascend the throne; 若即若离 to keep at arm's length; 可望而不可即 within sight but out of reach.</span></span></li><li><span class="num">④</span><span><span class="zh">当时；当下。～日、～刻、～席。</span><span class="en">At that very time. 即日 that same day; 即刻 immediately; 即席 impromptu.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>即使。～便、～或。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Even if. 即便 even though; 即或 even supposing.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

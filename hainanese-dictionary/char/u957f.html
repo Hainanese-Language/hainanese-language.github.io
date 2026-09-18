@@ -15,7 +15,8 @@
 <span class="rbig">ddo²</span>
 <button class="play" onclick="play('do2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddo2.html">同音字 6</a></div>
 <p class="rb-py">cháng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">两端距离大，跟"短"相对。～江、～途、路很～。</span><span class="en">Long — the opposite of 短. 长江 the Yangtze; 长途 long-distance.</span></span></li><li><span class="num">②</span><span><span class="zh">长度。全～两米、这条路～十里。</span><span class="en">Length. 全长两米 two metres long.</span></span></li><li><span class="num">③</span><span><span class="zh">时间久。～寿、～年、天～日久。</span><span class="en">Long in time. 长寿 longevity; 天长日久 with the passing of time.</span></span></li><li><span class="num">④</span><span><span class="zh">擅长的技能；优点。特～、取～补短、一技之～。</span><span class="en">A strong point. 特长 a speciality; 取长补短 to offset one's weakness with others' strength.</span></span></li><li><span class="num">⑤</span><span><span class="zh">擅长。他～于绘画。</span><span class="en">To be good at. 他长于绘画 he is good at painting.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">siang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('siang2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">两端距离大，跟"短"相对。～江、～途、路很～。</span><span class="en">Long — the opposite of 短. 长江 the Yangtze; 长途 long-distance.</span></span></li><li><span class="num">②</span><span><span class="zh">长度。全～两米、这条路～十里。</span><span class="en">Length. 全长两米 two metres long.</span></span></li><li><span class="num">③</span><span><span class="zh">时间久。～寿、～年、天～日久。</span><span class="en">Long in time. 长寿 longevity; 天长日久 with the passing of time.</span></span></li><li><span class="num">④</span><span><span class="zh">擅长的技能；优点。特～、取～补短、一技之～。</span><span class="en">A strong point. 特长 a speciality; 取长补短 to offset one's weakness with others' strength.</span></span></li><li><span class="num">⑤</span><span><span class="zh">擅长。他～于绘画。</span><span class="en">To be good at. 他长于绘画 he is good at painting.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">siang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('siang2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">ziang³</span>
 <button class="play" onclick="play('ciang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziang3.html">同音字 6</a></div>
 <p class="rb-py">zhǎng</p>
@@ -25,6 +26,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

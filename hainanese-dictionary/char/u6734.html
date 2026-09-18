@@ -15,7 +15,7 @@
 <span class="rbig">bog⁷</span>
 <button class="play" onclick="play('pog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bog7.html">同音字 23</a></div>
 <p class="rb-py">pò</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"朴树""朴硝"。～树、～硝。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"朴树""朴硝"。～树、～硝。</span><span class="en">Only in 朴树 (hackberry) and 朴硝 (mirabilite).</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">bog⁷</span>
 <button class="play" onclick="play('pog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bog7.html">同音字 23</a></div>
 <p class="rb-py">pǔ</p>
@@ -23,7 +23,7 @@
 <span class="rbig">bog⁷</span>
 <button class="play" onclick="play('pog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bog7.html">同音字 23</a></div>
 <p class="rb-py">pō</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"朴刀"，旧时的一种长柄大刀。～刀。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"朴刀"，旧时的一种长柄大刀。～刀。</span><span class="en">Only in 朴刀, a long-handled broadsword of former times.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">piao¹</span>
 <button class="play" onclick="play('phiau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/piao1.html">同音字 5</a></div>
 <p class="rb-py">piáo</p>
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/lid7.html">lid⁷</a><a class="chip" href="/hainanese-dictionary/syl/lid8.html">lid⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u51bd.html">
 <div class="ch">冽</div><div class="body">
 <span class="py">liè</span>
-<div class="gl zh">〈书〉寒冷。凛～、清～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54a7.html">
+<div class="gl zh">寒冷。凛～、清～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54a7.html">
 <div class="ch">咧</div><div class="body">
 <span class="py">liě · liē · lie</span>
 <div class="gl zh">嘴角向两边伸展。～嘴、～着嘴笑。  liē 用于"咧咧"，指乱说或乱嚷。大大～～。  lie 助词，用法跟"了""啦"相近。好～。</div><div class="also">另读 <i>le⁴</i> · <i>le⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6817.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">液体一滴一滴地落下。～血、呕心～血。</div><div class="also">另读 <i>leg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d0c.html">
 <div class="ch">洌</div><div class="body">
 <span class="py">liè</span>
-<div class="gl zh">〈书〉水、酒清澈。清～、泉香酒～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u88c2.html">
+<div class="gl zh">水、酒清澈。清～、泉香酒～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u88c2.html">
 <div class="ch">裂</div><div class="body">
 <span class="py">liè · liě</span>
 <div class="gl zh">破开；分开。～开、破～、分～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96f3.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

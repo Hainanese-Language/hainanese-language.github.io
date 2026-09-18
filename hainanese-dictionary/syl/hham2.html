@@ -18,7 +18,7 @@
 <div class="gl zh">东西放在嘴里，不咽下也不吐出。～着糖、～在嘴里。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54b8.html">
 <div class="ch">咸</div><div class="body">
 <span class="py">xián</span>
-<div class="gl zh">〈书〉全；都。老少～宜、～受其益。</div><div class="also">另读 <i>giam²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6db5.html">
+<div class="gl zh">全；都。老少～宜、～受其益。</div><div class="also">另读 <i>giam²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6db5.html">
 <div class="ch">涵</div><div class="body">
 <span class="py">hán</span>
 <div class="gl zh">包容；包含。～盖、包～、内～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8854.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

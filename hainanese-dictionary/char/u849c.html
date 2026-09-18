@@ -15,12 +15,18 @@
 <span class="rbig">dun⁴</span>
 <button class="play" onclick="play('ton4.mp3')">&#9654;</button></div>
 <p class="rb-py">suàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">草本植物，地下鳞茎味辣，可做调味品。大～、～头、～泥。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">草本植物，地下鳞茎味辣，可做调味品。大～、～头、～泥。</span><span class="en">Garlic; a plant whose pungent underground bulb is used as a seasoning. 大蒜 garlic; 蒜泥 mashed garlic.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

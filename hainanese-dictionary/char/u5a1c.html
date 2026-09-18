@@ -15,16 +15,22 @@
 <span class="rbig">na⁶</span>
 <button class="play" onclick="play('na6.mp3')">&#9654;</button></div>
 <p class="rb-py">nà</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于人名和译名。安～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于人名和译名。安～。</span><span class="en">Used in personal names and transliterations. 安娜 Anna.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">no²</span>
 <button class="play" onclick="play('no2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/no2.html">同音字 3</a></div>
 <p class="rb-py">nuó</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"婀娜""袅娜"，形容姿态柔美。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"婀娜""袅娜"，形容姿态柔美。</span><span class="en">Used in 婀娜 and 袅娜, of a graceful, willowy bearing.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -27,7 +27,7 @@
 <div class="gl zh">草木失去水分而干萎。～萎、～木逢春、～枝败叶。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6cbd.html">
 <div class="ch">沽</div><div class="body">
 <span class="py">gū</span>
-<div class="gl zh">〈书〉买。～酒、～名钓誉。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b8d.html">
+<div class="gl zh">买。～酒、～名钓誉。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b8d.html">
 <div class="ch">箍</div><div class="body">
 <span class="py">gū</span>
 <div class="gl zh">用竹篾、金属条等围紧。～木桶、～紧。</div><div class="also">另读 <i>hou¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83c7.html">
@@ -42,7 +42,7 @@
 <div class="gl zh">罪。无～、死有余～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5471.html">
 <div class="ch">呱</div><div class="body">
 <span class="py">guā · gū · guǎ</span>
-<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 〈方〉用于"拉呱儿"，指闲谈。</div><div class="also">主读 <i>gua¹</i> · <i>gua³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59d1.html">
+<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 用于"拉呱儿"，指闲谈。</div><div class="also">主读 <i>gua¹</i> · <i>gua³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59d1.html">
 <div class="ch">姑</div><div class="body">
 <span class="py">gū</span>
 <div class="gl zh">父亲的姐妹。～母、～妈。</div><div class="also">主读 <i>gou¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6545.html">
@@ -63,6 +63,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">lid⁷ dog⁷</span>
 <button class="play" onclick="play('liet7.mp3|tog7.mp3')">&#9654;</button></div>
 <p class="rb-py">lìsù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">傈僳族，我国少数民族之一，主要分布在云南。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">傈僳族，我国少数民族之一，主要分布在云南。</span><span class="en">The Lisu, one of China's ethnic minorities, living mainly in Yunnan.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

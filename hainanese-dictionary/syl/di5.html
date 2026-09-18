@@ -18,7 +18,7 @@
 <div class="gl zh">姓；表明家族的字。张～、～族。</div><div class="also">另读 <i>zi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b6e.html">
 <div class="ch">筮</div><div class="body">
 <span class="py">shì</span>
-<div class="gl zh">〈书〉用蓍草占卜。卜～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8680.html">
+<div class="gl zh">用蓍草占卜。卜～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8680.html">
 <div class="ch">蚀</div><div class="body">
 <span class="py">shí</span>
 <div class="gl zh">损伤；亏耗。侵～、腐～、～本。</div><div class="also">另读 <i>deg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c49.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

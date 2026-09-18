@@ -15,12 +15,18 @@
 <span class="rbig">i¹</span>
 <button class="play" onclick="play('i1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/i1.html">同音字 15</a></div>
 <p class="rb-py">yú</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">介词，表示时间、处所、范围、对象等。生～北京、乐～助人、有利～健康。</span><span class="en">Preposition marking time, place, scope or object. 生于北京 born in Beijing; 乐于助人 glad to help others.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉用在形容词后表示比较。大～、重～泰山。</span><span class="en">〈lit.〉 After an adjective, marking comparison. 重于泰山 weightier than Mount Tai.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">介词，表示时间、处所、范围、对象等。生～北京、乐～助人、有利～健康。</span><span class="en">Preposition marking time, place, scope or object. 生于北京 born in Beijing; 乐于助人 glad to help others.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>用在形容词后表示比较。大～、重～泰山。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> After an adjective, marking comparison. 重于泰山 weightier than Mount Tai.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,19 @@
 <span class="rbig">ddo²</span>
 <button class="play" onclick="play('do2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddo2.html">同音字 6</a></div>
 <p class="rb-py">táng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">正房；高大的房子。～屋、厅～、礼～、殿～。</span><span class="en">A main room; a hall. 堂屋; 厅堂; 礼堂; 殿堂.</span></span></li><li><span class="num">②</span><span><span class="zh">专门用途的房屋。课～、食～、澡～、教～。</span><span class="en">A room for a particular use. 课堂; 食堂; 澡堂; 教堂.</span></span></li><li><span class="num">③</span><span><span class="zh">同祖父的亲属关系。～兄、～姐、～房。</span><span class="en">Related through a common grandfather. 堂兄; 堂姐; 堂房.</span></span></li><li><span class="num">④</span><span><span class="zh">量词，用于分节的课程或成套的家具。一～课、一～家具。</span><span class="en">Measure word for class periods and suites of furniture. 一堂课; 一堂家具.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hang2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">正房；高大的房子。～屋、厅～、礼～、殿～。</span><span class="en">A main room; a hall. 堂屋; 厅堂; 礼堂; 殿堂.</span></span></li><li><span class="num">②</span><span><span class="zh">专门用途的房屋。课～、食～、澡～、教～。</span><span class="en">A room for a particular use. 课堂; 食堂; 澡堂; 教堂.</span></span></li><li><span class="num">③</span><span><span class="zh">同祖父的亲属关系。～兄、～姐、～房。</span><span class="en">Related through a common grandfather. 堂兄; 堂姐; 堂房.</span></span></li><li><span class="num">④</span><span><span class="zh">量词，用于分节的课程或成套的家具。一～课、一～家具。</span><span class="en">Measure word for class periods and suites of furniture. 一堂课; 一堂家具.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hang2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

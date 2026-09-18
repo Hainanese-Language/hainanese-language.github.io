@@ -15,12 +15,18 @@
 <span class="rbig">hi³</span>
 <button class="play" onclick="play('hi3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hi3.html">同音字 6</a></div>
 <p class="rb-py">qí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">他的；他们的。物尽～用、各得～所。</span><span class="en">His; her; its; their.</span></span></li><li><span class="num">②</span><span><span class="zh">他；那。任～自然、出～不意。</span><span class="en">He; that one.</span></span></li><li><span class="num">③</span><span><span class="zh">那个；那样。～中、～余、～他。</span><span class="en">That; those; such.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉表示揣测或反问。～奈我何。</span><span class="en">〈lit.〉 Marking a conjecture or a rhetorical question.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">他的；他们的。物尽～用、各得～所。</span><span class="en">His; her; its; their.</span></span></li><li><span class="num">②</span><span><span class="zh">他；那。任～自然、出～不意。</span><span class="en">He; that one.</span></span></li><li><span class="num">③</span><span><span class="zh">那个；那样。～中、～余、～他。</span><span class="en">That; those; such.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>表示揣测或反问。～奈我何。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Marking a conjecture or a rhetorical question.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">军事上的防守建筑。碉～、～垒、城～。</div><div class="also">另读 <i>pou⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8446.html">
 <div class="ch">葆</div><div class="body">
 <span class="py">bǎo</span>
-<div class="gl zh">〈书〉保持；保护。永～青春、～有。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8913.html">
+<div class="gl zh">保持；保护。永～青春、～有。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8913.html">
 <div class="ch">褓</div><div class="body">
 <span class="py">bǎo</span>
 <div class="gl zh">仅用于"襁褓"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e28.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

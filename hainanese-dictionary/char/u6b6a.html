@@ -15,12 +15,18 @@
 <span class="rbig">uai¹</span>
 <button class="play" onclick="play('uai1.mp3')">&#9654;</button></div>
 <p class="rb-py">wāi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">不正；偏斜，跟"正"相对。～斜、～戴帽子、上梁不正下梁～。</span><span class="en">Askew; slanting — the opposite of 正. 歪斜 crooked; 上梁不正下梁歪 if the upper beam is crooked the lower will be too.</span></span></li><li><span class="num">②</span><span><span class="zh">不正当的；不正派的。～门邪道、～风。</span><span class="en">Improper; crooked. 歪门邪道 crooked ways; 歪风 an unhealthy trend.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉侧身躺着休息。～一会儿。</span><span class="en">〈dial.〉 To lie down on one's side for a rest. 歪一会儿 to lie down for a while.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">不正；偏斜，跟"正"相对。～斜、～戴帽子、上梁不正下梁～。</span><span class="en">Askew; slanting — the opposite of 正. 歪斜 crooked; 上梁不正下梁歪 if the upper beam is crooked the lower will be too.</span></span></li><li><span class="num">②</span><span><span class="zh">不正当的；不正派的。～门邪道、～风。</span><span class="en">Improper; crooked. 歪门邪道 crooked ways; 歪风 an unhealthy trend.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>侧身躺着休息。～一会儿。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To lie down on one's side for a rest. 歪一会儿 to lie down for a while.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

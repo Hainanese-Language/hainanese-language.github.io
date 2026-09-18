@@ -15,12 +15,18 @@
 <span class="rbig">yiag⁷</span>
 <button class="play" onclick="play('jiag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yiag7.html">同音字 8</a></div>
 <p class="rb-py">ruò</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">如果；假如。～是、假～、倘～、～不努力。</span><span class="en">If; supposing. 若是; 假若; 倘若; 若不努力.</span></span></li><li><span class="num">②</span><span><span class="zh">像；好像。～有所思、旁～无人、～隐～现。</span><span class="en">As if; seemingly. 若有所思; 旁若无人; 若隐若现.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉你。～辈。</span><span class="en">〈lit.〉 You. 若辈.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">如果；假如。～是、假～、倘～、～不努力。</span><span class="en">If; supposing. 若是; 假若; 倘若; 若不努力.</span></span></li><li><span class="num">②</span><span><span class="zh">像；好像。～有所思、旁～无人、～隐～现。</span><span class="en">As if; seemingly. 若有所思; 旁若无人; 若隐若现.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>你。～辈。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> You. 若辈.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

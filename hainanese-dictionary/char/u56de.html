@@ -15,12 +15,19 @@
 <span class="rbig">ddui³</span>
 <button class="play" onclick="play('dui3.mp3')">&#9654;</button></div>
 <p class="rb-py">huí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">曲折环绕。～旋、～廊、迂～。</span><span class="en">To circle; wind about. 回旋 to revolve; 回廊 a winding corridor; 迂回 roundabout.</span></span></li><li><span class="num">②</span><span><span class="zh">从别处到原来的地方。～家、～国、～来。</span><span class="en">To return to where one came from. 回家 to go home; 回来 to come back.</span></span></li><li><span class="num">③</span><span><span class="zh">掉转。～头、～过身来。</span><span class="en">To turn round. 回头 to turn one's head; 回过身来 to turn about.</span></span></li><li><span class="num">④</span><span><span class="zh">答复；报答。～信、～话、～敬。</span><span class="en">To reply; return in kind. 回信 to write back; 回敬 to return a courtesy.</span></span></li><li><span class="num">⑤</span><span><span class="zh">谢绝；辞去。～绝、把他～了。</span><span class="en">To decline; dismiss. 回绝 to refuse; 把他回了 turned him away.</span></span></li><li><span class="num">⑥</span><span><span class="zh">量词，用于事情或章回。两～事、第一～。</span><span class="en">Measure word for occurrences and for chapters. 两回事 two different matters; 第一回 chapter one.</span></span></li><li><span class="num">⑦</span><span><span class="zh">指回族。～民。</span><span class="en">The Hui people. 回民 a Hui Muslim.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhui²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('wui2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">曲折环绕。～旋、～廊、迂～。</span><span class="en">To circle; wind about. 回旋 to revolve; 回廊 a winding corridor; 迂回 roundabout.</span></span></li><li><span class="num">②</span><span><span class="zh">从别处到原来的地方。～家、～国、～来。</span><span class="en">To return to where one came from. 回家 to go home; 回来 to come back.</span></span></li><li><span class="num">③</span><span><span class="zh">掉转。～头、～过身来。</span><span class="en">To turn round. 回头 to turn one's head; 回过身来 to turn about.</span></span></li><li><span class="num">④</span><span><span class="zh">答复；报答。～信、～话、～敬。</span><span class="en">To reply; return in kind. 回信 to write back; 回敬 to return a courtesy.</span></span></li><li><span class="num">⑤</span><span><span class="zh">谢绝；辞去。～绝、把他～了。</span><span class="en">To decline; dismiss. 回绝 to refuse; 把他回了 turned him away.</span></span></li><li><span class="num">⑥</span><span><span class="zh">量词，用于事情或章回。两～事、第一～。</span><span class="en">Measure word for occurrences and for chapters. 两回事 two different matters; 第一回 chapter one.</span></span></li><li><span class="num">⑦</span><span><span class="zh">指回族。～民。</span><span class="en">The Hui people. 回民 a Hui Muslim.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhui²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('wui2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

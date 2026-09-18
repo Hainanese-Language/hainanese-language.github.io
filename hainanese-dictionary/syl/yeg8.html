@@ -12,13 +12,13 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/yeg7.html">yeg⁷</a><a class="chip on" href="/hainanese-dictionary/syl/yeg8.html">yeg⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u4ea6.html">
 <div class="ch">亦</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f79.html">
+<div class="gl zh">也；也是。人云～云。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f79.html">
 <div class="ch">役</div><div class="body">
 <span class="py">yì</span>
 <div class="gl zh">需要出力的事。劳～、苦～、兵～。</div><div class="also">另读 <i>yud⁸</i> · <i>hhia⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6396.html">
 <div class="ch">掖</div><div class="body">
 <span class="py">yè · yē</span>
-<div class="gl zh">〈书〉扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75ab.html">
+<div class="gl zh">扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75ab.html">
 <div class="ch">疫</div><div class="body">
 <span class="py">yì</span>
 <div class="gl zh">流行性的传染病。～情、防～、瘟～。</div><div class="also">另读 <i>muad⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ece.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">理出头绪；推演。演～、寻～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7fcc.html">
 <div class="ch">翌</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉次于今日、今年的。～日、～年。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ffc.html">
+<div class="gl zh">次于今日、今年的。～日、～年。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ffc.html">
 <div class="ch">翼</div><div class="body">
 <span class="py">yì</span>
 <div class="gl zh">翅膀。羽～、机～、～展。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u814b.html">
@@ -42,7 +42,7 @@
 <div class="gl zh">古代传递公文的人换马、歇宿的处所。～站、～道。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6396.html">
 <div class="ch">掖</div><div class="body">
 <span class="py">yè · yē</span>
-<div class="gl zh">〈书〉扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6613.html">
+<div class="gl zh">扶持；提携。提～、奖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6613.html">
 <div class="ch">易</div><div class="body">
 <span class="py">yì</span>
 <div class="gl zh">容易；跟"难"相对。轻而～举、简～、平～近人。</div><div class="also">主读 <i>yi⁵</i></div></div></a><footer>
@@ -51,6 +51,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

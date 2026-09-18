@@ -13,14 +13,20 @@
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">suō</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">so¹</span>
-<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 13</a></div>
+<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 12</a></div>
 <p class="rb-py">suō</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">挑动别人做坏事。教～、～使、调～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">挑动别人做坏事。教～、～使、调～。</span><span class="en">To incite someone to wrongdoing. 教唆 to abet; 唆使 to instigate; 调唆 to stir up trouble.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">zi¹</span>
 <button class="play" onclick="play('ci1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zi1.html">同音字 17</a></div>
 <p class="rb-py">zhū</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">众；许多。～位、～多、～事顺利。</span><span class="en">Various; many. 诸位 ladies and gentlemen; 诸多 a good many; 诸事顺利 all goes well.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉"之于"或"之乎"的合音。付～实施、公～于世。</span><span class="en">〈lit.〉 A fusion of 之于 or 之乎. 付诸实施 to put into effect; 公诸于世 to make known to the world.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">众；许多。～位、～多、～事顺利。</span><span class="en">Various; many. 诸位 ladies and gentlemen; 诸多 a good many; 诸事顺利 all goes well.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>"之于"或"之乎"的合音。付～实施、公～于世。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A fusion of 之于 or 之乎. 付诸实施 to put into effect; 公诸于世 to make known to the world.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

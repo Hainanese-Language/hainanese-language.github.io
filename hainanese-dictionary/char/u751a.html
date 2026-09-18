@@ -15,16 +15,22 @@
 <span class="rbig">dim⁵</span>
 <button class="play" onclick="play('tiom5.mp3')">&#9654;</button></div>
 <p class="rb-py">shèn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">很；极。～好、～快、不～满意。</span><span class="en">Very; extremely. 甚好 very good; 甚快 very fast; 不甚满意 not particularly pleased.</span></span></li><li><span class="num">②</span><span><span class="zh">超过；胜过。日～一日、更有～者。</span><span class="en">To exceed; to surpass. 日甚一日 worse with every passing day; 更有甚者 what is more.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉过分。太～、欺人太～。</span><span class="en">〈lit.〉 Excessive. 太甚 to go too far; 欺人太甚 to bully beyond all bounds.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">很；极。～好、～快、不～满意。</span><span class="en">Very; extremely. 甚好 very good; 甚快 very fast; 不甚满意 not particularly pleased.</span></span></li><li><span class="num">②</span><span><span class="zh">超过；胜过。日～一日、更有～者。</span><span class="en">To exceed; to surpass. 日甚一日 worse with every passing day; 更有甚者 what is more.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>过分。太～、欺人太～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Excessive. 太甚 to go too far; 欺人太甚 to bully beyond all bounds.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">sim⁶</span>
 <button class="play" onclick="play('siom6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sim6.html">同音字 3</a></div>
 <p class="rb-py">shén</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"甚么"，同"什么"。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"甚么"，同"什么"。</span><span class="en">Used in 甚么, a variant of 什么: what.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/dang1.html">dang¹</a><a class="chip" href="/hainanese-dictionary/syl/dang2.html">dang²</a><a class="chip" href="/hainanese-dictionary/syl/dang3.html">dang³</a><a class="chip" href="/hainanese-dictionary/syl/dang4.html">dang⁴</a><a class="chip" href="/hainanese-dictionary/syl/dang5.html">dang⁵</a><a class="chip" href="/hainanese-dictionary/syl/dang6.html">dang⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u81e7.html">
 <div class="ch">臧</div><div class="body">
 <span class="py">zāng</span>
-<div class="gl zh">〈书〉善；好。～否人物。也用于姓氏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d43.html">
+<div class="gl zh">善；好。～否人物。也用于姓氏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d43.html">
 <div class="ch">赃</div><div class="body">
 <span class="py">zāng</span>
 <div class="gl zh">贪污受贿或偷盗得来的财物。～款、～物、退～。</div><div class="also">另读 <i>do¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9b03.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

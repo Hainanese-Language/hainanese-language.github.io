@@ -15,16 +15,22 @@
 <span class="rbig">gi⁶</span>
 <button class="play" onclick="play('ki6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi6.html">同音字 19</a></div>
 <p class="rb-py">jù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"莴～"，一种蔬菜。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"莴～"，一种蔬菜。</span><span class="en">Used in 莴苣: lettuce.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hi³</span>
 <button class="play" onclick="play('hi3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hi3.html">同音字 6</a></div>
 <p class="rb-py">qǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"～荬菜"，一种野菜。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"～荬菜"，一种野菜。</span><span class="en">Used in 苣荬菜: the sow thistle, eaten as a wild green.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

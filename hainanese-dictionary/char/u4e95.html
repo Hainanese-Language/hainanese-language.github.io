@@ -15,12 +15,19 @@
 <span class="rbig">ze³</span>
 <button class="play" onclick="play('ce3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ze3.html">同音字 7</a></div>
 <p class="rb-py">jǐng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">从地面向下挖成的取水深洞。水～、打～、～水。</span><span class="en">A well, a deep hole dug for water. 水井 a well; 打井 to sink a well.</span></span></li><li><span class="num">②</span><span><span class="zh">形状像井的东西。矿～、油～、天～。</span><span class="en">Anything shaped like a well. 矿井 a mine shaft; 油井 an oil well.</span></span></li><li><span class="num">③</span><span><span class="zh">整齐；有条理。～～有条、秩序～然。</span><span class="en">Orderly; methodical. 井井有条 in perfect order; 秩序井然 in good order.</span></span></li><li><span class="num">④</span><span><span class="zh">星宿名，二十八宿之一。</span><span class="en">One of the Twenty-Eight Lunar Mansions.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">zeng³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ceng3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">从地面向下挖成的取水深洞。水～、打～、～水。</span><span class="en">A well, a deep hole dug for water. 水井 a well; 打井 to sink a well.</span></span></li><li><span class="num">②</span><span><span class="zh">形状像井的东西。矿～、油～、天～。</span><span class="en">Anything shaped like a well. 矿井 a mine shaft; 油井 an oil well.</span></span></li><li><span class="num">③</span><span><span class="zh">整齐；有条理。～～有条、秩序～然。</span><span class="en">Orderly; methodical. 井井有条 in perfect order; 秩序井然 in good order.</span></span></li><li><span class="num">④</span><span><span class="zh">星宿名，二十八宿之一。</span><span class="en">One of the Twenty-Eight Lunar Mansions.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">zeng³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ceng3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

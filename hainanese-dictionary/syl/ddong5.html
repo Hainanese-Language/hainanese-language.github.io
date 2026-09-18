@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ddong1.html">ddong¹</a><a class="chip" href="/hainanese-dictionary/syl/ddong3.html">ddong³</a><a class="chip on" href="/hainanese-dictionary/syl/ddong5.html">ddong⁵</a><a class="chip" href="/hainanese-dictionary/syl/ddong6.html">ddong⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u4f97.html">
 <div class="ch">侗</div><div class="body">
 <span class="py">dòng · tóng</span>
-<div class="gl zh">侗族，我国少数民族之一，主要分布在贵州、湖南、广西。  tóng 〈书〉幼稚无知。倥～。</div><div class="also">另读 <i>hong²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u680b.html">
+<div class="gl zh">侗族，我国少数民族之一，主要分布在贵州、湖南、广西。  tóng 幼稚无知。倥～。</div><div class="also">另读 <i>hong²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u680b.html">
 <div class="ch">栋</div><div class="body">
 <span class="py">dòng</span>
 <div class="gl zh">房屋的正梁。～梁之材、汗牛充～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d1e.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

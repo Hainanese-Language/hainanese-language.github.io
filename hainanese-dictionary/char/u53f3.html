@@ -15,12 +15,18 @@
 <span class="rbig">yiu⁶</span>
 <button class="play" onclick="play('jiu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yiu6.html">同音字 5</a></div>
 <p class="rb-py">yòu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">面向南时靠西的一边；跟"左"相对。～手、～边、向～转。</span><span class="en">The right-hand side; the opposite of 左. 右手 the right hand; 向右转 turn right.</span></span></li><li><span class="num">②</span><span><span class="zh">政治上属于保守的一派。～派、～倾。</span><span class="en">Politically conservative. 右派 the right wing; 右倾 rightist.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉尊崇；重视。～文。</span><span class="en">〈lit.〉 To esteem; give precedence to. 右文 to prize learning.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">面向南时靠西的一边；跟"左"相对。～手、～边、向～转。</span><span class="en">The right-hand side; the opposite of 左. 右手 the right hand; 向右转 turn right.</span></span></li><li><span class="num">②</span><span><span class="zh">政治上属于保守的一派。～派、～倾。</span><span class="en">Politically conservative. 右派 the right wing; 右倾 rightist.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>尊崇；重视。～文。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To esteem; give precedence to. 右文 to prize learning.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

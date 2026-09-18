@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>镏 · 海南话字典</title><meta name="description" content="镏 的海南话读音 liu²、liu⁶，普通话 liú · liù。用于"镏金"，一种镀金的工艺。  liù 〈方〉戒指。～子。">
+<title>镏 · 海南话字典</title><meta name="description" content="镏 的海南话读音 liu²、liu⁶，普通话 liú · liù。用于"镏金"，一种镀金的工艺。  liù 戒指。～子。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">liu²</span>
 <button class="play" onclick="play('liu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu2.html">同音字 7</a></div>
 <p class="rb-py">liú</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"镏金"，一种镀金的工艺。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"镏金"，一种镀金的工艺。</span><span class="en">Used in 镏金, a traditional gilding technique.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">liu⁶</span>
 <button class="play" onclick="play('liu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu6.html">同音字 7</a></div>
 <p class="rb-py">liù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉戒指。～子。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>戒指。～子。</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

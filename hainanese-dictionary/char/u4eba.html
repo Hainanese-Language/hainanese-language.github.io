@@ -15,12 +15,19 @@
 <span class="rbig">nang²</span>
 <button class="play" onclick="play('nang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/nang2.html">同音字 2</a></div>
 <p class="rb-py">rén</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">能制造和使用工具进行劳动的高等动物。～类、男～、～口。</span><span class="en">A human being, the higher animal that makes and uses tools. 人类 humankind; 男人 a man; 人口 population.</span></span></li><li><span class="num">②</span><span><span class="zh">每人；一般人。～手一册、～所共知。</span><span class="en">Each person; people in general. 人手一册 a copy for everyone; 人所共知 as everyone knows.</span></span></li><li><span class="num">③</span><span><span class="zh">指某种人。工～、军～、主～、诗～。</span><span class="en">A person of a particular kind. 工人 a worker; 军人 a serviceman; 主人 a host; 诗人 a poet.</span></span></li><li><span class="num">④</span><span><span class="zh">别人。待～诚恳、助～为乐。</span><span class="en">Others. 待人诚恳 to treat others sincerely; 助人为乐 to take pleasure in helping others.</span></span></li><li><span class="num">⑤</span><span><span class="zh">人的品性或名声。为～、～品、丢～。</span><span class="en">A person's character or good name. 为人 the way one conducts oneself; 人品 character; 丢人 to lose face.</span></span></li><li><span class="num">⑥</span><span><span class="zh">指人的身体状况。这几天～不大舒服。</span><span class="en">Referring to one's physical condition. 这几天人不大舒服 I've not been feeling well these few days.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">yin³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('jien3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">能制造和使用工具进行劳动的高等动物。～类、男～、～口。</span><span class="en">A human being, the higher animal that makes and uses tools. 人类 humankind; 男人 a man; 人口 population.</span></span></li><li><span class="num">②</span><span><span class="zh">每人；一般人。～手一册、～所共知。</span><span class="en">Each person; people in general. 人手一册 a copy for everyone; 人所共知 as everyone knows.</span></span></li><li><span class="num">③</span><span><span class="zh">指某种人。工～、军～、主～、诗～。</span><span class="en">A person of a particular kind. 工人 a worker; 军人 a serviceman; 主人 a host; 诗人 a poet.</span></span></li><li><span class="num">④</span><span><span class="zh">别人。待～诚恳、助～为乐。</span><span class="en">Others. 待人诚恳 to treat others sincerely; 助人为乐 to take pleasure in helping others.</span></span></li><li><span class="num">⑤</span><span><span class="zh">人的品性或名声。为～、～品、丢～。</span><span class="en">A person's character or good name. 为人 the way one conducts oneself; 人品 character; 丢人 to lose face.</span></span></li><li><span class="num">⑥</span><span><span class="zh">指人的身体状况。这几天～不大舒服。</span><span class="en">Referring to one's physical condition. 这几天人不大舒服 I've not been feeling well these few days.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">yin³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('jien3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

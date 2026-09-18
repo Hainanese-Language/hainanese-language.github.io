@@ -39,7 +39,7 @@
 <div class="gl zh">仅用于"鲫鱼"，一种常见的淡水鱼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6809.html">
 <div class="ch">栉</div><div class="body">
 <span class="py">zhì</span>
-<div class="gl zh">〈书〉梳子和篦子的总称。～发、鳞次～比。</div><div class="also">主读 <i>zeg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u810a.html">
+<div class="gl zh">梳子和篦子的总称。～发、鳞次～比。</div><div class="also">主读 <i>zeg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u810a.html">
 <div class="ch">脊</div><div class="body">
 <span class="py">jǐ · jí</span>
 <div class="gl zh">人和动物背上中间的骨头。～椎、～梁、～背。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8282.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

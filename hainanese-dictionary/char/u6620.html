@@ -15,12 +15,19 @@
 <span class="rbig">eng⁴</span>
 <button class="play" onclick="play('eng4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/eng4.html">同音字 3</a></div>
 <p class="rb-py">yìng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">光线照射。～照、照～、～入眼帘。</span><span class="en">(of light) to shine on.</span></span></li><li><span class="num">②</span><span><span class="zh">因光线照射而现出物体的形象。倒～、放～、～现。</span><span class="en">to show an image by the action of light.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">iang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('iang4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">光线照射。～照、照～、～入眼帘。</span><span class="en">(of light) to shine on.</span></span></li><li><span class="num">②</span><span><span class="zh">因光线照射而现出物体的形象。倒～、放～、～现。</span><span class="en">to show an image by the action of light.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">iang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('iang4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

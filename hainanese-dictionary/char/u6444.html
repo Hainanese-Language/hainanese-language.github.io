@@ -15,12 +15,18 @@
 <span class="rbig">dib⁷</span>
 <button class="play" onclick="play('tiob7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dib7.html">同音字 2</a></div>
 <p class="rb-py">shè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">吸取；吸收。～取、～入、～食。</span><span class="en">To take in; to absorb. 摄取; 摄入; 摄食.</span></span></li><li><span class="num">②</span><span><span class="zh">拍照；录制。～影、～像、拍～。</span><span class="en">To photograph; to film. 摄影; 摄像; 拍摄.</span></span></li><li><span class="num">③</span><span><span class="zh">保养。～生、珍～。</span><span class="en">To look after one's health. 摄生; 珍摄.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉代理。～政、～位。</span><span class="en">〈lit.〉 To act in place of. 摄政; 摄位.</span></span></li></ul><div class="alt"><span class="r2">dib⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tiob8.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">吸取；吸收。～取、～入、～食。</span><span class="en">To take in; to absorb. 摄取; 摄入; 摄食.</span></span></li><li><span class="num">②</span><span><span class="zh">拍照；录制。～影、～像、拍～。</span><span class="en">To photograph; to film. 摄影; 摄像; 拍摄.</span></span></li><li><span class="num">③</span><span><span class="zh">保养。～生、珍～。</span><span class="en">To look after one's health. 摄生; 珍摄.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>代理。～政、～位。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To act in place of. 摄政; 摄位.</span></span></li></ul><div class="alt"><span class="r2">dib⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tiob8.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

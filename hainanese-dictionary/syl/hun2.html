@@ -18,7 +18,7 @@
 <div class="gl zh">屁股。～部、～围、～尖。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c5a.html">
 <div class="ch">豚</div><div class="body">
 <span class="py">tún</span>
-<div class="gl zh">〈书〉小猪；也泛指猪。海～、河～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u56e4.html">
+<div class="gl zh">小猪；也泛指猪。海～、河～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u56e4.html">
 <div class="ch">囤</div><div class="body">
 <span class="py">dùn · tún</span>
 <div class="gl zh">用竹篾、荆条等编成的盛粮食的器物。粮～、～尖。  tún 储存；积存。～粮、～积居奇。</div><div class="also">主读 <i>ddun¹</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

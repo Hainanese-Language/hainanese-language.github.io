@@ -18,7 +18,7 @@
 <div class="gl zh">君主；帝王的妻子。皇～、太～、～妃。</div><div class="also">另读 <i>ao⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96e8.html">
 <div class="ch">雨</div><div class="body">
 <span class="py">yǔ · yù</span>
-<div class="gl zh">从云层中降落的水滴。下～、～水、暴～。  yù 〈书〉降下（雨、雪等）。～雪。</div><div class="also">另读 <i>yi³</i> · <i>yi⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4faf.html">
+<div class="gl zh">从云层中降落的水滴。下～、～水、暴～。  yù 降下（雨、雪等）。～雪。</div><div class="also">另读 <i>yi³</i> · <i>yi⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4faf.html">
 <div class="ch">侯</div><div class="body">
 <span class="py">hóu · hòu</span>
 <div class="gl zh">古代五等爵位的第二等；泛指达官贵人。～爵、诸～、王～将相。</div><div class="also">主读 <i>hhou²</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

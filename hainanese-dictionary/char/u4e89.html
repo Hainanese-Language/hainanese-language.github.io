@@ -15,12 +15,18 @@
 <span class="rbig">ze¹</span>
 <button class="play" onclick="play('ce1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ze1.html">同音字 4</a></div>
 <p class="rb-py">zhēng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">力求得到或达到。～取、～夺、～先恐后。</span><span class="en">To strive for. 争取 to fight for; 争夺 to contend for; 争先恐后 to vie with one another to be first.</span></span></li><li><span class="num">②</span><span><span class="zh">争执；争论。～吵、～辩、～端、意气之～。</span><span class="en">To dispute. 争吵 to quarrel; 争辩 to argue; 争端 a dispute; 意气之争 a clash of tempers.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉差；欠。～不多。</span><span class="en">〈dial.〉 To fall short by. 争不多 not far off.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">力求得到或达到。～取、～夺、～先恐后。</span><span class="en">To strive for. 争取 to fight for; 争夺 to contend for; 争先恐后 to vie with one another to be first.</span></span></li><li><span class="num">②</span><span><span class="zh">争执；争论。～吵、～辩、～端、意气之～。</span><span class="en">To dispute. 争吵 to quarrel; 争辩 to argue; 争端 a dispute; 意气之争 a clash of tempers.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>差；欠。～不多。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To fall short by. 争不多 not far off.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

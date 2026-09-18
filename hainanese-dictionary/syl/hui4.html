@@ -15,7 +15,7 @@
 <div class="gl zh">缺乏。～乏、～竭。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u559f.html">
 <div class="ch">喟</div><div class="body">
 <span class="py">kuì</span>
-<div class="gl zh">〈书〉叹气。～叹、～然长叹。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c14.html">
+<div class="gl zh">叹气。～叹、～然长叹。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c14.html">
 <div class="ch">气</div><div class="body">
 <span class="py">qì</span>
 <div class="gl zh">没有一定形状和体积的物体。～体、空～、煤～。</div><div class="also">另读 <i>hi⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c7d.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">用开水烫后去掉毛。～猪毛、～鸡。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8069.html">
 <div class="ch">聩</div><div class="body">
 <span class="py">kuì</span>
-<div class="gl zh">〈书〉耳聋。振聋发～、昏～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8715.html">
+<div class="gl zh">耳聋。振聋发～、昏～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8715.html">
 <div class="ch">蜕</div><div class="body">
 <span class="py">tuì</span>
 <div class="gl zh">蛇、蝉等脱下的皮。蛇～、～皮。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9000.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

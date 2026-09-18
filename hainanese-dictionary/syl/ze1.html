@@ -15,18 +15,24 @@
 <div class="gl zh">力求得到或达到。～取、～夺、～先恐后。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55df.html">
 <div class="ch">嗟</div><div class="body">
 <span class="py">jiē</span>
-<div class="gl zh">〈书〉叹词，表示感慨或招呼。～叹、～来之食。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59d0.html">
+<div class="gl zh">叹词，表示感慨或招呼。～叹、～来之食。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59d0.html">
 <div class="ch">姐</div><div class="body">
 <span class="py">jiě</span>
 <div class="gl zh">姐姐。～妹、大～。</div><div class="also">另读 <i>ze³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u658b.html">
 <div class="ch">斋</div><div class="body">
 <span class="py">zhāi</span>
-<div class="gl zh">〈旧〉祭祀前整洁身心，表示虔敬。～戒、～沐。</div><div class="also">主读 <i>dai¹</i></div></div></a><footer>
+<div class="gl zh">祭祀前整洁身心，表示虔敬。～戒、～沐。</div><div class="also">主读 <i>dai¹</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

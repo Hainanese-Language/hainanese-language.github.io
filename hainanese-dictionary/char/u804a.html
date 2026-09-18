@@ -15,12 +15,18 @@
 <span class="rbig">liao²</span>
 <button class="play" onclick="play('liau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liao2.html">同音字 15</a></div>
 <p class="rb-py">liáo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">闲谈。～天、闲～、～家常。</span><span class="en">To chat.</span></span></li><li><span class="num">②</span><span><span class="zh">姑且；勉强。～以自慰、～胜于无。</span><span class="en">For the moment; just barely.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉依赖；寄托。民不～生。</span><span class="en">〈lit.〉 To rely on; to have something to fall back on.</span></span></li><li><span class="num">④</span><span><span class="zh">兴趣。无～。</span><span class="en">Interest; something to occupy one.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">闲谈。～天、闲～、～家常。</span><span class="en">To chat.</span></span></li><li><span class="num">②</span><span><span class="zh">姑且；勉强。～以自慰、～胜于无。</span><span class="en">For the moment; just barely.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>依赖；寄托。民不～生。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To rely on; to have something to fall back on.</span></span></li><li><span class="num">④</span><span><span class="zh">兴趣。无～。</span><span class="en">Interest; something to occupy one.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

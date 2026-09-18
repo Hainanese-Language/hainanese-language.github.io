@@ -15,12 +15,18 @@
 <span class="rbig">zin¹</span>
 <button class="play" onclick="play('cien1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zin1.html">同音字 11</a></div>
 <p class="rb-py">zhēn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">榛树，落叶灌木或小乔木，果实可食。～子、～树。</span><span class="en">hazel, a deciduous shrub or small tree with edible nuts.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉丛生的草木。～莽、～芜。</span><span class="en">〈lit.〉 a thicket of grass and shrubs.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">榛树，落叶灌木或小乔木，果实可食。～子、～树。</span><span class="en">hazel, a deciduous shrub or small tree with edible nuts.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>丛生的草木。～莽、～芜。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> a thicket of grass and shrubs.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

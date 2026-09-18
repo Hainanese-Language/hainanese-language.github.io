@@ -15,12 +15,18 @@
 <div class="gl zh">早晨。～上、～饭、清～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u548b.html">
 <div class="ch">咋</div><div class="body">
 <span class="py">zhā · zǎ · zhà</span>
-<div class="gl zh">用于"咋呼"，指大声喊叫或张扬。  zǎ 〈方〉疑问代词，怎么；怎样。这可～办？  zhà 〈书〉咬。</div><div class="also">主读 <i>da⁶</i> · <i>da¹</i></div></div></a><footer>
+<div class="gl zh">用于"咋呼"，指大声喊叫或张扬。  zǎ 疑问代词，怎么；怎样。这可～办？  zhà 咬。</div><div class="also">主读 <i>da⁶</i> · <i>da¹</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

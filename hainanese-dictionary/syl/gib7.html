@@ -24,7 +24,7 @@
 <div class="gl zh">从井里打水；泛指打水。～水、～取经验。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b08.html">
 <div class="ch">笈</div><div class="body">
 <span class="py">jí</span>
-<div class="gl zh">〈书〉书箱。负～从师。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ea7.html">
+<div class="gl zh">书箱。负～从师。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ea7.html">
 <div class="ch">级</div><div class="body">
 <span class="py">jí</span>
 <div class="gl zh">等级。上～、～别、高～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ed9.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

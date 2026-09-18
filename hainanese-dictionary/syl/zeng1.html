@@ -30,7 +30,7 @@
 <div class="gl zh">厌恶；恨。～恨、可～、爱～分明。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u65cc.html">
 <div class="ch">旌</div><div class="body">
 <span class="py">jīng</span>
-<div class="gl zh">〈古〉一种用羽毛装饰的旗子。～旗。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6676.html">
+<div class="gl zh">一种用羽毛装饰的旗子。～旗。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6676.html">
 <div class="ch">晶</div><div class="body">
 <span class="py">jīng</span>
 <div class="gl zh">光亮；透明。～莹、～亮、亮～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u66fe.html">
@@ -75,6 +75,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,19 @@
 <span class="rbig">dai²</span>
 <button class="play" onclick="play('tai2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dai2.html">同音字 2</a></div>
 <p class="rb-py">qián</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">空间上在正面的；跟"后"相对。～面、～门、～排、往～走。</span><span class="en">In front; the opposite of 后. 前面 the front; 前门 the front gate; 前排 the front row; 往前走 to walk forward.</span></span></li><li><span class="num">②</span><span><span class="zh">时间上较早的。～天、从～、～所未有、史无～例。</span><span class="en">Earlier in time. 前天 the day before yesterday; 从前 formerly; 前所未有 unprecedented; 史无前例 without precedent in history.</span></span></li><li><span class="num">③</span><span><span class="zh">次序在先的。～三名、～言。</span><span class="en">Earlier in order. 前三名 the top three; 前言 a foreword.</span></span></li><li><span class="num">④</span><span><span class="zh">向前行进。勇往直～、畏缩不～。</span><span class="en">To advance. 勇往直前 to press bravely forward; 畏缩不前 to shrink back.</span></span></li><li><span class="num">⑤</span><span><span class="zh">从前的；已经卸任的。～任、～妻、～校长。</span><span class="en">Former; no longer holding the post. 前任 a predecessor; 前妻 an ex-wife; 前校长 a former principal.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">sin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">空间上在正面的；跟"后"相对。～面、～门、～排、往～走。</span><span class="en">In front; the opposite of 后. 前面 the front; 前门 the front gate; 前排 the front row; 往前走 to walk forward.</span></span></li><li><span class="num">②</span><span><span class="zh">时间上较早的。～天、从～、～所未有、史无～例。</span><span class="en">Earlier in time. 前天 the day before yesterday; 从前 formerly; 前所未有 unprecedented; 史无前例 without precedent in history.</span></span></li><li><span class="num">③</span><span><span class="zh">次序在先的。～三名、～言。</span><span class="en">Earlier in order. 前三名 the top three; 前言 a foreword.</span></span></li><li><span class="num">④</span><span><span class="zh">向前行进。勇往直～、畏缩不～。</span><span class="en">To advance. 勇往直前 to press bravely forward; 畏缩不前 to shrink back.</span></span></li><li><span class="num">⑤</span><span><span class="zh">从前的；已经卸任的。～任、～妻、～校长。</span><span class="en">Former; no longer holding the post. 前任 a predecessor; 前妻 an ex-wife; 前校长 a former principal.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">sin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

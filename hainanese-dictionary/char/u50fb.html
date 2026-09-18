@@ -15,12 +15,19 @@
 <span class="rbig">pia⁶</span>
 <button class="play" onclick="play('phia6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pia6.html">同音字 2</a></div>
 <p class="rb-py">pì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">偏远；不常见的。偏～、荒～、～静、生～字。</span><span class="en">Remote; out of the way or seldom met with. 偏僻 out-of-the-way; 荒僻 desolate; 僻静 secluded; 生僻字 an uncommon character.</span></span></li><li><span class="num">②</span><span><span class="zh">性情古怪。孤～、怪～。</span><span class="en">Odd in temperament. 孤僻 unsociable; 怪僻 eccentric.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">peg⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pheg7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">偏远；不常见的。偏～、荒～、～静、生～字。</span><span class="en">Remote; out of the way or seldom met with. 偏僻 out-of-the-way; 荒僻 desolate; 僻静 secluded; 生僻字 an uncommon character.</span></span></li><li><span class="num">②</span><span><span class="zh">性情古怪。孤～、怪～。</span><span class="en">Odd in temperament. 孤僻 unsociable; 怪僻 eccentric.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">peg⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pheg7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

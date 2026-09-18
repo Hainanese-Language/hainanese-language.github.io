@@ -18,7 +18,7 @@
 <div class="gl zh">古代一种横刃长柄的兵器。干～、～矛、倒～。</div><div class="also">另读 <i>go¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67ef.html">
 <div class="ch">柯</div><div class="body">
 <span class="py">kē</span>
-<div class="gl zh">〈书〉斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</div><div class="also">另读 <i>o¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u68f5.html">
+<div class="gl zh">斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</div><div class="also">另读 <i>o¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u68f5.html">
 <div class="ch">棵</div><div class="body">
 <span class="py">kē</span>
 <div class="gl zh">量词，用于植物。一～树、两～白菜。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c64.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">食物煮后的汁液。米～、鸡～、～药。</div><div class="also">另读 <i>hang¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73c2.html">
 <div class="ch">珂</div><div class="body">
 <span class="py">kē</span>
-<div class="gl zh">〈书〉像玉的白色美石。鸣～、玉～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a1e.html">
+<div class="gl zh">像玉的白色美石。鸣～、玉～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a1e.html">
 <div class="ch">稞</div><div class="body">
 <span class="py">kē</span>
 <div class="gl zh">仅用于"青稞"，一种主要产于青藏高原的大麦。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7aa0.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -45,7 +45,7 @@
 <div class="gl zh">仅用于"蚂蟥"，即水蛭。</div><div class="also">另读 <i>hhuang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9051.html">
 <div class="ch">遑</div><div class="body">
 <span class="py">huáng</span>
-<div class="gl zh">〈书〉闲暇。不～、未～顾及。</div><div class="also">另读 <i>hhuang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cc7.html">
+<div class="gl zh">闲暇。不～、未～顾及。</div><div class="also">另读 <i>hhuang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cc7.html">
 <div class="ch">鳇</div><div class="body">
 <span class="py">huáng</span>
 <div class="gl zh">仅用于"鳇鱼"，一种大型鱼，跟鲟鱼相近。</div><div class="also">另读 <i>hhuang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ec4.html">
@@ -57,6 +57,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

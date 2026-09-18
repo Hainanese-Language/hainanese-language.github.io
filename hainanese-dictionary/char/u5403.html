@@ -15,12 +15,19 @@
 <span class="rbig">zia⁶</span>
 <button class="play" onclick="play('cia6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zia6.html">同音字 3</a></div>
 <p class="rb-py">chī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">把食物放进嘴里咀嚼咽下。～饭、～药。</span><span class="en">To eat. 吃饭 to have a meal; 吃药 to take medicine.</span></span></li><li><span class="num">②</span><span><span class="zh">在某处进食。～食堂、～馆子。</span><span class="en">To take one's meals somewhere. 吃食堂 to eat in the canteen; 吃馆子 to eat out.</span></span></li><li><span class="num">③</span><span><span class="zh">依靠某种事物生活。靠山～山、～老本。</span><span class="en">To live off something. 靠山吃山 to live off what is at hand; 吃老本 to rest on past gains.</span></span></li><li><span class="num">④</span><span><span class="zh">消灭。～掉敌人一个团。</span><span class="en">To wipe out. 吃掉敌人一个团 to destroy an enemy regiment.</span></span></li><li><span class="num">⑤</span><span><span class="zh">吸收（液体）。这纸不～墨。</span><span class="en">To absorb (liquid). 这纸不吃墨 this paper does not take ink.</span></span></li><li><span class="num">⑥</span><span><span class="zh">承受；禁受。～苦、～亏、～不消。</span><span class="en">To bear; suffer. 吃苦 to endure hardship; 吃亏 to come off badly.</span></span></li><li><span class="num">⑦</span><span><span class="zh">领会。～透文件精神。</span><span class="en">To grasp fully. 吃透文件精神 to master the substance of a document.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hid⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hiet7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把食物放进嘴里咀嚼咽下。～饭、～药。</span><span class="en">To eat. 吃饭 to have a meal; 吃药 to take medicine.</span></span></li><li><span class="num">②</span><span><span class="zh">在某处进食。～食堂、～馆子。</span><span class="en">To take one's meals somewhere. 吃食堂 to eat in the canteen; 吃馆子 to eat out.</span></span></li><li><span class="num">③</span><span><span class="zh">依靠某种事物生活。靠山～山、～老本。</span><span class="en">To live off something. 靠山吃山 to live off what is at hand; 吃老本 to rest on past gains.</span></span></li><li><span class="num">④</span><span><span class="zh">消灭。～掉敌人一个团。</span><span class="en">To wipe out. 吃掉敌人一个团 to destroy an enemy regiment.</span></span></li><li><span class="num">⑤</span><span><span class="zh">吸收（液体）。这纸不～墨。</span><span class="en">To absorb (liquid). 这纸不吃墨 this paper does not take ink.</span></span></li><li><span class="num">⑥</span><span><span class="zh">承受；禁受。～苦、～亏、～不消。</span><span class="en">To bear; suffer. 吃苦 to endure hardship; 吃亏 to come off badly.</span></span></li><li><span class="num">⑦</span><span><span class="zh">领会。～透文件精神。</span><span class="en">To grasp fully. 吃透文件精神 to master the substance of a document.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hid⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hiet7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">盛大；众多。～大、～繁、声势～大。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7693.html">
 <div class="ch">皓</div><div class="body">
 <span class="py">hào</span>
-<div class="gl zh">〈书〉洁白；明亮。～齿、～首、～月当空。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8017.html">
+<div class="gl zh">洁白；明亮。～齿、～首、～月当空。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8017.html">
 <div class="ch">耗</div><div class="body">
 <span class="py">hào</span>
 <div class="gl zh">消费；减损。消～、～费、～电。</div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

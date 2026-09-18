@@ -36,7 +36,7 @@
 <div class="gl zh">火灭；使火灭。～灭、～火、～灯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a51.html">
 <div class="ch">穑</div><div class="body">
 <span class="py">sè</span>
-<div class="gl zh">〈书〉收割庄稼。稼～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8272.html">
+<div class="gl zh">收割庄稼。稼～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8272.html">
 <div class="ch">色</div><div class="body">
 <span class="py">sè · shǎi</span>
 <div class="gl zh">颜色。红～、～彩、～调、五颜六～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bc6.html">
@@ -60,6 +60,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

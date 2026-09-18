@@ -15,12 +15,19 @@
 <span class="rbig">ddiang⁵</span>
 <button class="play" onclick="play('diang5.mp3')">&#9654;</button></div>
 <p class="rb-py">shuí （shéi）</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">疑问代词，问什么人。～来了？这是～的书？</span><span class="en">Interrogative pronoun: who. 谁来了？ who has come? 这是谁的书？ whose book is this?</span></span></li><li><span class="num">②</span><span><span class="zh">表示任指，任何人。～都知道、～也不能例外。</span><span class="en">Anyone; whoever. 谁都知道 everyone knows; 谁也不能例外 no one is exempt.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">sui²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sui2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">疑问代词，问什么人。～来了？这是～的书？</span><span class="en">Interrogative pronoun: who. 谁来了？ who has come? 这是谁的书？ whose book is this?</span></span></li><li><span class="num">②</span><span><span class="zh">表示任指，任何人。～都知道、～也不能例外。</span><span class="en">Anyone; whoever. 谁都知道 everyone knows; 谁也不能例外 no one is exempt.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">sui²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sui2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,20 +15,26 @@
 <span class="rbig">lid⁷</span>
 <button class="play" onclick="play('liet7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lid7.html">同音字 8</a></div>
 <p class="rb-py">liě</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">嘴角向两边伸展。～嘴、～着嘴笑。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">嘴角向两边伸展。～嘴、～着嘴笑。</span><span class="en">To draw back the corners of the mouth. 咧嘴 to grin; 咧着嘴笑 grinning broadly.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">le⁴</span>
 <button class="play" onclick="play('le4.mp3')">&#9654;</button></div>
 <p class="rb-py">liē</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"咧咧"，指乱说或乱嚷。大大～～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"咧咧"，指乱说或乱嚷。大大～～。</span><span class="en">Used in 咧咧, to prattle or bawl. 大大咧咧 casual and careless.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">le⁶</span>
 <button class="play" onclick="play('le6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/le6.html">同音字 2</a></div>
 <p class="rb-py">lie</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">助词，用法跟"了""啦"相近。好～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">助词，用法跟"了""啦"相近。好～。</span><span class="en">Final particle, close in use to 了 and 啦. 好咧 all right then.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

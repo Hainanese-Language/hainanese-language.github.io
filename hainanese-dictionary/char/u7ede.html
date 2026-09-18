@@ -15,12 +15,19 @@
 <span class="rbig">giao³</span>
 <button class="play" onclick="play('kiau3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/giao3.html">同音字 7</a></div>
 <p class="rb-py">jiǎo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">把两股以上的条状物拧在一起。～绳子、～在一起。</span><span class="en">To twist strands together. 绞绳子 to twist a rope.</span></span></li><li><span class="num">②</span><span><span class="zh">拧；扭。～干衣服、～尽脑汁。</span><span class="en">To wring; twist. 绞干衣服 to wring out clothes; 绞尽脑汁 to rack one's brains.</span></span></li><li><span class="num">③</span><span><span class="zh">用绳子勒死。～刑、～杀。</span><span class="en">To hang; strangle. 绞刑 death by hanging; 绞杀 to strangle.</span></span></li><li><span class="num">④</span><span><span class="zh">量词，用于纱、毛线等。一～毛线。</span><span class="en">Measure word for skeins. 一绞毛线 a skein of wool.</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">ga⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka6.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把两股以上的条状物拧在一起。～绳子、～在一起。</span><span class="en">To twist strands together. 绞绳子 to twist a rope.</span></span></li><li><span class="num">②</span><span><span class="zh">拧；扭。～干衣服、～尽脑汁。</span><span class="en">To wring; twist. 绞干衣服 to wring out clothes; 绞尽脑汁 to rack one's brains.</span></span></li><li><span class="num">③</span><span><span class="zh">用绳子勒死。～刑、～杀。</span><span class="en">To hang; strangle. 绞刑 death by hanging; 绞杀 to strangle.</span></span></li><li><span class="num">④</span><span><span class="zh">量词，用于纱、毛线等。一～毛线。</span><span class="en">Measure word for skeins. 一绞毛线 a skein of wool.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">ga⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka6.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

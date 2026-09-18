@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>哔叽 · 海南话字典</title><meta name="description" content="哔叽 的海南话读音 bid⁷gi¹，普通话 bìjī。〈外〉一种表面有斜纹的毛织品。">
+<title>哔叽 · 海南话字典</title><meta name="description" content="哔叽 的海南话读音 bid⁷gi¹，普通话 bìjī。一种表面有斜纹的毛织品。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">bid⁷gi¹</span>
 <button class="play" onclick="play('piet7.mp3|ki1.mp3')">&#9654;</button></div>
 <p class="rb-py">bìjī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈外〉一种表面有斜纹的毛织品。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>一种表面有斜纹的毛织品。</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

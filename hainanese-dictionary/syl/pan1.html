@@ -18,7 +18,7 @@
 <div class="gl zh">抓着东西向上爬。～登、～岩、～援。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71d4.html">
 <div class="ch">燔</div><div class="body">
 <span class="py">fán</span>
-<div class="gl zh">〈书〉焚烧；烤。～烧、～肉。</div><div class="also">另读 <i>pan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8543.html">
+<div class="gl zh">焚烧；烤。～烧、～肉。</div><div class="also">另读 <i>pan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8543.html">
 <div class="ch">蕃</div><div class="body">
 <span class="py">fán · fān</span>
 <div class="gl zh">茂盛。～茂。</div><div class="also">另读 <i>hhuan¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85e9.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,19 +15,19 @@
 <span class="rbig">a¹</span>
 <button class="play" onclick="play('a1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/a1.html">同音字 6</a></div>
 <p class="rb-py">ā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示赞叹或惊异。～，多美的景色！</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示赞叹或惊异。～，多美的景色！</span><span class="en">An exclamation of admiration or surprise. 啊，多美的景色 ah, what a lovely view!</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">a⁴</span>
 <button class="play" onclick="play('a4.mp3')">&#9654;</button></div>
 <p class="rb-py">á</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示追问。～？你说什么？</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示追问。～？你说什么？</span><span class="en">An exclamation pressing for an answer. 啊？你说什么 eh? what did you say?</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">a³</span>
 <button class="play" onclick="play('a3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/a3.html">同音字 2</a></div>
 <p class="rb-py">ǎ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示疑惑。～？会有这种事？</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示疑惑。～？会有这种事？</span><span class="en">An exclamation of puzzlement. 啊？会有这种事 what? can such a thing be?</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">a⁶</span>
 <button class="play" onclick="play('a6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/a6.html">同音字 5</a></div>
 <p class="rb-py">à</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示应诺或醒悟。～，原来是你。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示应诺或醒悟。～，原来是你。</span><span class="en">An exclamation of assent or realisation. 啊，原来是你 oh, so it's you.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">a⁵</span>
 <button class="play" onclick="play('a5.mp3')">&#9654;</button></div>
 <p class="rb-py">a</p>
@@ -37,6 +37,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">效法；照样做。模～、～造、～制、～古。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55d9.html">
 <div class="ch">嗙</div><div class="body">
 <span class="py">pǎng</span>
-<div class="gl zh">〈方〉吹牛。胡吹乱～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7eba.html">
+<div class="gl zh">吹牛。胡吹乱～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7eba.html">
 <div class="ch">纺</div><div class="body">
 <span class="py">fǎng</span>
 <div class="gl zh">把丝、棉、麻等纤维做成纱或线。～纱、～织、～车。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u802a.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">用锄头松土除草。～地。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u822b.html">
 <div class="ch">舫</div><div class="body">
 <span class="py">fǎng</span>
-<div class="gl zh">〈书〉船。画～、游～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bbf.html">
+<div class="gl zh">船。画～、游～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bbf.html">
 <div class="ch">访</div><div class="body">
 <span class="py">fǎng</span>
 <div class="gl zh">探望；看望。～友、～问、家～。</div></div></a><footer>
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

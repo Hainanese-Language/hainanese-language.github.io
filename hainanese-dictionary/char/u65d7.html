@@ -15,12 +15,18 @@
 <span class="rbig">gi²</span>
 <button class="play" onclick="play('ki2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi2.html">同音字 4</a></div>
 <p class="rb-py">qí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用布、绸等做成的标志。～帜、国～、～杆。</span><span class="en">A flag. 旗帜 a banner; 国旗 a national flag; 旗杆 a flagpole.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉清代满族的军队和户口编制。八～、～人。</span><span class="en">〈former〉 The Manchu military and household divisions of the Qing. 八旗 the Eight Banners; 旗人 a Bannerman.</span></span></li><li><span class="num">③</span><span><span class="zh">内蒙古自治区的行政区划单位，相当于县。</span><span class="en">A banner, an administrative division in Inner Mongolia equivalent to a county.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用布、绸等做成的标志。～帜、国～、～杆。</span><span class="en">A flag. 旗帜 a banner; 国旗 a national flag; 旗杆 a flagpole.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>清代满族的军队和户口编制。八～、～人。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> The Manchu military and household divisions of the Qing. 八旗 the Eight Banners; 旗人 a Bannerman.</span></span></li><li><span class="num">③</span><span><span class="zh">内蒙古自治区的行政区划单位，相当于县。</span><span class="en">A banner, an administrative division in Inner Mongolia equivalent to a county.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

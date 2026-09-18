@@ -18,12 +18,18 @@
 <div class="gl zh">削平木料的工具；用锛砍削。～子、～木头。</div><div class="also">另读 <i>pun¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d32.html">
 <div class="ch">贲</div><div class="body">
 <span class="py">bì · bēn</span>
-<div class="gl zh">〈书〉装饰得很好看。～临、～饰。  bēn 用于"贲门"，指胃与食管相接的部位。～门。</div><div class="also">主读 <i>bi⁵</i></div></div></a><footer>
+<div class="gl zh">装饰得很好看。～临、～饰。  bēn 用于"贲门"，指胃与食管相接的部位。～门。</div><div class="also">主读 <i>bi⁵</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

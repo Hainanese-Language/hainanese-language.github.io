@@ -15,7 +15,7 @@
 <div class="gl zh">强盗；抢劫的坏人。土～、～徒、盗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60b1.html">
 <div class="ch">悱</div><div class="body">
 <span class="py">fěi</span>
-<div class="gl zh">〈书〉心里想说而说不出来。不～不发。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83f2.html">
+<div class="gl zh">心里想说而说不出来。不～不发。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83f2.html">
 <div class="ch">菲</div><div class="body">
 <span class="py">fēi · fěi</span>
 <div class="gl zh">花草茂盛；香。芳～。</div><div class="also">主读 <i>pui¹</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

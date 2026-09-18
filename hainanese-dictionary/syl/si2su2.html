@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/si2su2.html">si²su²</a></div><a class="hrow" href="/hainanese-dictionary/char/u8e1f-u8e70.html">
 <div class="ch">踟蹰</div><div class="body">
 <span class="py">chíchú</span>
-<div class="gl zh">〈书〉徘徊不前；犹豫。～不前。</div></div></a><footer>
+<div class="gl zh">徘徊不前；犹豫。～不前。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">mou²</span>
 <button class="play" onclick="play('mou2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mou2.html">同音字 4</a></div>
 <p class="rb-py">móu</p>
-<ul class="senses"><li><span class="pyhead">〔móu〕</span></li><li><span class="num">①</span><span><span class="zh">谋取（多指不正当的）。～利、～取暴利。</span><span class="en">to seek (usually by improper means).</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉牛叫的声音。～然而鸣。</span><span class="en">〈lit.〉 the lowing of cattle.</span></span></li><li><span class="pyhead">〔mù〕</span></li><li><span class="num">③</span><span><span class="zh">用于地名，牟平，在山东。～平。</span><span class="en">used in the place name 牟平 in Shandong.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔móu〕</span></li><li><span class="num">①</span><span><span class="zh">谋取（多指不正当的）。～利、～取暴利。</span><span class="en">to seek (usually by improper means).</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>牛叫的声音。～然而鸣。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> the lowing of cattle.</span></span></li><li><span class="pyhead">〔mù〕</span></li><li><span class="num">③</span><span><span class="zh">用于地名，牟平，在山东。～平。</span><span class="en">used in the place name 牟平 in Shandong.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

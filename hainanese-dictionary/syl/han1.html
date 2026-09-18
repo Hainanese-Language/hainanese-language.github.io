@@ -18,7 +18,7 @@
 <div class="gl zh">建筑物、堤岸等倒塌。～塌、～方、河岸～了。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60ad.html">
 <div class="ch">悭</div><div class="body">
 <span class="py">qiān</span>
-<div class="gl zh">〈书〉吝啬；小气。～吝。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u644a.html">
+<div class="gl zh">吝啬；小气。～吝。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u644a.html">
 <div class="ch">摊</div><div class="body">
 <span class="py">tān</span>
 <div class="gl zh">摆开；展开。～开地图、～牌、～晒。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6ee9.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

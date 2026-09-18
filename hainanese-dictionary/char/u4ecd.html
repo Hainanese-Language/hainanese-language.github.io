@@ -15,12 +15,18 @@
 <span class="rbig">yeng²</span>
 <button class="play" onclick="play('jeng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yeng2.html">同音字 14</a></div>
 <p class="rb-py">réng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">依然；还。～旧、～然、～须努力。</span><span class="en">Still; as before. 仍旧 as before; 仍然 still; 仍须努力 further effort is still needed.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉屡次。频～。</span><span class="en">〈lit.〉 Repeatedly. 频仍 frequent.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">依然；还。～旧、～然、～须努力。</span><span class="en">Still; as before. 仍旧 as before; 仍然 still; 仍须努力 further effort is still needed.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>屡次。频～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Repeatedly. 频仍 frequent.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

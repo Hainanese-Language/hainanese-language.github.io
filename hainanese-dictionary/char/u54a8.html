@@ -15,12 +15,18 @@
 <span class="rbig">se¹</span>
 <button class="play" onclick="play('se1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se1.html">同音字 26</a></div>
 <p class="rb-py">zī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">商议；征求意见。～询、～商。</span><span class="en">To consult; seek opinions. 咨询 to seek advice; 咨商 to confer.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉同级机关之间往来的公文。～文。</span><span class="en">〈former〉 An official letter between offices of equal rank. 咨文 a dispatch.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">商议；征求意见。～询、～商。</span><span class="en">To consult; seek opinions. 咨询 to seek advice; 咨商 to confer.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>同级机关之间往来的公文。～文。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> An official letter between offices of equal rank. 咨文 a dispatch.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -30,7 +30,7 @@
 <div class="gl zh">溶化；散失。～融、冰～雪化、烟～云散。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6f47.html">
 <div class="ch">潇</div><div class="body">
 <span class="py">xiāo</span>
-<div class="gl zh">〈书〉水又深又清。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u785d.html">
+<div class="gl zh">水又深又清。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u785d.html">
 <div class="ch">硝</div><div class="body">
 <span class="py">xiāo</span>
 <div class="gl zh">某些含硝酸根的矿物盐。～石、芒～、～酸。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a0d.html">
@@ -39,7 +39,7 @@
 <div class="gl zh">略微。～微、～加修改、～等片刻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b72.html">
 <div class="ch">筲</div><div class="body">
 <span class="py">shāo</span>
-<div class="gl zh">〈书〉一种竹制的盛饭器具；也指水桶。～箕、斗～之人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7bab.html">
+<div class="gl zh">一种竹制的盛饭器具；也指水桶。～箕、斗～之人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7bab.html">
 <div class="ch">箫</div><div class="body">
 <span class="py">xiāo</span>
 <div class="gl zh">一种竹制管乐器，竖着吹。洞～、吹～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8427.html">
@@ -72,6 +72,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

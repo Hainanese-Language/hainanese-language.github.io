@@ -15,12 +15,18 @@
 <span class="rbig">liu²</span>
 <button class="play" onclick="play('liu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu2.html">同音字 7</a></div>
 <p class="rb-py">liú</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">液体移动。～水、～血、河水～向东。</span><span class="en">To flow, of liquid. 流水; 流血; 河水流向东.</span></span></li><li><span class="num">②</span><span><span class="zh">移动不定。～动、～浪、～星。</span><span class="en">To move about without a fixed place. 流动; 流浪; 流星.</span></span></li><li><span class="num">③</span><span><span class="zh">传播；传下来。～传、～行、～芳百世。</span><span class="en">To spread; to pass down. 流传; 流行; 流芳百世.</span></span></li><li><span class="num">④</span><span><span class="zh">向坏的方面转变。～于形式、～入歧途。</span><span class="en">To turn for the worse. 流于形式; 流入歧途.</span></span></li><li><span class="num">⑤</span><span><span class="zh">水道；水的流动。河～、气～、洪～。</span><span class="en">A watercourse; a current. 河流; 气流; 洪流.</span></span></li><li><span class="num">⑥</span><span><span class="zh">品类；等级。三教九～、一～水平。</span><span class="en">Class; grade. 三教九流; 一流水平.</span></span></li><li><span class="num">⑦</span><span><span class="zh">〈旧〉把犯人送到边远地方的刑罚。～放、～刑。</span><span class="en">〈former〉 The punishment of banishing a criminal to a remote place. 流放; 流刑.</span></span></li></ul><div class="alt"><span class="r2">lao²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lau2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">液体移动。～水、～血、河水～向东。</span><span class="en">To flow, of liquid. 流水; 流血; 河水流向东.</span></span></li><li><span class="num">②</span><span><span class="zh">移动不定。～动、～浪、～星。</span><span class="en">To move about without a fixed place. 流动; 流浪; 流星.</span></span></li><li><span class="num">③</span><span><span class="zh">传播；传下来。～传、～行、～芳百世。</span><span class="en">To spread; to pass down. 流传; 流行; 流芳百世.</span></span></li><li><span class="num">④</span><span><span class="zh">向坏的方面转变。～于形式、～入歧途。</span><span class="en">To turn for the worse. 流于形式; 流入歧途.</span></span></li><li><span class="num">⑤</span><span><span class="zh">水道；水的流动。河～、气～、洪～。</span><span class="en">A watercourse; a current. 河流; 气流; 洪流.</span></span></li><li><span class="num">⑥</span><span><span class="zh">品类；等级。三教九～、一～水平。</span><span class="en">Class; grade. 三教九流; 一流水平.</span></span></li><li><span class="num">⑦</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>把犯人送到边远地方的刑罚。～放、～刑。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> The punishment of banishing a criminal to a remote place. 流放; 流刑.</span></span></li></ul><div class="alt"><span class="r2">lao²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lau2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

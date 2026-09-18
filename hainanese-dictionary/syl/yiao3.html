@@ -21,7 +21,7 @@
 <div class="gl zh">用瓢、勺等取东西（多指流体）。～水、～汤、～一勺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5a06.html">
 <div class="ch">娆</div><div class="body">
 <span class="py">ráo · rǎo</span>
-<div class="gl zh">用于"妖娆"，形容娇艳美好。  rǎo 〈书〉烦扰。</div><div class="also">主读 <i>yiao²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u722a.html">
+<div class="gl zh">用于"妖娆"，形容娇艳美好。  rǎo 烦扰。</div><div class="also">主读 <i>yiao²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u722a.html">
 <div class="ch">爪</div><div class="body">
 <span class="py">zhǎo · zhuǎ</span>
 <div class="gl zh">鸟兽的脚趾甲。～牙、鹰～、张牙舞～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ed5.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

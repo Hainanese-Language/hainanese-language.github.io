@@ -21,7 +21,7 @@
 <div class="gl zh">用于地名。～源(在河北)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83b1.html">
 <div class="ch">莱</div><div class="body">
 <span class="py">lái</span>
-<div class="gl zh">〈书〉藜，一种野草；也指荒地。草～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83b2.html">
+<div class="gl zh">藜，一种野草；也指荒地。草～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83b2.html">
 <div class="ch">莲</div><div class="body">
 <span class="py">lián</span>
 <div class="gl zh">荷，水生草本植物，地下茎是藕，种子是莲子。～花、～蓬、～藕。</div><div class="also">主读 <i>lin²</i> · <i>nai²</i></div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

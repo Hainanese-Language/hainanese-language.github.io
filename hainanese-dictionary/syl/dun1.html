@@ -18,7 +18,7 @@
 <div class="gl zh">地位或辈分高(跟"卑"相对)。～长、～卑、～贵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6a3d.html">
 <div class="ch">樽</div><div class="body">
 <span class="py">zūn</span>
-<div class="gl zh">〈书〉盛酒的器具。～俎、金～、～前。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72f2.html">
+<div class="gl zh">盛酒的器具。～俎、金～、～前。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72f2.html">
 <div class="ch">狲</div><div class="body">
 <span class="py">sūn</span>
 <div class="gl zh">用于"猢狲"，即猕猴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u80ab.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">禽类的胃。鸡～、鸭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u836a.html">
 <div class="ch">荪</div><div class="body">
 <span class="py">sūn</span>
-<div class="gl zh">〈书〉一种香草。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8e72.html">
+<div class="gl zh">一种香草。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8e72.html">
 <div class="ch">蹲</div><div class="body">
 <span class="py">dūn · cún</span>
 <div class="gl zh">两腿弯曲，臀部不着地。～下、～在门口。</div><div class="also">另读 <i>sun²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9075.html">
@@ -48,6 +48,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">yi⁶</span>
 <button class="play" onclick="play('ji6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi6.html">同音字 17</a></div>
 <p class="rb-py">yù</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">更；越。～演～烈、每况～下、～挫～勇。</span><span class="en">more; the more.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉胜过；较好。彼～于此。</span><span class="en">〈lit.〉 to be better than.</span></span></li><li><span class="num">③</span><span><span class="zh">病好；痊愈。痊～、～合、日～。</span><span class="en">to recover from illness; heal.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">更；越。～演～烈、每况～下、～挫～勇。</span><span class="en">more; the more.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>胜过；较好。彼～于此。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> to be better than.</span></span></li><li><span class="num">③</span><span><span class="zh">病好；痊愈。痊～、～合、日～。</span><span class="en">to recover from illness; heal.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

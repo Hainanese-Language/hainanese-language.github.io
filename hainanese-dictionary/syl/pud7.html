@@ -12,10 +12,10 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/pud7.html">pud⁷</a></div><a class="hrow" href="/hainanese-dictionary/char/u5f17.html">
 <div class="ch">弗</div><div class="body">
 <span class="py">fú</span>
-<div class="gl zh">〈书〉不。自愧～如。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u602b.html">
+<div class="gl zh">不。自愧～如。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u602b.html">
 <div class="ch">怫</div><div class="body">
 <span class="py">fú （fèi）</span>
-<div class="gl zh">〈书〉愤怒；不高兴。～然作色。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62c2.html">
+<div class="gl zh">愤怒；不高兴。～然作色。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62c2.html">
 <div class="ch">拂</div><div class="body">
 <span class="py">fú</span>
 <div class="gl zh">轻轻擦过；掸去。～拭、春风～面、～去灰尘。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c1f.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

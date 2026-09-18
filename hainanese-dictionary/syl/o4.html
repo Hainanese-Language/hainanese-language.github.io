@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/o1.html">o¹</a><a class="chip" href="/hainanese-dictionary/syl/o2.html">o²</a><a class="chip" href="/hainanese-dictionary/syl/o3.html">o³</a><a class="chip on" href="/hainanese-dictionary/syl/o4.html">o⁴</a><a class="chip" href="/hainanese-dictionary/syl/o5.html">o⁵</a><a class="chip" href="/hainanese-dictionary/syl/o6.html">o⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u54e6.html">
 <div class="ch">哦</div><div class="body">
 <span class="py">ó · ò · é</span>
-<div class="gl zh">叹词，表示疑问或半信半疑。～，是这样吗？  ò 叹词，表示领会、醒悟。～，我明白了。  é 〈书〉吟咏。吟～。</div><div class="also">另读 <i>o⁶</i> · <i>ngo²</i></div></div></a><footer>
+<div class="gl zh">叹词，表示疑问或半信半疑。～，是这样吗？  ò 叹词，表示领会、醒悟。～，我明白了。  é 吟咏。吟～。</div><div class="also">另读 <i>o⁶</i> · <i>ngo²</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

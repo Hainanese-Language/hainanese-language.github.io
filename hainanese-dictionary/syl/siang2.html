@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/siang1.html">siang¹</a><a class="chip on" href="/hainanese-dictionary/syl/siang2.html">siang²</a><a class="chip" href="/hainanese-dictionary/syl/siang3.html">siang³</a><a class="chip" href="/hainanese-dictionary/syl/siang4.html">siang⁴</a><a class="chip" href="/hainanese-dictionary/syl/siang6.html">siang⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u6a2f.html">
 <div class="ch">樯</div><div class="body">
 <span class="py">qiáng</span>
-<div class="gl zh">〈书〉桅杆。～橹、帆～。</div><div class="also">另读 <i>zio²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e0a.html">
+<div class="gl zh">桅杆。～橹、帆～。</div><div class="also">另读 <i>zio²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e0a.html">
 <div class="ch">上</div><div class="body">
 <span class="py">shàng · shǎng</span>
 <div class="gl zh">位置在高处的，跟"下"相对。～面、～游、楼～。</div><div class="also">主读 <i>zio¹</i> · <i>zio⁵</i> · <i>diang⁵</i> · <i>diang⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5018.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

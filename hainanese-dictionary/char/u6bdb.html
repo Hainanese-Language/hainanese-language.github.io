@@ -15,12 +15,19 @@
 <span class="rbig">mao²</span>
 <button class="play" onclick="play('mau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mao2.html">同音字 7</a></div>
 <p class="rb-py">máo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">动植物表皮上长的丝状物。羽～、～发、～笔。</span><span class="en">hair; fur; feathers; down on a plant.</span></span></li><li><span class="num">②</span><span><span class="zh">东西上长的霉菌。馒头长～了、发～。</span><span class="en">mould growing on something.</span></span></li><li><span class="num">③</span><span><span class="zh">粗糙的；未加工的。～坯、～重、～糙。</span><span class="en">rough; unfinished.</span></span></li><li><span class="num">④</span><span><span class="zh">慌张；发慌。心里发～、吓～了。</span><span class="en">flustered; panicky.</span></span></li><li><span class="num">⑤</span><span><span class="zh">小；细碎。～孩子、～～雨。</span><span class="en">small; fine.</span></span></li><li><span class="num">⑥</span><span><span class="zh">货币贬值。钱～了。</span><span class="en">(of currency) to lose value.</span></span></li><li><span class="num">⑦</span><span><span class="zh">货币单位角的俗称。一～钱、五～。</span><span class="en">colloquial name for the 角, a unit of currency.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">mo²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">动植物表皮上长的丝状物。羽～、～发、～笔。</span><span class="en">hair; fur; feathers; down on a plant.</span></span></li><li><span class="num">②</span><span><span class="zh">东西上长的霉菌。馒头长～了、发～。</span><span class="en">mould growing on something.</span></span></li><li><span class="num">③</span><span><span class="zh">粗糙的；未加工的。～坯、～重、～糙。</span><span class="en">rough; unfinished.</span></span></li><li><span class="num">④</span><span><span class="zh">慌张；发慌。心里发～、吓～了。</span><span class="en">flustered; panicky.</span></span></li><li><span class="num">⑤</span><span><span class="zh">小；细碎。～孩子、～～雨。</span><span class="en">small; fine.</span></span></li><li><span class="num">⑥</span><span><span class="zh">货币贬值。钱～了。</span><span class="en">(of currency) to lose value.</span></span></li><li><span class="num">⑦</span><span><span class="zh">货币单位角的俗称。一～钱、五～。</span><span class="en">colloquial name for the 角, a unit of currency.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">mo²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

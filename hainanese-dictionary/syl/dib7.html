@@ -15,12 +15,18 @@
 <div class="gl zh">吸取；吸收。～取、～入、～食。</div><div class="also">另读 <i>dib⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u696b.html">
 <div class="ch">楫</div><div class="body">
 <span class="py">jí</span>
-<div class="gl zh">〈书〉船桨。舟～、～棹。</div></div></a><footer>
+<div class="gl zh">船桨。舟～、～棹。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

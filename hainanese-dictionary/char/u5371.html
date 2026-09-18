@@ -15,12 +15,18 @@
 <span class="rbig">ngui²</span>
 <button class="play" onclick="play('ngui2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ngui2.html">同音字 4</a></div>
 <p class="rb-py">wēi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">危险；不安全。～急、～难、～重、转～为安。</span><span class="en">Dangerous; unsafe. 危急 critical; 危难 peril; 危重 in a critical condition; 转危为安 to pull through a crisis.</span></span></li><li><span class="num">②</span><span><span class="zh">使处于危险境地。～害、～及生命。</span><span class="en">To endanger. 危害 to harm; 危及生命 to threaten life.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉高；陡。～楼、～峰。</span><span class="en">〈lit.〉 High; steep. 危楼 a lofty building; 危峰 a towering peak.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉端正。正襟～坐。</span><span class="en">〈lit.〉 Upright. 正襟危坐 to sit up straight and proper.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">危险；不安全。～急、～难、～重、转～为安。</span><span class="en">Dangerous; unsafe. 危急 critical; 危难 peril; 危重 in a critical condition; 转危为安 to pull through a crisis.</span></span></li><li><span class="num">②</span><span><span class="zh">使处于危险境地。～害、～及生命。</span><span class="en">To endanger. 危害 to harm; 危及生命 to threaten life.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>高；陡。～楼、～峰。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> High; steep. 危楼 a lofty building; 危峰 a towering peak.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>端正。正襟～坐。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Upright. 正襟危坐 to sit up straight and proper.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

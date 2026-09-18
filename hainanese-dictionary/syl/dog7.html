@@ -12,19 +12,19 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/dog7.html">dog⁷</a><a class="chip" href="/hainanese-dictionary/syl/dog8.html">dog⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u500f.html">
 <div class="ch">倏</div><div class="body">
 <span class="py">shū</span>
-<div class="gl zh">〈书〉极快地；忽然。～忽、～地不见了。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u50f3.html">
+<div class="gl zh">极快地；忽然。～忽、～地不见了。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u50f3.html">
 <div class="ch">僳</div><div class="body">
 <span class="py">sù</span>
 <div class="gl zh">用于"傈僳族"，我国少数民族之一。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u587e.html">
 <div class="ch">塾</div><div class="body">
 <span class="py">shú</span>
-<div class="gl zh">〈旧〉私人设立的学校。私～、～师。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5919.html">
+<div class="gl zh">私人设立的学校。私～、～师。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5919.html">
 <div class="ch">夙</div><div class="body">
 <span class="py">sù</span>
-<div class="gl zh">〈书〉早。～兴夜寐。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b70.html">
+<div class="gl zh">早。～兴夜寐。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b70.html">
 <div class="ch">孰</div><div class="body">
 <span class="py">shú</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5bbf.html">
+<div class="gl zh">谁。～是～非。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5bbf.html">
 <div class="ch">宿</div><div class="body">
 <span class="py">sù · xiǔ · xiù</span>
 <div class="gl zh">夜里睡觉；过夜。住～、留～、～舍、夜～。</div><div class="also">另读 <i>diu⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u675f.html">
@@ -36,7 +36,7 @@
 <div class="gl zh">水等不清；不干净(跟"清"相对)。～水、污～、～流。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6dd1.html">
 <div class="ch">淑</div><div class="body">
 <span class="py">shū</span>
-<div class="gl zh">〈书〉善良；美好。多用于女子。贤～、～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77a9.html">
+<div class="gl zh">善良；美好。多用于女子。贤～、～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77a9.html">
 <div class="ch">瞩</div><div class="body">
 <span class="py">zhǔ</span>
 <div class="gl zh">注视。～目、举世～目、高瞻远～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u795d.html">
@@ -93,6 +93,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

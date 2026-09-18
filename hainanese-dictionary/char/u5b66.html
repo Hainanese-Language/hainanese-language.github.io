@@ -15,12 +15,19 @@
 <span class="rbig">o⁵</span>
 <button class="play" onclick="play('o5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/o5.html">同音字 2</a></div>
 <p class="rb-py">xué</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">学习。～文化、勤～苦练、活到老～到老。</span><span class="en">To learn; study. 学文化 to acquire an education; 活到老学到老 one is never too old to learn.</span></span></li><li><span class="num">②</span><span><span class="zh">模仿。～舌、～鸟叫。</span><span class="en">To imitate. 学舌 to parrot; 学鸟叫 to mimic birdsong.</span></span></li><li><span class="num">③</span><span><span class="zh">学问；知识。博～、才疏～浅、治～。</span><span class="en">Learning; knowledge. 博学 erudite; 才疏学浅 of modest ability and shallow learning.</span></span></li><li><span class="num">④</span><span><span class="zh">分门别类的知识体系。文～、数～、～科。</span><span class="en">A branch of knowledge. 文学 literature; 数学 mathematics; 学科 a discipline.</span></span></li><li><span class="num">⑤</span><span><span class="zh">学校。上～、小～、～费。</span><span class="en">A school. 上学 to attend school; 小学 a primary school; 学费 tuition fees.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhiog⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiog7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">学习。～文化、勤～苦练、活到老～到老。</span><span class="en">To learn; study. 学文化 to acquire an education; 活到老学到老 one is never too old to learn.</span></span></li><li><span class="num">②</span><span><span class="zh">模仿。～舌、～鸟叫。</span><span class="en">To imitate. 学舌 to parrot; 学鸟叫 to mimic birdsong.</span></span></li><li><span class="num">③</span><span><span class="zh">学问；知识。博～、才疏～浅、治～。</span><span class="en">Learning; knowledge. 博学 erudite; 才疏学浅 of modest ability and shallow learning.</span></span></li><li><span class="num">④</span><span><span class="zh">分门别类的知识体系。文～、数～、～科。</span><span class="en">A branch of knowledge. 文学 literature; 数学 mathematics; 学科 a discipline.</span></span></li><li><span class="num">⑤</span><span><span class="zh">学校。上～、小～、～费。</span><span class="en">A school. 上学 to attend school; 小学 a primary school; 学费 tuition fees.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhiog⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiog7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

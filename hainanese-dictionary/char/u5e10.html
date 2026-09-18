@@ -15,12 +15,19 @@
 <span class="rbig">ziang⁶</span>
 <button class="play" onclick="play('ciang6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziang6.html">同音字 13</a></div>
 <p class="rb-py">zhàng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用布、纱等做成的遮挡用具。蚊～、～篷、营～。</span><span class="en">A screen or covering of cloth or gauze. 蚊帐 a mosquito net; 帐篷 a tent.</span></span></li><li><span class="num">②</span><span><span class="zh">关于货币、货物出入的记载。记～、～本、查～。</span><span class="en">A record of money or goods received and paid out. 记帐 to keep accounts; 帐本 an account book.</span></span></li><li><span class="num">③</span><span><span class="zh">债。欠～、还～。</span><span class="en">A debt. 欠帐 to owe money; 还帐 to settle a debt.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddio⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('diu4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用布、纱等做成的遮挡用具。蚊～、～篷、营～。</span><span class="en">A screen or covering of cloth or gauze. 蚊帐 a mosquito net; 帐篷 a tent.</span></span></li><li><span class="num">②</span><span><span class="zh">关于货币、货物出入的记载。记～、～本、查～。</span><span class="en">A record of money or goods received and paid out. 记帐 to keep accounts; 帐本 an account book.</span></span></li><li><span class="num">③</span><span><span class="zh">债。欠～、还～。</span><span class="en">A debt. 欠帐 to owe money; 还帐 to settle a debt.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddio⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('diu4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

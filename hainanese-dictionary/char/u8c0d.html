@@ -15,12 +15,18 @@
 <span class="rbig">ddiab⁷</span>
 <button class="play" onclick="play('diab7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddiab7.html">同音字 2</a></div>
 <p class="rb-py">dié</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">刺探敌方情报的人。～报、间～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">刺探敌方情报的人。～报、间～。</span><span class="en">One who gathers intelligence on an enemy. 谍报 espionage; 间谍 a spy.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -21,7 +21,7 @@
 <div class="gl zh">快乐；喜悦。～喜、～慰、～然。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f69.html">
 <div class="ch">轩</div><div class="body">
 <span class="py">xuān</span>
-<div class="gl zh">〈书〉高。～昂、气宇～昂。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9528.html">
+<div class="gl zh">高。～昂、气宇～昂。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9528.html">
 <div class="ch">锨</div><div class="body">
 <span class="py">xiān</span>
 <div class="gl zh">铲土或粮食的工具。铁～、木～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60ac.html">
@@ -30,7 +30,7 @@
 <div class="gl zh">挂。～挂、～梁、～灯结彩。</div><div class="also">主读 <i>hhin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6684.html">
 <div class="ch">暄</div><div class="body">
 <span class="py">xuān</span>
-<div class="gl zh">〈书〉温暖（多指阳光）。寒～、～和。</div><div class="also">主读 <i>hhuan¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73b0.html">
+<div class="gl zh">温暖（多指阳光）。寒～、～和。</div><div class="also">主读 <i>hhuan¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73b0.html">
 <div class="ch">现</div><div class="body">
 <span class="py">xiàn</span>
 <div class="gl zh">显露出来。出～、原形毕～、～出笑容。</div><div class="also">主读 <i>hhin⁴</i></div></div></a><footer>
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

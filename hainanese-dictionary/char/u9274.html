@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>鉴 · 海南话字典</title><meta name="description" content="鉴 的海南话读音 gam⁴，普通话 jiàn。〈书〉镜子。以铜为～。">
+<title>鉴 · 海南话字典</title><meta name="description" content="鉴 的海南话读音 gam⁴，普通话 jiàn。镜子。以铜为～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">gam⁴</span>
 <button class="play" onclick="play('kam4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gam4.html">同音字 5</a></div>
 <p class="rb-py">jiàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉镜子。以铜为～。</span><span class="en">〈lit.〉 A mirror.</span></span></li><li><span class="num">②</span><span><span class="zh">照；映。水清可～。</span><span class="en">To reflect; to mirror.</span></span></li><li><span class="num">③</span><span><span class="zh">仔细看；审察。～别、～定、～赏。</span><span class="en">To examine closely; to appraise.</span></span></li><li><span class="num">④</span><span><span class="zh">可以作为警戒或教训的事。借～、前车之～。</span><span class="en">A warning example; a lesson.</span></span></li><li><span class="num">⑤</span><span><span class="zh">书信用语，表示请对方看。台～、钧～。</span><span class="en">In letters, a word inviting the reader's attention.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>镜子。以铜为～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A mirror.</span></span></li><li><span class="num">②</span><span><span class="zh">照；映。水清可～。</span><span class="en">To reflect; to mirror.</span></span></li><li><span class="num">③</span><span><span class="zh">仔细看；审察。～别、～定、～赏。</span><span class="en">To examine closely; to appraise.</span></span></li><li><span class="num">④</span><span><span class="zh">可以作为警戒或教训的事。借～、前车之～。</span><span class="en">A warning example; a lesson.</span></span></li><li><span class="num">⑤</span><span><span class="zh">书信用语，表示请对方看。台～、钧～。</span><span class="en">In letters, a word inviting the reader's attention.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>侃 · 海南话字典</title><meta name="description" content="侃 的海南话读音 han³，普通话 kǎn。〈书〉理直气壮；从容不迫。～～而谈。">
+<title>侃 · 海南话字典</title><meta name="description" content="侃 的海南话读音 han³，普通话 kǎn。理直气壮；从容不迫。～～而谈。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">han³</span>
 <button class="play" onclick="play('han3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/han3.html">同音字 3</a></div>
 <p class="rb-py">kǎn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉理直气壮；从容不迫。～～而谈。</span><span class="en">〈lit.〉 Confident and unhurried. 侃侃而谈 to speak with calm assurance.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉闲谈；聊天。～大山、瞎～。</span><span class="en">〈dial.〉 To chat. 侃大山 to shoot the breeze; 瞎侃 to natter on.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>理直气壮；从容不迫。～～而谈。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Confident and unhurried. 侃侃而谈 to speak with calm assurance.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>闲谈；聊天。～大山、瞎～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To chat. 侃大山 to shoot the breeze; 瞎侃 to natter on.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

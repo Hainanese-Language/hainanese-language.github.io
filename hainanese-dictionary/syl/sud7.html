@@ -21,10 +21,10 @@
 <div class="gl zh">突然。～然、～不及防。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9edc.html">
 <div class="ch">黜</div><div class="body">
 <span class="py">chù</span>
-<div class="gl zh">〈书〉罢免；降职。罢～、～免。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ee2.html">
+<div class="gl zh">罢免；降职。罢～、～免。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ee2.html">
 <div class="ch">黢</div><div class="body">
 <span class="py">qū</span>
-<div class="gl zh">〈方〉形容很黑。～黑、黑～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5352.html">
+<div class="gl zh">形容很黑。～黑、黑～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5352.html">
 <div class="ch">卒</div><div class="body">
 <span class="py">zú · cù</span>
 <div class="gl zh">兵。士～、无名小～。</div><div class="also">主读 <i>dud⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ecc.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

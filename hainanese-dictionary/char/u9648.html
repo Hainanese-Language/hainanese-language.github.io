@@ -15,12 +15,19 @@
 <span class="rbig">sin²</span>
 <button class="play" onclick="play('sien2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sin2.html">同音字 11</a></div>
 <p class="rb-py">chén</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">摆设；排列。～列、～设、～兵。</span><span class="en">To set out; to arrange. 陈列 to display; 陈设 furnishings; 陈兵 to deploy troops.</span></span></li><li><span class="num">②</span><span><span class="zh">述说。～述、～情、详～。</span><span class="en">To state. 陈述 to set forth; 陈情 to plead one's case; 详陈 to explain in detail.</span></span></li><li><span class="num">③</span><span><span class="zh">时间久的；旧的。～旧、～醋、推～出新。</span><span class="en">Long kept; old. 陈旧 outdated; 陈醋 mature vinegar; 推陈出新 to bring forth the new from the old.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">摆设；排列。～列、～设、～兵。</span><span class="en">To set out; to arrange. 陈列 to display; 陈设 furnishings; 陈兵 to deploy troops.</span></span></li><li><span class="num">②</span><span><span class="zh">述说。～述、～情、详～。</span><span class="en">To state. 陈述 to set forth; 陈情 to plead one's case; 详陈 to explain in detail.</span></span></li><li><span class="num">③</span><span><span class="zh">时间久的；旧的。～旧、～醋、推～出新。</span><span class="en">Long kept; old. 陈旧 outdated; 陈醋 mature vinegar; 推陈出新 to bring forth the new from the old.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

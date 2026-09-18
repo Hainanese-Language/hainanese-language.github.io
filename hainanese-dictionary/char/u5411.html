@@ -15,12 +15,19 @@
 <span class="rbig">hhio⁴</span>
 <button class="play" onclick="play('yio4.mp3')">&#9654;</button></div>
 <p class="rb-py">xiàng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">方向；目标。风～、志～、方～。</span><span class="en">A direction; an aim. 风向 wind direction; 志向 aspiration.</span></span></li><li><span class="num">②</span><span><span class="zh">对着；朝着，跟"背"相对。～阳、面～大海、～前看。</span><span class="en">To face — the opposite of 背. 向阳 facing the sun; 向前看 to look ahead.</span></span></li><li><span class="num">③</span><span><span class="zh">表示动作的方向。～东走、～群众学习。</span><span class="en">Marks the direction of an action. 向东走 to go east; 向群众学习 to learn from the masses.</span></span></li><li><span class="num">④</span><span><span class="zh">偏袒。偏～、别老～着他。</span><span class="en">To take sides with. 偏向 to be partial; 别老向着他 stop taking his side.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉从来；一向。～有研究、～无此例。</span><span class="en">〈lit.〉 All along. 向无此例 there has never been such a precedent.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhiang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiang4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">方向；目标。风～、志～、方～。</span><span class="en">A direction; an aim. 风向 wind direction; 志向 aspiration.</span></span></li><li><span class="num">②</span><span><span class="zh">对着；朝着，跟"背"相对。～阳、面～大海、～前看。</span><span class="en">To face — the opposite of 背. 向阳 facing the sun; 向前看 to look ahead.</span></span></li><li><span class="num">③</span><span><span class="zh">表示动作的方向。～东走、～群众学习。</span><span class="en">Marks the direction of an action. 向东走 to go east; 向群众学习 to learn from the masses.</span></span></li><li><span class="num">④</span><span><span class="zh">偏袒。偏～、别老～着他。</span><span class="en">To take sides with. 偏向 to be partial; 别老向着他 stop taking his side.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>从来；一向。～有研究、～无此例。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> All along. 向无此例 there has never been such a precedent.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhiang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiang4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

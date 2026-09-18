@@ -24,7 +24,7 @@
 <div class="gl zh">从事某种工作或学习的人。教～、演～、学～。</div><div class="also">另读 <i>yun²</i> · <i>yun⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u57a3.html">
 <div class="ch">垣</div><div class="body">
 <span class="py">yuán</span>
-<div class="gl zh">〈书〉墙。城～、断壁残～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u586c.html">
+<div class="gl zh">墙。城～、断壁残～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u586c.html">
 <div class="ch">塬</div><div class="body">
 <span class="py">yuán</span>
 <div class="gl zh">中国西北黄土高原上四边陡、顶上平的地形。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b8c.html">
@@ -60,7 +60,7 @@
 <div class="gl zh">车前驾牲口的两根直木。～马、车～、驾～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e22.html">
 <div class="ch">鸢</div><div class="body">
 <span class="py">yuān</span>
-<div class="gl zh">〈书〉老鹰。～飞鱼跃、纸～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u56ed.html">
+<div class="gl zh">老鹰。～飞鱼跃、纸～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u56ed.html">
 <div class="ch">园</div><div class="body">
 <span class="py">yuán</span>
 <div class="gl zh">种植蔬菜、花果的地方。菜～、果～、～丁。</div><div class="also">主读 <i>hhui²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5706.html">
@@ -69,7 +69,7 @@
 <div class="gl zh">从中心到周边各点距离相等的形。～圈、～形、～桌。</div><div class="also">主读 <i>i²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u571c.html">
 <div class="ch">圜</div><div class="body">
 <span class="py">huán · yuán</span>
-<div class="gl zh">〈书〉环绕。～绕。  yuán 〈书〉同"圆"。～丘。</div><div class="also">主读 <i>hhuan²</i> · <i>uan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u693d.html">
+<div class="gl zh">环绕。～绕。  yuán 同"圆"。～丘。</div><div class="also">主读 <i>hhuan²</i> · <i>uan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u693d.html">
 <div class="ch">椽</div><div class="body">
 <span class="py">chuán</span>
 <div class="gl zh">架在屋顶横木上支撑屋面的木条。～子、～木、大笔如～。</div><div class="also">主读 <i>suan²</i></div></div></a><footer>
@@ -78,6 +78,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

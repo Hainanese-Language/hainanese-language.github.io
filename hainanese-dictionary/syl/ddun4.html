@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ddun1.html">ddun¹</a><a class="chip" href="/hainanese-dictionary/syl/ddun2.html">ddun²</a><a class="chip" href="/hainanese-dictionary/syl/ddun3.html">ddun³</a><a class="chip on" href="/hainanese-dictionary/syl/ddun4.html">ddun⁴</a><a class="chip" href="/hainanese-dictionary/syl/ddun5.html">ddun⁵</a><a class="chip" href="/hainanese-dictionary/syl/ddun6.html">ddun⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u627d.html">
 <div class="ch">扽</div><div class="body">
 <span class="py">dèn</span>
-<div class="gl zh">〈方〉猛地一拉。～绳子、把衣服～平。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c8c.html">
+<div class="gl zh">猛地一拉。～绳子、把衣服～平。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c8c.html">
 <div class="ch">沌</div><div class="body">
 <span class="py">dùn</span>
 <div class="gl zh">用于"混沌"，指模糊不清、分不出层次的状态。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9041.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

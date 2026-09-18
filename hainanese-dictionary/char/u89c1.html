@@ -15,16 +15,23 @@
 <span class="rbig">gi⁴</span>
 <button class="play" onclick="play('ki4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi4.html">同音字 6</a></div>
 <p class="rb-py">jiàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">看到。看～、～闻、～多识广。</span><span class="en">to see.</span></span></li><li><span class="num">②</span><span><span class="zh">会面。接～、～面、～客。</span><span class="en">to meet; receive.</span></span></li><li><span class="num">③</span><span><span class="zh">看法；见解。意～、成～、～地。</span><span class="en">a view; an opinion.</span></span></li><li><span class="num">④</span><span><span class="zh">指出参看的地方。～上、～下页、详～附录。</span><span class="en">to point to a place for reference; see.</span></span></li><li><span class="num">⑤</span><span><span class="zh">用在动词后，表示结果。听～、看不～、遇～。</span><span class="en">used after a verb to mark the result.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">gin⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kien4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">看到。看～、～闻、～多识广。</span><span class="en">to see.</span></span></li><li><span class="num">②</span><span><span class="zh">会面。接～、～面、～客。</span><span class="en">to meet; receive.</span></span></li><li><span class="num">③</span><span><span class="zh">看法；见解。意～、成～、～地。</span><span class="en">a view; an opinion.</span></span></li><li><span class="num">④</span><span><span class="zh">指出参看的地方。～上、～下页、详～附录。</span><span class="en">to point to a place for reference; see.</span></span></li><li><span class="num">⑤</span><span><span class="zh">用在动词后，表示结果。听～、看不～、遇～。</span><span class="en">used after a verb to mark the result.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">gin⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kien4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">hhin⁴</span>
 <button class="play" onclick="play('yien4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhin4.html">同音字 7</a></div>
 <p class="rb-py">xiàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"现"，显露出来。图穷匕首～、～于经传。</span></span></li></ul><div class="alt"><span class="r2">hhin⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yien5.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"现"，显露出来。图穷匕首～、～于经传。</span><span class="en">same as 现: to appear; become visible.</span></span></li></ul><div class="alt"><span class="r2">hhin⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yien5.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

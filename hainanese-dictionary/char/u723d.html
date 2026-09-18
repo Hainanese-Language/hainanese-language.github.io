@@ -15,12 +15,19 @@
 <span class="rbig">suang³</span>
 <button class="play" onclick="play('suang3.mp3')">&#9654;</button></div>
 <p class="rb-py">shuǎng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">明朗；清亮。～朗、清～、秋高气～。</span><span class="en">Bright and clear. 爽朗 hearty; bracing; 清爽 fresh; 秋高气爽 crisp autumn weather.</span></span></li><li><span class="num">②</span><span><span class="zh">舒服；痛快。～快、～心、身体不～。</span><span class="en">Comfortable; refreshed. 爽快 pleasant; 身体不爽 feeling unwell.</span></span></li><li><span class="num">③</span><span><span class="zh">直率；干脆。豪～、直～。</span><span class="en">Frank; straightforward. 豪爽 open-hearted; 直爽 candid.</span></span></li><li><span class="num">④</span><span><span class="zh">违背；差失。～约、屡试不～。</span><span class="en">To fail; deviate. 爽约 to break an appointment; 屡试不爽 never once failing.</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">dang³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tang3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">明朗；清亮。～朗、清～、秋高气～。</span><span class="en">Bright and clear. 爽朗 hearty; bracing; 清爽 fresh; 秋高气爽 crisp autumn weather.</span></span></li><li><span class="num">②</span><span><span class="zh">舒服；痛快。～快、～心、身体不～。</span><span class="en">Comfortable; refreshed. 爽快 pleasant; 身体不爽 feeling unwell.</span></span></li><li><span class="num">③</span><span><span class="zh">直率；干脆。豪～、直～。</span><span class="en">Frank; straightforward. 豪爽 open-hearted; 直爽 candid.</span></span></li><li><span class="num">④</span><span><span class="zh">违背；差失。～约、屡试不～。</span><span class="en">To fail; deviate. 爽约 to break an appointment; 屡试不爽 never once failing.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">dang³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tang3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -33,7 +33,7 @@
 <div class="gl zh">今仅用于"玲珑"，形容精巧细致或灵活。娇小～珑、～珑剔透。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u74f4.html">
 <div class="ch">瓴</div><div class="body">
 <span class="py">líng</span>
-<div class="gl zh">〈书〉古代一种盛水的瓶子；也指瓦沟。高屋建～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7eeb.html">
+<div class="gl zh">古代一种盛水的瓶子；也指瓦沟。高屋建～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7eeb.html">
 <div class="ch">绫</div><div class="body">
 <span class="py">líng</span>
 <div class="gl zh">薄而有花纹的丝织品。～罗绸缎。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f9a.html">
@@ -45,7 +45,7 @@
 <div class="gl zh">鸟翅膀或尾巴上的长羽毛。雁～、～毛、花～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8046.html">
 <div class="ch">聆</div><div class="body">
 <span class="py">líng</span>
-<div class="gl zh">〈书〉听。～听、～教。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82d3.html">
+<div class="gl zh">听。～听、～教。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82d3.html">
 <div class="ch">苓</div><div class="body">
 <span class="py">líng</span>
 <div class="gl zh">用于"茯～"，一种寄生在松树根上的菌类，可入药。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83f1.html">
@@ -75,6 +75,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

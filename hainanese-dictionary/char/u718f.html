@@ -15,12 +15,18 @@
 <span class="rbig">hhun¹</span>
 <button class="play" onclick="play('hhon1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhun1.html">同音字 11</a></div>
 <p class="rb-py">xūn</p>
-<ul class="senses"><li><span class="pyhead">〔xūn〕</span></li><li><span class="num">①</span><span><span class="zh">烟、气等接触物体。烟～火燎、臭气～天。</span><span class="en">(of smoke or fumes) To reach and affect something. 烟熏火燎 smoke-blackened and scorched; 臭气熏天 a stench filling the air.</span></span></li><li><span class="num">②</span><span><span class="zh">用烟火使食物有特殊香味。～鱼、～肉、～鸡。</span><span class="en">To smoke food for flavour. 熏鱼 smoked fish; 熏肉 bacon.</span></span></li><li><span class="pyhead">〔xùn〕</span></li><li><span class="num">③</span><span><span class="zh">〈方〉煤气使人中毒。让煤气～着了。</span><span class="en">〈dial.〉 To be poisoned by coal gas. 让煤气熏着了 overcome by the fumes.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔xūn〕</span></li><li><span class="num">①</span><span><span class="zh">烟、气等接触物体。烟～火燎、臭气～天。</span><span class="en">(of smoke or fumes) To reach and affect something. 烟熏火燎 smoke-blackened and scorched; 臭气熏天 a stench filling the air.</span></span></li><li><span class="num">②</span><span><span class="zh">用烟火使食物有特殊香味。～鱼、～肉、～鸡。</span><span class="en">To smoke food for flavour. 熏鱼 smoked fish; 熏肉 bacon.</span></span></li><li><span class="pyhead">〔xùn〕</span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>煤气使人中毒。让煤气～着了。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To be poisoned by coal gas. 让煤气熏着了 overcome by the fumes.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

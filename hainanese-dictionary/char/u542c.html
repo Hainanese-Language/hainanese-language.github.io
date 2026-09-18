@@ -15,12 +15,18 @@
 <span class="rbig">hia¹</span>
 <button class="play" onclick="play('hia1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hia1.html">同音字 2</a></div>
 <p class="rb-py">tīng</p><p class="scope">用于第 ❶❷❸ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用耳朵接受声音。～广播、～见、倾～。</span><span class="en">To hear; listen. 听广播 to listen to the radio; 倾听 to listen attentively.</span></span></li><li><span class="num">②</span><span><span class="zh">听从；接受。～话、～劝、言～计从。</span><span class="en">To obey; heed. 听话 obedient; 言听计从 to follow another's every word.</span></span></li><li><span class="num">③</span><span><span class="zh">治理；判断。～政、～讼。</span><span class="en">To administer; adjudicate. 听政 to attend to affairs of state; 听讼 to try a case.</span></span></li><li><span class="num">④</span><span><span class="zh">任凭；随便。～任、～便、～之任之。</span><span class="en">To let be; leave to. 听任 to allow; 听之任之 to let things drift.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈外〉量词，用于罐装的食品、饮料。一～可乐。</span><span class="en">〈loan〉 Measure word for tinned food and drink. 一听可乐 a can of cola.</span></span></li></ul><div class="alt"><span class="r2">heng⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('heng4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div><div class="alt"><span class="r2">din⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tien6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用耳朵接受声音。～广播、～见、倾～。</span><span class="en">To hear; listen. 听广播 to listen to the radio; 倾听 to listen attentively.</span></span></li><li><span class="num">②</span><span><span class="zh">听从；接受。～话、～劝、言～计从。</span><span class="en">To obey; heed. 听话 obedient; 言听计从 to follow another's every word.</span></span></li><li><span class="num">③</span><span><span class="zh">治理；判断。～政、～讼。</span><span class="en">To administer; adjudicate. 听政 to attend to affairs of state; 听讼 to try a case.</span></span></li><li><span class="num">④</span><span><span class="zh">任凭；随便。～任、～便、～之任之。</span><span class="en">To let be; leave to. 听任 to allow; 听之任之 to let things drift.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>量词，用于罐装的食品、饮料。一～可乐。</span><span class="en"><span class="pill tip" data-tip="Loanword. Borrowed or transliterated from a foreign language.">loan</span> Measure word for tinned food and drink. 一听可乐 a can of cola.</span></span></li></ul><div class="alt"><span class="r2">heng⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('heng4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div><div class="alt"><span class="r2">din⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tien6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

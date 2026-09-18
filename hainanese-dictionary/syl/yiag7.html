@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/yiag7.html">yiag⁷</a><a class="chip" href="/hainanese-dictionary/syl/yiag8.html">yiag⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u504c.html">
 <div class="ch">偌</div><div class="body">
 <span class="py">ruò</span>
-<div class="gl zh">〈书〉这么；那么。～大、～多。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70c1.html">
+<div class="gl zh">这么；那么。～大、～多。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70c1.html">
 <div class="ch">烁</div><div class="body">
 <span class="py">shuò</span>
 <div class="gl zh">光亮闪动。闪～、～～发光。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7bac.html">
@@ -27,18 +27,24 @@
 <div class="gl zh">跳。～进、飞～、～然纸上。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94a5.html">
 <div class="ch">钥</div><div class="body">
 <span class="py">yuè · yào</span>
-<div class="gl zh">〈书〉锁；开锁的东西。锁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94a5.html">
+<div class="gl zh">锁；开锁的东西。锁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94a5.html">
 <div class="ch">钥</div><div class="body">
 <span class="py">yuè · yào</span>
-<div class="gl zh">〈书〉锁；开锁的东西。锁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94c4.html">
+<div class="gl zh">锁；开锁的东西。锁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94c4.html">
 <div class="ch">铄</div><div class="body">
 <span class="py">shuò</span>
-<div class="gl zh">〈书〉熔化金属。众口～金。</div><div class="also">主读 <i>diag⁷</i></div></div></a><footer>
+<div class="gl zh">熔化金属。众口～金。</div><div class="also">主读 <i>diag⁷</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

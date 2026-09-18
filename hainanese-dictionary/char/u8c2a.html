@@ -15,12 +15,18 @@
 <span class="rbig">zeg⁷</span>
 <button class="play" onclick="play('ceg7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zeg7.html">同音字 38</a></div>
 <p class="rb-py">zhé</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">旧时指官吏被降职并调到边远地方。贬～、～居。</span><span class="en">Formerly, for an official to be demoted and banished to a remote post. 贬谪 to relegate; 谪居 to live in banishment.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉责备。～罚。</span><span class="en">〈lit.〉 To censure. 谪罚 to punish with blame.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">旧时指官吏被降职并调到边远地方。贬～、～居。</span><span class="en">Formerly, for an official to be demoted and banished to a remote post. 贬谪 to relegate; 谪居 to live in banishment.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>责备。～罚。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To censure. 谪罚 to punish with blame.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

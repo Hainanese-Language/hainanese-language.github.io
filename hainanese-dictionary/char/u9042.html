@@ -15,16 +15,22 @@
 <span class="rbig">dui⁵</span>
 <button class="play" onclick="play('tui5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dui5.html">同音字 4</a></div>
 <p class="rb-py">suì</p><p class="scope">用于第 ❶ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">顺心；称意。～心、～愿、～意。</span><span class="en">To one's satisfaction. 遂心; 遂愿; 遂意.</span></span></li><li><span class="num">②</span><span><span class="zh">成功；实现。未～、～行。</span><span class="en">To succeed; to be brought about. 未遂; 遂行.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉于是；就。服药后痛～止。</span><span class="en">〈lit.〉 Thereupon; then. 服药后痛遂止.</span></span></li></ul><div class="alt"><span class="r2">dui⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tui6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">顺心；称意。～心、～愿、～意。</span><span class="en">To one's satisfaction. 遂心; 遂愿; 遂意.</span></span></li><li><span class="num">②</span><span><span class="zh">成功；实现。未～、～行。</span><span class="en">To succeed; to be brought about. 未遂; 遂行.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>于是；就。服药后痛～止。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Thereupon; then. 服药后痛遂止.</span></span></li></ul><div class="alt"><span class="r2">dui⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tui6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">dui⁵</span>
 <button class="play" onclick="play('tui5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dui5.html">同音字 4</a></div>
 <p class="rb-py">suí</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"半身不遂"。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"半身不遂"。</span><span class="en">Used only in 半身不遂 (hemiplegia)</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -19,16 +19,23 @@
 <span class="rbig">dai³</span>
 <button class="play" onclick="play('tai3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dai3.html">同音字 7</a></div>
 <p class="rb-py">zǎi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉幼小的动物；也指年轻男子。猪～、肥～、打工～。</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">gia³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kia3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>幼小的动物；也指年轻男子。猪～、肥～、打工～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> A young animal; also a young man. 猪仔 a piglet; 肥仔 a chubby lad; 打工仔 a young hired hand.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">gia³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kia3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">zi¹</span>
 <button class="play" onclick="play('ci1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zi1.html">同音字 17</a></div>
 <p class="rb-py">zī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"仔肩"，指所担负的责任。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"仔肩"，指所担负的责任。</span><span class="en">Used in 仔肩: the responsibility one shoulders.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

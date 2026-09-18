@@ -15,16 +15,22 @@
 <span class="rbig">hhu³</span>
 <button class="play" onclick="play('wu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhu3.html">同音字 4</a></div>
 <p class="rb-py">hǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">蒙混；虚张声势吓人。～人、蒙～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">蒙混；虚张声势吓人。～人、蒙～。</span><span class="en">To bluff; frighten by bluster. 唬人 to put on a scare; 蒙唬 to hoodwink.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hhe⁶</span>
 <button class="play" onclick="play('hhe6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhe6.html">同音字 5</a></div>
 <p class="rb-py">xià</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"吓"，使害怕。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"吓"，使害怕。</span><span class="en">Same as 吓: to frighten.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

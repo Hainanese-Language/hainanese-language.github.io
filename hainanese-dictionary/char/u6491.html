@@ -15,12 +15,19 @@
 <span class="rbig">seng¹</span>
 <button class="play" onclick="play('seng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng1.html">同音字 9</a></div>
 <p class="rb-py">chēng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">抵住；支住。～住、～腰、～起帐篷。</span><span class="en">To prop up; to support. 撑住; 撑腰; 撑起帐篷.</span></span></li><li><span class="num">②</span><span><span class="zh">用篙抵住河底使船前进。～船、～篙。</span><span class="en">To pole a boat. 撑船; 撑篙.</span></span></li><li><span class="num">③</span><span><span class="zh">支持；维持。～场面、～下去、苦～。</span><span class="en">To keep going; to sustain. 撑场面; 撑下去; 苦撑.</span></span></li><li><span class="num">④</span><span><span class="zh">张开。～伞、～开口袋。</span><span class="en">To open out. 撑伞; 撑开口袋.</span></span></li><li><span class="num">⑤</span><span><span class="zh">装得过满。吃～了、别～破了。</span><span class="en">To be filled to bursting. 吃撑了; 别撑破了.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">he¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('he1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">抵住；支住。～住、～腰、～起帐篷。</span><span class="en">To prop up; to support. 撑住; 撑腰; 撑起帐篷.</span></span></li><li><span class="num">②</span><span><span class="zh">用篙抵住河底使船前进。～船、～篙。</span><span class="en">To pole a boat. 撑船; 撑篙.</span></span></li><li><span class="num">③</span><span><span class="zh">支持；维持。～场面、～下去、苦～。</span><span class="en">To keep going; to sustain. 撑场面; 撑下去; 苦撑.</span></span></li><li><span class="num">④</span><span><span class="zh">张开。～伞、～开口袋。</span><span class="en">To open out. 撑伞; 撑开口袋.</span></span></li><li><span class="num">⑤</span><span><span class="zh">装得过满。吃～了、别～破了。</span><span class="en">To be filled to bursting. 吃撑了; 别撑破了.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">he¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('he1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

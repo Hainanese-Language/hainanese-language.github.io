@@ -15,16 +15,22 @@
 <span class="rbig">gab⁷</span>
 <button class="play" onclick="play('kab7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gab7.html">同音字 5</a></div>
 <p class="rb-py">gé</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">软体动物，有两片圆形或椭圆形的壳，肉可以吃。～蜊、文～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">软体动物，有两片圆形或椭圆形的壳，肉可以吃。～蜊、文～。</span><span class="en">The clam, an edible shellfish with two rounded shells.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hha²</span>
 <button class="play" onclick="play('hha2.mp3')">&#9654;</button></div>
 <p class="rb-py">há</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"蛤蟆"，青蛙和蟾蜍的统称。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"蛤蟆"，青蛙和蟾蜍的统称。</span><span class="en">Used in 蛤蟆, a general term for frogs and toads.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

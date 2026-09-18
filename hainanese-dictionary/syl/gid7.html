@@ -27,7 +27,7 @@
 <div class="gl zh">吉利；幸运(跟"凶"相对)。～祥、～日、～庆、逢凶化～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b51.html">
 <div class="ch">孑</div><div class="body">
 <span class="py">jié</span>
-<div class="gl zh">〈书〉单独；孤单。～立、～然一身。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6289.html">
+<div class="gl zh">单独；孤单。～立、～然一身。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6289.html">
 <div class="ch">抉</div><div class="body">
 <span class="py">jué</span>
 <div class="gl zh">挑选。～择。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6770.html">
@@ -36,7 +36,7 @@
 <div class="gl zh">才能出众的人。豪～、英～、人～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6840.html">
 <div class="ch">桀</div><div class="body">
 <span class="py">jié</span>
-<div class="gl zh">〈书〉凶暴。～骜不驯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6854.html">
+<div class="gl zh">凶暴。～骜不驯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6854.html">
 <div class="ch">桔</div><div class="body">
 <span class="py">jié · jú</span>
 <div class="gl zh">用于"桔梗"，一种多年生草本植物，根可入药。～梗。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6a58.html">
@@ -48,7 +48,7 @@
 <div class="gl zh">有机化合物的一类，分子中含碳碳三键。乙～、～烃。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u78a3.html">
 <div class="ch">碣</div><div class="body">
 <span class="py">jié</span>
-<div class="gl zh">〈书〉圆顶的石碑。墓～、残碑断～。</div><div class="also">另读 <i>gad⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7aed.html">
+<div class="gl zh">圆顶的石碑。墓～、残碑断～。</div><div class="also">另读 <i>gad⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7aed.html">
 <div class="ch">竭</div><div class="body">
 <span class="py">jié</span>
 <div class="gl zh">尽；用完。～力、枯～、精疲力～。</div><div class="also">另读 <i>gad⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ed3.html">
@@ -66,7 +66,7 @@
 <div class="gl zh">欺诈；狡猾。诡～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5048.html">
 <div class="ch">偈</div><div class="body">
 <span class="py">jì · jié</span>
-<div class="gl zh">佛经中的唱词。～语、～颂。  jié 〈书〉勇武的样子。～～。</div><div class="also">主读 <i>gi⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63ed.html">
+<div class="gl zh">佛经中的唱词。～语、～颂。  jié 勇武的样子。～～。</div><div class="also">主读 <i>gi⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63ed.html">
 <div class="ch">揭</div><div class="body">
 <span class="py">jiē</span>
 <div class="gl zh">把粘着的东西掀起或取下。～下膏药、～锅盖、～下告示。</div><div class="also">主读 <i>gad⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6854.html">
@@ -84,12 +84,18 @@
 <div class="gl zh">用线、绳等打成的疙瘩。打～、活～、蝴蝶～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ee0.html">
 <div class="ch">黠</div><div class="body">
 <span class="py">xiá</span>
-<div class="gl zh">〈书〉聪明而狡猾。狡～、慧～。</div><div class="also">主读 <i>hhad⁸</i></div></div></a><footer>
+<div class="gl zh">聪明而狡猾。狡～、慧～。</div><div class="also">主读 <i>hhad⁸</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

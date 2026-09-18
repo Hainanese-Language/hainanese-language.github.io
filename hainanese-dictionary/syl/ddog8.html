@@ -27,7 +27,7 @@
 <div class="gl zh">慢慢地走。～步、～来～去。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ee9.html">
 <div class="ch">黩</div><div class="body">
 <span class="py">dú</span>
-<div class="gl zh">〈书〉轻率；滥用。穷兵～武。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5ea6.html">
+<div class="gl zh">轻率；滥用。穷兵～武。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5ea6.html">
 <div class="ch">度</div><div class="body">
 <span class="py">dù · duó</span>
 <div class="gl zh">计量长短的标准；程度。～量衡、长～、高～、～数。</div><div class="also">主读 <i>ddou¹</i> · <i>ddu⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u987f.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

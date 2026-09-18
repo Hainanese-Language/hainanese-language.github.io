@@ -18,7 +18,7 @@
 <div class="gl zh">一种多年生藤本植物，块根可制淀粉。～根、～藤。</div><div class="also">另读 <i>gua⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u78a3.html">
 <div class="ch">碣</div><div class="body">
 <span class="py">jié</span>
-<div class="gl zh">〈书〉圆顶的石碑。墓～、残碑断～。</div><div class="also">主读 <i>gid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7aed.html">
+<div class="gl zh">圆顶的石碑。墓～、残碑断～。</div><div class="also">主读 <i>gid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7aed.html">
 <div class="ch">竭</div><div class="body">
 <span class="py">jié</span>
 <div class="gl zh">尽；用完。～力、枯～、精疲力～。</div><div class="also">主读 <i>gid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u845b.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

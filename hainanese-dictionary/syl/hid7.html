@@ -18,7 +18,7 @@
 <div class="gl zh">昏倒；失去知觉。昏～、～逆。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6308.html">
 <div class="ch">挈</div><div class="body">
 <span class="py">qiè</span>
-<div class="gl zh">〈书〉提；带领。提纲～领、扶老～幼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6485.html">
+<div class="gl zh">提；带领。提纲～领、扶老～幼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6485.html">
 <div class="ch">撅</div><div class="body">
 <span class="py">juē</span>
 <div class="gl zh">翘起。～嘴、～尾巴、～着屁股。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6a5b.html">
@@ -42,13 +42,13 @@
 <div class="gl zh">跌倒；挫折。一～不振。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fc4.html">
 <div class="ch">迄</div><div class="body">
 <span class="py">qì</span>
-<div class="gl zh">〈书〉到；至。～今、～未成功。</div><div class="also">另读 <i>ngid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9532.html">
+<div class="gl zh">到；至。～今、～未成功。</div><div class="also">另读 <i>ngid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9532.html">
 <div class="ch">锲</div><div class="body">
 <span class="py">qiè</span>
-<div class="gl zh">〈书〉刻。～而不舍。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9619.html">
+<div class="gl zh">刻。～而不舍。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9619.html">
 <div class="ch">阙</div><div class="body">
 <span class="py">què · quē</span>
-<div class="gl zh">〈古〉宫殿门前两边的高建筑；也指宫殿。宫～、城～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5403.html">
+<div class="gl zh">宫殿门前两边的高建筑；也指宫殿。宫～、城～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5403.html">
 <div class="ch">吃</div><div class="body">
 <span class="py">chī</span>
 <div class="gl zh">把食物放进嘴里咀嚼咽下。～饭、～药。</div><div class="also">主读 <i>zia⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5951.html">
@@ -66,6 +66,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

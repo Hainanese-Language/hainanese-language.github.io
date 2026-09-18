@@ -15,12 +15,19 @@
 <span class="rbig">duang¹</span>
 <button class="play" onclick="play('tuang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/duang1.html">同音字 6</a></div>
 <p class="rb-py">zhuāng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">修饰打扮。梳～、化～、～扮。</span><span class="en">To make up; adorn oneself. 梳妆 to dress one's hair; 化妆 to put on make-up.</span></span></li><li><span class="num">②</span><span><span class="zh">女子身上的装饰。红～、卸～。</span><span class="en">A woman's attire and adornment. 红妆 a woman's finery; 卸妆 to remove one's make-up.</span></span></li><li><span class="num">③</span><span><span class="zh">嫁妆。送～、～奁。</span><span class="en">A dowry. 送妆 to send the trousseau; 妆奁 a bride's outfit.</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">do¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('to1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">修饰打扮。梳～、化～、～扮。</span><span class="en">To make up; adorn oneself. 梳妆 to dress one's hair; 化妆 to put on make-up.</span></span></li><li><span class="num">②</span><span><span class="zh">女子身上的装饰。红～、卸～。</span><span class="en">A woman's attire and adornment. 红妆 a woman's finery; 卸妆 to remove one's make-up.</span></span></li><li><span class="num">③</span><span><span class="zh">嫁妆。送～、～奁。</span><span class="en">A dowry. 送妆 to send the trousseau; 妆奁 a bride's outfit.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">do¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('to1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

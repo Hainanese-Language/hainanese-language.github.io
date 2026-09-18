@@ -15,12 +15,18 @@
 <span class="rbig">sang¹</span>
 <button class="play" onclick="play('sang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sang1.html">同音字 9</a></div>
 <p class="rb-py">sāng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">桑树，落叶乔木，叶可饲蚕，果实可食。～树、～叶、～葚。</span></span></li></ul><div class="alt"><span class="r2">duang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tuang1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">桑树，落叶乔木，叶可饲蚕，果实可食。～树、～叶、～葚。</span><span class="en">mulberry, a deciduous tree whose leaves feed silkworms and whose fruit is edible.</span></span></li></ul><div class="alt"><span class="r2">duang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tuang1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

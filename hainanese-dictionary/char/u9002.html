@@ -15,16 +15,22 @@
 <span class="rbig">ddeg⁸</span>
 <button class="play" onclick="play('deg8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddeg8.html">同音字 7</a></div>
 <p class="rb-py">shì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">合乎；相合。～合、～宜、～用、～可而止。</span><span class="en">To fit; to suit. 适合; 适宜; 适用; 适可而止.</span></span></li><li><span class="num">②</span><span><span class="zh">舒服。～意、舒～、不～。</span><span class="en">Comfortable. 适意; 舒适; 不适.</span></span></li><li><span class="num">③</span><span><span class="zh">恰好；正巧。～逢其会、～得其反。</span><span class="en">Just; as it happens. 适逢其会; 适得其反.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉往；到。无所～从。</span><span class="en">〈lit.〉 To go to. 无所适从.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">合乎；相合。～合、～宜、～用、～可而止。</span><span class="en">To fit; to suit. 适合; 适宜; 适用; 适可而止.</span></span></li><li><span class="num">②</span><span><span class="zh">舒服。～意、舒～、不～。</span><span class="en">Comfortable. 适意; 舒适; 不适.</span></span></li><li><span class="num">③</span><span><span class="zh">恰好；正巧。～逢其会、～得其反。</span><span class="en">Just; as it happens. 适逢其会; 适得其反.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>往；到。无所～从。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To go to. 无所适从.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">huad⁷</span>
 <button class="play" onclick="play('huat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/huad7.html">同音字 3</a></div>
 <p class="rb-py">kuò</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于人名。南宫～(春秋时人)。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于人名。南宫～(春秋时人)。</span><span class="en">Used in personal names. 南宫适 (a figure of the Spring and Autumn period).</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -27,7 +27,7 @@
 <div class="gl zh">屠杀牲畜。～猪、屠～、～杀。</div><div class="also">主读 <i>hai²</i> · <i>dai²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5d3d.html">
 <div class="ch">崽</div><div class="body">
 <span class="py">zǎi</span>
-<div class="gl zh">〈方〉儿子；小孩儿。</div><div class="also">主读 <i>zai³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f7d.html">
+<div class="gl zh">儿子；小孩儿。</div><div class="also">主读 <i>zai³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f7d.html">
 <div class="ch">载</div><div class="body">
 <span class="py">zài · zǎi</span>
 <div class="gl zh">装运。装～、～重、满～而归。</div><div class="also">主读 <i>dai⁴</i> · <i>dai¹</i> · <i>dai⁴</i></div></div></a><footer>
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

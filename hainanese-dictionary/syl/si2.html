@@ -39,7 +39,7 @@
 <div class="gl zh">仅用于"蛴螬"，金龟子的幼虫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u892b.html">
 <div class="ch">褫</div><div class="body">
 <span class="py">chǐ</span>
-<div class="gl zh">〈书〉剥夺。～夺、～职。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a70.html">
+<div class="gl zh">剥夺。～夺、～职。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a70.html">
 <div class="ch">驰</div><div class="body">
 <span class="py">chí</span>
 <div class="gl zh">车马等奔跑；快跑。奔～、～骋、风～电掣。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ecd.html">
@@ -72,6 +72,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,16 +15,23 @@
 <span class="rbig">hhio⁵</span>
 <button class="play" onclick="play('yio5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhio5.html">同音字 3</a></div>
 <p class="rb-py">yè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">植物的叶子。树～、枝～、～绿素。</span><span class="en">A leaf. 树叶 tree leaves; 叶绿素 chlorophyll.</span></span></li><li><span class="num">②</span><span><span class="zh">像叶子的薄片。～片、百～窗。</span><span class="en">A thin leaf-like piece. 叶片 a blade; 百叶窗 a shutter.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉较长时期的分段。中～、20世纪末～。</span><span class="en">〈lit.〉 A division of a long period. 中叶 the middle years; 20世纪末叶 the late twentieth century.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhiab⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiab8.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">植物的叶子。树～、枝～、～绿素。</span><span class="en">A leaf. 树叶 tree leaves; 叶绿素 chlorophyll.</span></span></li><li><span class="num">②</span><span><span class="zh">像叶子的薄片。～片、百～窗。</span><span class="en">A thin leaf-like piece. 叶片 a blade; 百叶窗 a shutter.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>较长时期的分段。中～、20世纪末～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A division of a long period. 中叶 the middle years; 20世纪末叶 the late twentieth century.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhiab⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('yiab8.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">hhiab⁸</span>
 <button class="play" onclick="play('yiab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhiab8.html">同音字 11</a></div>
 <p class="rb-py">xié</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">和洽。～韵。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">和洽。～韵。</span><span class="en">In harmony. 叶韵 to rhyme.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">yim³</span>
 <button class="play" onclick="play('jiom3.mp3')">&#9654;</button></div>
 <p class="rb-py">rěn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">白苏，一种草本植物。</span><span class="en">Perilla, a herbaceous plant.</span></span></li><li><span class="num">②</span><span><span class="zh">用于"～苒"，形容时间渐渐过去。</span><span class="en">Used in 荏苒, describing time slipping by.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉软弱。色厉内～。</span><span class="en">〈lit.〉 Weak. 色厉内荏 (fierce outside, feeble within).</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">白苏，一种草本植物。</span><span class="en">Perilla, a herbaceous plant.</span></span></li><li><span class="num">②</span><span><span class="zh">用于"～苒"，形容时间渐渐过去。</span><span class="en">Used in 荏苒, describing time slipping by.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>软弱。色厉内～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Weak. 色厉内荏 (fierce outside, feeble within).</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

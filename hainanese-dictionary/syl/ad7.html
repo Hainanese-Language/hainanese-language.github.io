@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/ad7.html">ad⁷</a></div><a class="hrow" href="/hainanese-dictionary/char/u63e0.html">
 <div class="ch">揠</div><div class="body">
 <span class="py">yà</span>
-<div class="gl zh">〈书〉拔。～苗助长。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u904f.html">
+<div class="gl zh">拔。～苗助长。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u904f.html">
 <div class="ch">遏</div><div class="body">
 <span class="py">è</span>
 <div class="gl zh">阻止；抑制。～止、～制、怒不可～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6291.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

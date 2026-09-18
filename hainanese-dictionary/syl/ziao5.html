@@ -15,7 +15,7 @@
 <div class="gl zh">事前显露出来的迹象。预～、征～、～头。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8087.html">
 <div class="ch">肇</div><div class="body">
 <span class="py">zhào</span>
-<div class="gl zh">〈书〉开始；发生。～始、～端。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d75.html">
+<div class="gl zh">开始；发生。～始、～端。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d75.html">
 <div class="ch">赵</div><div class="body">
 <span class="py">zhao</span>
 <div class="gl zh">周代国名，在今河北南部、山西北部一带。</div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

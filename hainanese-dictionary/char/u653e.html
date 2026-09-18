@@ -15,12 +15,19 @@
 <span class="rbig">bang⁴</span>
 <button class="play" onclick="play('pang4.mp3')">&#9654;</button></div>
 <p class="rb-py">fàng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">解除约束；使自由。～行、释～、～学。</span><span class="en">to release; set free.</span></span></li><li><span class="num">②</span><span><span class="zh">任意；不加约束。～任、～纵、豪～。</span><span class="en">unrestrained; unchecked.</span></span></li><li><span class="num">③</span><span><span class="zh">发出。～光、～枪、～电。</span><span class="en">to give out; emit.</span></span></li><li><span class="num">④</span><span><span class="zh">点燃。～火、～鞭炮。</span><span class="en">to set alight.</span></span></li><li><span class="num">⑤</span><span><span class="zh">搁置；安置。～下、存～、～在桌上。</span><span class="en">to put down; place.</span></span></li><li><span class="num">⑥</span><span><span class="zh">借钱给人收取利息。～债、～款。</span><span class="en">to lend money at interest.</span></span></li><li><span class="num">⑦</span><span><span class="zh">花开；扩展。百花齐～、～大、～宽。</span><span class="en">(of flowers) to open; to widen.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phang4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">解除约束；使自由。～行、释～、～学。</span><span class="en">to release; set free.</span></span></li><li><span class="num">②</span><span><span class="zh">任意；不加约束。～任、～纵、豪～。</span><span class="en">unrestrained; unchecked.</span></span></li><li><span class="num">③</span><span><span class="zh">发出。～光、～枪、～电。</span><span class="en">to give out; emit.</span></span></li><li><span class="num">④</span><span><span class="zh">点燃。～火、～鞭炮。</span><span class="en">to set alight.</span></span></li><li><span class="num">⑤</span><span><span class="zh">搁置；安置。～下、存～、～在桌上。</span><span class="en">to put down; place.</span></span></li><li><span class="num">⑥</span><span><span class="zh">借钱给人收取利息。～债、～款。</span><span class="en">to lend money at interest.</span></span></li><li><span class="num">⑦</span><span><span class="zh">花开；扩展。百花齐～、～大、～宽。</span><span class="en">(of flowers) to open; to widen.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pang⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phang4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

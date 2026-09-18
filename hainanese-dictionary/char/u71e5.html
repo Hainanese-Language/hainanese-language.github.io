@@ -15,12 +15,18 @@
 <span class="rbig">sao⁴</span>
 <button class="play" onclick="play('sau4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sao4.html">同音字 4</a></div>
 <p class="rb-py">zào</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">缺少水分；干。干～、～热、口干舌～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">缺少水分；干。干～、～热、口干舌～。</span><span class="en">Dry; lacking moisture. 干燥 arid; 燥热 hot and dry; 口干舌燥 parched.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

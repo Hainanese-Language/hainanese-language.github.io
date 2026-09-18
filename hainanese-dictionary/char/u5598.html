@@ -15,12 +15,19 @@
 <span class="rbig">suai²</span>
 <button class="play" onclick="play('suai2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/suai2.html">同音字 3</a></div>
 <p class="rb-py">chuǎn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">急促地呼吸。～气、～息、气～吁吁。</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">suan³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('suan3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">急促地呼吸。～气、～息、气～吁吁。</span><span class="en">To breathe hard; pant. 喘气 to gasp; 喘息 to catch one's breath; 气喘吁吁 out of breath.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">suan³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('suan3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

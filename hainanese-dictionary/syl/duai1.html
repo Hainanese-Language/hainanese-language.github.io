@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/duai1.html">duai¹</a><a class="chip" href="/hainanese-dictionary/syl/duai6.html">duai⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u8870.html">
 <div class="ch">衰</div><div class="body">
 <span class="py">shuāi · cuī</span>
-<div class="gl zh">由强变弱；转向低落。～老、～退、兴～。  cuī 〈书〉按一定标准递减。等～。</div><div class="also">另读 <i>sui¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62fd.html">
+<div class="gl zh">由强变弱；转向低落。～老、～退、兴～。  cuī 按一定标准递减。等～。</div><div class="also">另读 <i>sui¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62fd.html">
 <div class="ch">拽</div><div class="body">
 <span class="py">zhuài · zhuāi · yè</span>
 <div class="gl zh">用力拉。～住不放、生拉硬～。  zhuāi</div><div class="also">主读 <i>duai⁶</i> · <i>yid⁷</i></div></div></a><footer>
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

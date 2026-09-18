@@ -33,7 +33,7 @@
 <div class="gl zh">儿童；小孩子。～年、儿～、～话。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f97.html">
 <div class="ch">侗</div><div class="body">
 <span class="py">dòng · tóng</span>
-<div class="gl zh">侗族，我国少数民族之一，主要分布在贵州、湖南、广西。  tóng 〈书〉幼稚无知。倥～。</div><div class="also">主读 <i>ddong⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u540c.html">
+<div class="gl zh">侗族，我国少数民族之一，主要分布在贵州、湖南、广西。  tóng 幼稚无知。倥～。</div><div class="also">主读 <i>ddong⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u540c.html">
 <div class="ch">同</div><div class="body">
 <span class="py">tóng · tòng</span>
 <div class="gl zh">一样；没有差别。相～、～等、～岁、～一个人。</div><div class="also">主读 <i>ddang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u540c.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <span class="rbig">sang⁴</span>
 <button class="play" onclick="play('sang4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sang4.html">同音字 4</a></div>
 <p class="rb-py">chuàng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">开始做；第一次做。～立、～办、～作、开～、首～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">开始做；第一次做。～立、～办、～作、开～、首～。</span><span class="en">To start; to do for the first time. 创立 to found; 创办 to set up; 创作 to create a work; 开创 to initiate; 首创 to originate.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">suang¹</span>
 <button class="play" onclick="play('suang1.mp3')">&#9654;</button></div>
 <p class="rb-py">chuāng</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

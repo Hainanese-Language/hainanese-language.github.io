@@ -27,7 +27,7 @@
 <div class="gl zh">往上或往前看。～仰、～望、高～远瞩。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7bb4.html">
 <div class="ch">箴</div><div class="body">
 <span class="py">zhēn</span>
-<div class="gl zh">〈书〉劝告；规劝。～言、～规。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c98.html">
+<div class="gl zh">劝告；规劝。～言、～规。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c98.html">
 <div class="ch">粘</div><div class="body">
 <span class="py">zhān · nián</span>
 <div class="gl zh">黏的东西附着在物体上；用黏的东西使物体连接。～贴、～住、糖～牙。  nián 同"黏"。～液、～米。</div><div class="also">另读 <i>niam²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8a79.html">
@@ -45,12 +45,18 @@
 <div class="gl zh">缝纫、编织用的细长工具。缝衣～、～线、毛线～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e10.html">
 <div class="ch">渐</div><div class="body">
 <span class="py">jiàn · jiān</span>
-<div class="gl zh">慢慢地；一点一点地。逐～、～变、～入佳境。  jiān 〈书〉浸；流入。东～于海。</div><div class="also">主读 <i>ziam⁵</i></div></div></a><footer>
+<div class="gl zh">慢慢地；一点一点地。逐～、～变、～入佳境。  jiān 浸；流入。东～于海。</div><div class="also">主读 <i>ziam⁵</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

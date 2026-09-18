@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/gan1.html">gan¹</a><a class="chip" href="/hainanese-dictionary/syl/gan3.html">gan³</a><a class="chip on" href="/hainanese-dictionary/syl/gan4.html">gan⁴</a><a class="chip" href="/hainanese-dictionary/syl/gan6.html">gan⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u65f0.html">
 <div class="ch">旰</div><div class="body">
 <span class="py">gàn</span>
-<div class="gl zh">〈书〉天色晚。宵衣～食。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da7.html">
+<div class="gl zh">天色晚。宵衣～食。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da7.html">
 <div class="ch">涧</div><div class="body">
 <span class="py">jiàn</span>
 <div class="gl zh">两山之间的流水；山间的水沟。山～、溪～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c0f.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

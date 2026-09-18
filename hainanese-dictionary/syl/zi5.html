@@ -21,18 +21,24 @@
 <div class="gl zh">辨别味道、帮助发音的器官。～头、～尖、口～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8210.html">
 <div class="ch">舐</div><div class="body">
 <span class="py">shì</span>
-<div class="gl zh">〈书〉舔。～犊情深、老牛～犊。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2e.html">
+<div class="gl zh">舔。～犊情深、老牛～犊。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2e.html">
 <div class="ch">贮</div><div class="body">
 <span class="py">zhù</span>
 <div class="gl zh">储存；积存。～存、～藏、～水。</div><div class="also">另读 <i>si¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96c9.html">
 <div class="ch">雉</div><div class="body">
 <span class="py">zhì</span>
-<div class="gl zh">〈书〉野鸡。～鸡。</div></div></a><footer>
+<div class="gl zh">野鸡。～鸡。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

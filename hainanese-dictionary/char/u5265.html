@@ -16,7 +16,8 @@
 <button class="play" onclick="play('pe6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/be6.html">同音字 8</a></div>
 <p class="rb-py">bāo</p>
 <ul class="senses"><li><span class="num"></span><span><span class="zh">去掉外面的皮或壳。～花生、～皮、把橘子～开。
-，多用于合成词。～削、～夺、～落、～离。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+，多用于合成词。～削、～夺、～落、～离。</span><span class="en">To take off an outer skin or shell. 剥花生 to shell peanuts; 剥皮 to skin; 把橘子剥开 to peel an orange.
+, used mainly in compounds. 剥削 to exploit; 剥夺 to deprive; 剥落 to flake off; 剥离 to strip away.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">bag⁷</span>
 <button class="play" onclick="play('pag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bag7.html">同音字 8</a></div>
 <p class="rb-py">bō</p>
@@ -26,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

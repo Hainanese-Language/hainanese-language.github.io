@@ -18,7 +18,7 @@
 <div class="gl zh">长度、地积、重量、利率等的单位。～米、年利一～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55b1.html">
 <div class="ch">喱</div><div class="body">
 <span class="py">lí</span>
-<div class="gl zh">〈外〉用于"咖喱"。</div><div class="also">另读 <i>ddi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c65.html">
+<div class="gl zh">用于"咖喱"。</div><div class="also">另读 <i>ddi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c65.html">
 <div class="ch">履</div><div class="body">
 <span class="py">lǚ</span>
 <div class="gl zh">鞋。革～、削足适～。</div><div class="also">另读 <i>li³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u65c5.html">
@@ -45,10 +45,10 @@
 <div class="gl zh">用竹子、树枝等编成的遮拦物。～笆、竹～、寄人～下。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f79.html">
 <div class="ch">罹</div><div class="body">
 <span class="py">lí</span>
-<div class="gl zh">〈书〉遭受（灾祸、疾病）。～难、～病。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8182.html">
+<div class="gl zh">遭受（灾祸、疾病）。～难、～病。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8182.html">
 <div class="ch">膂</div><div class="body">
 <span class="py">lǚ</span>
-<div class="gl zh">〈书〉脊梁骨。～力。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85dc.html">
+<div class="gl zh">脊梁骨。～力。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85dc.html">
 <div class="ch">藜</div><div class="body">
 <span class="py">lí</span>
 <div class="gl zh">草本植物，嫩叶可食，老茎可做拐杖。～杖。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94dd.html">
@@ -57,13 +57,13 @@
 <div class="gl zh">金属元素，符号Al，银白色，质轻。～合金、～锅。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u95fe.html">
 <div class="ch">闾</div><div class="body">
 <span class="py">lǘ</span>
-<div class="gl zh">〈书〉里巷的门；也指里巷。～里、倚～而望。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ca1.html">
+<div class="gl zh">里巷的门；也指里巷。～里、倚～而望。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ca1.html">
 <div class="ch">鲡</div><div class="body">
 <span class="py">lí</span>
 <div class="gl zh">仅用于"鳗鲡"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ee7.html">
 <div class="ch">黧</div><div class="body">
 <span class="py">lí</span>
-<div class="gl zh">〈书〉黑中带黄。～黑。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ece.html">
+<div class="gl zh">黑中带黄。～黑。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ece.html">
 <div class="ch">黎</div><div class="body">
 <span class="py">lí</span>
 <div class="gl zh">众多。～民、～庶。</div><div class="also">主读 <i>loi²</i></div></div></a><footer>
@@ -72,6 +72,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

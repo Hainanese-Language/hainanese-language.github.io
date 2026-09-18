@@ -15,20 +15,26 @@
 <span class="rbig">a³</span>
 <button class="play" onclick="play('a3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/a3.html">同音字 2</a></div>
 <p class="rb-py">ǎo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">弯曲使断。～断树枝、～折。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">弯曲使断。～断树枝、～折。</span><span class="en">To bend until it breaks. 拗断树枝; 拗折.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ao⁶</span>
 <button class="play" onclick="play('au6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ao6.html">同音字 4</a></div>
 <p class="rb-py">ào</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">不顺口；别扭。～口、～口令。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">不顺口；别扭。～口、～口令。</span><span class="en">Awkward to say; not smooth. 拗口; 拗口令.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ao⁴</span>
 <button class="play" onclick="play('au4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ao4.html">同音字 3</a></div>
 <p class="rb-py">niù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">固执；不驯顺。执～、～不过他、脾气很～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">固执；不驯顺。执～、～不过他、脾气很～。</span><span class="en">Stubborn; unyielding. 执拗; 拗不过他; 脾气很拗.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

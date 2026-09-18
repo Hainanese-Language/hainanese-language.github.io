@@ -18,7 +18,7 @@
 <div class="gl zh">姓。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c14.html">
 <div class="ch">尔</div><div class="body">
 <span class="py">ěr</span>
-<div class="gl zh">〈书〉你；你的。～等、～虞我诈。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e90.html">
+<div class="gl zh">你；你的。～等、～虞我诈。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e90.html">
 <div class="ch">庐</div><div class="body">
 <span class="py">lú</span>
 <div class="gl zh">简陋的小屋。茅～、～舍、三顾茅～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63b3.html">
@@ -36,7 +36,7 @@
 <div class="gl zh">仅用于"辘轳"，一种利用轮轴汲水的器具。辘～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fe9.html">
 <div class="ch">迩</div><div class="body">
 <span class="py">ěr</span>
-<div class="gl zh">〈书〉近。遐～闻名、～来。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9885.html">
+<div class="gl zh">近。遐～闻名、～来。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9885.html">
 <div class="ch">颅</div><div class="body">
 <span class="py">lú</span>
 <div class="gl zh">头的上部，包括头骨和脑。～骨、头～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a74.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

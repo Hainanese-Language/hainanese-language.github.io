@@ -15,20 +15,27 @@
 <span class="rbig">de⁶</span>
 <button class="play" onclick="play('te6.mp3')">&#9654;</button></div>
 <p class="rb-py">shuō</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用话表达意思。～话、～明、诉～。</span><span class="en">To say; to speak. 说话 to talk; 说明 to explain; 诉说 to relate.</span></span></li><li><span class="num">②</span><span><span class="zh">解释。～文解字、这话怎么～？</span><span class="en">To interpret. 说文解字 to explain characters; 这话怎么说？ how is that to be understood?</span></span></li><li><span class="num">③</span><span><span class="zh">言论；主张。学～、著书立～、邪～。</span><span class="en">A doctrine; a view. 学说 a theory; 著书立说 to write and put forward a doctrine; 邪说 a heresy.</span></span></li><li><span class="num">④</span><span><span class="zh">责备。挨～、他～了我一顿。</span><span class="en">To scold. 挨说 to be told off; 他说了我一顿 he gave me a talking-to.</span></span></li><li><span class="num">⑤</span><span><span class="zh">介绍；说合。～媒、～亲。</span><span class="en">To act as go-between. 说媒 to arrange a match; 说亲 to make a marriage proposal.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">suad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('suat7.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❺ 义</span></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用话表达意思。～话、～明、诉～。</span><span class="en">To say; to speak. 说话 to talk; 说明 to explain; 诉说 to relate.</span></span></li><li><span class="num">②</span><span><span class="zh">解释。～文解字、这话怎么～？</span><span class="en">To interpret. 说文解字 to explain characters; 这话怎么说？ how is that to be understood?</span></span></li><li><span class="num">③</span><span><span class="zh">言论；主张。学～、著书立～、邪～。</span><span class="en">A doctrine; a view. 学说 a theory; 著书立说 to write and put forward a doctrine; 邪说 a heresy.</span></span></li><li><span class="num">④</span><span><span class="zh">责备。挨～、他～了我一顿。</span><span class="en">To scold. 挨说 to be told off; 他说了我一顿 he gave me a talking-to.</span></span></li><li><span class="num">⑤</span><span><span class="zh">介绍；说合。～媒、～亲。</span><span class="en">To act as go-between. 说媒 to arrange a match; 说亲 to make a marriage proposal.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">suad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('suat7.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❺ 义</span></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">sui⁴</span>
 <button class="play" onclick="play('sui4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sui4.html">同音字 7</a></div>
 <p class="rb-py">shuì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用话劝人听从自己的主张。游～、～客。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用话劝人听从自己的主张。游～、～客。</span><span class="en">To persuade someone round to one's view. 游说 to lobby; 说客 a persuader.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">yuad⁸</span>
 <button class="play" onclick="play('juat8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yuad8.html">同音字 6</a></div>
 <p class="rb-py">yuè</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉同"悦"，喜悦。学而时习之，不亦～乎。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>同"悦"，喜悦。学而时习之，不亦～乎。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Same as 悦: pleased. 学而时习之，不亦说乎 is it not a pleasure to learn and practise in season?</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

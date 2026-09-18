@@ -15,12 +15,19 @@
 <span class="rbig">hhua²</span>
 <button class="play" onclick="play('wua2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhua2.html">同音字 8</a></div>
 <p class="rb-py">hān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">熟睡时因呼吸受阻而发出的粗重声音。打～、～声如雷。</span><span class="en">Snoring; the heavy breathing sound made during sleep when airflow is partly obstructed. 打鼾 to snore; 鼾声如雷 snoring as loud as thunder.</span></span></li><li><span class="num">②</span><span><span class="zh">打鼾；睡觉时发出鼾声。昨晚他～了一夜。</span><span class="en">To snore; to make a snoring sound while asleep. 他鼾了一夜 he snored all night.'</span></span></li></ul><div class="alt"><span class="r2">ngua²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ngua2.mp3')">&#9654;</button></div><div class="alt"><span class="pill">文读</span><span class="r2">hhan¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhan1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">熟睡时因呼吸受阻而发出的粗重声音。打～、～声如雷。</span><span class="en">Snoring; the heavy breathing sound made during sleep when airflow is partly obstructed. 打鼾 to snore; 鼾声如雷 snoring as loud as thunder.</span></span></li><li><span class="num">②</span><span><span class="zh">打鼾；睡觉时发出鼾声。昨晚他～了一夜。</span><span class="en">To snore; to make a snoring sound while asleep. 他鼾了一夜 he snored all night.'</span></span></li></ul><div class="alt"><span class="r2">ngua²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ngua2.mp3')">&#9654;</button></div><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhan¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhan1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

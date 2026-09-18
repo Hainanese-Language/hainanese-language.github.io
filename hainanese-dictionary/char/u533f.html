@@ -15,12 +15,18 @@
 <span class="rbig">neg⁷</span>
 <button class="play" onclick="play('neg7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/neg7.html">同音字 3</a></div>
 <p class="rb-py">nì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">隐藏；不让人知道。～名、藏～、隐～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">隐藏；不让人知道。～名、藏～、隐～。</span><span class="en">To hide; to conceal. 匿名 anonymous; 藏匿 to harbour; 隐匿 to keep out of sight.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

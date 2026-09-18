@@ -18,7 +18,7 @@
 <div class="gl zh">囟门，婴儿头顶骨未合缝的地方。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b17.html">
 <div class="ch">嬗</div><div class="body">
 <span class="py">shàn</span>
-<div class="gl zh">〈书〉更替；演变。～变。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u614e.html">
+<div class="gl zh">更替；演变。～变。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u614e.html">
 <div class="ch">慎</div><div class="body">
 <span class="py">shèn</span>
 <div class="gl zh">小心；谨慎。～重、谨～、不～、～言～行。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u80be.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

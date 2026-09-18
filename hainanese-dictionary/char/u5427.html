@@ -15,7 +15,7 @@
 <span class="rbig">ba⁵</span>
 <button class="play" onclick="play('pa5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ba5.html">同音字 3</a></div>
 <p class="rb-py">bā</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">象声词。～的一声。</span><span class="en">A short sharp sound. 吧的一声 with a snap.</span></span></li><li><span class="num">②</span><span><span class="zh">〈外〉指酒吧一类的场所。～台、网～。</span><span class="en">〈loan〉 A bar or similar place. 吧台 a bar counter; 网吧 an internet café.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">象声词。～的一声。</span><span class="en">A short sharp sound. 吧的一声 with a snap.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>指酒吧一类的场所。～台、网～。</span><span class="en"><span class="pill tip" data-tip="Loanword. Borrowed or transliterated from a foreign language.">loan</span> A bar or similar place. 吧台 a bar counter; 网吧 an internet café.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">dda⁶</span>
 <button class="play" onclick="play('da6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dda6.html">同音字 6</a></div>
 <p class="rb-py">ba</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

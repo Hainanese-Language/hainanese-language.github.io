@@ -15,12 +15,18 @@
 <span class="rbig">lu³</span>
 <button class="play" onclick="play('lu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lu3.html">同音字 7</a></div>
 <p class="rb-py">ér</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">连词，表示并列。伟大～光荣。</span><span class="en">Conjunction marking coordination. 伟大而光荣 great and glorious.</span></span></li><li><span class="num">②</span><span><span class="zh">连词，表示承接。取～代之。</span><span class="en">Conjunction marking succession. 取而代之 to take its place.</span></span></li><li><span class="num">③</span><span><span class="zh">连词，表示转折。华～不实、少～精。</span><span class="en">Conjunction marking contrast. 华而不实 showy but without substance.</span></span></li><li><span class="num">④</span><span><span class="zh">连词，连接状语和中心语。侃侃～谈、挺身～出。</span><span class="en">Conjunction joining an adverbial to its verb. 挺身而出 to step boldly forward.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉助词，表示从……到……。自上～下、由古～今。</span><span class="en">〈lit.〉 Particle marking a range from one point to another. 自上而下 from top to bottom; 由古而今 from ancient times to the present.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">连词，表示并列。伟大～光荣。</span><span class="en">Conjunction marking coordination. 伟大而光荣 great and glorious.</span></span></li><li><span class="num">②</span><span><span class="zh">连词，表示承接。取～代之。</span><span class="en">Conjunction marking succession. 取而代之 to take its place.</span></span></li><li><span class="num">③</span><span><span class="zh">连词，表示转折。华～不实、少～精。</span><span class="en">Conjunction marking contrast. 华而不实 showy but without substance.</span></span></li><li><span class="num">④</span><span><span class="zh">连词，连接状语和中心语。侃侃～谈、挺身～出。</span><span class="en">Conjunction joining an adverbial to its verb. 挺身而出 to step boldly forward.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>助词，表示从……到……。自上～下、由古～今。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Particle marking a range from one point to another. 自上而下 from top to bottom; 由古而今 from ancient times to the present.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

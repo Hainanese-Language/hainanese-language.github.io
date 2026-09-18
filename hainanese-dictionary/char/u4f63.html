@@ -15,16 +15,22 @@
 <span class="rbig">yong²</span>
 <button class="play" onclick="play('jong2.mp3')">&#9654;</button></div>
 <p class="rb-py">yōng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">雇用。～工、雇～、～人。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">雇用。～工、雇～、～人。</span><span class="en">To hire. 佣工 a hired labourer; 雇佣 to employ; 佣人 a servant.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">yong⁶</span>
 <button class="play" onclick="play('jong6.mp3')">&#9654;</button></div>
 <p class="rb-py">yòng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">买卖时付给中间人的报酬。～金、～钱、回～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">买卖时付给中间人的报酬。～金、～钱、回～。</span><span class="en">The commission paid to a middleman in a deal. 佣金 a commission; 佣钱 brokerage; 回佣 a rebate.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/nan1.html">nan¹</a><a class="chip" href="/hainanese-dictionary/syl/nan2.html">nan²</a><a class="chip" href="/hainanese-dictionary/syl/nan3.html">nan³</a><a class="chip" href="/hainanese-dictionary/syl/nan5.html">nan⁵</a></div><a class="hrow" href="/hainanese-dictionary/char/u56dd.html">
 <div class="ch">囝</div><div class="body">
 <span class="py">jiǎn · nān</span>
-<div class="gl zh">〈方〉儿子；孩子。  nān 同"囡"，〈方〉指小孩儿。小～。</div><div class="also">主读 <i>gia³</i></div></div></a><footer>
+<div class="gl zh">儿子；孩子。  nān 同"囡"，指小孩儿。小～。</div><div class="also">主读 <i>gia³</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">ddiab⁸</span>
 <button class="play" onclick="play('diab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddiab8.html">同音字 4</a></div>
 <p class="rb-py">dié</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">古代的公文或证件。通～、度～、～文。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">古代的公文或证件。通～、度～、～文。</span><span class="en">an official document or certificate of former times.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">pog⁷</span>
 <button class="play" onclick="play('phog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pog7.html">同音字 10</a></div>
 <p class="rb-py">huò</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">得到；取得。～得、～奖、～利、俘～。</span><span class="en">To obtain; to gain. 获得; 获奖; 获利; 俘获.</span></span></li><li><span class="num">②</span><span><span class="zh">收割庄稼。收～。</span><span class="en">To harvest. 收获.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉能够。不～前往。</span><span class="en">〈lit.〉 To be able to. 不获前往.</span></span></li></ul><div class="alt"><span class="r2">hhog⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhog7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">得到；取得。～得、～奖、～利、俘～。</span><span class="en">To obtain; to gain. 获得; 获奖; 获利; 俘获.</span></span></li><li><span class="num">②</span><span><span class="zh">收割庄稼。收～。</span><span class="en">To harvest. 收获.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>能够。不～前往。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To be able to. 不获前往.</span></span></li></ul><div class="alt"><span class="r2">hhog⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhog7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

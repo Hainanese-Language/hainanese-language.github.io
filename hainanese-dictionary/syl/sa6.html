@@ -12,13 +12,13 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/sa1.html">sa¹</a><a class="chip" href="/hainanese-dictionary/syl/sa2.html">sa²</a><a class="chip" href="/hainanese-dictionary/syl/sa3.html">sa³</a><a class="chip" href="/hainanese-dictionary/syl/sa4.html">sa⁴</a><a class="chip on" href="/hainanese-dictionary/syl/sa6.html">sa⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5565.html">
 <div class="ch">啥</div><div class="body">
 <span class="py">shá</span>
-<div class="gl zh">〈方〉疑问代词，什么。你说～？干～去？</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63d2.html">
+<div class="gl zh">疑问代词，什么。你说～？干～去？</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63d2.html">
 <div class="ch">插</div><div class="body">
 <span class="py">chā</span>
 <div class="gl zh">长形或片状的东西放进、刺进。～秧、～花、～门、～上电源。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6b43.html">
 <div class="ch">歃</div><div class="body">
 <span class="py">shà</span>
-<div class="gl zh">〈书〉用嘴吸取。～血为盟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c4a.html">
+<div class="gl zh">用嘴吸取。～血为盟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c4a.html">
 <div class="ch">汊</div><div class="body">
 <span class="py">chà</span>
 <div class="gl zh">河流的分支。河～、～港、～流。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8be7.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">惊讶。惊～、～异。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62c6.html">
 <div class="ch">拆</div><div class="body">
 <span class="py">chāi · cā</span>
-<div class="gl zh">把合在一起的弄开；卸下。～开、～信、～房子、～台。  cā 〈方〉排泄。～烂污。</div><div class="also">主读 <i>hia⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6748.html">
+<div class="gl zh">把合在一起的弄开；卸下。～开、～信、～房子、～台。  cā 排泄。～烂污。</div><div class="also">主读 <i>hia⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6748.html">
 <div class="ch">杈</div><div class="body">
 <span class="py">chā · chà</span>
 <div class="gl zh">一种带杈的农具，用来挑柴草。～子、粪～。  chà 树枝分岔的地方；也指分岔。树～、打～、～枝。</div><div class="also">主读 <i>sa¹</i></div></div></a><footer>
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

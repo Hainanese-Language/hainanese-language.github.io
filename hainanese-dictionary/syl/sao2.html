@@ -21,7 +21,7 @@
 <div class="gl zh">鸟窝；也指虫、兽或坏人盘踞的地方。鸟～、蜂～、匪～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u66f9.html">
 <div class="ch">曹</div><div class="body">
 <span class="py">cáo</span>
-<div class="gl zh">〈书〉辈；等（指人）。尔～、吾～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u69fd.html">
+<div class="gl zh">辈；等（指人）。尔～、吾～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u69fd.html">
 <div class="ch">槽</div><div class="body">
 <span class="py">cáo</span>
 <div class="gl zh">盛牲口饲料的器具。马～、猪～、～头。</div><div class="also">另读 <i>do²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u87ac.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

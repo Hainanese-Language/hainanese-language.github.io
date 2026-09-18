@@ -15,12 +15,19 @@
 <span class="rbig">hi¹</span>
 <button class="play" onclick="play('hi1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hi1.html">同音字 9</a></div>
 <p class="rb-py">tiān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">天空。～边、顶～立地。</span><span class="en">The sky. 天边 the horizon; 顶天立地 of dauntless spirit.</span></span></li><li><span class="num">②</span><span><span class="zh">位置在顶部的；架在空中的。～窗、～桥。</span><span class="en">Overhead; built up in the air. 天窗 a skylight; 天桥 an overpass.</span></span></li><li><span class="num">③</span><span><span class="zh">一昼夜；白天。今～、三～三夜。</span><span class="en">A day; daytime. 今天 today; 三天三夜 three days and nights.</span></span></li><li><span class="num">④</span><span><span class="zh">一天里的某段时间。五更～、～不亮。</span><span class="en">A part of the day. 天不亮 before daybreak.</span></span></li><li><span class="num">⑤</span><span><span class="zh">季节。春～、冷～。</span><span class="en">A season. 春天 spring; 冷天 cold weather.</span></span></li><li><span class="num">⑥</span><span><span class="zh">天气。阴～、～晴了。</span><span class="en">The weather. 阴天 an overcast day; 天晴了 it has cleared up.</span></span></li><li><span class="num">⑦</span><span><span class="zh">自然的；生来的。～然、～性、～灾。</span><span class="en">Natural; inborn. 天然 natural; 天性 one's nature; 天灾 a natural disaster.</span></span></li><li><span class="num">⑧</span><span><span class="zh">迷信指自然界的主宰或神佛所住的地方。～意、～堂。</span><span class="en">In superstition, the ruler of nature or the abode of gods. 天意 the will of heaven; 天堂 paradise.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hin¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hien1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">天空。～边、顶～立地。</span><span class="en">The sky. 天边 the horizon; 顶天立地 of dauntless spirit.</span></span></li><li><span class="num">②</span><span><span class="zh">位置在顶部的；架在空中的。～窗、～桥。</span><span class="en">Overhead; built up in the air. 天窗 a skylight; 天桥 an overpass.</span></span></li><li><span class="num">③</span><span><span class="zh">一昼夜；白天。今～、三～三夜。</span><span class="en">A day; daytime. 今天 today; 三天三夜 three days and nights.</span></span></li><li><span class="num">④</span><span><span class="zh">一天里的某段时间。五更～、～不亮。</span><span class="en">A part of the day. 天不亮 before daybreak.</span></span></li><li><span class="num">⑤</span><span><span class="zh">季节。春～、冷～。</span><span class="en">A season. 春天 spring; 冷天 cold weather.</span></span></li><li><span class="num">⑥</span><span><span class="zh">天气。阴～、～晴了。</span><span class="en">The weather. 阴天 an overcast day; 天晴了 it has cleared up.</span></span></li><li><span class="num">⑦</span><span><span class="zh">自然的；生来的。～然、～性、～灾。</span><span class="en">Natural; inborn. 天然 natural; 天性 one's nature; 天灾 a natural disaster.</span></span></li><li><span class="num">⑧</span><span><span class="zh">迷信指自然界的主宰或神佛所住的地方。～意、～堂。</span><span class="en">In superstition, the ruler of nature or the abode of gods. 天意 the will of heaven; 天堂 paradise.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hin¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hien1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

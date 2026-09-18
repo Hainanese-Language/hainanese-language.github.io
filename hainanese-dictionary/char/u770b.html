@@ -15,16 +15,24 @@
 <span class="rbig">mo¹</span>
 <button class="play" onclick="play('mo1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mo1.html">同音字 3</a></div>
 <p class="rb-py">kàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">使视线接触人或物。～书、～电影、～了一眼。</span><span class="en">To look at; to watch; to read.</span></span></li><li><span class="num">②</span><span><span class="zh">观察；判断。～病、～风向、你～怎么办。</span><span class="en">To observe and judge; to see about.</span></span></li><li><span class="num">③</span><span><span class="zh">访问。～朋友、～望。</span><span class="en">To call on; to visit.</span></span></li><li><span class="num">④</span><span><span class="zh">对待。～重、另眼相～。</span><span class="en">To treat; to regard.</span></span></li><li><span class="num">⑤</span><span><span class="zh">用在动词后，表示试一试。试试～、想想～。</span><span class="en">Used after a verb: to try and see.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">han⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('han4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">使视线接触人或物。～书、～电影、～了一眼。</span><span class="en">To look at; to watch; to read.</span></span></li><li><span class="num">②</span><span><span class="zh">观察；判断。～病、～风向、你～怎么办。</span><span class="en">To observe and judge; to see about.</span></span></li><li><span class="num">③</span><span><span class="zh">访问。～朋友、～望。</span><span class="en">To call on; to visit.</span></span></li><li><span class="num">④</span><span><span class="zh">对待。～重、另眼相～。</span><span class="en">To treat; to regard.</span></span></li><li><span class="num">⑤</span><span><span class="zh">用在动词后，表示试一试。试试～、想想～。</span><span class="en">Used after a verb: to try and see.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">han⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('han4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">mo¹</span>
 <button class="play" onclick="play('mo1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mo1.html">同音字 3</a></div>
 <p class="rb-py">kān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">守护；照料。～门、～家、～孩子。</span><span class="en">To guard; to look after.</span></span></li><li><span class="num">②</span><span><span class="zh">监视。～押、～守。</span><span class="en">To keep watch over.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">han⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('han4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">守护；照料。～门、～家、～孩子。</span><span class="en">To guard; to look after.</span></span></li><li><span class="num">②</span><span><span class="zh">监视。～押、～守。</span><span class="en">To keep watch over.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">han⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('han4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

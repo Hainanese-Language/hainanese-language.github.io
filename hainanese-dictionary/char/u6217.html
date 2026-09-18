@@ -19,12 +19,18 @@
 <span class="rbig">siang⁶</span>
 <button class="play" onclick="play('siang6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/siang6.html">同音字 4</a></div>
 <p class="rb-py">qiàng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">支撑。用木头把墙～住。</span><span class="en">to prop up; shore up.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉支撑用的东西。～柱。</span><span class="en">〈dial.〉 a prop; a support.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">支撑。用木头把墙～住。</span><span class="en">to prop up; shore up.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>支撑用的东西。～柱。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> a prop; a support.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

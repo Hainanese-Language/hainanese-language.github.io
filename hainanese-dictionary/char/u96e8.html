@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>雨 · 海南话字典</title><meta name="description" content="雨 的海南话读音 hhou⁵、yi³、yi⁴，普通话 yǔ · yù。从云层中降落的水滴。下～、～水、暴～。  yù 〈书〉降下（雨、雪等）。～雪。">
+<title>雨 · 海南话字典</title><meta name="description" content="雨 的海南话读音 hhou⁵、yi³、yi⁴，普通话 yǔ · yù。从云层中降落的水滴。下～、～水、暴～。  yù 降下（雨、雪等）。～雪。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,23 @@
 <span class="rbig">hhou⁵</span>
 <button class="play" onclick="play('hhou5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhou5.html">同音字 4</a></div>
 <p class="rb-py">yǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">从云层中降落的水滴。下～、～水、暴～。</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">yi³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ji3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">从云层中降落的水滴。下～、～水、暴～。</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">yi³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ji3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">yi⁴</span>
 <button class="play" onclick="play('ji4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi4.html">同音字 4</a></div>
 <p class="rb-py">yù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉降下（雨、雪等）。～雪。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>降下（雨、雪等）。～雪。</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

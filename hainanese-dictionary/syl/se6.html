@@ -21,7 +21,7 @@
 <div class="gl zh">装订成的本子。～子、手～、画～、注～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u58eb.html">
 <div class="ch">士</div><div class="body">
 <span class="py">shì</span>
-<div class="gl zh">〈古〉介于大夫和庶民之间的阶层。～农工商。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5df3.html">
+<div class="gl zh">介于大夫和庶民之间的阶层。～农工商。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5df3.html">
 <div class="ch">巳</div><div class="body">
 <span class="py">sì</span>
 <div class="gl zh">地支的第六位。～时。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60dc.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

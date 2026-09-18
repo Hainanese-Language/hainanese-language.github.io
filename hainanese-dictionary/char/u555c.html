@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>啜 · 海南话字典</title><meta name="description" content="啜 的海南话读音 suad⁷、suai⁴，普通话 chuò · chuài。〈书〉喝；抽泣。～茶、～泣。  chuài 姓。">
+<title>啜 · 海南话字典</title><meta name="description" content="啜 的海南话读音 suad⁷、suai⁴，普通话 chuò · chuài。喝；抽泣。～茶、～泣。  chuài 姓。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,7 +15,7 @@
 <span class="rbig">suad⁷</span>
 <button class="play" onclick="play('suat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/suad7.html">同音字 3</a></div>
 <p class="rb-py">chuò</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉喝；抽泣。～茶、～泣。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>喝；抽泣。～茶、～泣。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To sip; to sob. 啜茶 to sip tea; 啜泣 to weep quietly.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">suai⁴</span>
 <button class="play" onclick="play('suai4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/suai4.html">同音字 3</a></div>
 <p class="rb-py">chuài</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

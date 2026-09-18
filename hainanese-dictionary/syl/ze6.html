@@ -15,7 +15,7 @@
 <div class="gl zh">狭窄。逼～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55fb.html">
 <div class="ch">嗻</div><div class="body">
 <span class="py">zhè</span>
-<div class="gl zh">〈旧〉仆役答应主人的声音。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5750.html">
+<div class="gl zh">仆役答应主人的声音。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5750.html">
 <div class="ch">坐</div><div class="body">
 <span class="py">zuò</span>
 <div class="gl zh">臀部放在物体上支持身体。～下、请～、～立不安。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d23.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

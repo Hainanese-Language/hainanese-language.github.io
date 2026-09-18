@@ -15,7 +15,7 @@
 <div class="gl zh">欺负；轻慢。～辱、欺～、～蔑、外～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6bcb.html">
 <div class="ch">毋</div><div class="body">
 <span class="py">wú</span>
-<div class="gl zh">〈书〉不要；不。～庸讳言、宁缺～滥。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u829c.html">
+<div class="gl zh">不要；不。～庸讳言、宁缺～滥。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u829c.html">
 <div class="ch">芜</div><div class="body">
 <span class="py">wú</span>
 <div class="gl zh">长满乱草。荒～、～秽。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ea1.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">逃跑。逃～、流～。</div><div class="also">主读 <i>vang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6003.html">
 <div class="ch">怃</div><div class="body">
 <span class="py">wǔ</span>
-<div class="gl zh">〈书〉失意；怅然。～然。</div><div class="also">主读 <i>iu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u629a.html">
+<div class="gl zh">失意；怅然。～然。</div><div class="also">主读 <i>iu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u629a.html">
 <div class="ch">抚</div><div class="body">
 <span class="py">fǔ</span>
 <div class="gl zh">安慰；安顿。～慰、安～、～恤。</div><div class="also">主读 <i>pu²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u65e0.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

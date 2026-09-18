@@ -15,12 +15,18 @@
 <span class="rbig">an¹</span>
 <button class="play" onclick="play('an1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/an1.html">同音字 4</a></div>
 <p class="rb-py">ān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">平静；稳定。～定、～宁、心神不～、坐立不～。</span><span class="en">Calm; settled. 安定; 安宁; 心神不安; 坐立不安.</span></span></li><li><span class="num">②</span><span><span class="zh">使平静；使稳定。～抚、～民、～神。</span><span class="en">To calm; to steady. 安抚; 安民; 安神.</span></span></li><li><span class="num">③</span><span><span class="zh">平安；没有危险(跟"危"相对)。～全、转危为～、～然无恙。</span><span class="en">Safe; out of danger (opposite of 危). 安全; 转危为安; 安然无恙.</span></span></li><li><span class="num">④</span><span><span class="zh">安置；装设。～家、～排、～装、～电灯。</span><span class="en">To place; to install. 安家; 安排; 安装; 安电灯.</span></span></li><li><span class="num">⑤</span><span><span class="zh">存着某种念头(多指坏的)。～心不良、～的什么心。</span><span class="en">To harbour an intention, usually a bad one. 安心不良; 安的什么心.</span></span></li><li><span class="num">⑥</span><span><span class="zh">〈书〉哪里；怎么。～能如此。</span><span class="en">〈lit.〉 How; how could it be. 安能如此.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">平静；稳定。～定、～宁、心神不～、坐立不～。</span><span class="en">Calm; settled. 安定; 安宁; 心神不安; 坐立不安.</span></span></li><li><span class="num">②</span><span><span class="zh">使平静；使稳定。～抚、～民、～神。</span><span class="en">To calm; to steady. 安抚; 安民; 安神.</span></span></li><li><span class="num">③</span><span><span class="zh">平安；没有危险(跟"危"相对)。～全、转危为～、～然无恙。</span><span class="en">Safe; out of danger (opposite of 危). 安全; 转危为安; 安然无恙.</span></span></li><li><span class="num">④</span><span><span class="zh">安置；装设。～家、～排、～装、～电灯。</span><span class="en">To place; to install. 安家; 安排; 安装; 安电灯.</span></span></li><li><span class="num">⑤</span><span><span class="zh">存着某种念头(多指坏的)。～心不良、～的什么心。</span><span class="en">To harbour an intention, usually a bad one. 安心不良; 安的什么心.</span></span></li><li><span class="num">⑥</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>哪里；怎么。～能如此。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> How; how could it be. 安能如此.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

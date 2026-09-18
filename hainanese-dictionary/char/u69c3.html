@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>槃 · 海南话字典</title><meta name="description" content="槃 的海南话读音 bua²、puan²，普通话 pán。〈书〉同"盘"。杯～、～根错节。">
+<title>槃 · 海南话字典</title><meta name="description" content="槃 的海南话读音 bua²、puan²，普通话 pán。同"盘"。杯～、～根错节。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -12,15 +12,23 @@
 <div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">bua²</span> <span class="r">puan²</span></div></div>
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">pán</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
-<span class="rbig">bua²</span><span class="pill">白读</span>
+<span class="rbig">bua²</span><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span>
 <button class="play" onclick="play('pua2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bua2.html">同音字 3</a></div>
 <p class="rb-py">pán</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉同"盘"。杯～、～根错节。</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">puan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phuan2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>同"盘"。杯～、～根错节。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> same as 盘 (a tray; coiled).</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">puan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phuan2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

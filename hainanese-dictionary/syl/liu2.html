@@ -27,7 +27,7 @@
 <div class="gl zh">非金属元素，符号S，通称硫黄。～酸、～化物。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u954f.html">
 <div class="ch">镏</div><div class="body">
 <span class="py">liú · liù</span>
-<div class="gl zh">用于"镏金"，一种镀金的工艺。  liù 〈方〉戒指。～子。</div><div class="also">另读 <i>liu⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u998f.html">
+<div class="gl zh">用于"镏金"，一种镀金的工艺。  liù 戒指。～子。</div><div class="also">另读 <i>liu⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u998f.html">
 <div class="ch">馏</div><div class="body">
 <span class="py">liù · liú</span>
 <div class="gl zh">把凉了的熟食再蒸热。～馒头。  liú 加热使液体变成蒸气，再凝成纯净的液体。蒸～、干～。</div><div class="also">主读 <i>liu⁶</i></div></div></a><footer>
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

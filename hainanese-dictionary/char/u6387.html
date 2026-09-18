@@ -15,12 +15,18 @@
 <span class="rbig">duad⁷</span>
 <button class="play" onclick="play('tuat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/duad7.html">同音字 10</a></div>
 <p class="rb-py">duō</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">拾取；摘取。采～、拾～。</span><span class="en">To pick up; to gather. 采掇; 拾掇.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉用双手拿(重物)。～凳子、把桌子～过来。</span><span class="en">〈dial.〉 To lift with both hands. 掇凳子; 把桌子掇过来.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">拾取；摘取。采～、拾～。</span><span class="en">To pick up; to gather. 采掇; 拾掇.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>用双手拿(重物)。～凳子、把桌子～过来。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To lift with both hands. 掇凳子; 把桌子掇过来.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

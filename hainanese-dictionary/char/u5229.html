@@ -15,12 +15,19 @@
 <span class="rbig">li⁵</span>
 <button class="play" onclick="play('li5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/li5.html">同音字 5</a></div>
 <p class="rb-py">lì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">好处；跟"害""弊"相对。～益、有～、～害得失、～国～民。</span><span class="en">Benefit; the opposite of 害 and 弊. 利益 interests; 有利 advantageous; 利害得失 gains and losses; 利国利民 to benefit country and people.</span></span></li><li><span class="num">②</span><span><span class="zh">利润；利息。～润、暴～、本～、高～贷。</span><span class="en">Profit; interest. 利润 profit; 暴利 exorbitant profit; 本利 principal and interest; 高利贷 usury.</span></span></li><li><span class="num">③</span><span><span class="zh">顺利；有益；使发挥作用。～于团结、无往不～、～用废料。</span><span class="en">Favourable; beneficial; to put to use. 利于团结 conducive to unity; 无往不利 to succeed everywhere; 利用废料 to make use of waste material.</span></span></li><li><span class="num">④</span><span><span class="zh">锋利；快。～刃、锐～、～口。</span><span class="en">Sharp; keen. 利刃 a sharp blade; 锐利 sharp; 利口 glib.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">lai¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lai1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❹ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">好处；跟"害""弊"相对。～益、有～、～害得失、～国～民。</span><span class="en">Benefit; the opposite of 害 and 弊. 利益 interests; 有利 advantageous; 利害得失 gains and losses; 利国利民 to benefit country and people.</span></span></li><li><span class="num">②</span><span><span class="zh">利润；利息。～润、暴～、本～、高～贷。</span><span class="en">Profit; interest. 利润 profit; 暴利 exorbitant profit; 本利 principal and interest; 高利贷 usury.</span></span></li><li><span class="num">③</span><span><span class="zh">顺利；有益；使发挥作用。～于团结、无往不～、～用废料。</span><span class="en">Favourable; beneficial; to put to use. 利于团结 conducive to unity; 无往不利 to succeed everywhere; 利用废料 to make use of waste material.</span></span></li><li><span class="num">④</span><span><span class="zh">锋利；快。～刃、锐～、～口。</span><span class="en">Sharp; keen. 利刃 a sharp blade; 锐利 sharp; 利口 glib.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">lai¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lai1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

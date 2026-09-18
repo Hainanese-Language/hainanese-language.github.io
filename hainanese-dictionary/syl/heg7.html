@@ -27,7 +27,7 @@
 <div class="gl zh">用于"缂丝"，一种通经断纬的丝织工艺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8daf.html">
 <div class="ch">趯</div><div class="body">
 <span class="py">tī</span>
-<div class="gl zh">〈书〉跳跃；也指汉字书法中向上挑起的笔画。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9699.html">
+<div class="gl zh">跳跃；也指汉字书法中向上挑起的笔画。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9699.html">
 <div class="ch">隙</div><div class="body">
 <span class="py">xì</span>
 <div class="gl zh">裂缝；窟窿。缝～、门～、～缝。</div><div class="also">另读 <i>hhid⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9521.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

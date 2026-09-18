@@ -15,7 +15,7 @@
 <div class="gl zh">钱；经费。～项、存～、拨～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7583.html">
 <div class="ch">疃</div><div class="body">
 <span class="py">tuǎn</span>
-<div class="gl zh">〈方〉村庄，多用于地名。前李～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7efb.html">
+<div class="gl zh">村庄，多用于地名。前李～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7efb.html">
 <div class="ch">绻</div><div class="body">
 <span class="py">quǎn</span>
 <div class="gl zh">用于"缱绻"，形容情意深厚，难舍难分。</div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

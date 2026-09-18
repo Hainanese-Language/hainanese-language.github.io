@@ -16,16 +16,24 @@
 <button class="play" onclick="play('wuat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhuad7.html">同音字 2</a></div>
 <p class="rb-py">fā</p>
 <ul class="senses"><li><span class="num">①</span><span><span class="zh">送出；交付；跟"收"相对。～信、～货、分～、～工资。</span><span class="en">Hair. 头发 hair; 发型 a hairstyle; 理发 to have a haircut; 白发苍苍 hoary-headed.</span></span></li><li><span class="num">②</span><span><span class="zh">放射；射出。～射、～炮、百～百中。</span><span class="en">To emit; to fire. 发射 to launch; 发炮 to open fire; 百发百中 to hit the mark every time.</span></span></li><li><span class="num">③</span><span><span class="zh">产生；发生。～芽、～电、～病、～水。</span><span class="en">To come into being; to occur. 发芽 to sprout; 发电 to generate power; 发病 to fall ill; 发水 to flood.</span></span></li><li><span class="num">④</span><span><span class="zh">表达；说出。～言、～问、～誓、～表。</span><span class="en">To express; to utter. 发言 to speak; 发问 to ask; 发誓 to swear; 发表 to publish.</span></span></li><li><span class="num">⑤</span><span><span class="zh">扩大；开展。～展、～扬、～挥。</span><span class="en">To expand; to develop. 发展 to develop; 发扬 to carry forward; 发挥 to bring into play.</span></span></li><li><span class="num">⑥</span><span><span class="zh">因得财而兴旺。～财、～家。</span><span class="en">To prosper through gain. 发财 to make a fortune; 发家 to build up a family fortune.</span></span></li><li><span class="num">⑦</span><span><span class="zh">食物因发酵或浸泡而膨胀。面～了、～海参。</span><span class="en">Of food, to swell through fermenting or soaking. 面发了 the dough has risen; 发海参 to soak sea cucumbers.</span></span></li><li><span class="num">⑧</span><span><span class="zh">显现；流露。～黄、脸色～白、～愁。</span><span class="en">To show; to take on a look. 发黄 to turn yellow; 脸色发白 to go pale; 发愁 to look worried.</span></span></li><li><span class="num">⑨</span><span><span class="zh">感到（多指不适）。～麻、～痒、～困。</span><span class="en">To feel (usually something unpleasant). 发麻 to go numb; 发痒 to itch; 发困 to feel sleepy.</span></span></li><li><span class="num">⑩</span><span><span class="zh">量词，用于枪弹炮弹。三～子弹。</span><span class="en">Measure word for rounds of ammunition. 三发子弹 three rounds.
-fā</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phat7.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+fā</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phat7.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">buad⁷</span>
 <button class="play" onclick="play('puat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/buad7.html">同音字 6</a></div>
 <p class="rb-py">fà</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">人和动物的毛。头～、～型、理～、白～苍苍。</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phat7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">人和动物的毛。头～、～型、理～、白～苍苍。</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pad⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phat7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

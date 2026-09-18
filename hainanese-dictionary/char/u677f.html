@@ -15,12 +15,19 @@
 <span class="rbig">ban³</span>
 <button class="play" onclick="play('pan3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ban3.html">同音字 4</a></div>
 <p class="rb-py">bǎn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">片状的较硬的物体。木～、钢～、～材。</span><span class="en">a board; a hard flat sheet.</span></span></li><li><span class="num">②</span><span><span class="zh">器物上作用像板的部分。～擦、跳～、黑～。</span><span class="en">a board-like part of an object.</span></span></li><li><span class="num">③</span><span><span class="zh">不灵活；死板。呆～、古～、表情很～。</span><span class="en">stiff; inflexible.</span></span></li><li><span class="num">④</span><span><span class="zh">商店的主人。老～、～娘。</span><span class="en">the proprietor of a shop.</span></span></li><li><span class="num">⑤</span><span><span class="zh">音乐或戏曲中的节拍。快～、慢～、一～一眼。</span><span class="en">the beat in music or opera.</span></span></li><li><span class="num">⑥</span><span><span class="zh">露出严肃的神情。～起面孔、～着脸。</span><span class="en">to put on a stern face.</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">bai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pai3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">片状的较硬的物体。木～、钢～、～材。</span><span class="en">a board; a hard flat sheet.</span></span></li><li><span class="num">②</span><span><span class="zh">器物上作用像板的部分。～擦、跳～、黑～。</span><span class="en">a board-like part of an object.</span></span></li><li><span class="num">③</span><span><span class="zh">不灵活；死板。呆～、古～、表情很～。</span><span class="en">stiff; inflexible.</span></span></li><li><span class="num">④</span><span><span class="zh">商店的主人。老～、～娘。</span><span class="en">the proprietor of a shop.</span></span></li><li><span class="num">⑤</span><span><span class="zh">音乐或戏曲中的节拍。快～、慢～、一～一眼。</span><span class="en">the beat in music or opera.</span></span></li><li><span class="num">⑥</span><span><span class="zh">露出严肃的神情。～起面孔、～着脸。</span><span class="en">to put on a stern face.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">bai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pai3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

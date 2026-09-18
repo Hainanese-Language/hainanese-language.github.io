@@ -21,7 +21,7 @@
 <div class="gl zh">用指甲按或截断。～花、～断、～了一根葱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ba7.html">
 <div class="ch">箧</div><div class="body">
 <span class="py">qiè</span>
-<div class="gl zh">〈书〉小箱子。藤～、倾～相赠。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d34.html">
+<div class="gl zh">小箱子。藤～、倾～相赠。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d34.html">
 <div class="ch">贴</div><div class="body">
 <span class="py">tiē</span>
 <div class="gl zh">把片状物粘在别的东西上。～邮票、张～、～标签。</div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -33,15 +33,21 @@
 <div class="gl zh">多；复杂，跟"简"相对。～多、～杂、～体字。</div><div class="also">另读 <i>po²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u87e0.html">
 <div class="ch">蟠</div><div class="body">
 <span class="py">pán</span>
-<div class="gl zh">〈书〉盘曲；环绕。～龙、～踞。</div><div class="also">另读 <i>puan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71d4.html">
+<div class="gl zh">盘曲；环绕。～龙、～踞。</div><div class="also">另读 <i>puan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71d4.html">
 <div class="ch">燔</div><div class="body">
 <span class="py">fán</span>
-<div class="gl zh">〈书〉焚烧；烤。～烧、～肉。</div><div class="also">主读 <i>pan¹</i></div></div></a><footer>
+<div class="gl zh">焚烧；烤。～烧、～肉。</div><div class="also">主读 <i>pan¹</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

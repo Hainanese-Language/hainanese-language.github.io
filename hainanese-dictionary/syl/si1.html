@@ -21,7 +21,7 @@
 <div class="gl zh">寒冷。～风苦雨。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u520d.html">
 <div class="ch">刍</div><div class="body">
 <span class="py">chú</span>
-<div class="gl zh">〈书〉喂牲畜的草。反～、～秣。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54e7.html">
+<div class="gl zh">喂牲畜的草。反～、～秣。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54e7.html">
 <div class="ch">哧</div><div class="body">
 <span class="py">chī</span>
 <div class="gl zh">象声词，形容笑声、撕裂声等。～的一声笑了。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55e4.html">
@@ -30,13 +30,13 @@
 <div class="gl zh">讥笑。～笑、～之以鼻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59bb.html">
 <div class="ch">妻</div><div class="body">
 <span class="py">qī · qì</span>
-<div class="gl zh">男子的配偶；跟"夫"相对。～子、夫～、娶～。  qì 〈书〉把女儿嫁给某人。</div><div class="also">另读 <i>si⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6292.html">
+<div class="gl zh">男子的配偶；跟"夫"相对。～子、夫～、娶～。  qì 把女儿嫁给某人。</div><div class="also">另读 <i>si⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6292.html">
 <div class="ch">抒</div><div class="body">
 <span class="py">shū</span>
 <div class="gl zh">表达；发泄。～情、～怀、各～己见。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u677c.html">
 <div class="ch">杼</div><div class="body">
 <span class="py">zhù</span>
-<div class="gl zh">〈书〉织布机上的梭子。机～、～轴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67a2.html">
+<div class="gl zh">织布机上的梭子。机～、～轴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67a2.html">
 <div class="ch">枢</div><div class="body">
 <span class="py">shū</span>
 <div class="gl zh">门上的转轴。户～不蠹。</div><div class="also">另读 <i>hi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6816.html">
@@ -54,10 +54,10 @@
 <div class="gl zh">非金属元素，符号Se。富～茶。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b1e.html">
 <div class="ch">笞</div><div class="body">
 <span class="py">chī</span>
-<div class="gl zh">〈书〉用竹板、荆条打。鞭～、～刑。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ebe.html">
+<div class="gl zh">用竹板、荆条打。鞭～、～刑。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ebe.html">
 <div class="ch">纾</div><div class="body">
 <span class="py">shū</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8212.html">
+<div class="gl zh">解除；缓解。～难、～困。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8212.html">
 <div class="ch">舒</div><div class="body">
 <span class="py">shū</span>
 <div class="gl zh">展开；伸展。～展、～眉、～筋活血。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82ce.html">
@@ -111,6 +111,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

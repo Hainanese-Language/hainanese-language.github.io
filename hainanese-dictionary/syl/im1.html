@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/im1.html">im¹</a><a class="chip" href="/hainanese-dictionary/syl/im3.html">im³</a><a class="chip" href="/hainanese-dictionary/syl/im4.html">im⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u5591.html">
 <div class="ch">喑</div><div class="body">
 <span class="py">yīn</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u836b.html">
+<div class="gl zh">嗓子哑，发不出声。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u836b.html">
 <div class="ch">荫</div><div class="body">
 <span class="py">yīn · yìn</span>
 <div class="gl zh">树木遮住阳光所成的阴影。树～、林～道、绿树成～。  yìn</div><div class="also">另读 <i>im⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9634.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

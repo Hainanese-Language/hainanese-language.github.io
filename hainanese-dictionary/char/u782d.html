@@ -15,12 +15,18 @@
 <span class="rbig">bin¹</span>
 <button class="play" onclick="play('pien1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bin1.html">同音字 12</a></div>
 <p class="rb-py">biān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">古代治病用的石针。～石、针～。</span><span class="en">A stone needle used in ancient medicine.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉刺。寒风～骨。</span><span class="en">〈lit.〉 To prick; to pierce.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">古代治病用的石针。～石、针～。</span><span class="en">A stone needle used in ancient medicine.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>刺。寒风～骨。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To prick; to pierce.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

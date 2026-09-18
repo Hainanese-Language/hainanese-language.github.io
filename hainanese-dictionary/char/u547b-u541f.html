@@ -15,12 +15,18 @@
 <span class="rbig">din¹ngim²</span>
 <button class="play" onclick="play('tien1.mp3|ngiom2.mp3')">&#9654;</button></div>
 <p class="rb-py">shēnyín</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">因痛苦而发出低哼的声音。无病～、伤者在～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">因痛苦而发出低哼的声音。无病～、伤者在～。</span><span class="en">To groan in pain. 无病呻吟 to moan without being ill; to make a fuss over nothing.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

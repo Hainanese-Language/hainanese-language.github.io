@@ -30,7 +30,7 @@
 <div class="gl zh">仅用于"褡裢"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f9a.html">
 <div class="ch">辚</div><div class="body">
 <span class="py">lín</span>
-<div class="gl zh">〈书〉形容车行走的声音。车～～、～～作响。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fde.html">
+<div class="gl zh">形容车行走的声音。车～～、～～作响。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fde.html">
 <div class="ch">连</div><div class="body">
 <span class="py">lián</span>
 <div class="gl zh">相接；不间断。～接、～续、～成一片、藕断丝～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9074.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

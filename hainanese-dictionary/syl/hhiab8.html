@@ -24,7 +24,7 @@
 <div class="gl zh">用胳膊夹住。～持、～在腋下。</div><div class="also">另读 <i>giab⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72ce.html">
 <div class="ch">狎</div><div class="body">
 <span class="py">xiá</span>
-<div class="gl zh">〈书〉亲近而不庄重。～昵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72ed.html">
+<div class="gl zh">亲近而不庄重。～昵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72ed.html">
 <div class="ch">狭</div><div class="body">
 <span class="py">xiá</span>
 <div class="gl zh">窄；不宽阔。～窄、～隘、～路相逢。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u80c1.html">
@@ -48,6 +48,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

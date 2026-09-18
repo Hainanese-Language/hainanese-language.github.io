@@ -15,7 +15,7 @@
 <span class="rbig">ni²</span>
 <button class="play" onclick="play('ni2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ni2.html">同音字 9</a></div>
 <p class="rb-py">ní</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">一种较厚的毛织品。～子、～绒、毛～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">一种较厚的毛织品。～子、～绒、毛～。</span><span class="en">A heavy woollen cloth. 呢子 woollen fabric; 毛呢 wool cloth.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ni⁶</span>
 <button class="play" onclick="play('ni6.mp3')">&#9654;</button></div>
 <p class="rb-py">ne</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

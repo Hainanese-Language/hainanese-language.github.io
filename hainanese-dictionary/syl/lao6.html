@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/lao1.html">lao¹</a><a class="chip" href="/hainanese-dictionary/syl/lao2.html">lao²</a><a class="chip" href="/hainanese-dictionary/syl/lao3.html">lao³</a><a class="chip" href="/hainanese-dictionary/syl/lao4.html">lao⁴</a><a class="chip" href="/hainanese-dictionary/syl/lao5.html">lao⁵</a><a class="chip on" href="/hainanese-dictionary/syl/lao6.html">lao⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5520.html">
 <div class="ch">唠</div><div class="body">
 <span class="py">lào</span>
-<div class="gl zh">〈方〉闲谈。～嗑、～家常。</div></div></a><footer>
+<div class="gl zh">闲谈。～嗑、～家常。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -21,7 +21,7 @@
 <div class="gl zh">高起；突起。～起、～立。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77fb.html">
 <div class="ch">矻</div><div class="body">
 <span class="py">kū</span>
-<div class="gl zh">〈书〉仅用于"矻矻"，形容勤劳不懈。孜孜～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a9f.html">
+<div class="gl zh">仅用于"矻矻"，形容勤劳不懈。孜孜～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a9f.html">
 <div class="ch">窟</div><div class="body">
 <span class="py">kū</span>
 <div class="gl zh">洞穴。石～、狡兔三～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8131.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

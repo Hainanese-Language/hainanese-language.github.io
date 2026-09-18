@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>沤 · 海南话字典</title><meta name="description" content="沤 的海南话读音 ao⁶、ou¹，普通话 òu · ōu。长时间浸泡使变质。～肥、～麻。  ōu 〈书〉水中的泡沫。浮～。">
+<title>沤 · 海南话字典</title><meta name="description" content="沤 的海南话读音 ao⁶、ou¹，普通话 òu · ōu。长时间浸泡使变质。～肥、～麻。  ōu 水中的泡沫。浮～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">ao⁶</span>
 <button class="play" onclick="play('au6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ao6.html">同音字 4</a></div>
 <p class="rb-py">òu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">长时间浸泡使变质。～肥、～麻。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">长时间浸泡使变质。～肥、～麻。</span><span class="en">To steep for a long time until it breaks down. 沤肥 to make compost; 沤麻 to ret hemp.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ou¹</span>
 <button class="play" onclick="play('ou1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ou1.html">同音字 9</a></div>
 <p class="rb-py">ōu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉水中的泡沫。浮～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>水中的泡沫。浮～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Foam on water. 浮沤 floating bubbles.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,19 @@
 <span class="rbig">da⁶</span>
 <button class="play" onclick="play('ta6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da6.html">同音字 18</a></div>
 <p class="rb-py">zhá</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">切草等的器具，刀身固定在底槽上。～刀。</span><span class="en">A fodder chopper, its blade hinged to a base.</span></span></li><li><span class="num">②</span><span><span class="zh">用铡刀切。～草。</span><span class="en">To chop with such a blade.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">ze⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ce5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">切草等的器具，刀身固定在底槽上。～刀。</span><span class="en">A fodder chopper, its blade hinged to a base.</span></span></li><li><span class="num">②</span><span><span class="zh">用铡刀切。～草。</span><span class="en">To chop with such a blade.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">ze⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ce5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

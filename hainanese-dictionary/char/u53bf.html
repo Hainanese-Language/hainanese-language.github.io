@@ -15,12 +15,18 @@
 <span class="rbig">guai¹</span>
 <button class="play" onclick="play('kuai1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/guai1.html">同音字 2</a></div>
 <p class="rb-py">xiàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">行政区划单位，一般由地区、自治州或直辖市管辖。～城、～长。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">行政区划单位，一般由地区、自治州或直辖市管辖。～城、～长。</span><span class="en">A county, an administrative division. 县城 a county town; 县长 a county head.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

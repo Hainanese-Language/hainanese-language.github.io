@@ -15,12 +15,18 @@
 <span class="rbig">pad⁷lang²</span>
 <button class="play" onclick="play('phat7.mp3|lang2.mp3')">&#9654;</button></div>
 <p class="rb-py">fàláng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">涂在金属表面的一种釉质材料，可防锈并作装饰。～彩、～器。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">涂在金属表面的一种釉质材料，可防锈并作装饰。～彩、～器。</span><span class="en">enamel, a glaze fired onto metal to protect and decorate it.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

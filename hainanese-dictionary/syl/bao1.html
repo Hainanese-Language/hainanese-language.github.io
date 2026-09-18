@@ -21,7 +21,7 @@
 <div class="gl zh">用手臂围住。～孩子、拥～、～头鼠窜。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7172.html">
 <div class="ch">煲</div><div class="body">
 <span class="py">bāo</span>
-<div class="gl zh">〈方〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u80de.html">
+<div class="gl zh">壁较陡直的锅。沙～、电饭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u80de.html">
 <div class="ch">胞</div><div class="body">
 <span class="py">bāo</span>
 <div class="gl zh">包裹胎儿的膜和胎盘。～衣、～胎。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82de.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

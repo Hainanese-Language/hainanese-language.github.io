@@ -21,12 +21,18 @@
 <div class="gl zh">难闻的气味，跟"香"相对。～味、发～、～气熏天。</div><div class="also">另读 <i>hhiu⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bee.html">
 <div class="ch">诮</div><div class="body">
 <span class="py">qiào</span>
-<div class="gl zh">〈书〉责备；讥讽。讥～、～让。</div></div></a><footer>
+<div class="gl zh">责备；讥讽。讥～、～让。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

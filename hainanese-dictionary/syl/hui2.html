@@ -21,7 +21,7 @@
 <div class="gl zh">车轮经过留下的痕迹。～迹、覆～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9997.html">
 <div class="ch">馗</div><div class="body">
 <span class="py">kuí</span>
-<div class="gl zh">〈书〉四通八达的道路。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u690e.html">
+<div class="gl zh">四通八达的道路。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u690e.html">
 <div class="ch">椎</div><div class="body">
 <span class="py">zhuī · chuí</span>
 <div class="gl zh">构成脊柱的短骨。脊～、颈～、～间盘。  chuí</div><div class="also">主读 <i>dui¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9524.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">介词，表示时间、处所、范围、对象等。生～北京、乐～助人、有利～健康。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f0a.html">
 <div class="ch">伊</div><div class="body">
 <span class="py">yī</span>
-<div class="gl zh">〈书〉第三人称代词，他；她。～人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f9d.html">
+<div class="gl zh">第三人称代词，他；她。～人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f9d.html">
 <div class="ch">依</div><div class="body">
 <span class="py">yī</span>
 <div class="gl zh">靠着。～靠、～偎、～山傍水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u533b.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">医生。军～、～护人员。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u566b.html">
 <div class="ch">噫</div><div class="body">
 <span class="py">yī</span>
-<div class="gl zh">〈书〉叹词，表示感慨或悲痛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5979.html">
+<div class="gl zh">叹词，表示感慨或悲痛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5979.html">
 <div class="ch">她</div><div class="body">
 <span class="py">tā</span>
 <div class="gl zh">人称代词，称自己和对方以外的女性。</div><div class="also">另读 <i>ha¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b83.html">
@@ -60,6 +60,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

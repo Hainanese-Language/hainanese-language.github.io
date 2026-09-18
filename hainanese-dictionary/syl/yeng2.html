@@ -21,10 +21,10 @@
 <div class="gl zh">抛；投掷。～球、～砖头。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6979.html">
 <div class="ch">楹</div><div class="body">
 <span class="py">yíng</span>
-<div class="gl zh">〈书〉厅堂前部的柱子。～联、～柱。</div><div class="also">另读 <i>e²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u701b.html">
+<div class="gl zh">厅堂前部的柱子。～联、～柱。</div><div class="also">另读 <i>e²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u701b.html">
 <div class="ch">瀛</div><div class="body">
 <span class="py">yíng</span>
-<div class="gl zh">〈书〉大海。～海、东～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76c8.html">
+<div class="gl zh">大海。～海、东～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76c8.html">
 <div class="ch">盈</div><div class="body">
 <span class="py">yíng</span>
 <div class="gl zh">充满。充～、～门、笑语～室。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8314.html">
@@ -57,6 +57,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

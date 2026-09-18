@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hiam1.html">hiam¹</a><a class="chip" href="/hainanese-dictionary/syl/hiam2.html">hiam²</a><a class="chip" href="/hainanese-dictionary/syl/hiam3.html">hiam³</a><a class="chip" href="/hainanese-dictionary/syl/hiam4.html">hiam⁴</a><a class="chip on" href="/hainanese-dictionary/syl/hiam6.html">hiam⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u55db.html">
 <div class="ch">嗛</div><div class="body">
 <span class="py">qiǎn</span>
-<div class="gl zh">〈书〉猴、鼠等颊内贮存食物的口袋。</div></div></a><footer>
+<div class="gl zh">猴、鼠等颊内贮存食物的口袋。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

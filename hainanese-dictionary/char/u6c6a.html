@@ -15,12 +15,18 @@
 <span class="rbig">uang¹</span>
 <button class="play" onclick="play('uang1.mp3')">&#9654;</button></div>
 <p class="rb-py">wāng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">液体聚积。～着一摊水、眼里～着泪。</span><span class="en">Of liquid, to collect in a pool. 汪着一摊水 with a puddle standing there; 眼里汪着泪 with tears welling in one's eyes.</span></span></li><li><span class="num">②</span><span><span class="zh">量词，用于液体。一～水。</span><span class="en">Measure word for liquids. 一汪水 a pool of water.</span></span></li><li><span class="num">③</span><span><span class="zh">拟声，狗叫的声音。～～叫。</span><span class="en">Imitating the bark of a dog. 汪汪叫 to go woof-woof.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉深广。～洋大海。</span><span class="en">〈lit.〉 Deep and wide. 汪洋大海 a boundless ocean.</span></span></li></ul><div class="alt"><span class="r2">uang⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('uang6.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">液体聚积。～着一摊水、眼里～着泪。</span><span class="en">Of liquid, to collect in a pool. 汪着一摊水 with a puddle standing there; 眼里汪着泪 with tears welling in one's eyes.</span></span></li><li><span class="num">②</span><span><span class="zh">量词，用于液体。一～水。</span><span class="en">Measure word for liquids. 一汪水 a pool of water.</span></span></li><li><span class="num">③</span><span><span class="zh">拟声，狗叫的声音。～～叫。</span><span class="en">Imitating the bark of a dog. 汪汪叫 to go woof-woof.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>深广。～洋大海。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Deep and wide. 汪洋大海 a boundless ocean.</span></span></li></ul><div class="alt"><span class="r2">uang⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('uang6.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,20 +15,26 @@
 <span class="rbig">hag⁸</span>
 <button class="play" onclick="play('hag8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hag8.html">同音字 2</a></div>
 <p class="rb-py">kǎ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用力使东西从气管或食道里出来。～血、～痰。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用力使东西从气管或食道里出来。～血、～痰。</span><span class="en">To cough up. 咯血 to spit blood; 咯痰 to bring up phlegm.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">lo⁵</span>
 <button class="play" onclick="play('lo5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lo5.html">同音字 2</a></div>
 <p class="rb-py">lo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">助词，用法跟"了"相近。就这样办～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">助词，用法跟"了"相近。就这样办～。</span><span class="en">Final particle, close in use to 了. 就这样办咯 let's do it that way then.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">go¹</span>
 <button class="play" onclick="play('ko1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/go1.html">同音字 13</a></div>
 <p class="rb-py">gē</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词。～吱、～噔。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词。～吱、～噔。</span><span class="en">A creaking or clicking sound. 咯吱 creak; 咯噔 clunk.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

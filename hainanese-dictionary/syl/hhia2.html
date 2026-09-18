@@ -21,12 +21,18 @@
 <div class="gl zh">玉上的斑点；也指缺点、毛病。～疵、白璧微～、～不掩瑜。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9050.html">
 <div class="ch">遐</div><div class="body">
 <span class="py">xiá</span>
-<div class="gl zh">〈书〉远。～想、～迩闻名、～龄。</div></div></a><footer>
+<div class="gl zh">远。～想、～迩闻名、～龄。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -33,7 +33,7 @@
 <div class="gl zh">养禽兽、种树木的地方，多指帝王的园林。鹿～、御～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u839e.html">
 <div class="ch">莞</div><div class="body">
 <span class="py">guǎn · wǎn</span>
-<div class="gl zh">用于地名。东～(在广东)。  wǎn 〈书〉形容微笑。～尔。</div><div class="also">主读 <i>guan³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c4c.html">
+<div class="gl zh">用于地名。东～(在广东)。  wǎn 形容微笑。～尔。</div><div class="also">主读 <i>guan³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c4c.html">
 <div class="ch">豌</div><div class="body">
 <span class="py">wān</span>
 <div class="gl zh">仅用于"豌豆"，一年生草本植物，种子可以吃。</div><div class="also">主读 <i>uan¹</i></div></div></a><footer>
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

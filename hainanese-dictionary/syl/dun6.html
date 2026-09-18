@@ -33,7 +33,7 @@
 <div class="gl zh">谦让；恭顺。谦～、～让、出言不～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u954c.html">
 <div class="ch">镌</div><div class="body">
 <span class="py">juān</span>
-<div class="gl zh">〈书〉雕刻。～刻、～碑。</div><div class="also">另读 <i>duan¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96bd.html">
+<div class="gl zh">雕刻。～刻、～碑。</div><div class="also">另读 <i>duan¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96bd.html">
 <div class="ch">隽</div><div class="body">
 <span class="py">juàn · jùn</span>
 <div class="gl zh">意味深长。～永、～语。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a8f.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

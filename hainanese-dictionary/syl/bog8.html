@@ -15,7 +15,7 @@
 <div class="gl zh">丝织品的总称。布～、～画、化干戈为玉～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7011.html">
 <div class="ch">瀑</div><div class="body">
 <span class="py">pù · bào</span>
-<div class="gl zh">从高处直泻而下的水流。～布、飞～。  bào 〈书〉急雨。～水。</div><div class="also">另读 <i>bao⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91ad.html">
+<div class="gl zh">从高处直泻而下的水流。～布、飞～。  bào 急雨。～水。</div><div class="also">另读 <i>bao⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91ad.html">
 <div class="ch">醭</div><div class="body">
 <span class="py">bú</span>
 <div class="gl zh">醋、酱油等表面长的白色霉。长～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ec6.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

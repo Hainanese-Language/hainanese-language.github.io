@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>婢 · 海南话字典</title><meta name="description" content="婢 的海南话读音 bi⁵，普通话 bì。〈旧〉供人使唤的女子。奴～、～女。">
+<title>婢 · 海南话字典</title><meta name="description" content="婢 的海南话读音 bi⁵，普通话 bì。供人使唤的女子。奴～、～女。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">bi⁵</span>
 <button class="play" onclick="play('pi5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bi5.html">同音字 9</a></div>
 <p class="rb-py">bì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈旧〉供人使唤的女子。奴～、～女。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>供人使唤的女子。奴～、～女。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A maidservant. 奴婢 bondmaids; 婢女 a serving girl.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

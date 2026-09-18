@@ -15,10 +15,10 @@
 <div class="gl zh">古代称以歌舞为业的女子。歌～、～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5048.html">
 <div class="ch">偈</div><div class="body">
 <span class="py">jì · jié</span>
-<div class="gl zh">佛经中的唱词。～语、～颂。  jié 〈书〉勇武的样子。～～。</div><div class="also">另读 <i>gid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5180.html">
+<div class="gl zh">佛经中的唱词。～语、～颂。  jié 勇武的样子。～～。</div><div class="also">另读 <i>gid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5180.html">
 <div class="ch">冀</div><div class="body">
 <span class="py">jì</span>
-<div class="gl zh">〈书〉希望。希～、～求。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5267.html">
+<div class="gl zh">希望。希～、～求。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5267.html">
 <div class="ch">剧</div><div class="body">
 <span class="py">jù</span>
 <div class="gl zh">戏剧。～本、京～、话～、演～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5993.html">
@@ -60,7 +60,7 @@
 <div class="gl zh">相隔的长度。～离、相～不远。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u907d.html">
 <div class="ch">遽</div><div class="body">
 <span class="py">jù</span>
-<div class="gl zh">〈书〉急；仓促。急～、～然、～下结论。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98d3.html">
+<div class="gl zh">急；仓促。急～、～然、～下结论。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98d3.html">
 <div class="ch">飓</div><div class="body">
 <span class="py">jù</span>
 <div class="gl zh">仅用于"飓风"，指强烈的热带风暴。～风。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f01.html">
@@ -72,6 +72,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

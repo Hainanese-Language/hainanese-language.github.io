@@ -36,12 +36,18 @@
 <div class="gl zh">用于"恣睢"，指放纵、任意。暴戾恣～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8870.html">
 <div class="ch">衰</div><div class="body">
 <span class="py">shuāi · cuī</span>
-<div class="gl zh">由强变弱；转向低落。～老、～退、兴～。  cuī 〈书〉按一定标准递减。等～。</div><div class="also">主读 <i>duai¹</i></div></div></a><footer>
+<div class="gl zh">由强变弱；转向低落。～老、～退、兴～。  cuī 按一定标准递减。等～。</div><div class="also">主读 <i>duai¹</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

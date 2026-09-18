@@ -15,16 +15,23 @@
 <span class="rbig">dai¹</span>
 <button class="play" onclick="play('tai1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dai1.html">同音字 9</a></div>
 <p class="rb-py">zhī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">晓得；明白。～道、～识、～己～彼。</span><span class="en">To know; to be aware of.</span></span></li><li><span class="num">②</span><span><span class="zh">使知道。通～、告～。</span><span class="en">To inform; to let someone know.</span></span></li><li><span class="num">③</span><span><span class="zh">知识。求～、无～、真～灼见。</span><span class="en">Knowledge.</span></span></li><li><span class="num">④</span><span><span class="zh">彼此了解；了解自己的人。相～、～交、～音。</span><span class="en">To know one another well; a close friend.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">zi¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ci1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">晓得；明白。～道、～识、～己～彼。</span><span class="en">To know; to be aware of.</span></span></li><li><span class="num">②</span><span><span class="zh">使知道。通～、告～。</span><span class="en">To inform; to let someone know.</span></span></li><li><span class="num">③</span><span><span class="zh">知识。求～、无～、真～灼见。</span><span class="en">Knowledge.</span></span></li><li><span class="num">④</span><span><span class="zh">彼此了解；了解自己的人。相～、～交、～音。</span><span class="en">To know one another well; a close friend.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">zi¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ci1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">zi⁴</span>
 <button class="play" onclick="play('ci4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zi4.html">同音字 25</a></div>
 <p class="rb-py">zhì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"智"，聪明。～者不惑。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"智"，聪明。～者不惑。</span><span class="en">Same as 智: wise.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

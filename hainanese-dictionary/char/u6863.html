@@ -15,12 +15,18 @@
 <span class="rbig">ddang⁴</span>
 <button class="play" onclick="play('dang4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddang4.html">同音字 4</a></div>
 <p class="rb-py">dàng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">存放案卷的橱架；也指分类保存的文件。～案、归～、查～。</span><span class="en">a rack for files; also files kept in order.</span></span></li><li><span class="num">②</span><span><span class="zh">等级。～次、高～、低～。</span><span class="en">a grade; a class.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉摊子；营业的铺位。大排～、摊～。</span><span class="en">〈dial.〉 a stall; a trading pitch.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">存放案卷的橱架；也指分类保存的文件。～案、归～、查～。</span><span class="en">a rack for files; also files kept in order.</span></span></li><li><span class="num">②</span><span><span class="zh">等级。～次、高～、低～。</span><span class="en">a grade; a class.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>摊子；营业的铺位。大排～、摊～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> a stall; a trading pitch.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

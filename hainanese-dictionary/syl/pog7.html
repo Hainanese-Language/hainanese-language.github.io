@@ -33,7 +33,7 @@
 <div class="gl zh">连接车轮中心和轮圈的直条。～条、～射、～辏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u99a5.html">
 <div class="ch">馥</div><div class="body">
 <span class="py">fù</span>
-<div class="gl zh">〈书〉香气浓。～郁、芬～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u590d.html">
+<div class="gl zh">香气浓。～郁、芬～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u590d.html">
 <div class="ch">复</div><div class="body">
 <span class="py">fù</span>
 <div class="gl zh">回答；回报。～信、答～、～仇。</div><div class="also">主读 <i>pog⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8986.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

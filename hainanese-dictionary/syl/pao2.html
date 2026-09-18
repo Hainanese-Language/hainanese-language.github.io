@@ -21,7 +21,7 @@
 <div class="gl zh">用于"咆哮"，指猛兽怒吼；也形容水势奔腾或人发怒。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e96.html">
 <div class="ch">庖</div><div class="body">
 <span class="py">páo</span>
-<div class="gl zh">〈书〉厨房；厨师。～厨、～丁、越俎代～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72cd.html">
+<div class="gl zh">厨房；厨师。～厨、～丁、越俎代～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72cd.html">
 <div class="ch">狍</div><div class="body">
 <span class="py">páo</span>
 <div class="gl zh">鹿的一种，体形较小，尾极短。～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8dd1.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

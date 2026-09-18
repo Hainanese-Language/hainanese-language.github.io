@@ -15,16 +15,23 @@
 <span class="rbig">ddai²</span>
 <button class="play" onclick="play('dai2.mp3')">&#9654;</button></div>
 <p class="rb-py">mái</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用土等物盖住。～葬、～藏、掩～。</span><span class="en">To bury; to cover over with earth. 埋葬; 埋藏; 掩埋.</span></span></li><li><span class="num">②</span><span><span class="zh">隐藏；使不显露。～伏、～没、隐姓～名。</span><span class="en">To hide; to keep out of sight. 埋伏; 埋没; 隐姓埋名.</span></span></li><li><span class="num">③</span><span><span class="zh">专心地投入。～头苦干、～头读书。</span><span class="en">To throw oneself into. 埋头苦干; 埋头读书.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">mai²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mai2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用土等物盖住。～葬、～藏、掩～。</span><span class="en">To bury; to cover over with earth. 埋葬; 埋藏; 掩埋.</span></span></li><li><span class="num">②</span><span><span class="zh">隐藏；使不显露。～伏、～没、隐姓～名。</span><span class="en">To hide; to keep out of sight. 埋伏; 埋没; 隐姓埋名.</span></span></li><li><span class="num">③</span><span><span class="zh">专心地投入。～头苦干、～头读书。</span><span class="en">To throw oneself into. 埋头苦干; 埋头读书.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">mai²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mai2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">mai²</span>
 <button class="play" onclick="play('mai2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mai2.html">同音字 3</a></div>
 <p class="rb-py">mán</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"～怨"，指责怪、抱怨。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"～怨"，指责怪、抱怨。</span><span class="en">Used in 埋怨: to blame; to grumble at.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

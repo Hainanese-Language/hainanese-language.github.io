@@ -15,12 +15,19 @@
 <span class="rbig">ve³</span>
 <button class="play" onclick="play('be3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ve3.html">同音字 2</a></div>
 <p class="rb-py">mǎ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">哺乳动物，颈上有鬃，善跑，可供人骑或拉车。骑～、～车、～蹄。</span><span class="en">The horse, a maned mammal that runs well and is ridden or used for draught. 骑马 to ride a horse; 马车 a carriage; 马蹄 a hoof.</span></span></li><li><span class="num">②</span><span><span class="zh">大。～蜂、～勺。</span><span class="en">Large. 马蜂 a hornet; 马勺 a large ladle.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">ma²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ma2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">哺乳动物，颈上有鬃，善跑，可供人骑或拉车。骑～、～车、～蹄。</span><span class="en">The horse, a maned mammal that runs well and is ridden or used for draught. 骑马 to ride a horse; 马车 a carriage; 马蹄 a hoof.</span></span></li><li><span class="num">②</span><span><span class="zh">大。～蜂、～勺。</span><span class="en">Large. 马蜂 a hornet; 马勺 a large ladle.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">ma²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ma2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

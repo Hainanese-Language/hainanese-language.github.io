@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/vid7.html">vid⁷</a></div><a class="hrow" href="/hainanese-dictionary/char/u5564.html">
 <div class="ch">啤</div><div class="body">
 <span class="py">pí</span>
-<div class="gl zh">〈外〉用于"啤酒"，一种用大麦发酵制成的饮料。生～、扎～。</div><div class="also">主读 <i>pi²</i></div></div></a><footer>
+<div class="gl zh">用于"啤酒"，一种用大麦发酵制成的饮料。生～、扎～。</div><div class="also">主读 <i>pi²</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

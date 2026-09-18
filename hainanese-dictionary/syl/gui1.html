@@ -30,7 +30,7 @@
 <div class="gl zh">画圆的工具。圆～、～尺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u95fa.html">
 <div class="ch">闺</div><div class="body">
 <span class="py">guī</span>
-<div class="gl zh">〈旧〉女子居住的内室。～房、深～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9c91.html">
+<div class="gl zh">女子居住的内室。～房、深～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9c91.html">
 <div class="ch">鲑</div><div class="body">
 <span class="py">guī</span>
 <div class="gl zh">一种海洋鱼类，产卵时溯河而上，肉可以吃。～鱼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f9f.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

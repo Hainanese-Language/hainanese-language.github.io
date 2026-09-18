@@ -15,12 +15,18 @@
 <span class="rbig">yi⁴</span>
 <button class="play" onclick="play('ji4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi4.html">同音字 4</a></div>
 <p class="rb-py">yù</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">驾驶车马。～车、驾～。</span><span class="en">To drive a carriage. 御车 to drive a chariot; 驾御 to handle; to control.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉跟皇帝有关的。～用、～旨、～花园。</span><span class="en">〈former〉 Pertaining to the emperor. 御用 for imperial use; 御旨 an imperial decree.</span></span></li><li><span class="num">③</span><span><span class="zh">抵挡。抵～、防～、～寒。</span><span class="en">To ward off. 抵御 to resist; 防御 to defend; 御寒 to keep out the cold.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">驾驶车马。～车、驾～。</span><span class="en">To drive a carriage. 御车 to drive a chariot; 驾御 to handle; to control.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>跟皇帝有关的。～用、～旨、～花园。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> Pertaining to the emperor. 御用 for imperial use; 御旨 an imperial decree.</span></span></li><li><span class="num">③</span><span><span class="zh">抵挡。抵～、防～、～寒。</span><span class="en">To ward off. 抵御 to resist; 防御 to defend; 御寒 to keep out the cold.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

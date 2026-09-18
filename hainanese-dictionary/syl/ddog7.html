@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/ddog7.html">ddog⁷</a><a class="chip" href="/hainanese-dictionary/syl/ddog8.html">ddog⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u691f.html">
 <div class="ch">椟</div><div class="body">
 <span class="py">dú</span>
-<div class="gl zh">〈书〉匣子；柜子。买～还珠。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e0e.html">
+<div class="gl zh">匣子；柜子。买～还珠。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e0e.html">
 <div class="ch">渎</div><div class="body">
 <span class="py">dú</span>
 <div class="gl zh">轻慢；不恭敬。亵～、～职。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u724d.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

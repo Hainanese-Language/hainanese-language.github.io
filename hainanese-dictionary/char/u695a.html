@@ -15,12 +15,18 @@
 <span class="rbig">so³</span>
 <button class="play" onclick="play('so3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so3.html">同音字 2</a></div>
 <p class="rb-py">chǔ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">周代国名，在今湖北、湖南一带。～辞、～汉相争。</span><span class="en">The state of Chu of the Zhou period, in present-day Hubei and Hunan.</span></span></li><li><span class="num">②</span><span><span class="zh">湖北的别称。～剧。</span><span class="en">Another name for Hubei.</span></span></li><li><span class="num">③</span><span><span class="zh">清晰；整齐。清～、衣冠～～。</span><span class="en">Clear; neat.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉痛苦。苦～、凄～。</span><span class="en">〈lit.〉 Pain; distress.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">周代国名，在今湖北、湖南一带。～辞、～汉相争。</span><span class="en">The state of Chu of the Zhou period, in present-day Hubei and Hunan.</span></span></li><li><span class="num">②</span><span><span class="zh">湖北的别称。～剧。</span><span class="en">Another name for Hubei.</span></span></li><li><span class="num">③</span><span><span class="zh">清晰；整齐。清～、衣冠～～。</span><span class="en">Clear; neat.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>痛苦。苦～、凄～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Pain; distress.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

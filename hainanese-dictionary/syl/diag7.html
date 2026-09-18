@@ -18,7 +18,7 @@
 <div class="gl zh">由大变小；由长变短。收～、～小、热胀冷～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94c4.html">
 <div class="ch">铄</div><div class="body">
 <span class="py">shuò</span>
-<div class="gl zh">〈书〉熔化金属。众口～金。</div><div class="also">另读 <i>yiag⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u524a.html">
+<div class="gl zh">熔化金属。众口～金。</div><div class="also">另读 <i>yiag⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u524a.html">
 <div class="ch">削</div><div class="body">
 <span class="py">xiāo · xuē</span>
 <div class="gl zh">用刀斜着去掉物体的表层。～苹果、～铅笔、～皮。  xuē 减少；减弱；除去。～减、～弱、剥～。</div><div class="also">主读 <i>dia⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c51.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

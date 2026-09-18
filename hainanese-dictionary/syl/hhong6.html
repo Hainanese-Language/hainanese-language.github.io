@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/hhong1.html">hhong¹</a><a class="chip" href="/hainanese-dictionary/syl/hhong2.html">hhong²</a><a class="chip" href="/hainanese-dictionary/syl/hhong5.html">hhong⁵</a><a class="chip on" href="/hainanese-dictionary/syl/hhong6.html">hhong⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u857b.html">
 <div class="ch">蕻</div><div class="body">
 <span class="py">hòng · hóng</span>
-<div class="gl zh">用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 〈方〉某些蔬菜的花茎。菜～、油菜～。</div><div class="also">另读 <i>hhong²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8ba7.html">
+<div class="gl zh">用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 某些蔬菜的花茎。菜～、油菜～。</div><div class="also">另读 <i>hhong²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8ba7.html">
 <div class="ch">讧</div><div class="body">
 <span class="py">hòng</span>
 <div class="gl zh">争吵；混乱。内～。</div></div></a><footer>
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

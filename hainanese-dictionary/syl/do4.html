@@ -15,7 +15,7 @@
 <div class="gl zh">鸟类食管下部储存食物的囊。～子、鸡～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u612b.html">
 <div class="ch">愫</div><div class="body">
 <span class="py">sù</span>
-<div class="gl zh">〈书〉真实的情意。情～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7d20.html">
+<div class="gl zh">真实的情意。情～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7d20.html">
 <div class="ch">素</div><div class="body">
 <span class="py">sù</span>
 <div class="gl zh">白色；本色。～服、～净。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5ea7.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

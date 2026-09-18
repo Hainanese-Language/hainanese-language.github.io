@@ -15,12 +15,18 @@
 <span class="rbig">lao¹</span>
 <button class="play" onclick="play('lau1.mp3')">&#9654;</button></div>
 <p class="rb-py">lòu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">东西从孔隙中滴下、掉出或透出。～水、屋顶～雨、～气。</span><span class="en">To leak; for something to drip or escape through a gap. 漏水; 屋顶漏雨; 漏气.</span></span></li><li><span class="num">②</span><span><span class="zh">有孔隙；不严密。锅～了、～洞。</span><span class="en">Having gaps; not tight. 锅漏了; 漏洞.</span></span></li><li><span class="num">③</span><span><span class="zh">遗落；疏忽。遗～、～题、挂一～万。</span><span class="en">To leave out; to overlook. 遗漏; 漏题; 挂一漏万.</span></span></li><li><span class="num">④</span><span><span class="zh">泄露。走～消息、～底。</span><span class="en">To let out a secret. 走漏消息; 漏底.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈古〉计时器；也指时刻。～壶、更深～残。</span><span class="en">〈arch.〉 A water clock; also, the hour. 漏壶; 更深漏残.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">东西从孔隙中滴下、掉出或透出。～水、屋顶～雨、～气。</span><span class="en">To leak; for something to drip or escape through a gap. 漏水; 屋顶漏雨; 漏气.</span></span></li><li><span class="num">②</span><span><span class="zh">有孔隙；不严密。锅～了、～洞。</span><span class="en">Having gaps; not tight. 锅漏了; 漏洞.</span></span></li><li><span class="num">③</span><span><span class="zh">遗落；疏忽。遗～、～题、挂一～万。</span><span class="en">To leave out; to overlook. 遗漏; 漏题; 挂一漏万.</span></span></li><li><span class="num">④</span><span><span class="zh">泄露。走～消息、～底。</span><span class="en">To let out a secret. 走漏消息; 漏底.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>计时器；也指时刻。～壶、更深～残。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> A water clock; also, the hour. 漏壶; 更深漏残.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

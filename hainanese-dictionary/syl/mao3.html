@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/mao2.html">mao²</a><a class="chip on" href="/hainanese-dictionary/syl/mao3.html">mao³</a><a class="chip" href="/hainanese-dictionary/syl/mao4.html">mao⁴</a><a class="chip" href="/hainanese-dictionary/syl/mao5.html">mao⁵</a><a class="chip" href="/hainanese-dictionary/syl/mao6.html">mao⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5187.html">
 <div class="ch">冇</div><div class="body">
 <span class="py">mǎo</span>
-<div class="gl zh">〈方〉没有。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u536f.html">
+<div class="gl zh">没有。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u536f.html">
 <div class="ch">卯</div><div class="body">
 <span class="py">mǎo</span>
 <div class="gl zh">地支的第四位。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94c6.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

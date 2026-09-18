@@ -15,12 +15,18 @@
 <span class="rbig">gou²</span>
 <button class="play" onclick="play('kou2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gou2.html">同音字 2</a></div>
 <p class="rb-py">gǒu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">马虎；随便。～且、不～言笑、一丝不～。</span><span class="en">Careless; casual. 苟且; 不苟言笑; 一丝不苟.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉姑且；暂且。～安、～活、～延残喘。</span><span class="en">〈lit.〉 For the moment; merely to get by. 苟安; 苟活; 苟延残喘.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉如果。～非其人。</span><span class="en">〈lit.〉 If. 苟非其人.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">马虎；随便。～且、不～言笑、一丝不～。</span><span class="en">Careless; casual. 苟且; 不苟言笑; 一丝不苟.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>姑且；暂且。～安、～活、～延残喘。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> For the moment; merely to get by. 苟安; 苟活; 苟延残喘.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>如果。～非其人。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> If. 苟非其人.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

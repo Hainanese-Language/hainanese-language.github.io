@@ -15,12 +15,18 @@
 <span class="rbig">gui⁴</span>
 <button class="play" onclick="play('kui4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gui4.html">同音字 6</a></div>
 <p class="rb-py">jì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">因害怕而心跳。心～、惊～、心有余～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">因害怕而心跳。心～、惊～、心有余～。</span><span class="en">For the heart to pound with fear. 心悸; 惊悸; 心有余悸.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

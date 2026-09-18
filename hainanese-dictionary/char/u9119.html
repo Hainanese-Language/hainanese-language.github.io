@@ -15,12 +15,18 @@
 <span class="rbig">pi²</span>
 <button class="play" onclick="play('phi2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pi2.html">同音字 10</a></div>
 <p class="rb-py">bǐ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">品质低劣。卑～、～俗、～陋。</span><span class="en">Base in character. 卑鄙 despicable; 鄙俗 vulgar; 鄙陋 mean and shallow.</span></span></li><li><span class="num">②</span><span><span class="zh">轻视；看不起。～视、～薄、～夷。</span><span class="en">To look down on. 鄙视 to despise; 鄙薄 to disdain; 鄙夷 to scorn.</span></span></li><li><span class="num">③</span><span><span class="zh">谦辞，称自己的。～人、～意、～见。</span><span class="en">A humble form used of oneself. 鄙人 your humble servant; 鄙意 my humble opinion; 鄙见 my poor view.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉边远的地方。边～。</span><span class="en">〈lit.〉 An outlying place. 边鄙 the borderlands.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">品质低劣。卑～、～俗、～陋。</span><span class="en">Base in character. 卑鄙 despicable; 鄙俗 vulgar; 鄙陋 mean and shallow.</span></span></li><li><span class="num">②</span><span><span class="zh">轻视；看不起。～视、～薄、～夷。</span><span class="en">To look down on. 鄙视 to despise; 鄙薄 to disdain; 鄙夷 to scorn.</span></span></li><li><span class="num">③</span><span><span class="zh">谦辞，称自己的。～人、～意、～见。</span><span class="en">A humble form used of oneself. 鄙人 your humble servant; 鄙意 my humble opinion; 鄙见 my poor view.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>边远的地方。边～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> An outlying place. 边鄙 the borderlands.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

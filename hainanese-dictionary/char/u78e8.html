@@ -15,16 +15,24 @@
 <span class="rbig">vo¹</span>
 <button class="play" onclick="play('bo1.mp3')">&#9654;</button></div>
 <p class="rb-py">mó</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">摩擦。～刀、～墨、铁杵～成针。</span><span class="en">To rub; to grind; to sharpen.</span></span></li><li><span class="num">②</span><span><span class="zh">消耗；拖延。消～、～时间。</span><span class="en">To wear away; to drag out time.</span></span></li><li><span class="num">③</span><span><span class="zh">折磨。～难、好事多～。</span><span class="en">To torment.</span></span></li><li><span class="num">④</span><span><span class="zh">纠缠。～人、软～硬泡。</span><span class="en">To pester.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">mo²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo2.mp3')">&#9654;</button></div><div class="alt"><span class="r2">vua²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('bua2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">摩擦。～刀、～墨、铁杵～成针。</span><span class="en">To rub; to grind; to sharpen.</span></span></li><li><span class="num">②</span><span><span class="zh">消耗；拖延。消～、～时间。</span><span class="en">To wear away; to drag out time.</span></span></li><li><span class="num">③</span><span><span class="zh">折磨。～难、好事多～。</span><span class="en">To torment.</span></span></li><li><span class="num">④</span><span><span class="zh">纠缠。～人、软～硬泡。</span><span class="en">To pester.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">mo²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo2.mp3')">&#9654;</button></div><div class="alt"><span class="r2">vua²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('bua2.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">vo¹</span>
 <button class="play" onclick="play('bo1.mp3')">&#9654;</button></div>
 <p class="rb-py">mò</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">把粮食弄碎的工具。石～、电～。</span><span class="en">A millstone.</span></span></li><li><span class="num">②</span><span><span class="zh">用磨把粮食弄碎。～面、～豆腐。</span><span class="en">To grind grain in a mill.</span></span></li><li><span class="num">③</span><span><span class="zh">掉转。把车～过来。</span><span class="en">To turn round.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">mo¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把粮食弄碎的工具。石～、电～。</span><span class="en">A millstone.</span></span></li><li><span class="num">②</span><span><span class="zh">用磨把粮食弄碎。～面、～豆腐。</span><span class="en">To grind grain in a mill.</span></span></li><li><span class="num">③</span><span><span class="zh">掉转。把车～过来。</span><span class="en">To turn round.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">mo¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mo1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

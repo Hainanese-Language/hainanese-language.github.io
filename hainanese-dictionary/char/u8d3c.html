@@ -15,12 +15,18 @@
 <span class="rbig">sad⁸</span>
 <button class="play" onclick="play('sat8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sad8.html">同音字 2</a></div>
 <p class="rb-py">zéi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">偷东西的人。～窝、抓～、做～心虚。</span><span class="en">a thief.</span></span></li><li><span class="num">②</span><span><span class="zh">危害国家和人民的人。卖国～、～寇。</span><span class="en">one who harms the country and the people.</span></span></li><li><span class="num">③</span><span><span class="zh">邪的；不正派的。～眉鼠眼、～心不死。</span><span class="en">evil; underhand.</span></span></li><li><span class="num">④</span><span><span class="zh">〈方〉狡猾。这人真～。</span><span class="en">〈dial.〉 crafty; sly.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">偷东西的人。～窝、抓～、做～心虚。</span><span class="en">a thief.</span></span></li><li><span class="num">②</span><span><span class="zh">危害国家和人民的人。卖国～、～寇。</span><span class="en">one who harms the country and the people.</span></span></li><li><span class="num">③</span><span><span class="zh">邪的；不正派的。～眉鼠眼、～心不死。</span><span class="en">evil; underhand.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>狡猾。这人真～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> crafty; sly.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

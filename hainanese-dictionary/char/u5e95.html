@@ -15,12 +15,18 @@
 <span class="rbig">ddoi³</span>
 <button class="play" onclick="play('doi3.mp3')">&#9654;</button></div>
 <p class="rb-py">dǐ</p>
-<ul class="senses"><li><span class="pyhead">〔dǐ〕</span></li><li><span class="num">①</span><span><span class="zh">物体最下面的部分。～层、井～、鞋～、海～。</span><span class="en">The bottom of something. 底层; 井底; 鞋底; 海底.</span></span></li><li><span class="num">②</span><span><span class="zh">事情的根源或内情。～细、刨根问～、心中有～。</span><span class="en">The root of a matter; the inside story. 底细; 刨根问底; 心中有底.</span></span></li><li><span class="num">③</span><span><span class="zh">末尾；临近终了。年～、月～、～稿。</span><span class="en">The end; the closing part. 年底; 月底; 底稿.</span></span></li><li><span class="num">④</span><span><span class="zh">图案的衬托面。白～红花、～色。</span><span class="en">The ground of a pattern. 白底红花; 底色.</span></span></li><li><span class="pyhead">〔de〕</span></li><li><span class="num">⑤</span><span><span class="zh">〈旧〉助词，同"的"。</span><span class="en">〈former〉 A particle, same as 的.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔dǐ〕</span></li><li><span class="num">①</span><span><span class="zh">物体最下面的部分。～层、井～、鞋～、海～。</span><span class="en">The bottom of something. 底层; 井底; 鞋底; 海底.</span></span></li><li><span class="num">②</span><span><span class="zh">事情的根源或内情。～细、刨根问～、心中有～。</span><span class="en">The root of a matter; the inside story. 底细; 刨根问底; 心中有底.</span></span></li><li><span class="num">③</span><span><span class="zh">末尾；临近终了。年～、月～、～稿。</span><span class="en">The end; the closing part. 年底; 月底; 底稿.</span></span></li><li><span class="num">④</span><span><span class="zh">图案的衬托面。白～红花、～色。</span><span class="en">The ground of a pattern. 白底红花; 底色.</span></span></li><li><span class="pyhead">〔de〕</span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>助词，同"的"。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A particle, same as 的.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

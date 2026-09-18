@@ -30,7 +30,7 @@
 <div class="gl zh">一种香草。～衣草。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91ba.html">
 <div class="ch">醺</div><div class="body">
 <span class="py">xūn</span>
-<div class="gl zh">〈书〉酒醉。醉～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5206.html">
+<div class="gl zh">酒醉。醉～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5206.html">
 <div class="ch">分</div><div class="body">
 <span class="py">fēn · fèn</span>
 <div class="gl zh">使整体变成几部分；跟"合"相对。～开、～割、～成两组。</div><div class="also">主读 <i>bun¹</i> · <i>pun⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6655.html">
@@ -48,6 +48,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

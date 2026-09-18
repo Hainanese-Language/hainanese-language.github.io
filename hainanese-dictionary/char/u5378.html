@@ -15,12 +15,19 @@
 <span class="rbig">dia⁴</span>
 <button class="play" onclick="play('tia4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dia4.html">同音字 3</a></div>
 <p class="rb-py">xiè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">把东西去掉或搬下来。～货、～车、装～。</span><span class="en">To take off or unload. 卸货 to unload goods; 卸车 to unload a vehicle; 装卸 to load and unload.</span></span></li><li><span class="num">②</span><span><span class="zh">把零件拆下来。拆～、～轮胎。</span><span class="en">To take apart. 拆卸 to dismantle; 卸轮胎 to take off a tyre.</span></span></li><li><span class="num">③</span><span><span class="zh">解除；推脱。～任、～职、推～责任。</span><span class="en">To lay down; to shirk. 卸任 to leave office; 卸职 to resign a post; 推卸责任 to shift responsibility.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">yi⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ji6.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把东西去掉或搬下来。～货、～车、装～。</span><span class="en">To take off or unload. 卸货 to unload goods; 卸车 to unload a vehicle; 装卸 to load and unload.</span></span></li><li><span class="num">②</span><span><span class="zh">把零件拆下来。拆～、～轮胎。</span><span class="en">To take apart. 拆卸 to dismantle; 卸轮胎 to take off a tyre.</span></span></li><li><span class="num">③</span><span><span class="zh">解除；推脱。～任、～职、推～责任。</span><span class="en">To lay down; to shirk. 卸任 to leave office; 卸职 to resign a post; 推卸责任 to shift responsibility.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">yi⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ji6.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

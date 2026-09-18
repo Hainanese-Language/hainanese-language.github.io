@@ -15,20 +15,26 @@
 <span class="rbig">gui¹</span>
 <button class="play" onclick="play('kui1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gui1.html">同音字 9</a></div>
 <p class="rb-py">guī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">爬行动物，身体有硬甲，头尾和四肢能缩入甲内。乌～、～甲、～缩。</span></span></li></ul><div class="alt"><span class="r2">gu¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ku1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">爬行动物，身体有硬甲，头尾和四肢能缩入甲内。乌～、～甲、～缩。</span><span class="en">A tortoise, a reptile with a hard shell into which it can draw its head, tail and limbs. 乌龟 a tortoise; 龟甲 a tortoise shell; 龟缩 to withdraw into one's shell.</span></span></li></ul><div class="alt"><span class="r2">gu¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ku1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">gun¹</span>
 <button class="play" onclick="play('kon1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gun1.html">同音字 5</a></div>
 <p class="rb-py">jūn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">皮肤因干燥而裂开。～裂。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">皮肤因干燥而裂开。～裂。</span><span class="en">Of skin, to crack from dryness. 龟裂 chapped.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hiu¹</span>
 <button class="play" onclick="play('hiu1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hiu1.html">同音字 3</a></div>
 <p class="rb-py">qiū</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"龟兹"，古代西域国名。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"龟兹"，古代西域国名。</span><span class="en">Used in 龟兹, an ancient state in the Western Regions.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

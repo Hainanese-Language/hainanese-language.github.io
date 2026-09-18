@@ -18,7 +18,7 @@
 <div class="gl zh">把人关起来。～禁、～犯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7574.html">
 <div class="ch">畴</div><div class="body">
 <span class="py">chóu</span>
-<div class="gl zh">〈书〉田地。田～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a20.html">
+<div class="gl zh">田地。田～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a20.html">
 <div class="ch">稠</div><div class="body">
 <span class="py">chóu</span>
 <div class="gl zh">液体中含固体多，跟"稀"相对。粥很～、～糊。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b79.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">计数用的小竿或小片。～码、略胜一～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9052.html">
 <div class="ch">遒</div><div class="body">
 <span class="py">qiú</span>
-<div class="gl zh">〈书〉强劲；有力。～劲、～健。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u914b.html">
+<div class="gl zh">强劲；有力。～劲、～健。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u914b.html">
 <div class="ch">酋</div><div class="body">
 <span class="py">qiú</span>
 <div class="gl zh">部落的首领。～长、～长国、匪～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u916c.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

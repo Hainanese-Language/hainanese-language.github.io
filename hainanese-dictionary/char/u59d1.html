@@ -15,12 +15,19 @@
 <span class="rbig">gou¹</span>
 <button class="play" onclick="play('kou1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gou1.html">同音字 4</a></div>
 <p class="rb-py">gū</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">父亲的姐妹。～母、～妈。</span><span class="en">A father's sister. 姑母 a paternal aunt; 姑妈 auntie.</span></span></li><li><span class="num">②</span><span><span class="zh">丈夫的姐妹。大～子、小～子。</span><span class="en">A husband's sister. 大姑子 an elder sister-in-law; 小姑子 a younger sister-in-law.</span></span></li><li><span class="num">③</span><span><span class="zh">丈夫的母亲。翁～。</span><span class="en">A husband's mother. 翁姑 one's husband's parents.</span></span></li><li><span class="num">④</span><span><span class="zh">出家修行的女子。尼～、道～。</span><span class="en">A nun. 尼姑 a Buddhist nun; 道姑 a Daoist nun.</span></span></li><li><span class="num">⑤</span><span><span class="zh">暂且。～且、～妄言之。</span><span class="en">For the moment. 姑且 for the time being; 姑妄言之 let me venture a word.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">gu¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ku1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">父亲的姐妹。～母、～妈。</span><span class="en">A father's sister. 姑母 a paternal aunt; 姑妈 auntie.</span></span></li><li><span class="num">②</span><span><span class="zh">丈夫的姐妹。大～子、小～子。</span><span class="en">A husband's sister. 大姑子 an elder sister-in-law; 小姑子 a younger sister-in-law.</span></span></li><li><span class="num">③</span><span><span class="zh">丈夫的母亲。翁～。</span><span class="en">A husband's mother. 翁姑 one's husband's parents.</span></span></li><li><span class="num">④</span><span><span class="zh">出家修行的女子。尼～、道～。</span><span class="en">A nun. 尼姑 a Buddhist nun; 道姑 a Daoist nun.</span></span></li><li><span class="num">⑤</span><span><span class="zh">暂且。～且、～妄言之。</span><span class="en">For the moment. 姑且 for the time being; 姑妄言之 let me venture a word.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">gu¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ku1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

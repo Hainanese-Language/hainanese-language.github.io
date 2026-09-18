@@ -15,10 +15,10 @@
 <div class="gl zh">柞树，即栎树，叶可饲柞蚕。～树、～蚕、～丝。  zhà 用于地名，柞水，在陕西。～水。</div><div class="also">另读 <i>da⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b2e.html">
 <div class="ch">笮</div><div class="body">
 <span class="py">zuó · zé</span>
-<div class="gl zh">〈书〉竹索。  zé 〈书〉狭窄。</div><div class="also">另读 <i>zeg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9162.html">
+<div class="gl zh">竹索。  zé 狭窄。</div><div class="also">另读 <i>zeg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9162.html">
 <div class="ch">酢</div><div class="body">
 <span class="py">zuò · cù</span>
-<div class="gl zh">〈书〉客人用酒回敬主人。酬～。  cù 同"醋"。</div><div class="also">另读 <i>sou⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f5c.html">
+<div class="gl zh">客人用酒回敬主人。酬～。  cù 同"醋"。</div><div class="also">另读 <i>sou⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f5c.html">
 <div class="ch">作</div><div class="body">
 <span class="py">zuò · zuō · zuó</span>
 <div class="gl zh">从事某种活动；进行。～工、～战、～报告、精耕细～。</div><div class="also">主读 <i>do⁶</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

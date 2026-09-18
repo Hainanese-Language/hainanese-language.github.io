@@ -15,12 +15,18 @@
 <span class="rbig">hhang⁶</span>
 <button class="play" onclick="play('hhang6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhang6.html">同音字 2</a></div>
 <p class="rb-py">hàng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"沆瀣"，指夜间的水气。～瀣一气。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"沆瀣"，指夜间的水气。～瀣一气。</span><span class="en">Used in 沆瀣: night vapours. 沆瀣一气 to be hand in glove with one another.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

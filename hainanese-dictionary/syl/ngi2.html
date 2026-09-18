@@ -15,7 +15,7 @@
 <div class="gl zh">人的容貌举止。～表、～容、威～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u502a.html">
 <div class="ch">倪</div><div class="body">
 <span class="py">ní</span>
-<div class="gl zh">〈书〉边际；头绪。端～。</div><div class="also">另读 <i>ni²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b9c.html">
+<div class="gl zh">边际；头绪。端～。</div><div class="also">另读 <i>ni²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b9c.html">
 <div class="ch">宜</div><div class="body">
 <span class="py">yí</span>
 <div class="gl zh">合适；适当。适～、相～、～人、因地制～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u611a.html">
@@ -27,7 +27,7 @@
 <div class="gl zh">不相信；猜测。怀～、～心、半信半～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7768.html">
 <div class="ch">睨</div><div class="body">
 <span class="py">nì</span>
-<div class="gl zh">〈书〉斜着眼睛看。斜～、～视。</div><div class="also">另读 <i>ni²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9713.html">
+<div class="gl zh">斜着眼睛看。斜～、～视。</div><div class="also">另读 <i>ni²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9713.html">
 <div class="ch">霓</div><div class="body">
 <span class="py">ní</span>
 <div class="gl zh">大气中的一种光学现象，是副虹，色彩比虹淡。～虹。</div><div class="also">另读 <i>ni²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cb5.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

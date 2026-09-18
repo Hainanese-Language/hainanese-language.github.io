@@ -12,13 +12,13 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/ddi2.html">ddi²</a><a class="chip" href="/hainanese-dictionary/syl/ddi4.html">ddi⁴</a><a class="chip" href="/hainanese-dictionary/syl/ddi5.html">ddi⁵</a><a class="chip" href="/hainanese-dictionary/syl/ddi6.html">ddi⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u577b.html">
 <div class="ch">坻</div><div class="body">
 <span class="py">dǐ</span>
-<div class="gl zh">〈书〉水中的小洲。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62b5.html">
+<div class="gl zh">水中的小洲。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62b5.html">
 <div class="ch">抵</div><div class="body">
 <span class="py">dǐ</span>
 <div class="gl zh">支撑；顶住。～住门、～挡、～制。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7825.html">
 <div class="ch">砥</div><div class="body">
 <span class="py">dǐ</span>
-<div class="gl zh">〈书〉细的磨刀石。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bcb.html">
+<div class="gl zh">细的磨刀石。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bcb.html">
 <div class="ch">诋</div><div class="body">
 <span class="py">dǐ</span>
 <div class="gl zh">毁谤；说人坏话。～毁、丑～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fdf.html">
@@ -33,12 +33,18 @@
 <div class="gl zh">腰椎下面、尾骨上面的部位。～骨、～椎。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55b1.html">
 <div class="ch">喱</div><div class="body">
 <span class="py">lí</span>
-<div class="gl zh">〈外〉用于"咖喱"。</div><div class="also">主读 <i>li²</i></div></div></a><footer>
+<div class="gl zh">用于"咖喱"。</div><div class="also">主读 <i>li²</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

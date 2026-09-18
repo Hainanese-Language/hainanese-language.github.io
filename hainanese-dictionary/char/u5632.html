@@ -15,16 +15,22 @@
 <span class="rbig">siao²</span>
 <button class="play" onclick="play('siau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/siao2.html">同音字 6</a></div>
 <p class="rb-py">cháo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">讥笑；讽刺。～笑、～讽、冷～热讽。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">讥笑；讽刺。～笑、～讽、冷～热讽。</span><span class="en">To mock; ridicule. 嘲笑 to jeer at; 冷嘲热讽 to taunt and sneer.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ziao¹</span>
 <button class="play" onclick="play('ciau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziao1.html">同音字 12</a></div>
 <p class="rb-py">zhāo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"嘲哳"，形容声音杂乱细碎。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"嘲哳"，形容声音杂乱细碎。</span><span class="en">Used in 嘲哳, a confusion of small shrill sounds.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">危险；不安全。～急、～难、～重、转～为安。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5d6c.html">
 <div class="ch">嵬</div><div class="body">
 <span class="py">wéi</span>
-<div class="gl zh">〈书〉形容山高大。崔～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5dcd.html">
+<div class="gl zh">形容山高大。崔～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5dcd.html">
 <div class="ch">巍</div><div class="body">
 <span class="py">wēi</span>
 <div class="gl zh">高大。～峨、～然屹立。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6845.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

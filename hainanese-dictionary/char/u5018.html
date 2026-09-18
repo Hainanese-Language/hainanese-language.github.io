@@ -15,16 +15,22 @@
 <span class="rbig">hang³</span>
 <button class="play" onclick="play('hang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hang3.html">同音字 5</a></div>
 <p class="rb-py">tǎng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">连词，假如。～若、～使、～有困难，可以提出。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">连词，假如。～若、～使、～有困难，可以提出。</span><span class="en">If. 倘若 supposing; 倘使 in case; 倘有困难，可以提出 if there is any difficulty, say so.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">siang²</span>
 <button class="play" onclick="play('siang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/siang2.html">同音字 4</a></div>
 <p class="rb-py">cháng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"倘佯"，同"徜徉"，指自由自在地来回走。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"倘佯"，同"徜徉"，指自由自在地来回走。</span><span class="en">Used in 倘佯, the same as 徜徉: to wander at leisure.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

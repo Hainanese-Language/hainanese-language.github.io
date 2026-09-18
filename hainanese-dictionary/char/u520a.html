@@ -15,12 +15,19 @@
 <span class="rbig">han¹</span>
 <button class="play" onclick="play('han1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/han1.html">同音字 7</a></div>
 <p class="rb-py">kān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">排印出版。～登、～载、创～、月～发行。</span><span class="en">To print and publish. 刊登 to publish; 刊载 to carry in print; 创刊 to start a publication.</span></span></li><li><span class="num">②</span><span><span class="zh">出版的报纸、杂志等。报～、周～、副～。</span><span class="en">A publication such as a newspaper or magazine. 报刊 the press; 周刊 a weekly; 副刊 a supplement.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉删改；修正。～误、不～之论。</span><span class="en">〈lit.〉 To delete or amend. 刊误 to correct errors; 不刊之论 a statement that cannot be altered.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">had⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hat7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">排印出版。～登、～载、创～、月～发行。</span><span class="en">To print and publish. 刊登 to publish; 刊载 to carry in print; 创刊 to start a publication.</span></span></li><li><span class="num">②</span><span><span class="zh">出版的报纸、杂志等。报～、周～、副～。</span><span class="en">A publication such as a newspaper or magazine. 报刊 the press; 周刊 a weekly; 副刊 a supplement.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>删改；修正。～误、不～之论。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To delete or amend. 刊误 to correct errors; 不刊之论 a statement that cannot be altered.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">had⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hat7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

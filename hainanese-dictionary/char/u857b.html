@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>蕻 · 海南话字典</title><meta name="description" content="蕻 的海南话读音 hhong⁶、hhong²，普通话 hòng · hóng。用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 〈方〉某些蔬菜的花茎。菜～、油菜～。">
+<title>蕻 · 海南话字典</title><meta name="description" content="蕻 的海南话读音 hhong⁶、hhong²，普通话 hòng · hóng。用于"雪里蕻"，一种芥菜，多腌制后食用。  hóng 某些蔬菜的花茎。菜～、油菜～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">hhong⁶</span>
 <button class="play" onclick="play('hhong6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhong6.html">同音字 2</a></div>
 <p class="rb-py">hòng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"雪里蕻"，一种芥菜，多腌制后食用。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"雪里蕻"，一种芥菜，多腌制后食用。</span><span class="en">Used in 雪里蕻, a mustard green usually eaten pickled.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hhong²</span>
 <button class="play" onclick="play('hhong2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhong2.html">同音字 12</a></div>
 <p class="rb-py">hóng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉某些蔬菜的花茎。菜～、油菜～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>某些蔬菜的花茎。菜～、油菜～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> The flowering stalk of certain vegetables. 菜蕻 vegetable stalk.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

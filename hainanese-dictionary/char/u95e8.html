@@ -15,12 +15,19 @@
 <span class="rbig">mui²</span>
 <button class="play" onclick="play('mui2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mui2.html">同音字 2</a></div>
 <p class="rb-py">mén</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">建筑物、车船的出入口；也指出入口的开关装置。大～、～口、房～、车～。</span><span class="en">A doorway or gateway; also the door itself. 大门; 门口; 房门; 车门.</span></span></li><li><span class="num">②</span><span><span class="zh">形状或作用像门的东西。电～、球～、闸～。</span><span class="en">Something shaped or working like a door. 电门; 球门; 闸门.</span></span></li><li><span class="num">③</span><span><span class="zh">途径；关键。窍～、～路、入～。</span><span class="en">A way in; the key to something. 窍门; 门路; 入门.</span></span></li><li><span class="num">④</span><span><span class="zh">家族；家庭。～第、豪～、～风、满～。</span><span class="en">A family; a household. 门第; 豪门; 门风; 满门.</span></span></li><li><span class="num">⑤</span><span><span class="zh">派别；宗派。～派、佛～、～徒、同～。</span><span class="en">A school; a sect. 门派; 佛门; 门徒; 同门.</span></span></li><li><span class="num">⑥</span><span><span class="zh">类别。分～别类、五花八～。</span><span class="en">A category. 分门别类; 五花八门.</span></span></li><li><span class="num">⑦</span><span><span class="zh">量词，用于炮、功课、技术等。一～炮、三～功课、一～手艺。</span><span class="en">Measure word for guns, courses and skills. 一门炮; 三门功课; 一门手艺.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">mun²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mon2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">建筑物、车船的出入口；也指出入口的开关装置。大～、～口、房～、车～。</span><span class="en">A doorway or gateway; also the door itself. 大门; 门口; 房门; 车门.</span></span></li><li><span class="num">②</span><span><span class="zh">形状或作用像门的东西。电～、球～、闸～。</span><span class="en">Something shaped or working like a door. 电门; 球门; 闸门.</span></span></li><li><span class="num">③</span><span><span class="zh">途径；关键。窍～、～路、入～。</span><span class="en">A way in; the key to something. 窍门; 门路; 入门.</span></span></li><li><span class="num">④</span><span><span class="zh">家族；家庭。～第、豪～、～风、满～。</span><span class="en">A family; a household. 门第; 豪门; 门风; 满门.</span></span></li><li><span class="num">⑤</span><span><span class="zh">派别；宗派。～派、佛～、～徒、同～。</span><span class="en">A school; a sect. 门派; 佛门; 门徒; 同门.</span></span></li><li><span class="num">⑥</span><span><span class="zh">类别。分～别类、五花八～。</span><span class="en">A category. 分门别类; 五花八门.</span></span></li><li><span class="num">⑦</span><span><span class="zh">量词，用于炮、功课、技术等。一～炮、三～功课、一～手艺。</span><span class="en">Measure word for guns, courses and skills. 一门炮; 三门功课; 一门手艺.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">mun²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('mon2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

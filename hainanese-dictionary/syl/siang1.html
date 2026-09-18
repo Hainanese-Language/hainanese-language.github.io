@@ -21,7 +21,7 @@
 <div class="gl zh">妓女。～妓、暗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6215.html">
 <div class="ch">戕</div><div class="body">
 <span class="py">qiāng</span>
-<div class="gl zh">〈书〉杀害；损害。～害、自～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6217.html">
+<div class="gl zh">杀害；损害。～害、自～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6217.html">
 <div class="ch">戗</div><div class="body">
 <span class="py">qiāng · qiàng</span>
 <div class="gl zh">逆着；方向相对。～风、～水而行。  qiàng</div><div class="also">另读 <i>siang⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u660c.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

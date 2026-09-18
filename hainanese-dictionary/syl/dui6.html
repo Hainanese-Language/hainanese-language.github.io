@@ -15,7 +15,7 @@
 <div class="gl zh">落；掉下。～落、～马、～入深渊。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71e7.html">
 <div class="ch">燧</div><div class="body">
 <span class="py">suì</span>
-<div class="gl zh">〈古〉取火的器具。～石、钻～取火。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u745e.html">
+<div class="gl zh">取火的器具。～石、钻～取火。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u745e.html">
 <div class="ch">瑞</div><div class="body">
 <span class="py">ruì</span>
 <div class="gl zh">吉祥；吉利的征兆。祥～、～雪、～气盈门。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d58.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">多余的；无用的。～述、累～、～言。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9083.html">
 <div class="ch">邃</div><div class="body">
 <span class="py">suì</span>
-<div class="gl zh">〈书〉深；深远。深～、～密。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96a7.html">
+<div class="gl zh">深；深远。深～、～密。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96a7.html">
 <div class="ch">隧</div><div class="body">
 <span class="py">suì</span>
 <div class="gl zh">地道。～道、～洞。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9042.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

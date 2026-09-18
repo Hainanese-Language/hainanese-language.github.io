@@ -15,12 +15,19 @@
 <span class="rbig">dde⁶</span>
 <button class="play" onclick="play('de6.mp3')">&#9654;</button></div>
 <p class="rb-py">yā</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">从上面加力。～住、～碎、～路机。</span><span class="en">To press down. 压住 to hold down; 压碎 to crush; 压路机 a road roller.</span></span></li><li><span class="num">②</span><span><span class="zh">使稳定；使平静。～惊、～住阵脚、～住火气。</span><span class="en">To steady; to calm. 压惊 to soothe after a fright; 压住阵脚 to hold the line.</span></span></li><li><span class="num">③</span><span><span class="zh">用威力制服。镇～、～制、～迫。</span><span class="en">To subdue by force. 镇压 to suppress; 压制 to stifle; 压迫 to oppress.</span></span></li><li><span class="num">④</span><span><span class="zh">逼近。大军～境、太阳～山了。</span><span class="en">To bear down on. 大军压境 a great army presses on the border; 太阳压山了 the sun is dipping behind the hills.</span></span></li><li><span class="num">⑤</span><span><span class="zh">搁着不动。积～、这件事～了很久。</span><span class="en">To shelve. 积压 to leave piled up; 这件事压了很久 this matter has been left hanging a long time.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">ab⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ab7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">从上面加力。～住、～碎、～路机。</span><span class="en">To press down. 压住 to hold down; 压碎 to crush; 压路机 a road roller.</span></span></li><li><span class="num">②</span><span><span class="zh">使稳定；使平静。～惊、～住阵脚、～住火气。</span><span class="en">To steady; to calm. 压惊 to soothe after a fright; 压住阵脚 to hold the line.</span></span></li><li><span class="num">③</span><span><span class="zh">用威力制服。镇～、～制、～迫。</span><span class="en">To subdue by force. 镇压 to suppress; 压制 to stifle; 压迫 to oppress.</span></span></li><li><span class="num">④</span><span><span class="zh">逼近。大军～境、太阳～山了。</span><span class="en">To bear down on. 大军压境 a great army presses on the border; 太阳压山了 the sun is dipping behind the hills.</span></span></li><li><span class="num">⑤</span><span><span class="zh">搁着不动。积～、这件事～了很久。</span><span class="en">To shelve. 积压 to leave piled up; 这件事压了很久 this matter has been left hanging a long time.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">ab⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ab7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

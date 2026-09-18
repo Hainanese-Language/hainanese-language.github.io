@@ -15,7 +15,8 @@
 <span class="rbig">gui³</span>
 <button class="play" onclick="play('kui3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gui3.html">同音字 3</a></div>
 <p class="rb-py">jǐ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">询问数目。～个人、来了～天。</span><span class="en">How many. 几个人 how many people; 来了几天 how many days has it been.</span></span></li><li><span class="num">②</span><span><span class="zh">表示不定的数目。十～岁、所剩无～。</span><span class="en">An indefinite number. 十几岁 in one's teens; 所剩无几 hardly any left.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">gi³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ki3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">询问数目。～个人、来了～天。</span><span class="en">How many. 几个人 how many people; 来了几天 how many days has it been.</span></span></li><li><span class="num">②</span><span><span class="zh">表示不定的数目。十～岁、所剩无～。</span><span class="en">An indefinite number. 十几岁 in one's teens; 所剩无几 hardly any left.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">gi³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ki3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">gi¹</span>
 <button class="play" onclick="play('ki1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi1.html">同音字 21</a></div>
 <p class="rb-py">jī</p>
@@ -25,6 +26,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

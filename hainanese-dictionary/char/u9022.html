@@ -15,12 +15,18 @@
 <span class="rbig">pong²</span>
 <button class="play" onclick="play('phong2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pong2.html">同音字 9</a></div>
 <p class="rb-py">féng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">遇到；碰上。相～、～年过节、久别重～、～凶化吉。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">遇到；碰上。相～、～年过节、久别重～、～凶化吉。</span><span class="en">To meet; to come upon. 相逢; 逢年过节; 久别重逢; 逢凶化吉.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">草的总称。花～、奇花异～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5599.html">
 <div class="ch">喙</div><div class="body">
 <span class="py">huì</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c09.html">
+<div class="gl zh">鸟兽的嘴。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c09.html">
 <div class="ch">尉</div><div class="body">
 <span class="py">wèi · yù</span>
 <div class="gl zh">军衔的一级。～官、上～、少～。</div><div class="also">另读 <i>ud⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f57.html">
@@ -60,6 +60,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

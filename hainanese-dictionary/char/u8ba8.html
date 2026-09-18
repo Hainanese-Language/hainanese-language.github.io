@@ -15,12 +15,19 @@
 <span class="rbig">hao²</span>
 <button class="play" onclick="play('hau2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hao2.html">同音字 9</a></div>
 <p class="rb-py">tǎo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">索取；请求。～债、～饶、～教。</span><span class="en">To demand; to ask for. 讨债 to dun for a debt; 讨教 to seek advice.</span></span></li><li><span class="num">②</span><span><span class="zh">征伐；发动攻击。征～、声～、南征北～。</span><span class="en">To send a punitive expedition against. 征讨 to march against; 声讨 to denounce.</span></span></li><li><span class="num">③</span><span><span class="zh">招惹。～厌、～人喜欢、自～苦吃。</span><span class="en">To invite a reaction. 讨厌 disagreeable; 讨人喜欢 to be likeable; 自讨苦吃 to ask for trouble.</span></span></li><li><span class="num">④</span><span><span class="zh">研究；探求。～论、探～、研～。</span><span class="en">To study; to look into. 讨论 to discuss; 探讨 to enquire into.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ho³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ho3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">索取；请求。～债、～饶、～教。</span><span class="en">To demand; to ask for. 讨债 to dun for a debt; 讨教 to seek advice.</span></span></li><li><span class="num">②</span><span><span class="zh">征伐；发动攻击。征～、声～、南征北～。</span><span class="en">To send a punitive expedition against. 征讨 to march against; 声讨 to denounce.</span></span></li><li><span class="num">③</span><span><span class="zh">招惹。～厌、～人喜欢、自～苦吃。</span><span class="en">To invite a reaction. 讨厌 disagreeable; 讨人喜欢 to be likeable; 自讨苦吃 to ask for trouble.</span></span></li><li><span class="num">④</span><span><span class="zh">研究；探求。～论、探～、研～。</span><span class="en">To study; to look into. 讨论 to discuss; 探讨 to enquire into.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ho³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ho3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

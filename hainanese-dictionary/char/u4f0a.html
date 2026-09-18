@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>伊 · 海南话字典</title><meta name="description" content="伊 的海南话读音 i¹，普通话 yī。〈书〉第三人称代词，他；她。～人。">
+<title>伊 · 海南话字典</title><meta name="description" content="伊 的海南话读音 i¹，普通话 yī。第三人称代词，他；她。～人。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">i¹</span>
 <button class="play" onclick="play('i1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/i1.html">同音字 15</a></div>
 <p class="rb-py">yī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉第三人称代词，他；她。～人。</span><span class="en">〈lit.〉 He; she. 伊人 that person.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉助词，用于句首或句中。～始、下车～始。</span><span class="en">〈lit.〉 A particle used at the start or in the middle of a sentence. 伊始 at the outset; 下车伊始 the moment one takes up a post.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>第三人称代词，他；她。～人。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> He; she. 伊人 that person.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>助词，用于句首或句中。～始、下车～始。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A particle used at the start or in the middle of a sentence. 伊始 at the outset; 下车伊始 the moment one takes up a post.</span></span></li><li><span class="num">③</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

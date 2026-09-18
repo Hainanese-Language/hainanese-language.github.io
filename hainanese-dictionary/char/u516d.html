@@ -15,16 +15,23 @@
 <span class="rbig">lag⁸</span>
 <button class="play" onclick="play('lag8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lag8.html">同音字 2</a></div>
 <p class="rb-py">liù</p><p class="scope">用于第 ❶ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">数目，五加一所得。</span><span class="en">The number six; five plus one.</span></span></li><li><span class="num">②</span><span><span class="zh">民族音乐音阶上的一级，乐谱上用作记音符号，相当于简谱的"5"。</span><span class="en">A degree in the traditional musical scale, equivalent to the note 5 in numbered notation.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">log⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('log7.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div><div class="alt"><span class="r2">liu⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('liu6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">数目，五加一所得。</span><span class="en">The number six; five plus one.</span></span></li><li><span class="num">②</span><span><span class="zh">民族音乐音阶上的一级，乐谱上用作记音符号，相当于简谱的"5"。</span><span class="en">A degree in the traditional musical scale, equivalent to the note 5 in numbered notation.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">log⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('log7.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div><div class="alt"><span class="r2">liu⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('liu6.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">log⁷</span>
 <button class="play" onclick="play('log7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/log7.html">同音字 14</a></div>
 <p class="rb-py">lù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于地名。～安（在安徽）、～合（在江苏）。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于地名。～安（在安徽）、～合（在江苏）。</span><span class="en">Used in place names. 六安 Lu'an, in Anhui; 六合 Luhe, in Jiangsu.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

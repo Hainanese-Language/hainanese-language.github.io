@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>呱 · 海南话字典</title><meta name="description" content="呱 的海南话读音 gua¹、gu¹、gua³，普通话 guā · gū · guǎ。象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 〈方〉用于"拉呱儿…">
+<title>呱 · 海南话字典</title><meta name="description" content="呱 的海南话读音 gua¹、gu¹、gua³，普通话 guā · gū · guǎ。象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 用于"拉呱儿"，指…">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,20 +15,26 @@
 <span class="rbig">gua¹</span>
 <button class="play" onclick="play('kua1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gua1.html">同音字 5</a></div>
 <p class="rb-py">guā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词，形容鸭子、青蛙等的叫声。～～叫。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词，形容鸭子、青蛙等的叫声。～～叫。</span><span class="en">Quack; croak — the call of ducks and frogs. 呱呱叫 first-rate.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">gu¹</span>
 <button class="play" onclick="play('ku1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gu1.html">同音字 16</a></div>
 <p class="rb-py">gū</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"呱呱"，形容婴儿的哭声。～～坠地。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"呱呱"，形容婴儿的哭声。～～坠地。</span><span class="en">Used in 呱呱, the wail of a newborn. 呱呱坠地 to come into the world.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">gua³</span>
 <button class="play" onclick="play('kua3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gua3.html">同音字 6</a></div>
 <p class="rb-py">guǎ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉用于"拉呱儿"，指闲谈。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>用于"拉呱儿"，指闲谈。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Used in 拉呱儿, to chat.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>咋 · 海南话字典</title><meta name="description" content="咋 的海南话读音 da⁶、da³、da¹，普通话 zhā · zǎ · zhà。用于"咋呼"，指大声喊叫或张扬。  zǎ 〈方〉疑问代词，怎么；怎样。这可～办？  zhà 〈书〉咬。">
+<title>咋 · 海南话字典</title><meta name="description" content="咋 的海南话读音 da⁶、da³、da¹，普通话 zhā · zǎ · zhà。用于"咋呼"，指大声喊叫或张扬。  zǎ 疑问代词，怎么；怎样。这可～办？  zhà 咬。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,20 +15,26 @@
 <span class="rbig">da⁶</span>
 <button class="play" onclick="play('ta6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da6.html">同音字 18</a></div>
 <p class="rb-py">zhā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"咋呼"，指大声喊叫或张扬。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"咋呼"，指大声喊叫或张扬。</span><span class="en">Used in 咋呼, to bawl or make a show.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">da³</span>
 <button class="play" onclick="play('ta3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da3.html">同音字 2</a></div>
 <p class="rb-py">zǎ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉疑问代词，怎么；怎样。这可～办？</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>疑问代词，怎么；怎样。这可～办？</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Interrogative pronoun: how; what. 这可咋办 what's to be done?</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">da¹</span>
 <button class="play" onclick="play('ta1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da1.html">同音字 6</a></div>
 <p class="rb-py">zhà</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉咬。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>咬。</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

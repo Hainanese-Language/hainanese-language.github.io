@@ -18,7 +18,7 @@
 <div class="gl zh">历史。～料、近代～、～无前例。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55e3.html">
 <div class="ch">嗣</div><div class="body">
 <span class="py">sì</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6148.html">
+<div class="gl zh">继承。～位。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6148.html">
 <div class="ch">慈</div><div class="body">
 <span class="py">cí</span>
 <div class="gl zh">仁爱；和善。～爱、～祥、心～手软。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u626f.html">
@@ -57,7 +57,7 @@
 <div class="gl zh">仅用于"鸬鹚"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5179.html">
 <div class="ch">兹</div><div class="body">
 <span class="py">zī · cí</span>
-<div class="gl zh">〈书〉这；这个。～事体大、念～在～。</div><div class="also">主读 <i>se¹</i> · <i>se²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b50.html">
+<div class="gl zh">这；这个。～事体大、念～在～。</div><div class="also">主读 <i>se¹</i> · <i>se²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b50.html">
 <div class="ch">子</div><div class="body">
 <span class="py">zǐ</span>
 <div class="gl zh">古代指儿女，现专指儿子。～女、父～、～孙。</div><div class="also">主读 <i>zi³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6ecb.html">
@@ -72,6 +72,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">dun²</span>
 <button class="play" onclick="play('ton2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dun2.html">同音字 15</a></div>
 <p class="rb-py">zhūn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">恳切耐心。～～告诫、～～教导。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">恳切耐心。～～告诫、～～教导。</span><span class="en">Earnest and patient. 谆谆告诫 to admonish earnestly; 谆谆教导 to teach with untiring patience.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

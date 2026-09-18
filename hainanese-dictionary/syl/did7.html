@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/did7.html">did⁷</a><a class="chip" href="/hainanese-dictionary/syl/did8.html">did⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u57a4.html">
 <div class="ch">垤</div><div class="body">
 <span class="py">dié</span>
-<div class="gl zh">〈书〉小土堆；蚂蚁做窝堆在穴口的土。蚁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5931.html">
+<div class="gl zh">小土堆；蚂蚁做窝堆在穴口的土。蚁～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5931.html">
 <div class="ch">失</div><div class="body">
 <span class="py">shī</span>
 <div class="gl zh">丢掉；丧失，跟"得"相对。遗～、～而复得、～业。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c51.html">
@@ -21,7 +21,7 @@
 <div class="gl zh">碎末。木～、纸～、铁～。</div><div class="also">另读 <i>diag⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e19.html">
 <div class="ch">帙</div><div class="body">
 <span class="py">zhì</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6954.html">
+<div class="gl zh">包书的套子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6954.html">
 <div class="ch">楔</div><div class="body">
 <span class="py">xiē</span>
 <div class="gl zh">插在缝隙里使物体固定或分开的木橛。～子、木～。</div><div class="also">另读 <i>hid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u745f.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

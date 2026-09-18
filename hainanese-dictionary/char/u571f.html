@@ -15,12 +15,19 @@
 <span class="rbig">hou²</span>
 <button class="play" onclick="play('hou2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hou2.html">同音字 3</a></div>
 <p class="rb-py">tǔ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">泥土；土壤。～地、黄～、～块、沙～。</span><span class="en">Earth; soil. 土地; 黄土; 土块; 沙土.</span></span></li><li><span class="num">②</span><span><span class="zh">土地；领土。国～、领～、～崩瓦解。</span><span class="en">Land; territory. 国土; 领土; 土崩瓦解.</span></span></li><li><span class="num">③</span><span><span class="zh">本地的；地方性的。～产、～话、～著、乡～。</span><span class="en">Local; native. 土产; 土话; 土著; 乡土.</span></span></li><li><span class="num">④</span><span><span class="zh">不合潮流(跟"洋"相对)。～气、～里～气、～办法。</span><span class="en">Unfashionable (opposite of 洋). 土气; 土里土气; 土办法.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈旧〉指鸦片。烟～、～膏。</span><span class="en">〈former〉 Refers to opium; opium paste. 土膏。</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">hou³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hou3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❹ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">泥土；土壤。～地、黄～、～块、沙～。</span><span class="en">Earth; soil. 土地; 黄土; 土块; 沙土.</span></span></li><li><span class="num">②</span><span><span class="zh">土地；领土。国～、领～、～崩瓦解。</span><span class="en">Land; territory. 国土; 领土; 土崩瓦解.</span></span></li><li><span class="num">③</span><span><span class="zh">本地的；地方性的。～产、～话、～著、乡～。</span><span class="en">Local; native. 土产; 土话; 土著; 乡土.</span></span></li><li><span class="num">④</span><span><span class="zh">不合潮流(跟"洋"相对)。～气、～里～气、～办法。</span><span class="en">Unfashionable (opposite of 洋). 土气; 土里土气; 土办法.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>指鸦片。烟～、～膏。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> Refers to opium; opium paste. 土膏。</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">hou³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hou3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

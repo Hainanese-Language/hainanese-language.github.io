@@ -15,12 +15,18 @@
 <span class="rbig">ngan⁵</span>
 <button class="play" onclick="play('ngan5.mp3')">&#9654;</button></div>
 <p class="rb-py">yàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">候鸟，形状略像鹅，飞时排成"一"字或"人"字形。大～、～群。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">候鸟，形状略像鹅，飞时排成"一"字或"人"字形。大～、～群。</span><span class="en">The wild goose, a migratory bird somewhat like a goose, flying in a line or a V. 大雁 a wild goose; 雁群 a skein of geese.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

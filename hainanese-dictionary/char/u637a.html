@@ -15,12 +15,20 @@
 <span class="rbig">nab⁸</span>
 <button class="play" onclick="play('nab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/nab8.html">同音字 4</a></div>
 <p class="rb-py">nà</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用手向下按。按～、～手印。</span><span class="en">To press down with the hand. 按捺; 捺手印.</span></span></li><li><span class="num">②</span><span><span class="zh">汉字的笔画，向右斜下。一撇一～。</span><span class="en">A stroke in Chinese characters, slanting down to the right. 一撇一捺.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">nad⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('nat8.mp3')">&#9654;</button></div><div class="alt"><span class="pill">俗读</span><span class="r2">nai⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('nai6.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用手向下按。按～、～手印。</span><span class="en">To press down with the hand. 按捺; 捺手印.</span></span></li><li><span class="num">②</span><span><span class="zh">汉字的笔画，向右斜下。一撇一～。</span><span class="en">A stroke in Chinese characters, slanting down to the right. 一撇一捺.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">nad⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('nat8.mp3')">&#9654;</button></div><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">nai⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('nai6.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

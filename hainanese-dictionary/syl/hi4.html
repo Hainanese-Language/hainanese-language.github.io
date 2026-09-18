@@ -24,10 +24,10 @@
 <div class="gl zh">器物中可以抽出推进的部分。抽～、笼～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u61a9.html">
 <div class="ch">憩</div><div class="body">
 <span class="py">qì</span>
-<div class="gl zh">〈书〉休息。小～、休～、少～片刻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e9f.html">
+<div class="gl zh">休息。小～、休～、少～片刻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e9f.html">
 <div class="ch">亟</div><div class="body">
 <span class="py">jí · qì</span>
-<div class="gl zh">〈书〉急切。～待解决、～需。  qì 〈书〉屡次。～来问讯。</div><div class="also">主读 <i>geg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5951.html">
+<div class="gl zh">急切。～待解决、～需。  qì 屡次。～来问讯。</div><div class="also">主读 <i>geg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5951.html">
 <div class="ch">契</div><div class="body">
 <span class="py">qì · xiè</span>
 <div class="gl zh">证明买卖、租赁等关系的文书。地～、房～、～约。</div><div class="also">主读 <i>hoi⁴</i> · <i>hid⁷</i> · <i>did⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c14.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

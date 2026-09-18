@@ -15,7 +15,8 @@
 <span class="rbig">seng¹</span>
 <button class="play" onclick="play('seng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng1.html">同音字 9</a></div>
 <p class="rb-py">chēng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">叫；叫作。～呼、～号、～为。</span><span class="en">To call; to name.</span></span></li><li><span class="num">②</span><span><span class="zh">说。～病、连声～好、拍手～快。</span><span class="en">To say; to state.</span></span></li><li><span class="num">③</span><span><span class="zh">测定重量。～体重、把米～一～。</span><span class="en">To weigh.</span></span></li><li><span class="num">④</span><span><span class="zh">赞扬。～赞、～道。</span><span class="en">To praise.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">sin⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">叫；叫作。～呼、～号、～为。</span><span class="en">To call; to name.</span></span></li><li><span class="num">②</span><span><span class="zh">说。～病、连声～好、拍手～快。</span><span class="en">To say; to state.</span></span></li><li><span class="num">③</span><span><span class="zh">测定重量。～体重、把米～一～。</span><span class="en">To weigh.</span></span></li><li><span class="num">④</span><span><span class="zh">赞扬。～赞、～道。</span><span class="en">To praise.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">sin⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">seng⁴</span>
 <button class="play" onclick="play('seng4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng4.html">同音字 2</a></div>
 <p class="rb-py">chèn</p>
@@ -23,12 +24,18 @@
 <span class="rbig">sin⁴</span>
 <button class="play" onclick="play('sien4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sin4.html">同音字 6</a></div>
 <p class="rb-py">chèng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"秤"。～杆。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"秤"。～杆。</span><span class="en">Same as 秤: a steelyard.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -19,12 +19,18 @@
 <span class="rbig">siao⁶</span>
 <button class="play" onclick="play('siau6.mp3')">&#9654;</button></div>
 <p class="rb-py">shào</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">年纪轻。～年、～女、男女老～。</span><span class="en">Young. 少年 a youth; 男女老少 men and women, old and young.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉指有钱人家的儿子。～爷、阔～。</span><span class="en">〈former〉 The son of a rich family. 少爷 a young master; 阔少 a rich young idler.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">年纪轻。～年、～女、男女老～。</span><span class="en">Young. 少年 a youth; 男女老少 men and women, old and young.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>指有钱人家的儿子。～爷、阔～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> The son of a rich family. 少爷 a young master; 阔少 a rich young idler.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

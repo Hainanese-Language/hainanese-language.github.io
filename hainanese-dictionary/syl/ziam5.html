@@ -12,18 +12,24 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ziam1.html">ziam¹</a><a class="chip" href="/hainanese-dictionary/syl/ziam4.html">ziam⁴</a><a class="chip on" href="/hainanese-dictionary/syl/ziam5.html">ziam⁵</a></div><a class="hrow" href="/hainanese-dictionary/char/u50ed.html">
 <div class="ch">僭</div><div class="body">
 <span class="py">jiàn</span>
-<div class="gl zh">〈书〉超越本分，冒用在上者的名义或器物。～越、～称。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6682.html">
+<div class="gl zh">超越本分，冒用在上者的名义或器物。～越、～称。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6682.html">
 <div class="ch">暂</div><div class="body">
 <span class="py">zàn</span>
 <div class="gl zh">时间短。短～、～时。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e10.html">
 <div class="ch">渐</div><div class="body">
 <span class="py">jiàn · jiān</span>
-<div class="gl zh">慢慢地；一点一点地。逐～、～变、～入佳境。  jiān 〈书〉浸；流入。东～于海。</div><div class="also">另读 <i>ziam¹</i></div></div></a><footer>
+<div class="gl zh">慢慢地；一点一点地。逐～、～变、～入佳境。  jiān 浸；流入。东～于海。</div><div class="also">另读 <i>ziam¹</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

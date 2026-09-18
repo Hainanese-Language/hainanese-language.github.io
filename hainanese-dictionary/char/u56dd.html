@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>囝 · 海南话字典</title><meta name="description" content="囝 的海南话读音 gia³、nan¹，普通话 jiǎn · nān。〈方〉儿子；孩子。  nān 同"囡"，〈方〉指小孩儿。小～。">
+<title>囝 · 海南话字典</title><meta name="description" content="囝 的海南话读音 gia³、nan¹，普通话 jiǎn · nān。儿子；孩子。  nān 同"囡"，指小孩儿。小～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">gia³</span>
 <button class="play" onclick="play('kia3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gia3.html">同音字 3</a></div>
 <p class="rb-py">jiǎn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉儿子；孩子。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>儿子；孩子。</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">nan¹</span>
 <button class="play" onclick="play('nan1.mp3')">&#9654;</button></div>
 <p class="rb-py">nān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"囡"，〈方〉指小孩儿。小～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"囡"，<span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>指小孩儿。小～。</span><span class="en">Same as 囡:<span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> a small child. 小囝 a little one.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

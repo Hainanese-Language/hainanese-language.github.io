@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/bi1.html">bi¹</a><a class="chip" href="/hainanese-dictionary/syl/bi2.html">bi²</a><a class="chip" href="/hainanese-dictionary/syl/bi3.html">bi³</a><a class="chip" href="/hainanese-dictionary/syl/bi4.html">bi⁴</a><a class="chip on" href="/hainanese-dictionary/syl/bi5.html">bi⁵</a><a class="chip" href="/hainanese-dictionary/syl/bi6.html">bi⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5a62.html">
 <div class="ch">婢</div><div class="body">
 <span class="py">bì</span>
-<div class="gl zh">〈旧〉供人使唤的女子。奴～、～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60eb.html">
+<div class="gl zh">供人使唤的女子。奴～、～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u60eb.html">
 <div class="ch">惫</div><div class="body">
 <span class="py">bèi</span>
 <div class="gl zh">多用于"疲惫"：极度疲乏。疲～不堪、身心疲～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u655d.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">胳膊。手～、～膀、左膀右～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d32.html">
 <div class="ch">贲</div><div class="body">
 <span class="py">bì · bēn</span>
-<div class="gl zh">〈书〉装饰得很好看。～临、～饰。  bēn 用于"贲门"，指胃与食管相接的部位。～门。</div><div class="also">另读 <i>bun¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u907f.html">
+<div class="gl zh">装饰得很好看。～临、～饰。  bēn 用于"贲门"，指胃与食管相接的部位。～门。</div><div class="also">另读 <i>bun¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u907f.html">
 <div class="ch">避</div><div class="body">
 <span class="py">bì</span>
 <div class="gl zh">躲开；回避。躲～、～雨、～难、～而不谈。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u965b.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

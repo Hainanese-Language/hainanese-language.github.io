@@ -18,7 +18,7 @@
 <div class="gl zh">人体上肢前端能拿东西的部分。～心、～指、握～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7785.html">
 <div class="ch">瞅</div><div class="body">
 <span class="py">chǒu</span>
-<div class="gl zh">〈方〉看。～了一眼、～见。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f20.html">
+<div class="gl zh">看。～了一眼、～见。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f20.html">
 <div class="ch">鼠</div><div class="body">
 <span class="py">shǔ</span>
 <div class="gl zh">哺乳动物，门齿发达，能传播疾病。老～、～疫、～目寸光。</div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

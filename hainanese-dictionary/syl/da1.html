@@ -15,7 +15,7 @@
 <div class="gl zh">数目，二加一所得。</div><div class="also">另读 <i>dam¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ee8.html">
 <div class="ch">仨</div><div class="body">
 <span class="py">sā</span>
-<div class="gl zh">〈方〉三个。～人、哥儿～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53c1.html">
+<div class="gl zh">三个。～人、哥儿～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53c1.html">
 <div class="ch">叁</div><div class="body">
 <span class="py">sān</span>
 <div class="gl zh">"三"的大写，多用于账目。～拾元。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u886b.html">
@@ -27,12 +27,18 @@
 <div class="gl zh">三十。</div><div class="also">主读 <i>dab⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u548b.html">
 <div class="ch">咋</div><div class="body">
 <span class="py">zhā · zǎ · zhà</span>
-<div class="gl zh">用于"咋呼"，指大声喊叫或张扬。  zǎ 〈方〉疑问代词，怎么；怎样。这可～办？  zhà 〈书〉咬。</div><div class="also">主读 <i>da⁶</i> · <i>da³</i></div></div></a><footer>
+<div class="gl zh">用于"咋呼"，指大声喊叫或张扬。  zǎ 疑问代词，怎么；怎样。这可～办？  zhà 咬。</div><div class="also">主读 <i>da⁶</i> · <i>da³</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

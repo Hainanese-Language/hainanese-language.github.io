@@ -15,12 +15,19 @@
 <span class="rbig">gia¹</span>
 <button class="play" onclick="play('kia1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gia1.html">同音字 10</a></div>
 <p class="rb-py">pà</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">害怕；畏惧。～黑、～羞、不～困难。</span><span class="en">To fear. 怕黑; 怕羞; 不怕困难.</span></span></li><li><span class="num">②</span><span><span class="zh">担心；顾虑。～他不来、就～下雨。</span><span class="en">To worry about. 怕他不来; 就怕下雨.</span></span></li><li><span class="num">③</span><span><span class="zh">表示估计或猜测。～是要下雨、～有十里路。</span><span class="en">Probably; I suppose. 怕是要下雨; 怕有十里路.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pa⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pha4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">害怕；畏惧。～黑、～羞、不～困难。</span><span class="en">To fear. 怕黑; 怕羞; 不怕困难.</span></span></li><li><span class="num">②</span><span><span class="zh">担心；顾虑。～他不来、就～下雨。</span><span class="en">To worry about. 怕他不来; 就怕下雨.</span></span></li><li><span class="num">③</span><span><span class="zh">表示估计或猜测。～是要下雨、～有十里路。</span><span class="en">Probably; I suppose. 怕是要下雨; 怕有十里路.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pa⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pha4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

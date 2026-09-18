@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/gua1.html">gua¹</a><a class="chip" href="/hainanese-dictionary/syl/gua2.html">gua²</a><a class="chip" href="/hainanese-dictionary/syl/gua3.html">gua³</a><a class="chip" href="/hainanese-dictionary/syl/gua4.html">gua⁴</a><a class="chip" href="/hainanese-dictionary/syl/gua6.html">gua⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5471.html">
 <div class="ch">呱</div><div class="body">
 <span class="py">guā · gū · guǎ</span>
-<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 〈方〉用于"拉呱儿"，指闲谈。</div><div class="also">另读 <i>gu¹</i> · <i>gua³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b98.html">
+<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 用于"拉呱儿"，指闲谈。</div><div class="also">另读 <i>gu¹</i> · <i>gua³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b98.html">
 <div class="ch">官</div><div class="body">
 <span class="py">guān</span>
 <div class="gl zh">政府机关或军队中经任命的公职人员。～员、当～、～职、～兵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u68fa.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

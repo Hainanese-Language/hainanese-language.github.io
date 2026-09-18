@@ -15,12 +15,18 @@
 <span class="rbig">lin⁶</span>
 <button class="play" onclick="play('lien6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lin6.html">同音字 4</a></div>
 <p class="rb-py">liàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">练习；训练。～兵、～习、～功。</span><span class="en">To practise; train. 练兵 to drill troops; 练习 to exercise; 练功 to train in a skill.</span></span></li><li><span class="num">②</span><span><span class="zh">经验多；纯熟。老～、干～、熟～。</span><span class="en">Seasoned; adept. 老练 experienced; 干练 capable; 熟练 proficient.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉白绢。江平如～。</span><span class="en">〈lit.〉 White silk. 江平如练 the river lies smooth as white silk.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">练习；训练。～兵、～习、～功。</span><span class="en">To practise; train. 练兵 to drill troops; 练习 to exercise; 练功 to train in a skill.</span></span></li><li><span class="num">②</span><span><span class="zh">经验多；纯熟。老～、干～、熟～。</span><span class="en">Seasoned; adept. 老练 experienced; 干练 capable; 熟练 proficient.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>白绢。江平如～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> White silk. 江平如练 the river lies smooth as white silk.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <span class="rbig">siu²</span>
 <button class="play" onclick="play('siu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/siu2.html">同音字 8</a></div>
 <p class="rb-py">chóu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">深切的怨恨。～恨、～人、报～、～视。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">深切的怨恨。～恨、～人、报～、～视。</span><span class="en">Deep enmity. 仇恨 hatred; 仇人 an enemy; 报仇 to avenge; 仇视 to regard with hostility.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hiu²</span>
 <button class="play" onclick="play('hiu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hiu2.html">同音字 4</a></div>
 <p class="rb-py">qiú</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

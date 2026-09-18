@@ -15,12 +15,18 @@
 <span class="rbig">giao³</span>
 <button class="play" onclick="play('kiau3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/giao3.html">同音字 7</a></div>
 <p class="rb-py">jiǎo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用剪刀剪。～布、～下一块。</span><span class="en">To cut with scissors.</span></span></li><li><span class="num">②</span><span><span class="zh">用铰刀切削金属孔。～孔、～刀。</span><span class="en">To ream a hole in metal.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉剪刀。</span><span class="en">〈dial.〉 Scissors.</span></span></li></ul><div class="alt"><span class="r2">ga¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用剪刀剪。～布、～下一块。</span><span class="en">To cut with scissors.</span></span></li><li><span class="num">②</span><span><span class="zh">用铰刀切削金属孔。～孔、～刀。</span><span class="en">To ream a hole in metal.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>剪刀。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Scissors.</span></span></li></ul><div class="alt"><span class="r2">ga¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❸ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

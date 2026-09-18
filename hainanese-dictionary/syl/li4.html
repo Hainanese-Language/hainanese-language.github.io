@@ -15,7 +15,7 @@
 <div class="gl zh">好看；漂亮。美～、秀～、风和日～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4fea.html">
 <div class="ch">俪</div><div class="body">
 <span class="py">lì</span>
-<div class="gl zh">〈书〉成对的；指夫妇。伉～、～影。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u52b1.html">
+<div class="gl zh">成对的；指夫妇。伉～、～影。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u52b1.html">
 <div class="ch">励</div><div class="body">
 <span class="py">lì</span>
 <div class="gl zh">劝勉；鼓舞。鼓～、激～、勉～、～精图治。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5389.html">
@@ -24,13 +24,13 @@
 <div class="gl zh">严格；严肃。严～、～行节约。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5533.html">
 <div class="ch">唳</div><div class="body">
 <span class="py">lì</span>
-<div class="gl zh">〈书〉鹤、雁等鸣叫。风声鹤～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75a0.html">
+<div class="gl zh">鹤、雁等鸣叫。风声鹤～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75a0.html">
 <div class="ch">疠</div><div class="body">
 <span class="py">lì</span>
-<div class="gl zh">〈书〉瘟疫。瘟～、～疫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c9d.html">
+<div class="gl zh">瘟疫。瘟～、～疫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c9d.html">
 <div class="ch">粝</div><div class="body">
 <span class="py">lì</span>
-<div class="gl zh">〈书〉糙米；粗糙。～食、粗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u86ce.html">
+<div class="gl zh">糙米；粗糙。～食、粗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u86ce.html">
 <div class="ch">蛎</div><div class="body">
 <span class="py">lì</span>
 <div class="gl zh">仅用于"牡蛎"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96b6.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

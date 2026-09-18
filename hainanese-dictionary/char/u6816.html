@@ -15,16 +15,22 @@
 <span class="rbig">si¹</span>
 <button class="play" onclick="play('si1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/si1.html">同音字 32</a></div>
 <p class="rb-py">qī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">鸟停在树上；泛指居住、停留。～息、～身、两～动物。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">鸟停在树上；泛指居住、停留。～息、～身、两～动物。</span><span class="en">(of birds) to perch; more generally, to dwell or stay.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">di¹</span>
 <button class="play" onclick="play('ti1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/di1.html">同音字 6</a></div>
 <p class="rb-py">xī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"栖栖"，形容忙碌不安。～～遑遑。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"栖栖"，形容忙碌不安。～～遑遑。</span><span class="en">used in 栖栖: bustling and unsettled.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

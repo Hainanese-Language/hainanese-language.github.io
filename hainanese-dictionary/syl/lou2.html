@@ -30,7 +30,7 @@
 <div class="gl zh">仅用于"鲈鱼"，一种肉味鲜美的鱼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u507b.html">
 <div class="ch">偻</div><div class="body">
 <span class="py">lǚ · lóu</span>
-<div class="gl zh">〈书〉弯曲身体。伛～。  lóu 用于"佝偻"，指脊背弯曲。</div><div class="also">主读 <i>lu³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55bd.html">
+<div class="gl zh">弯曲身体。伛～。  lóu 用于"佝偻"，指脊背弯曲。</div><div class="also">主读 <i>lu³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u55bd.html">
 <div class="ch">喽</div><div class="body">
 <span class="py">lou · lóu</span>
 <div class="gl zh">助词，用法跟"了"相近。好～、走～。</div></div></a><footer>
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

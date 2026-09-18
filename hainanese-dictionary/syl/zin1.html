@@ -27,7 +27,7 @@
 <div class="gl zh">珠玉等宝物。～宝、奇～异宝、如数家～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7504.html">
 <div class="ch">甄</div><div class="body">
 <span class="py">zhēn</span>
-<div class="gl zh">〈书〉鉴别；审查。～别、～选、～拔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u771f.html">
+<div class="gl zh">鉴别；审查。～别、～选、～拔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u771f.html">
 <div class="ch">真</div><div class="body">
 <span class="py">zhēn</span>
 <div class="gl zh">与客观事实相符，跟"假""伪"相对。～相、～情、～金不怕火炼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b3a.html">
@@ -39,15 +39,21 @@
 <div class="gl zh">禽类的胃。鸡～、鸭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u81fb.html">
 <div class="ch">臻</div><div class="body">
 <span class="py">zhēn</span>
-<div class="gl zh">〈书〉达到；来到。日～完善、渐～佳境。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e85.html">
+<div class="gl zh">达到；来到。日～完善、渐～佳境。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e85.html">
 <div class="ch">溅</div><div class="body">
 <span class="py">jiàn · jiān</span>
-<div class="gl zh">液体受冲击向四外飞射。～水、水花四～、油～了一身。  jiān 〈书〉多用于"～～"，形容水急流的声音。</div><div class="also">主读 <i>zin³</i></div></div></a><footer>
+<div class="gl zh">液体受冲击向四外飞射。～水、水花四～、油～了一身。  jiān 多用于"～～"，形容水急流的声音。</div><div class="also">主读 <i>zin³</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

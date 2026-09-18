@@ -15,12 +15,19 @@
 <span class="rbig">ho¹</span>
 <button class="play" onclick="play('ho1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ho1.html">同音字 10</a></div>
 <p class="rb-py">tāng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">食物煮后的汁液。米～、鸡～、～药。</span><span class="en">The liquid left after cooking food. 米汤 rice water; 鸡汤 chicken broth; 汤药 a herbal decoction.</span></span></li><li><span class="num">②</span><span><span class="zh">烹调后汁多的食物。菜～、～面、清～。</span><span class="en">A dish with plenty of liquid. 菜汤 vegetable soup; 汤面 noodles in soup; 清汤 clear broth.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉热水；开水。赴～蹈火、扬～止沸。</span><span class="en">〈lit.〉 Hot water. 赴汤蹈火 to go through fire and water; 扬汤止沸 to try to stop water boiling by ladling it.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hang1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">食物煮后的汁液。米～、鸡～、～药。</span><span class="en">The liquid left after cooking food. 米汤 rice water; 鸡汤 chicken broth; 汤药 a herbal decoction.</span></span></li><li><span class="num">②</span><span><span class="zh">烹调后汁多的食物。菜～、～面、清～。</span><span class="en">A dish with plenty of liquid. 菜汤 vegetable soup; 汤面 noodles in soup; 清汤 clear broth.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>热水；开水。赴～蹈火、扬～止沸。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Hot water. 赴汤蹈火 to go through fire and water; 扬汤止沸 to try to stop water boiling by ladling it.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hang1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

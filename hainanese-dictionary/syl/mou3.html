@@ -18,10 +18,10 @@
 <div class="gl zh">指不确定的人或事物。～人、～地、～年～月。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7261.html">
 <div class="ch">牡</div><div class="body">
 <span class="py">mǔ</span>
-<div class="gl zh">〈书〉雄性的（鸟兽）；跟"牝"相对。～牛、～马。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7738.html">
+<div class="gl zh">雄性的（鸟兽）；跟"牝"相对。～牛、～马。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7738.html">
 <div class="ch">眸</div><div class="body">
 <span class="py">móu</span>
-<div class="gl zh">〈书〉瞳仁；也泛指眼睛。凝～、明～皓齿。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5deb.html">
+<div class="gl zh">瞳仁；也泛指眼睛。凝～、明～皓齿。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5deb.html">
 <div class="ch">巫</div><div class="body">
 <span class="py">wū</span>
 <div class="gl zh">以求神驱鬼为业的人。～婆、～师、～术、～医。</div><div class="also">主读 <i>mu²</i></div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

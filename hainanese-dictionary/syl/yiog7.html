@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/yiog7.html">yiog⁷</a><a class="chip" href="/hainanese-dictionary/syl/yiog8.html">yiog⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u6bd3.html">
 <div class="ch">毓</div><div class="body">
 <span class="py">yù</span>
-<div class="gl zh">〈书〉同"育"，养育；培育。钟灵～秀。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d74.html">
+<div class="gl zh">同"育"，养育；培育。钟灵～秀。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d74.html">
 <div class="ch">浴</div><div class="body">
 <span class="py">yù</span>
 <div class="gl zh">洗澡。沐～、～室、～血奋战。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7389.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">生育。～龄、节～、生儿～女。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9b3b.html">
 <div class="ch">鬻</div><div class="body">
 <span class="py">yù</span>
-<div class="gl zh">〈书〉卖。卖官～爵、～文为生。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c37.html">
+<div class="gl zh">卖。卖官～爵、～文为生。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c37.html">
 <div class="ch">谷</div><div class="body">
 <span class="py">gǔ · yù</span>
 <div class="gl zh">两山之间狭长而有出口的地带。山～、峡～、～地。</div><div class="also">主读 <i>gog⁷</i></div></div></a><footer>
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

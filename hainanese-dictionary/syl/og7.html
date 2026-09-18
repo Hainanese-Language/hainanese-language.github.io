@@ -27,7 +27,7 @@
 <div class="gl zh">土地肥。肥～、～土、～野千里。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e25.html">
 <div class="ch">渥</div><div class="body">
 <span class="py">wò</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5594.html">
+<div class="gl zh">沾湿；润泽。～丹。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5594.html">
 <div class="ch">喔</div><div class="body">
 <span class="py">ō · wō</span>
 <div class="gl zh">叹词，表示了解或醒悟。～，我知道了。  wō 象声词，形容公鸡叫。～～啼。</div><div class="also">主读 <i>o⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c4b.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

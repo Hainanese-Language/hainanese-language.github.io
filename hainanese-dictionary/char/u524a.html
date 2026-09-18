@@ -15,16 +15,22 @@
 <span class="rbig">dia⁶</span>
 <button class="play" onclick="play('tia6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dia6.html">同音字 2</a></div>
 <p class="rb-py">xiāo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用刀斜着去掉物体的表层。～苹果、～铅笔、～皮。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用刀斜着去掉物体的表层。～苹果、～铅笔、～皮。</span><span class="en">To pare off the surface of something with a slanting blade. 削苹果 to peel an apple; 削铅笔 to sharpen a pencil; 削皮 to pare.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">diag⁷</span>
 <button class="play" onclick="play('tiag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/diag7.html">同音字 7</a></div>
 <p class="rb-py">xuē</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">减少；减弱；除去。～减、～弱、剥～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">减少；减弱；除去。～减、～弱、剥～。</span><span class="en">To reduce; to weaken; to strip away. 削减 to cut down; 削弱 to weaken; 剥削 to exploit.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

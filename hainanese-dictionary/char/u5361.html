@@ -19,12 +19,18 @@
 <span class="rbig">ha⁶</span>
 <button class="play" onclick="play('ha6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ha6.html">同音字 8</a></div>
 <p class="rb-py">kǎ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈外〉用于音译词。～车、～片、～通。</span><span class="en">(Loan) Used in transliterations. 卡车 a lorry; 卡片 a card; 卡通 a cartoon.</span></span></li><li><span class="num">②</span><span><span class="zh">热量单位。千～。</span><span class="en">The calorie. 千卡 a kilocalorie.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>用于音译词。～车、～片、～通。</span><span class="en">(Loan) Used in transliterations. 卡车 a lorry; 卡片 a card; 卡通 a cartoon.</span></span></li><li><span class="num">②</span><span><span class="zh">热量单位。千～。</span><span class="en">The calorie. 千卡 a kilocalorie.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -27,7 +27,7 @@
 <div class="gl zh">露出地面的树根。守～待兔。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6f74.html">
 <div class="ch">潴</div><div class="body">
 <span class="py">zhū</span>
-<div class="gl zh">〈书〉水积聚；水积聚的地方。～留、～水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72d9.html">
+<div class="gl zh">水积聚；水积聚的地方。～留、～水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72d9.html">
 <div class="ch">狙</div><div class="body">
 <span class="py">jū</span>
 <div class="gl zh">暗中埋伏，伺机袭击。～击、～击手。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73e0.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

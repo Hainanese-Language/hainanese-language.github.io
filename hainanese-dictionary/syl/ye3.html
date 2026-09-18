@@ -18,7 +18,7 @@
 <div class="gl zh">祖父。～～、～孙俩。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8036.html">
 <div class="ch">耶</div><div class="body">
 <span class="py">yé · yē</span>
-<div class="gl zh">〈书〉助词，表示疑问。是～非～。  yē 用于译音。～稣、～路撒冷。</div><div class="also">另读 <i>ye²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91ce.html">
+<div class="gl zh">助词，表示疑问。是～非～。  yē 用于译音。～稣、～路撒冷。</div><div class="also">另读 <i>ye²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91ce.html">
 <div class="ch">野</div><div class="body">
 <span class="py">yě</span>
 <div class="gl zh">郊外；村外。～外、旷～、～营。</div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

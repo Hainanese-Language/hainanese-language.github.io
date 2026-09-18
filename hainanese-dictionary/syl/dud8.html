@@ -15,7 +15,7 @@
 <div class="gl zh">技艺；技术。武～、美～、～业有专攻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79eb.html">
 <div class="ch">秫</div><div class="body">
 <span class="py">shú</span>
-<div class="gl zh">〈方〉高粱。～秸、～米。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8ff0.html">
+<div class="gl zh">高粱。～秸、～米。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8ff0.html">
 <div class="ch">述</div><div class="body">
 <span class="py">shù</span>
 <div class="gl zh">讲；说明。叙～、～说、～评、～职、口～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u672f.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,16 +15,22 @@
 <span class="rbig">a¹</span>
 <button class="play" onclick="play('a1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/a1.html">同音字 6</a></div>
 <p class="rb-py">ā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">词头，用在称呼或名字前。～姨、～婆、～宝。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">词头，用在称呼或名字前。～姨、～婆、～宝。</span><span class="en">A prefix placed before terms of address and names. 阿姨 auntie; 阿婆 granny; 阿宝 little Bao.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">o¹</span>
 <button class="play" onclick="play('o1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/o1.html">同音字 13</a></div>
 <p class="rb-py">ē</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉迎合；偏袒。～谀、～附、刚正不～。</span><span class="en">〈lit.〉 To curry favour; to take sides. 阿谀 to flatter; 阿附 to toady to; 刚正不阿 upright and impartial.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉大的丘陵；山的弯曲处。山～。</span><span class="en">〈lit.〉 A large hill; a bend in the hills. 山阿 a fold in the hills.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>迎合；偏袒。～谀、～附、刚正不～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To curry favour; to take sides. 阿谀 to flatter; 阿附 to toady to; 刚正不阿 upright and impartial.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>大的丘陵；山的弯曲处。山～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A large hill; a bend in the hills. 山阿 a fold in the hills.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

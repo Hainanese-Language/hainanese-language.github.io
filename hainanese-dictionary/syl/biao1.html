@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/biao1.html">biao¹</a><a class="chip" href="/hainanese-dictionary/syl/biao3.html">biao³</a><a class="chip" href="/hainanese-dictionary/syl/biao6.html">biao⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5f6a.html">
 <div class="ch">彪</div><div class="body">
 <span class="py">biāo</span>
-<div class="gl zh">〈书〉小老虎。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6807.html">
+<div class="gl zh">小老虎。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6807.html">
 <div class="ch">标</div><div class="body">
 <span class="py">biāo</span>
 <div class="gl zh">树木的末梢；事物的枝节。治～不治本、～本兼治。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8198.html">
@@ -24,15 +24,21 @@
 <div class="gl zh">旧式暗器，形状像矛头，投掷伤人。飞～、～枪。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9573.html">
 <div class="ch">镳</div><div class="body">
 <span class="py">biāo</span>
-<div class="gl zh">〈书〉马嚼子露在嘴外的两端。分道扬～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98d9.html">
+<div class="gl zh">马嚼子露在嘴外的两端。分道扬～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98d9.html">
 <div class="ch">飙</div><div class="body">
 <span class="py">biāo</span>
-<div class="gl zh">〈书〉暴风。狂～。</div></div></a><footer>
+<div class="gl zh">暴风。狂～。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

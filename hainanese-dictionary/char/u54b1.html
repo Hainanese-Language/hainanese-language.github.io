@@ -15,16 +15,22 @@
 <span class="rbig">dan⁴</span>
 <button class="play" onclick="play('tan4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dan4.html">同音字 5</a></div>
 <p class="rb-py">zán</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">我们（包括听话的人）。～们、～俩。</span><span class="en">We; us — including the person addressed. 咱们 we; 咱俩 the two of us.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉我。～不知道。</span><span class="en">〈dial.〉 I; me. 咱不知道 I don't know.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">我们（包括听话的人）。～们、～俩。</span><span class="en">We; us — including the person addressed. 咱们 we; 咱俩 the two of us.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>我。～不知道。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> I; me. 咱不知道 I don't know.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">da⁶</span>
 <button class="play" onclick="play('ta6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da6.html">同音字 18</a></div>
 <p class="rb-py">zá</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈旧〉用于"咱家"，旧小说、戏曲中的自称。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>用于"咱家"，旧小说、戏曲中的自称。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> Used in 咱家, a first-person form in old fiction and opera.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,19 @@
 <span class="rbig">i²</span>
 <button class="play" onclick="play('i2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/i2.html">同音字 2</a></div>
 <p class="rb-py">yuán</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">从中心到周边各点距离相等的形。～圈、～形、～桌。</span><span class="en">Round; a circle. 圆圈 a ring; 圆形 circular; 圆桌 a round table.</span></span></li><li><span class="num">②</span><span><span class="zh">完备；周全。～满、～熟、话说得不～。</span><span class="en">Complete; well rounded. 圆满 satisfactory; 话说得不圆 the account doesn't hold together.</span></span></li><li><span class="num">③</span><span><span class="zh">使周全。～场、～谎。</span><span class="en">To make good; smooth over. 圆场 to mediate; 圆谎 to patch up a lie.</span></span></li><li><span class="num">④</span><span><span class="zh">货币单位；也指圆形的硬币。银～、铜～。</span><span class="en">A unit of currency; also a round coin. 银圆 a silver dollar; 铜圆 a copper coin.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">yuan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('juan2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">从中心到周边各点距离相等的形。～圈、～形、～桌。</span><span class="en">Round; a circle. 圆圈 a ring; 圆形 circular; 圆桌 a round table.</span></span></li><li><span class="num">②</span><span><span class="zh">完备；周全。～满、～熟、话说得不～。</span><span class="en">Complete; well rounded. 圆满 satisfactory; 话说得不圆 the account doesn't hold together.</span></span></li><li><span class="num">③</span><span><span class="zh">使周全。～场、～谎。</span><span class="en">To make good; smooth over. 圆场 to mediate; 圆谎 to patch up a lie.</span></span></li><li><span class="num">④</span><span><span class="zh">货币单位；也指圆形的硬币。银～、铜～。</span><span class="en">A unit of currency; also a round coin. 银圆 a silver dollar; 铜圆 a copper coin.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">yuan²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('juan2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

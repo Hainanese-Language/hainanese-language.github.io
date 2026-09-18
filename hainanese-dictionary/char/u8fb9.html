@@ -15,12 +15,19 @@
 <span class="rbig">bi¹</span>
 <button class="play" onclick="play('pi1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bi1.html">同音字 4</a></div>
 <p class="rb-py">biān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体的周围部分；边缘。～沿、桌～、无～无际。</span><span class="en">The outer part of a thing; an edge. 边沿; 桌边; 无边无际.</span></span></li><li><span class="num">②</span><span><span class="zh">国家或地区的交界处。～疆、～境、～防、戍～。</span><span class="en">A border; a frontier. 边疆; 边境; 边防; 戍边.</span></span></li><li><span class="num">③</span><span><span class="zh">方位；方面。这～、两～、旁～。</span><span class="en">A side; a direction. 这边; 两边; 旁边.</span></span></li><li><span class="num">④</span><span><span class="zh">几何图形上夹成角的直线。三角形的三条～。</span><span class="en">A side of a geometric figure. 三角形的三条边.</span></span></li><li><span class="num">⑤</span><span><span class="zh">两个"边"连用，表示动作同时进行。～走～说、～吃～聊。</span><span class="en">Used in pairs to mark simultaneous actions. 边走边说; 边吃边聊.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">bin¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pien1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体的周围部分；边缘。～沿、桌～、无～无际。</span><span class="en">The outer part of a thing; an edge. 边沿; 桌边; 无边无际.</span></span></li><li><span class="num">②</span><span><span class="zh">国家或地区的交界处。～疆、～境、～防、戍～。</span><span class="en">A border; a frontier. 边疆; 边境; 边防; 戍边.</span></span></li><li><span class="num">③</span><span><span class="zh">方位；方面。这～、两～、旁～。</span><span class="en">A side; a direction. 这边; 两边; 旁边.</span></span></li><li><span class="num">④</span><span><span class="zh">几何图形上夹成角的直线。三角形的三条～。</span><span class="en">A side of a geometric figure. 三角形的三条边.</span></span></li><li><span class="num">⑤</span><span><span class="zh">两个"边"连用，表示动作同时进行。～走～说、～吃～聊。</span><span class="en">Used in pairs to mark simultaneous actions. 边走边说; 边吃边聊.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">bin¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('pien1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

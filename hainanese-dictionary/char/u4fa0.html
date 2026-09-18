@@ -15,12 +15,18 @@
 <span class="rbig">hhiab⁸</span>
 <button class="play" onclick="play('yiab8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhiab8.html">同音字 11</a></div>
 <p class="rb-py">xiá</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">讲义气、肯舍己助人的人或行为。～客、～义、武～、豪～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">讲义气、肯舍己助人的人或行为。～客、～义、武～、豪～。</span><span class="en">One who acts with chivalry and helps others at their own cost, or such conduct. 侠客 a knight-errant; 侠义 chivalrous; 武侠 a martial-arts hero; 豪侠 gallant.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

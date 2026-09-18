@@ -24,13 +24,13 @@
 <div class="gl zh">液体一点一点地落下。～水、～眼药、汗往下～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72c4.html">
 <div class="ch">狄</div><div class="body">
 <span class="py">dí</span>
-<div class="gl zh">〈古〉对北方民族的称呼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u837b.html">
+<div class="gl zh">对北方民族的称呼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u837b.html">
 <div class="ch">荻</div><div class="body">
 <span class="py">dí</span>
 <div class="gl zh">一种多年生草本植物，形状像芦苇。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fea.html">
 <div class="ch">迪</div><div class="body">
 <span class="py">dí</span>
-<div class="gl zh">〈书〉开导；引导。启～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7684.html">
+<div class="gl zh">开导；引导。启～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7684.html">
 <div class="ch">的</div><div class="body">
 <span class="py">dì · dí · de</span>
 <div class="gl zh">箭靶的中心。目～、有～放矢、众矢之～。  dí 确实；实在。～确。  de</div><div class="also">主读 <i>ddeg⁸</i> · <i>gai²</i></div></div></a><footer>
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

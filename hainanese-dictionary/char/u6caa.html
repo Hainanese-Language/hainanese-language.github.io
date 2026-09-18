@@ -15,12 +15,18 @@
 <span class="rbig">hhu⁶</span>
 <button class="play" onclick="play('wu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhu6.html">同音字 3</a></div>
 <p class="rb-py">hù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">上海的别称。～剧、京～线。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">上海的别称。～剧、京～线。</span><span class="en">Another name for Shanghai. 沪剧 Shanghai opera; 京沪线 the Beijing–Shanghai line.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

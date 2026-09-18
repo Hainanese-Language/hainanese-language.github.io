@@ -15,7 +15,7 @@
 <span class="rbig">sa¹</span>
 <button class="play" onclick="play('sa1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sa1.html">同音字 16</a></div>
 <p class="rb-py">chā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">一种带杈的农具，用来挑柴草。～子、粪～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">一种带杈的农具，用来挑柴草。～子、粪～。</span><span class="en">a pitchfork, used for lifting straw and firewood.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">sa⁶</span>
 <button class="play" onclick="play('sa6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sa6.html">同音字 7</a></div>
 <p class="rb-py">chà</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

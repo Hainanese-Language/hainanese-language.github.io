@@ -15,12 +15,18 @@
 <span class="rbig">ua¹</span>
 <button class="play" onclick="play('ua1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ua1.html">同音字 5</a></div>
 <p class="rb-py">wá</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">小孩子。～娃、女～。</span><span class="en">A small child. 娃娃 a baby; 女娃 a little girl.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉某些幼小的动物。猪～、鸡～。</span><span class="en">〈dial.〉 The young of certain animals. 猪娃 a piglet; 鸡娃 a chick.</span></span></li></ul><div class="alt"><span class="r2">hhua¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('wua1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">小孩子。～娃、女～。</span><span class="en">A small child. 娃娃 a baby; 女娃 a little girl.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>某些幼小的动物。猪～、鸡～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> The young of certain animals. 猪娃 a piglet; 鸡娃 a chick.</span></span></li></ul><div class="alt"><span class="r2">hhua¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('wua1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

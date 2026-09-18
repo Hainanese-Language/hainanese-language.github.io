@@ -16,16 +16,22 @@
 <button class="play" onclick="play('hang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hang2.html">同音字 10</a></div>
 <p class="rb-py">káng</p>
 <ul class="senses"><li><span class="num">①</span><span><span class="zh">用肩膀承担。～枪、～行李、～麻袋。</span><span class="en">To carry on the shoulder. 扛枪 to carry a rifle; 扛麻袋 to carry a sack.
-cTo bear; to endure. 扛得住 can stand it; 扛不住 cannot stand it.</span></span></li><li><span class="num">②</span><span><span class="zh">承受；忍受。～得住、～不住。</span></span></li><li><span class="num">③</span><span><span class="zh">〈旧〉受雇做工。～活。</span><span class="en">〈former〉 To work as a hired labourer. 扛活 to do hired labour.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+cTo bear; to endure. 扛得住 can stand it; 扛不住 cannot stand it.</span></span></li><li><span class="num">②</span><span><span class="zh">承受；忍受。～得住、～不住。</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>受雇做工。～活。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> To work as a hired labourer. 扛活 to do hired labour.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">gang¹</span>
 <button class="play" onclick="play('kang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gang1.html">同音字 8</a></div>
 <p class="rb-py">gāng</p><p class="scope">用于第 ❶ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉用双手举起。力能～鼎。</span><span class="en">〈lit.〉 To lift with both hands. 力能扛鼎 strong enough to lift a tripod.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉抬东西。</span><span class="en">&lt;dial.〉To lift or carry something.</span></span></li></ul><div class="alt"><span class="r2">go¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ko1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>用双手举起。力能～鼎。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To lift with both hands. 力能扛鼎 strong enough to lift a tripod.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>抬东西。</span><span class="en">&lt;dial.〉To lift or carry something.</span></span></li></ul><div class="alt"><span class="r2">go¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ko1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

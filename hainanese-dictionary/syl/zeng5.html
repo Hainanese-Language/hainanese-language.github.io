@@ -30,12 +30,18 @@
 <div class="gl zh">形容器物光亮。～亮、～光瓦亮。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9753.html">
 <div class="ch">靓</div><div class="body">
 <span class="py">jìng · liàng</span>
-<div class="gl zh">〈书〉妆饰艳丽。～妆。  liàng 〈方〉漂亮；好看。～女、～仔。</div><div class="also">另读 <i>liang⁵</i></div></div></a><footer>
+<div class="gl zh">妆饰艳丽。～妆。  liàng 漂亮；好看。～女、～仔。</div><div class="also">另读 <i>liang⁵</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -18,13 +18,13 @@
 <div class="gl zh">用于"婀娜"，形容姿态柔美。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c59.html">
 <div class="ch">屙</div><div class="body">
 <span class="py">ē</span>
-<div class="gl zh">〈方〉排泄大小便。～屎、～尿。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da1.html">
+<div class="gl zh">排泄大小便。～屎、～尿。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da1.html">
 <div class="ch">涡</div><div class="body">
 <span class="py">wō · guō</span>
 <div class="gl zh">水流旋转形成的螺旋形。～流、旋～、～轮。</div><div class="also">另读 <i>go¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75b4.html">
 <div class="ch">疴</div><div class="body">
 <span class="py">kē</span>
-<div class="gl zh">〈书〉病。沉～、染～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a9d.html">
+<div class="gl zh">病。沉～、染～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a9d.html">
 <div class="ch">窝</div><div class="body">
 <span class="py">wō</span>
 <div class="gl zh">鸟兽昆虫住的地方。鸟～、蜂～、狗～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82db.html">
@@ -36,10 +36,10 @@
 <div class="gl zh">仅用于"蜗牛"，一种背着螺旋形壳的软体动物。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u631d.html">
 <div class="ch">挝</div><div class="body">
 <span class="py">zhuā · wō</span>
-<div class="gl zh">〈书〉敲打。～鼓。  wō 用于国名。老～。</div><div class="also">主读 <i>dua¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67ef.html">
+<div class="gl zh">敲打。～鼓。  wō 用于国名。老～。</div><div class="also">主读 <i>dua¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67ef.html">
 <div class="ch">柯</div><div class="body">
 <span class="py">kē</span>
-<div class="gl zh">〈书〉斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</div><div class="also">主读 <i>ho¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79e7.html">
+<div class="gl zh">斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</div><div class="also">主读 <i>ho¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79e7.html">
 <div class="ch">秧</div><div class="body">
 <span class="py">yāng</span>
 <div class="gl zh">植物的幼苗，特指稻苗。～苗、插～、育～。</div><div class="also">主读 <i>iang¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8377.html">
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

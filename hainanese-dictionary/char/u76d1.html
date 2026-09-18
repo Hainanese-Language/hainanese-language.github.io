@@ -15,7 +15,8 @@
 <span class="rbig">gam¹</span>
 <button class="play" onclick="play('kam1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gam1.html">同音字 6</a></div>
 <p class="rb-py">jiān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">督察；看管。～督、～视、～考。</span><span class="en">To supervise; to keep watch over.</span></span></li><li><span class="num">②</span><span><span class="zh">牢狱。～狱、收～、探～。</span><span class="en">A prison.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">gam⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kam4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">督察；看管。～督、～视、～考。</span><span class="en">To supervise; to keep watch over.</span></span></li><li><span class="num">②</span><span><span class="zh">牢狱。～狱、收～、探～。</span><span class="en">A prison.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">gam⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kam4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">gam⁴</span>
 <button class="play" onclick="play('kam4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gam4.html">同音字 5</a></div>
 <p class="rb-py">jiàn</p>
@@ -25,6 +26,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

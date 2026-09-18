@@ -15,16 +15,22 @@
 <span class="rbig">lia³</span>
 <button class="play" onclick="play('lia3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lia3.html">同音字 3</a></div>
 <p class="rb-py">liǎ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">两个。～人、咱们～、有～钱。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">两个。～人、咱们～、有～钱。</span><span class="en">Two. 俩人 two people; 咱们俩 the two of us; 有俩钱 to have a bit of money.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">liang³</span>
 <button class="play" onclick="play('liang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liang3.html">同音字 2</a></div>
 <p class="rb-py">liǎng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"伎俩"，指不正当的手段。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"伎俩"，指不正当的手段。</span><span class="en">Used in 伎俩: an underhand trick.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

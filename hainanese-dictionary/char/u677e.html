@@ -15,16 +15,23 @@
 <span class="rbig">dong¹</span>
 <button class="play" onclick="play('tong1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dong1.html">同音字 13</a></div>
 <p class="rb-py">sōng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">常绿乔木，叶针形，木材和树脂都有用。～树、～针、～脂。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">常绿乔木，叶针形，木材和树脂都有用。～树、～针、～脂。</span><span class="en">pine, an evergreen tree with needle-like leaves, valued for its timber and resin.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">song¹</span>
 <button class="play" onclick="play('song1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/song1.html">同音字 14</a></div>
 <p class="rb-py">sōng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">不紧；不密。～紧、～散、鞋带～了。</span><span class="en">loose; not tight or dense.</span></span></li><li><span class="num">②</span><span><span class="zh">放开；使松。放～、～手、～一口气。</span><span class="en">to loosen; let go.</span></span></li><li><span class="num">③</span><span><span class="zh">宽裕。手头～、日子过得～。</span><span class="en">well off; not hard pressed.</span></span></li><li><span class="num">④</span><span><span class="zh">用鱼、肉等做成的绒状食品。肉～、鱼～。</span><span class="en">a fluffy dried food made from fish or meat.</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">sang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sang1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶❷❸ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">不紧；不密。～紧、～散、鞋带～了。</span><span class="en">loose; not tight or dense.</span></span></li><li><span class="num">②</span><span><span class="zh">放开；使松。放～、～手、～一口气。</span><span class="en">to loosen; let go.</span></span></li><li><span class="num">③</span><span><span class="zh">宽裕。手头～、日子过得～。</span><span class="en">well off; not hard pressed.</span></span></li><li><span class="num">④</span><span><span class="zh">用鱼、肉等做成的绒状食品。肉～、鱼～。</span><span class="en">a fluffy dried food made from fish or meat.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">sang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sang1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶❷❸ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/ddin1.html">ddin¹</a><a class="chip" href="/hainanese-dictionary/syl/ddin2.html">ddin²</a><a class="chip" href="/hainanese-dictionary/syl/ddin3.html">ddin³</a><a class="chip" href="/hainanese-dictionary/syl/ddin4.html">ddin⁴</a><a class="chip on" href="/hainanese-dictionary/syl/ddin5.html">ddin⁵</a><a class="chip" href="/hainanese-dictionary/syl/ddin6.html">ddin⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u4f43.html">
 <div class="ch">佃</div><div class="body">
 <span class="py">diàn · tián</span>
-<div class="gl zh">租种土地。～户、～农、～田、租～。  tián 〈古〉耕作。</div><div class="also">另读 <i>hin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u765c.html">
+<div class="gl zh">租种土地。～户、～农、～田、租～。  tián 耕作。</div><div class="also">另读 <i>hin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u765c.html">
 <div class="ch">癜</div><div class="body">
 <span class="py">diàn</span>
 <div class="gl zh">皮肤上出现斑点的病。白～风、紫～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u975b.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>燧 · 海南话字典</title><meta name="description" content="燧 的海南话读音 dui⁶，普通话 suì。〈古〉取火的器具。～石、钻～取火。">
+<title>燧 · 海南话字典</title><meta name="description" content="燧 的海南话读音 dui⁶，普通话 suì。取火的器具。～石、钻～取火。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">dui⁶</span>
 <button class="play" onclick="play('tui6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dui6.html">同音字 7</a></div>
 <p class="rb-py">suì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈古〉取火的器具。～石、钻～取火。</span><span class="en">〈arch.〉 A fire-making implement. 燧石 flint; 钻燧取火 to make fire by drilling.</span></span></li><li><span class="num">②</span><span><span class="zh">〈古〉边防报警的烽火。烽～。</span><span class="en">〈arch.〉 A frontier beacon. 烽燧 beacon fires.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>取火的器具。～石、钻～取火。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> A fire-making implement. 燧石 flint; 钻燧取火 to make fire by drilling.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>边防报警的烽火。烽～。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> A frontier beacon. 烽燧 beacon fires.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

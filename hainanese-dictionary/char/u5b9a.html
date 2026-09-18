@@ -15,12 +15,19 @@
 <span class="rbig">ddia¹</span>
 <button class="play" onclick="play('dia1.mp3')">&#9654;</button></div>
 <p class="rb-py">dìng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">不动的；不改变的。～居、～量、固～、～期。</span><span class="en">Fixed; unchanging. 定居; 定量; 固定; 定期.</span></span></li><li><span class="num">②</span><span><span class="zh">使确定；决定。～计划、～婚、～案、～价。</span><span class="en">To settle; to decide. 定计划; 定婚; 定案; 定价.</span></span></li><li><span class="num">③</span><span><span class="zh">平静；安稳。安～、镇～、心神不～。</span><span class="en">Calm; steady. 安定; 镇定; 心神不定.</span></span></li><li><span class="num">④</span><span><span class="zh">一定；必然。～能成功、～有分晓。</span><span class="en">Certainly; bound to. 定能成功; 定有分晓.</span></span></li><li><span class="num">⑤</span><span><span class="zh">预先约妥。～购、～做、～报纸。</span><span class="en">To arrange in advance; to order. 定购; 定做; 定报纸.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">ddeng⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('deng4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">不动的；不改变的。～居、～量、固～、～期。</span><span class="en">Fixed; unchanging. 定居; 定量; 固定; 定期.</span></span></li><li><span class="num">②</span><span><span class="zh">使确定；决定。～计划、～婚、～案、～价。</span><span class="en">To settle; to decide. 定计划; 定婚; 定案; 定价.</span></span></li><li><span class="num">③</span><span><span class="zh">平静；安稳。安～、镇～、心神不～。</span><span class="en">Calm; steady. 安定; 镇定; 心神不定.</span></span></li><li><span class="num">④</span><span><span class="zh">一定；必然。～能成功、～有分晓。</span><span class="en">Certainly; bound to. 定能成功; 定有分晓.</span></span></li><li><span class="num">⑤</span><span><span class="zh">预先约妥。～购、～做、～报纸。</span><span class="en">To arrange in advance; to order. 定购; 定做; 定报纸.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">ddeng⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('deng4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

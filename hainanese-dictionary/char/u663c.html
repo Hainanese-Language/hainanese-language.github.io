@@ -15,12 +15,18 @@
 <span class="rbig">ziu⁶</span>
 <button class="play" onclick="play('ciu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziu6.html">同音字 3</a></div>
 <p class="rb-py">zhòu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">白天；跟"夜"相对。白～、～夜、～伏夜出。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">白天；跟"夜"相对。白～、～夜、～伏夜出。</span><span class="en">Daytime; the opposite of 夜. 白昼 broad daylight; 昼夜 day and night; 昼伏夜出 to lie low by day and come out at night.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

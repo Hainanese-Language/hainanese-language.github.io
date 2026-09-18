@@ -15,12 +15,19 @@
 <span class="rbig">dai¹</span>
 <button class="play" onclick="play('tai1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dai1.html">同音字 9</a></div>
 <p class="rb-py">xiān</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">时间或次序在前的；跟"后"相对。～后、～来后到、～进。</span><span class="en">Earlier in time or order; the opposite of 后. 先后 one after another; 先来后到 first come, first served; 先进 advanced.</span></span></li><li><span class="num">②</span><span><span class="zh">祖先；上代。～辈、祖～。</span><span class="en">Ancestors; earlier generations. 先辈 forebears; 祖先 ancestors.</span></span></li><li><span class="num">③</span><span><span class="zh">尊称已去世的人。～父、～烈、～贤。</span><span class="en">A respectful term for the deceased. 先父 my late father; 先烈 the martyrs; 先贤 the worthies of old.</span></span></li><li><span class="num">④</span><span><span class="zh">副词，暂时。你～坐一会儿。</span><span class="en">For the time being. 你先坐一会儿 do sit down for a moment.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">din¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tien1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">时间或次序在前的；跟"后"相对。～后、～来后到、～进。</span><span class="en">Earlier in time or order; the opposite of 后. 先后 one after another; 先来后到 first come, first served; 先进 advanced.</span></span></li><li><span class="num">②</span><span><span class="zh">祖先；上代。～辈、祖～。</span><span class="en">Ancestors; earlier generations. 先辈 forebears; 祖先 ancestors.</span></span></li><li><span class="num">③</span><span><span class="zh">尊称已去世的人。～父、～烈、～贤。</span><span class="en">A respectful term for the deceased. 先父 my late father; 先烈 the martyrs; 先贤 the worthies of old.</span></span></li><li><span class="num">④</span><span><span class="zh">副词，暂时。你～坐一会儿。</span><span class="en">For the time being. 你先坐一会儿 do sit down for a moment.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">din¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tien1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

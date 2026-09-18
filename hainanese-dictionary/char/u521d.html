@@ -13,7 +13,7 @@
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">chū</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">so¹</span>
-<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 13</a></div>
+<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 12</a></div>
 <p class="rb-py">chū</p><p class="scope">用于第 ❶❷❸ 义</p>
 <ul class="senses"><li><span class="num">①</span><span><span class="zh">开始的；第一个。～步、～次、～版。</span><span class="en">first; at the beginning.</span></span></li><li><span class="num">②</span><span><span class="zh">原来的；原来的情况。～衷、和好如～。</span><span class="en">original; the original state.</span></span></li><li><span class="num">③</span><span><span class="zh">最低的（等级）。～级、～等、～中。</span><span class="en">used before one to ten for the first ten days of a lunar month.</span></span></li><li><span class="num">④</span><span><span class="zh">用在一至十前面，表示农历每月的头十天。～一、～五。</span><span class="en">elementary; of the lowest grade.</span></span></li></ul><div class="alt"><span class="r2">sou¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sou1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

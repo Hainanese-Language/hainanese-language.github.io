@@ -15,12 +15,18 @@
 <span class="rbig">buan⁵</span>
 <button class="play" onclick="play('puan5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/buan5.html">同音字 2</a></div>
 <p class="rb-py">pàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">背离；反对自己原来所属的一方。背～、～变、～国、众～亲离。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">背离；反对自己原来所属的一方。背～、～变、～国、众～亲离。</span><span class="en">To turn against the side one belonged to. 背叛 to betray; 叛变 to defect; 叛国 to commit treason; 众叛亲离 to be utterly forsaken.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

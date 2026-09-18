@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>辟 · 海南话字典</title><meta name="description" content="辟 的海南话读音 beg⁷、peg⁷，普通话 bì · pì。〈书〉君主。复～。">
+<title>辟 · 海南话字典</title><meta name="description" content="辟 的海南话读音 beg⁷、peg⁷，普通话 bì · pì。君主。复～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,7 +15,7 @@
 <span class="rbig">beg⁷</span>
 <button class="play" onclick="play('peg7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/beg7.html">同音字 9</a></div>
 <p class="rb-py">bì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉君主。复～。</span><span class="en">〈lit.〉 A sovereign.</span></span></li><li><span class="num">②</span><span><span class="zh">排除；驱除。～邪。</span><span class="en">To drive away; to ward off.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>君主。复～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A sovereign.</span></span></li><li><span class="num">②</span><span><span class="zh">排除；驱除。～邪。</span><span class="en">To drive away; to ward off.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">peg⁷</span>
 <button class="play" onclick="play('pheg7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/peg7.html">同音字 5</a></div>
 <p class="rb-py">pì</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

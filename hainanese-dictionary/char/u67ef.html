@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>柯 · 海南话字典</title><meta name="description" content="柯 的海南话读音 ho¹、o¹，普通话 kē。〈书〉斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。">
+<title>柯 · 海南话字典</title><meta name="description" content="柯 的海南话读音 ho¹、o¹，普通话 kē。斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">ho¹</span>
 <button class="play" onclick="play('ho1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ho1.html">同音字 10</a></div>
 <p class="rb-py">kē</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</span></span></li></ul><div class="alt"><span class="r2">o¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('o1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>斧子的柄；也指草木的枝茎。斧～、～叶。也用于姓氏。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> an axe handle; also the branch or stem of a plant. Also used as a surname.</span></span></li></ul><div class="alt"><span class="r2">o¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('o1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

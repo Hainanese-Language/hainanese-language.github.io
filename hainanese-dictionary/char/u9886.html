@@ -15,12 +15,19 @@
 <span class="rbig">lia³</span>
 <button class="play" onclick="play('lia3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lia3.html">同音字 3</a></div>
 <p class="rb-py">lǐng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">脖子。引～而望。</span><span class="en">The neck.</span></span></li><li><span class="num">②</span><span><span class="zh">衣服围绕脖子的部分。衣～、～带、～口。</span><span class="en">The collar of a garment.</span></span></li><li><span class="num">③</span><span><span class="zh">事物的纲要。要～、提纲挈～。</span><span class="en">The essentials of a matter.</span></span></li><li><span class="num">④</span><span><span class="zh">带；引导。～队、率～、～路。</span><span class="en">To lead; to guide.</span></span></li><li><span class="num">⑤</span><span><span class="zh">领取；接受。～工资、～奖、～情。</span><span class="en">To draw; to receive; to accept.</span></span></li><li><span class="num">⑥</span><span><span class="zh">管辖的范围。～土、～海、占～。</span><span class="en">Territory under one's control.</span></span></li><li><span class="num">⑦</span><span><span class="zh">明白；理会。～会、～悟。</span><span class="en">To grasp; to understand.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">leng³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('leng3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">脖子。引～而望。</span><span class="en">The neck.</span></span></li><li><span class="num">②</span><span><span class="zh">衣服围绕脖子的部分。衣～、～带、～口。</span><span class="en">The collar of a garment.</span></span></li><li><span class="num">③</span><span><span class="zh">事物的纲要。要～、提纲挈～。</span><span class="en">The essentials of a matter.</span></span></li><li><span class="num">④</span><span><span class="zh">带；引导。～队、率～、～路。</span><span class="en">To lead; to guide.</span></span></li><li><span class="num">⑤</span><span><span class="zh">领取；接受。～工资、～奖、～情。</span><span class="en">To draw; to receive; to accept.</span></span></li><li><span class="num">⑥</span><span><span class="zh">管辖的范围。～土、～海、占～。</span><span class="en">Territory under one's control.</span></span></li><li><span class="num">⑦</span><span><span class="zh">明白；理会。～会、～悟。</span><span class="en">To grasp; to understand.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">leng³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('leng3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

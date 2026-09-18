@@ -15,13 +15,13 @@
 <div class="gl zh">习以为常。习～、～例、司空见～、吃～了。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63bc.html">
 <div class="ch">掼</div><div class="body">
 <span class="py">guàn</span>
-<div class="gl zh">〈方〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u704c.html">
+<div class="gl zh">扔；摔。～纱帽、～在地上。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u704c.html">
 <div class="ch">灌</div><div class="body">
 <span class="py">guàn</span>
 <div class="gl zh">浇；把水引到田里。～溉、～田、～水。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76e5.html">
 <div class="ch">盥</div><div class="body">
 <span class="py">guàn</span>
-<div class="gl zh">〈书〉洗手；洗。～洗、～漱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f50.html">
+<div class="gl zh">洗手；洗。～洗、～漱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f50.html">
 <div class="ch">罐</div><div class="body">
 <span class="py">guàn</span>
 <div class="gl zh">盛东西的圆筒形器皿。～头、茶～、～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2f.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">mang²</span>
 <button class="play" onclick="play('mang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mang2.html">同音字 9</a></div>
 <p class="rb-py">máng</p>
-<ul class="senses"><li><span class="pyhead">〔máng〕</span></li><li><span class="num">①</span><span><span class="zh">某些禾本科植物子实壳上的细刺。麦～、～刺在背。</span><span class="en">The awn on the husk of certain grasses. 麦芒; 芒刺在背.</span></span></li><li><span class="num">②</span><span><span class="zh">像芒的东西；光线。光～、锋～。</span><span class="en">Something spike-like; a ray of light. 光芒; 锋芒.</span></span></li><li><span class="num">③</span><span><span class="zh">一种多年生草本植物。～草。</span><span class="en">A perennial grass. 芒草.</span></span></li><li><span class="pyhead">〔wáng〕</span></li><li><span class="num">④</span><span><span class="zh">〈古〉通"茫"，无边无际。</span><span class="en">〈arch.〉 Same as 茫: boundless.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔máng〕</span></li><li><span class="num">①</span><span><span class="zh">某些禾本科植物子实壳上的细刺。麦～、～刺在背。</span><span class="en">The awn on the husk of certain grasses. 麦芒; 芒刺在背.</span></span></li><li><span class="num">②</span><span><span class="zh">像芒的东西；光线。光～、锋～。</span><span class="en">Something spike-like; a ray of light. 光芒; 锋芒.</span></span></li><li><span class="num">③</span><span><span class="zh">一种多年生草本植物。～草。</span><span class="en">A perennial grass. 芒草.</span></span></li><li><span class="pyhead">〔wáng〕</span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>通"茫"，无边无际。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> Same as 茫: boundless.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

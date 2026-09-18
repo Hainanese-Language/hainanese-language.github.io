@@ -18,7 +18,7 @@
 <div class="gl zh">后悔；烦恼。～悔、～恼、～丧。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6ca4.html">
 <div class="ch">沤</div><div class="body">
 <span class="py">òu · ōu</span>
-<div class="gl zh">长时间浸泡使变质。～肥、～麻。  ōu 〈书〉水中的泡沫。浮～。</div><div class="also">另读 <i>ou¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62d7.html">
+<div class="gl zh">长时间浸泡使变质。～肥、～麻。  ōu 水中的泡沫。浮～。</div><div class="also">另读 <i>ou¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62d7.html">
 <div class="ch">拗</div><div class="body">
 <span class="py">ǎo · ào · niù</span>
 <div class="gl zh">弯曲使断。～断树枝、～折。  ào 不顺口；别扭。～口、～口令。  niù 固执；不驯顺。执～、～不过他、脾气很～。</div><div class="also">主读 <i>a³</i> · <i>ao⁴</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

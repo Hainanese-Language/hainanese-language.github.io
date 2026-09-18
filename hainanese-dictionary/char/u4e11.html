@@ -15,12 +15,19 @@
 <span class="rbig">siu³</span>
 <button class="play" onclick="play('siu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/siu3.html">同音字 4</a></div>
 <p class="rb-py">chǒu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">地支的第二位。</span><span class="en">The second of the Twelve Earthly Branches.</span></span></li><li><span class="num">②</span><span><span class="zh">丑时，指凌晨一点到三点。</span><span class="en">The 丑 double-hour, 1–3 a.m.</span></span></li><li><span class="num">③</span><span><span class="zh">戏曲角色行当之一。～角、文～、～旦。</span><span class="en">A role type in Chinese opera, the clown. 丑角 a comic role; 文丑 a civil clown.</span></span></li><li><span class="num">④</span><span><span class="zh">相貌难看，跟"美"相对。～陋、～态。</span><span class="en">Ugly — the opposite of 美. 丑陋 unsightly; 丑态 a disgraceful sight.</span></span></li><li><span class="num">⑤</span><span><span class="zh">可厌恶的；不光彩的。～闻、～事、出～。</span><span class="en">Shameful. 丑闻 a scandal; 出丑 to make a fool of oneself.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">sun³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('son3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹❺ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">地支的第二位。</span><span class="en">The second of the Twelve Earthly Branches.</span></span></li><li><span class="num">②</span><span><span class="zh">丑时，指凌晨一点到三点。</span><span class="en">The 丑 double-hour, 1–3 a.m.</span></span></li><li><span class="num">③</span><span><span class="zh">戏曲角色行当之一。～角、文～、～旦。</span><span class="en">A role type in Chinese opera, the clown. 丑角 a comic role; 文丑 a civil clown.</span></span></li><li><span class="num">④</span><span><span class="zh">相貌难看，跟"美"相对。～陋、～态。</span><span class="en">Ugly — the opposite of 美. 丑陋 unsightly; 丑态 a disgraceful sight.</span></span></li><li><span class="num">⑤</span><span><span class="zh">可厌恶的；不光彩的。～闻、～事、出～。</span><span class="en">Shameful. 丑闻 a scandal; 出丑 to make a fool of oneself.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">sun³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('son3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹❺ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

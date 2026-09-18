@@ -15,12 +15,18 @@
 <span class="rbig">ha¹</span>
 <button class="play" onclick="play('ha1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ha1.html">同音字 5</a></div>
 <p class="rb-py">kǎ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">象声词，形容短促的断裂或碰撞声。～嚓一声。</span><span class="en">A short snapping or clicking sound. 咔嚓 snap; click.</span></span></li><li><span class="num">②</span><span><span class="zh">〈外〉用于"咔叽"，一种厚实的斜纹布。</span><span class="en">〈loan〉 Used in 咔叽 (khaki), a stout twilled cloth.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">象声词，形容短促的断裂或碰撞声。～嚓一声。</span><span class="en">A short snapping or clicking sound. 咔嚓 snap; click.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="外来词。由外语音译或借入。">外</span>用于"咔叽"，一种厚实的斜纹布。</span><span class="en"><span class="pill tip" data-tip="Loanword. Borrowed or transliterated from a foreign language.">loan</span> Used in 咔叽 (khaki), a stout twilled cloth.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

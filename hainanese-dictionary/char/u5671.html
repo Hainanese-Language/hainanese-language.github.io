@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>噱 · 海南话字典</title><meta name="description" content="噱 的海南话读音 giag⁷、giag⁷，普通话 jué · xué。〈书〉大笑。可发一～。">
+<title>噱 · 海南话字典</title><meta name="description" content="噱 的海南话读音 giag⁷、giag⁷，普通话 jué · xué。大笑。可发一～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">giag⁷</span>
 <button class="play" onclick="play('kiag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/giag7.html">同音字 9</a></div>
 <p class="rb-py">jué</p>
-<ul class="senses"><li><span class="pyhead">〔jué〕</span></li><li><span class="num">①</span><span><span class="zh">〈书〉大笑。可发一～。</span><span class="en">〈lit.〉 To laugh aloud. 可发一噱 enough to raise a laugh.</span></span></li><li><span class="pyhead">〔xué〕</span></li><li><span class="num">②</span><span><span class="zh">〈方〉引人发笑的话或举动。～头、发～。</span><span class="en">〈dial.〉 A joke; something done for laughs. 噱头 a gimmick; 发噱 to be funny.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔jué〕</span></li><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>大笑。可发一～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To laugh aloud. 可发一噱 enough to raise a laugh.</span></span></li><li><span class="pyhead">〔xué〕</span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>引人发笑的话或举动。～头、发～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> A joke; something done for laughs. 噱头 a gimmick; 发噱 to be funny.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

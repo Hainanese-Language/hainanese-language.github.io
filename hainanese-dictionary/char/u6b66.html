@@ -15,12 +15,18 @@
 <span class="rbig">vu³</span>
 <button class="play" onclick="play('bu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/vu3.html">同音字 3</a></div>
 <p class="rb-py">wǔ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">关于军事或技击的；跟"文"相对。～器、～术、～装。</span><span class="en">military; martial, as opposed to civil.</span></span></li><li><span class="num">②</span><span><span class="zh">勇猛；猛烈。威～、英～、～断。</span><span class="en">valiant; fierce.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉脚步。步～、踵～前贤。</span><span class="en">〈lit.〉 a footstep.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">关于军事或技击的；跟"文"相对。～器、～术、～装。</span><span class="en">military; martial, as opposed to civil.</span></span></li><li><span class="num">②</span><span><span class="zh">勇猛；猛烈。威～、英～、～断。</span><span class="en">valiant; fierce.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>脚步。步～、踵～前贤。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> a footstep.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

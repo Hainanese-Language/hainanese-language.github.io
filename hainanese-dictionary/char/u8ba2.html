@@ -15,12 +15,19 @@
 <span class="rbig">ddeng⁵</span>
 <button class="play" onclick="play('deng5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddeng5.html">同音字 5</a></div>
 <p class="rb-py">dìng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">经过商讨而立下。～合同、～计划、修～。</span><span class="en">To settle after discussion. 订合同 to conclude a contract; 修订 to revise.</span></span></li><li><span class="num">②</span><span><span class="zh">预先约定。～货、～票、～阅。</span><span class="en">To order in advance. 订货 to place an order; 订阅 to subscribe.</span></span></li><li><span class="num">③</span><span><span class="zh">改正。～正、校～。</span><span class="en">To correct. 订正 to emend; 校订 to check and revise.</span></span></li><li><span class="num">④</span><span><span class="zh">装订。～书机、把讲义～起来。</span><span class="en">To bind. 订书机 a stapler; 把讲义订起来 to bind the lecture notes.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">经过商讨而立下。～合同、～计划、修～。</span><span class="en">To settle after discussion. 订合同 to conclude a contract; 修订 to revise.</span></span></li><li><span class="num">②</span><span><span class="zh">预先约定。～货、～票、～阅。</span><span class="en">To order in advance. 订货 to place an order; 订阅 to subscribe.</span></span></li><li><span class="num">③</span><span><span class="zh">改正。～正、校～。</span><span class="en">To correct. 订正 to emend; 校订 to check and revise.</span></span></li><li><span class="num">④</span><span><span class="zh">装订。～书机、把讲义～起来。</span><span class="en">To bind. 订书机 a stapler; 把讲义订起来 to bind the lecture notes.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan4.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❹ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

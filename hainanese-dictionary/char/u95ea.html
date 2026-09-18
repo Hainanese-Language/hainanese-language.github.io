@@ -15,12 +15,19 @@
 <span class="rbig">diam³</span>
 <button class="play" onclick="play('tiam3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/diam3.html">同音字 2</a></div>
 <p class="rb-py">shǎn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">突然显现；忽明忽暗。～现、～烁、灯光一～。</span><span class="en">To flash; to flicker. 闪现; 闪烁; 灯光一闪.</span></span></li><li><span class="num">②</span><span><span class="zh">闪电。打～、～雷。</span><span class="en">Lightning. 打闪; 闪雷.</span></span></li><li><span class="num">③</span><span><span class="zh">侧身避开。～开、躲～、～身。</span><span class="en">To dodge aside. 闪开; 躲闪; 闪身.</span></span></li><li><span class="num">④</span><span><span class="zh">因动作过猛而扭伤。～了腰。</span><span class="en">To wrench through a sudden movement. 闪了腰.</span></span></li><li><span class="num">⑤</span><span><span class="zh">光亮。～光、金～～。</span><span class="en">A gleam. 闪光; 金闪闪.</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">iam⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('iam5.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">突然显现；忽明忽暗。～现、～烁、灯光一～。</span><span class="en">To flash; to flicker. 闪现; 闪烁; 灯光一闪.</span></span></li><li><span class="num">②</span><span><span class="zh">闪电。打～、～雷。</span><span class="en">Lightning. 打闪; 闪雷.</span></span></li><li><span class="num">③</span><span><span class="zh">侧身避开。～开、躲～、～身。</span><span class="en">To dodge aside. 闪开; 躲闪; 闪身.</span></span></li><li><span class="num">④</span><span><span class="zh">因动作过猛而扭伤。～了腰。</span><span class="en">To wrench through a sudden movement. 闪了腰.</span></span></li><li><span class="num">⑤</span><span><span class="zh">光亮。～光、金～～。</span><span class="en">A gleam. 闪光; 金闪闪.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">iam⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('iam5.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

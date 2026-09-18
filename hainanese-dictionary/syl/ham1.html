@@ -18,7 +18,7 @@
 <div class="gl zh">能；可以。～用、不～设想、～称一流。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6221.html">
 <div class="ch">戡</div><div class="body">
 <span class="py">kān</span>
-<div class="gl zh">〈书〉用武力平定。～乱、～定。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2a.html">
+<div class="gl zh">用武力平定。～乱、～定。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2a.html">
 <div class="ch">贪</div><div class="body">
 <span class="py">tān</span>
 <div class="gl zh">求多；不知足。～多、～心、～得无厌。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f9b.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">pu³</span>
 <button class="play" onclick="play('phu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pu3.html">同音字 3</a></div>
 <p class="rb-py">fǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">中医对胃、胆、大肠、小肠、膀胱、三焦的总称。脏～、五脏六～、肺～之言。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">中医对胃、胆、大肠、小肠、膀胱、三焦的总称。脏～、五脏六～、肺～之言。</span><span class="en">in Chinese medicine, a collective term for the stomach, gall bladder, large and small intestines, bladder and triple burner.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

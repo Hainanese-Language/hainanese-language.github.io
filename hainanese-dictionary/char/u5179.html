@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>兹 · 海南话字典</title><meta name="description" content="兹 的海南话读音 se¹、se³、se²，普通话 zī · cí。〈书〉这；这个。～事体大、念～在～。">
+<title>兹 · 海南话字典</title><meta name="description" content="兹 的海南话读音 se¹、se³、se²，普通话 zī · cí。这；这个。～事体大、念～在～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">se¹</span>
 <button class="play" onclick="play('se1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se1.html">同音字 26</a></div>
 <p class="rb-py">zī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉这；这个。～事体大、念～在～。</span><span class="en">〈lit.〉 This. 兹事体大 this is a weighty matter; 念兹在兹 to keep it constantly in mind.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉现在。～订于五月一日举行。</span><span class="en">〈lit.〉 Now. 兹订于五月一日举行 it is hereby fixed for the first of May.</span></span></li></ul><div class="alt"><span class="r2">se³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('se3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>这；这个。～事体大、念～在～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> This. 兹事体大 this is a weighty matter; 念兹在兹 to keep it constantly in mind.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>现在。～订于五月一日举行。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Now. 兹订于五月一日举行 it is hereby fixed for the first of May.</span></span></li></ul><div class="alt"><span class="r2">se³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('se3.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">se²</span>
 <button class="play" onclick="play('se2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se2.html">同音字 3</a></div>
 <p class="rb-py">cí</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"龟兹"，古代西域国名。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"龟兹"，古代西域国名。</span><span class="en">Used in 龟兹, an ancient state in the Western Regions.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

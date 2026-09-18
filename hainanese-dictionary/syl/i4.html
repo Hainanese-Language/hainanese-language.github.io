@@ -21,7 +21,7 @@
 <div class="gl zh">仅用于"癔症"，一种精神障碍。～症、～病。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ff3.html">
 <div class="ch">翳</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉遮蔽。荫～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8863.html">
+<div class="gl zh">遮蔽。荫～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8863.html">
 <div class="ch">衣</div><div class="body">
 <span class="py">yī · yì</span>
 <div class="gl zh">穿在身上的东西。～服、上～、～冠。</div><div class="also">主读 <i>i¹</i></div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

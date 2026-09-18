@@ -15,12 +15,18 @@
 <span class="rbig">sang⁶</span>
 <button class="play" onclick="play('sang6.mp3')">&#9654;</button></div>
 <p class="rb-py">chàng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">不如意；失意。～惘、～然、惆～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">不如意；失意。～惘、～然、惆～。</span><span class="en">Disappointed; despondent. 怅惘; 怅然; 惆怅.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

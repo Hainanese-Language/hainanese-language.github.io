@@ -18,7 +18,7 @@
 <div class="gl zh">家畜，肉可食，皮可制革。养～、～肉、～圈。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7bb8.html">
 <div class="ch">箸</div><div class="body">
 <span class="py">zhù</span>
-<div class="gl zh">〈书〉筷子。举～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u90fd.html">
+<div class="gl zh">筷子。举～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u90fd.html">
 <div class="ch">都</div><div class="body">
 <span class="py">dū · dōu</span>
 <div class="gl zh">首都；大城市。首～、～市、～会、建～。</div><div class="also">另读 <i>ddou¹</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

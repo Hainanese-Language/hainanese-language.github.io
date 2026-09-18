@@ -15,12 +15,18 @@
 <span class="rbig">leng²</span>
 <button class="play" onclick="play('leng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/leng2.html">同音字 20</a></div>
 <p class="rb-py">líng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">大土山。丘～、～谷。</span><span class="en">A large mound. 丘陵 hills; 陵谷 hills and valleys.</span></span></li><li><span class="num">②</span><span><span class="zh">帝王或伟人的坟墓。～墓、～园、中山～。</span><span class="en">The tomb of a ruler or great figure. 陵墓 a mausoleum; 陵园 a memorial park; 中山陵 the Sun Yat-sen Mausoleum.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉侵犯；欺压。～侮。</span><span class="en">〈lit.〉 To encroach on; to bully. 陵侮 to humiliate.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">大土山。丘～、～谷。</span><span class="en">A large mound. 丘陵 hills; 陵谷 hills and valleys.</span></span></li><li><span class="num">②</span><span><span class="zh">帝王或伟人的坟墓。～墓、～园、中山～。</span><span class="en">The tomb of a ruler or great figure. 陵墓 a mausoleum; 陵园 a memorial park; 中山陵 the Sun Yat-sen Mausoleum.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>侵犯；欺压。～侮。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To encroach on; to bully. 陵侮 to humiliate.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

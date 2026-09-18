@@ -15,12 +15,18 @@
 <span class="rbig">seng²</span>
 <button class="play" onclick="play('seng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng2.html">同音字 14</a></div>
 <p class="rb-py">shéng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用两股以上的纤维拧成的条状物。～子、麻～、～索。</span><span class="en">A rope; a cord. 绳子 string; 麻绳 hemp rope; 绳索 ropes.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉约束；制裁。～之以法。</span><span class="en">〈lit.〉 To restrain; bring to book. 绳之以法 to deal with according to law.</span></span></li></ul><div class="alt"><span class="r2">sin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用两股以上的纤维拧成的条状物。～子、麻～、～索。</span><span class="en">A rope; a cord. 绳子 string; 麻绳 hemp rope; 绳索 ropes.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>约束；制裁。～之以法。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To restrain; bring to book. 绳之以法 to deal with according to law.</span></span></li></ul><div class="alt"><span class="r2">sin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sien2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

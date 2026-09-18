@@ -15,7 +15,7 @@
 <div class="gl zh">移动物体的位置。～运、～砖、～家具。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u69c3.html">
 <div class="ch">槃</div><div class="body">
 <span class="py">pán</span>
-<div class="gl zh">〈书〉同"盘"。杯～、～根错节。</div><div class="also">另读 <i>puan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76d8.html">
+<div class="gl zh">同"盘"。杯～、～根错节。</div><div class="also">另读 <i>puan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76d8.html">
 <div class="ch">盘</div><div class="body">
 <span class="py">pán</span>
 <div class="gl zh">盛放东西的浅底器具。～子、茶～、托～。</div><div class="also">另读 <i>puan²</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

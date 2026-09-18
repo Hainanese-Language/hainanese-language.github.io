@@ -15,12 +15,18 @@
 <span class="rbig">gai⁶</span>
 <button class="play" onclick="play('kai6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gai6.html">同音字 5</a></div>
 <p class="rb-py">jiè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">在两者之间。～于两者之间、～入、媒～。</span><span class="en">Between two parties. 介于两者之间 to lie between the two; 介入 to intervene; 媒介 a medium.</span></span></li><li><span class="num">②</span><span><span class="zh">使双方发生关系。～绍、推～。</span><span class="en">To bring two sides together. 介绍 to introduce; 推介 to recommend.</span></span></li><li><span class="num">③</span><span><span class="zh">放在心上。～意、～怀。</span><span class="en">To take to heart. 介意 to mind; 介怀 to take offence.</span></span></li><li><span class="num">④</span><span><span class="zh">甲壳。～壳、～虫。</span><span class="en">A shell. 介壳 a shell; 介虫 shellfish.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉正直；有骨气。耿～。</span><span class="en">〈lit.〉 Upright; principled. 耿介 upright and honourable.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">在两者之间。～于两者之间、～入、媒～。</span><span class="en">Between two parties. 介于两者之间 to lie between the two; 介入 to intervene; 媒介 a medium.</span></span></li><li><span class="num">②</span><span><span class="zh">使双方发生关系。～绍、推～。</span><span class="en">To bring two sides together. 介绍 to introduce; 推介 to recommend.</span></span></li><li><span class="num">③</span><span><span class="zh">放在心上。～意、～怀。</span><span class="en">To take to heart. 介意 to mind; 介怀 to take offence.</span></span></li><li><span class="num">④</span><span><span class="zh">甲壳。～壳、～虫。</span><span class="en">A shell. 介壳 a shell; 介虫 shellfish.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>正直；有骨气。耿～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Upright; principled. 耿介 upright and honourable.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

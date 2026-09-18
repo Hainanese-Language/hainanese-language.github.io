@@ -15,16 +15,23 @@
 <span class="rbig">ang²</span>
 <button class="play" onclick="play('ang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ang2.html">同音字 2</a></div>
 <p class="rb-py">hóng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">像血的颜色。～旗、～花、脸～了。</span><span class="en">Red, the colour of blood. 红旗 a red flag; 脸红了 to blush.</span></span></li><li><span class="num">②</span><span><span class="zh">象征喜庆的红布。挂～、披～。</span><span class="en">Red cloth as a token of celebration. 挂红 to hang red cloth; 披红 to drape in red.</span></span></li><li><span class="num">③</span><span><span class="zh">顺利；受人重视。走～、～人、开门～。</span><span class="en">Successful; in favour. 走红 to be in vogue; 红人 a favourite; 开门红 a good start.</span></span></li><li><span class="num">④</span><span><span class="zh">象征革命。～军、～色政权。</span><span class="en">Symbolising revolution. 红军 the Red Army; 红色政权 red political power.</span></span></li><li><span class="num">⑤</span><span><span class="zh">红利。分～。</span><span class="en">A dividend. 分红 to share out profits.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhong²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhong2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">像血的颜色。～旗、～花、脸～了。</span><span class="en">Red, the colour of blood. 红旗 a red flag; 脸红了 to blush.</span></span></li><li><span class="num">②</span><span><span class="zh">象征喜庆的红布。挂～、披～。</span><span class="en">Red cloth as a token of celebration. 挂红 to hang red cloth; 披红 to drape in red.</span></span></li><li><span class="num">③</span><span><span class="zh">顺利；受人重视。走～、～人、开门～。</span><span class="en">Successful; in favour. 走红 to be in vogue; 红人 a favourite; 开门红 a good start.</span></span></li><li><span class="num">④</span><span><span class="zh">象征革命。～军、～色政权。</span><span class="en">Symbolising revolution. 红军 the Red Army; 红色政权 red political power.</span></span></li><li><span class="num">⑤</span><span><span class="zh">红利。分～。</span><span class="en">A dividend. 分红 to share out profits.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hhong²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhong2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">gong¹</span>
 <button class="play" onclick="play('kong1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gong1.html">同音字 14</a></div>
 <p class="rb-py">gōng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"女～"（同"女工"，指女子的纺织、刺绣等工作）。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"女～"（同"女工"，指女子的纺织、刺绣等工作）。</span><span class="en">Used only in 女红 (needlework; women's handcrafts).</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

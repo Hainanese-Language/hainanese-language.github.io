@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/han1.html">han¹</a><a class="chip on" href="/hainanese-dictionary/syl/han2.html">han²</a><a class="chip" href="/hainanese-dictionary/syl/han3.html">han³</a><a class="chip" href="/hainanese-dictionary/syl/han4.html">han⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u575b.html">
 <div class="ch">坛</div><div class="body">
 <span class="py">tán</span>
-<div class="gl zh">〈古〉举行祭祀、会盟等大典的台。天～、祭～、登～。</div><div class="also">另读 <i>ddin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6619.html">
+<div class="gl zh">举行祭祀、会盟等大典的台。天～、祭～、登～。</div><div class="also">另读 <i>ddin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6619.html">
 <div class="ch">昙</div><div class="body">
 <span class="py">tán</span>
 <div class="gl zh">用于"昙花"，一种夜间开花的植物。～花、～花一现。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6a80.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

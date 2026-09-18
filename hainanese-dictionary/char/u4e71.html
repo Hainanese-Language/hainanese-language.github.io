@@ -15,12 +15,19 @@
 <span class="rbig">lui¹</span>
 <button class="play" onclick="play('lui1.mp3')">&#9654;</button></div>
 <p class="rb-py">luàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">没有秩序；没有条理。～七八糟、杂～、～成一团。</span><span class="en">Disordered. 乱七八糟 in a mess; 杂乱 jumbled; 乱成一团 in utter confusion.</span></span></li><li><span class="num">②</span><span><span class="zh">使混乱。捣～、扰～、以假～真。</span><span class="en">To throw into disorder. 捣乱 to make trouble; 以假乱真 to pass off the false as genuine.</span></span></li><li><span class="num">③</span><span><span class="zh">战争；武装骚扰。～世、叛～、兵～。</span><span class="en">Turmoil; armed disorder. 乱世 troubled times; 叛乱 a rebellion.</span></span></li><li><span class="num">④</span><span><span class="zh">心绪不宁。心～如麻、心烦意～。</span><span class="en">Troubled in mind. 心乱如麻 in a turmoil; 心烦意乱 distracted.</span></span></li><li><span class="num">⑤</span><span><span class="zh">任意；随便。～说、～花钱、～跑。</span><span class="en">At random. 乱说 to talk nonsense; 乱花钱 to spend recklessly.</span></span></li><li><span class="num">⑥</span><span><span class="zh">男女关系不正当。淫～。</span><span class="en">Of improper relations between the sexes. 淫乱 licentious.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">luan⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('luan5.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">没有秩序；没有条理。～七八糟、杂～、～成一团。</span><span class="en">Disordered. 乱七八糟 in a mess; 杂乱 jumbled; 乱成一团 in utter confusion.</span></span></li><li><span class="num">②</span><span><span class="zh">使混乱。捣～、扰～、以假～真。</span><span class="en">To throw into disorder. 捣乱 to make trouble; 以假乱真 to pass off the false as genuine.</span></span></li><li><span class="num">③</span><span><span class="zh">战争；武装骚扰。～世、叛～、兵～。</span><span class="en">Turmoil; armed disorder. 乱世 troubled times; 叛乱 a rebellion.</span></span></li><li><span class="num">④</span><span><span class="zh">心绪不宁。心～如麻、心烦意～。</span><span class="en">Troubled in mind. 心乱如麻 in a turmoil; 心烦意乱 distracted.</span></span></li><li><span class="num">⑤</span><span><span class="zh">任意；随便。～说、～花钱、～跑。</span><span class="en">At random. 乱说 to talk nonsense; 乱花钱 to spend recklessly.</span></span></li><li><span class="num">⑥</span><span><span class="zh">男女关系不正当。淫～。</span><span class="en">Of improper relations between the sexes. 淫乱 licentious.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">luan⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('luan5.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

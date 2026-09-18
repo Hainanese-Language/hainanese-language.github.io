@@ -15,16 +15,23 @@
 <span class="rbig">o²</span>
 <button class="play" onclick="play('o2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/o2.html">同音字 2</a></div>
 <p class="rb-py">hé</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">莲。～花、～叶、～塘、～藕。</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hho²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hho2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">莲。～花、～叶、～塘、～藕。</span><span class="en">The lotus. 荷花; 荷叶; 荷塘; 荷藕.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">hho²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hho2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">o¹</span>
 <button class="play" onclick="play('o1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/o1.html">同音字 13</a></div>
 <p class="rb-py">hè</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉背；扛。～锄、～枪实弹。</span><span class="en">〈lit.〉 To carry on the shoulder. 荷锄; 荷枪实弹.</span></span></li><li><span class="num">②</span><span><span class="zh">承受；担负。～重、负～、电～。</span><span class="en">To bear; to carry a load. 荷重; 负荷; 电荷.</span></span></li><li><span class="num">③</span><span><span class="zh">敬辞，表示感谢。感～、请予批准为～。</span><span class="en">A polite form expressing thanks. 感荷; 请予批准为荷.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>背；扛。～锄、～枪实弹。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To carry on the shoulder. 荷锄; 荷枪实弹.</span></span></li><li><span class="num">②</span><span><span class="zh">承受；担负。～重、负～、电～。</span><span class="en">To bear; to carry a load. 荷重; 负荷; 电荷.</span></span></li><li><span class="num">③</span><span><span class="zh">敬辞，表示感谢。感～、请予批准为～。</span><span class="en">A polite form expressing thanks. 感荷; 请予批准为荷.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

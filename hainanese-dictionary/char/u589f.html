@@ -15,12 +15,18 @@
 <span class="rbig">hhi¹</span>
 <button class="play" onclick="play('hi1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhi1.html">同音字 18</a></div>
 <p class="rb-py">xū</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">有人住过而现已荒废的地方。废～、殷～。</span><span class="en">A place once inhabited and now in ruins. 废墟; 殷墟.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉集市。～场、赶～。</span><span class="en">〈dial.〉 A market. 墟场; 赶墟.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">有人住过而现已荒废的地方。废～、殷～。</span><span class="en">A place once inhabited and now in ruins. 废墟; 殷墟.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>集市。～场、赶～。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> A market. 墟场; 赶墟.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

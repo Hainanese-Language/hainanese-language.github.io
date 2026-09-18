@@ -15,16 +15,22 @@
 <span class="rbig">liag⁸</span>
 <button class="play" onclick="play('liag8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liag8.html">同音字 2</a></div>
 <p class="rb-py">lǜ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">像草和树叶茂盛时的颜色。～叶、～化、碧～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">像草和树叶茂盛时的颜色。～叶、～化、碧～。</span><span class="en">Green, the colour of lush grass and leaves. 绿叶 green leaves; 绿化 to plant with greenery; 碧绿 emerald green.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">log⁸</span>
 <button class="play" onclick="play('log8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/log8.html">同音字 10</a></div>
 <p class="rb-py">lù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"绿林""鸭绿江"等词。～林好汉。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"绿林""鸭绿江"等词。～林好汉。</span><span class="en">Used in words such as 绿林 and 鸭绿江. 绿林好汉 a greenwood hero; an outlaw.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,16 +15,24 @@
 <span class="rbig">dde⁴</span>
 <button class="play" onclick="play('de4.mp3')">&#9654;</button></div>
 <p class="rb-py">chù</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">地方。～所、住～、到～。</span><span class="en">A place. 处所 a location; 住处 a dwelling; 到处 everywhere.</span></span></li><li><span class="num">②</span><span><span class="zh">机关，或机关中的部门。办事～、教务～。</span><span class="en">An office, or a department within one. 办事处 an agency; 教务处 the academic affairs office.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">si¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">地方。～所、住～、到～。</span><span class="en">A place. 处所 a location; 住处 a dwelling; 到处 everywhere.</span></span></li><li><span class="num">②</span><span><span class="zh">机关，或机关中的部门。办事～、教务～。</span><span class="en">An office, or a department within one. 办事处 an agency; 教务处 the academic affairs office.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">si¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si1.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">si³</span>
 <button class="play" onclick="play('si3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/si3.html">同音字 8</a></div>
 <p class="rb-py">chǔ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">居住；存在。穴居野～、～世。</span><span class="en">To dwell; live. 穴居野处 to live in caves and the wild; 处世 to conduct oneself in society.</span></span></li><li><span class="num">②</span><span><span class="zh">交往；相待。～得来、相～融洽。</span><span class="en">To get on with. 处得来 to get along; 相处融洽 on good terms.</span></span></li><li><span class="num">③</span><span><span class="zh">办理；决定。～理、～置。</span><span class="en">To handle; decide. 处理 to deal with; 处置 to dispose of.</span></span></li><li><span class="num">④</span><span><span class="zh">惩罚。～罚、～分、～决。</span><span class="en">To punish. 处罚 to penalise; 处分 to discipline; 处决 to execute.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">si²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">居住；存在。穴居野～、～世。</span><span class="en">To dwell; live. 穴居野处 to live in caves and the wild; 处世 to conduct oneself in society.</span></span></li><li><span class="num">②</span><span><span class="zh">交往；相待。～得来、相～融洽。</span><span class="en">To get on with. 处得来 to get along; 相处融洽 on good terms.</span></span></li><li><span class="num">③</span><span><span class="zh">办理；决定。～理、～置。</span><span class="en">To handle; decide. 处理 to deal with; 处置 to dispose of.</span></span></li><li><span class="num">④</span><span><span class="zh">惩罚。～罚、～分、～决。</span><span class="en">To punish. 处罚 to penalise; 处分 to discipline; 处决 to execute.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">si²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

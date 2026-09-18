@@ -15,7 +15,7 @@
 <div class="gl zh">旁边。～面、两～、～门、耳～。</div><div class="also">另读 <i>zeg⁷</i> · <i>zeg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5395.html">
 <div class="ch">厕</div><div class="body">
 <span class="py">cè · sì</span>
-<div class="gl zh">厕所。公～、男～。  sì 〈书〉参与；混杂在里面。～身其间。</div><div class="also">另读 <i>si⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5601.html">
+<div class="gl zh">厕所。公～、男～。  sì 参与；混杂在里面。～身其间。</div><div class="also">另读 <i>si⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5601.html">
 <div class="ch">嘁</div><div class="body">
 <span class="py">qī</span>
 <div class="gl zh">用于"嘁嘁喳喳"，形容细碎的说话声。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u607b.html">
@@ -36,13 +36,13 @@
 <div class="gl zh">测量。～绘、～量、～试、观～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u789b.html">
 <div class="ch">碛</div><div class="body">
 <span class="py">qì</span>
-<div class="gl zh">〈书〉水中的沙石滩。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b56.html">
+<div class="gl zh">水中的沙石滩。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b56.html">
 <div class="ch">策</div><div class="body">
 <span class="py">cè</span>
 <div class="gl zh">计谋；办法。～略、对～、决～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u996c.html">
 <div class="ch">饬</div><div class="body">
 <span class="py">chì</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u814a.html">
+<div class="gl zh">整顿。整～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u814a.html">
 <div class="ch">腊</div><div class="body">
 <span class="py">là · xī</span>
 <div class="gl zh">农历十二月。～月、～八、～梅。</div><div class="also">主读 <i>la⁶</i></div></div></a><footer>
@@ -51,6 +51,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

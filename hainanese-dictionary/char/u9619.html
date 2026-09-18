@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>阙 · 海南话字典</title><meta name="description" content="阙 的海南话读音 hid⁷，普通话 què · quē。〈古〉宫殿门前两边的高建筑；也指宫殿。宫～、城～。">
+<title>阙 · 海南话字典</title><meta name="description" content="阙 的海南话读音 hid⁷，普通话 què · quē。宫殿门前两边的高建筑；也指宫殿。宫～、城～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">hid⁷</span>
 <button class="play" onclick="play('hiet7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hid7.html">同音字 17</a></div>
 <p class="rb-py">què</p>
-<ul class="senses"><li><span class="pyhead">〔què〕</span></li><li><span class="num">①</span><span><span class="zh">〈古〉宫殿门前两边的高建筑；也指宫殿。宫～、城～。</span><span class="en">〈arch.〉 The towers flanking a palace gate; also the palace itself. 宫阙 a palace; 城阙 the gate-towers of a city.</span></span></li><li><span class="pyhead">〔quē〕</span></li><li><span class="num">②</span><span><span class="zh">〈书〉过失。～失。</span><span class="en">〈lit.〉 A fault; a lapse. 阙失 a shortcoming.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉空缺；缺少。～如、～疑。</span><span class="en">〈lit.〉 A gap; wanting. 阙如 to be missing; 阙疑 to leave a doubtful point open.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔què〕</span></li><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>宫殿门前两边的高建筑；也指宫殿。宫～、城～。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> The towers flanking a palace gate; also the palace itself. 宫阙 a palace; 城阙 the gate-towers of a city.</span></span></li><li><span class="pyhead">〔quē〕</span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>过失。～失。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A fault; a lapse. 阙失 a shortcoming.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>空缺；缺少。～如、～疑。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A gap; wanting. 阙如 to be missing; 阙疑 to leave a doubtful point open.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

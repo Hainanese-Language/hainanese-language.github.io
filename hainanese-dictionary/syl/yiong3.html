@@ -27,7 +27,7 @@
 <div class="gl zh">水或云气冒出。～泉、泪如泉～、风起云～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u752c.html">
 <div class="ch">甬</div><div class="body">
 <span class="py">yǒng</span>
-<div class="gl zh">〈书〉两旁有墙的路。～道。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u86f9.html">
+<div class="gl zh">两旁有墙的路。～道。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u86f9.html">
 <div class="ch">蛹</div><div class="body">
 <span class="py">yǒng</span>
 <div class="gl zh">昆虫从幼虫变为成虫过程中不食不动的阶段。蚕～、～期。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8e0a.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

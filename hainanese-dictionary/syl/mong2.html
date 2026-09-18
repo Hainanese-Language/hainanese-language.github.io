@@ -15,7 +15,7 @@
 <div class="gl zh">仅用于"柠檬"。柠～、柠～汁。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c13.html">
 <div class="ch">氓</div><div class="body">
 <span class="py">méng · máng</span>
-<div class="gl zh">〈书〉百姓。～隶。  máng 用于"流氓"，指不务正业、为非作歹的人。</div><div class="also">另读 <i>mang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76df.html">
+<div class="gl zh">百姓。～隶。  máng 用于"流氓"，指不务正业、为非作歹的人。</div><div class="also">另读 <i>mang²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76df.html">
 <div class="ch">盟</div><div class="body">
 <span class="py">méng · míng</span>
 <div class="gl zh">结拜；发誓联合。～誓、～约、～友。</div><div class="also">另读 <i>meng²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u840c.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

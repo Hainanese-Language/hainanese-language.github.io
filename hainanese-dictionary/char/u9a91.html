@@ -15,7 +15,7 @@
 <span class="rbig">hia²</span>
 <button class="play" onclick="play('hia2.mp3')">&#9654;</button></div>
 <p class="rb-py">qí</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">两腿跨坐。～马、～车、～墙。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">两腿跨坐。～马、～车、～墙。</span><span class="en">To ride astride. 骑马 to ride a horse; 骑车 to cycle; 骑墙 to sit on the fence.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hi²</span>
 <button class="play" onclick="play('hi2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hi2.html">同音字 21</a></div>
 <p class="rb-py">jì</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

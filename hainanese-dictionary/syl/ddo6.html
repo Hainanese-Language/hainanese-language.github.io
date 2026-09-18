@@ -33,7 +33,7 @@
 <div class="gl zh">墙上向外或向上突出的部分。～口、城～、门～子。  duò</div><div class="also">主读 <i>ddo³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u68f9.html">
 <div class="ch">棹</div><div class="body">
 <span class="py">zhào · zhuō</span>
-<div class="gl zh">〈书〉船桨；也指划船。归～、～歌。  zhuō 同"桌"。书～、～椅。</div><div class="also">主读 <i>ziao⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a6e.html">
+<div class="gl zh">船桨；也指划船。归～、～歌。  zhuō 同"桌"。书～、～椅。</div><div class="also">主读 <i>ziao⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9a6e.html">
 <div class="ch">驮</div><div class="body">
 <span class="py">tuó · duò</span>
 <div class="gl zh">用背部承载。～运、马～着粮食。  duò 牲口背上驮的货物。～子、把～卸下来。</div><div class="also">主读 <i>ho²</i></div></div></a><footer>
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

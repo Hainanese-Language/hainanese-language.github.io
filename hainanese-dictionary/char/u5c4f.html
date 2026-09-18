@@ -15,7 +15,8 @@
 <span class="rbig">peng²</span>
 <button class="play" onclick="play('pheng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/peng2.html">同音字 14</a></div>
 <p class="rb-py">píng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">遮挡用的器具。～风、～障、围～。</span><span class="en">A screen. 屏风 a folding screen; 屏障 a protective barrier; 围屏 a screen wall.</span></span></li><li><span class="num">②</span><span><span class="zh">像屏风的东西。～幕、荧光～、彩～。</span><span class="en">Something resembling a screen. 屏幕 a screen; 彩屏 a colour display.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">beng²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('peng2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">遮挡用的器具。～风、～障、围～。</span><span class="en">A screen. 屏风 a folding screen; 屏障 a protective barrier; 围屏 a screen wall.</span></span></li><li><span class="num">②</span><span><span class="zh">像屏风的东西。～幕、荧光～、彩～。</span><span class="en">Something resembling a screen. 屏幕 a screen; 彩屏 a colour display.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">beng²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('peng2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">beng³</span>
 <button class="play" onclick="play('peng3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/beng3.html">同音字 3</a></div>
 <p class="rb-py">bǐng</p>
@@ -25,6 +26,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

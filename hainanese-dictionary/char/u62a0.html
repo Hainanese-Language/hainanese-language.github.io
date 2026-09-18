@@ -15,12 +15,18 @@
 <span class="rbig">hou¹</span>
 <button class="play" onclick="play('hou1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hou1.html">同音字 3</a></div>
 <p class="rb-py">kōu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用手指或细小的东西挖。～鼻子、～个洞。</span><span class="en">To dig at with a finger or a small tool. 抠鼻子; 抠个洞.</span></span></li><li><span class="num">②</span><span><span class="zh">向狭窄的方面深求。～字眼、死～书本。</span><span class="en">To split hairs over. 抠字眼; 死抠书本.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉吝啬。～门儿。</span><span class="en">〈dial.〉 Stingy. 抠门儿.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用手指或细小的东西挖。～鼻子、～个洞。</span><span class="en">To dig at with a finger or a small tool. 抠鼻子; 抠个洞.</span></span></li><li><span class="num">②</span><span><span class="zh">向狭窄的方面深求。～字眼、死～书本。</span><span class="en">To split hairs over. 抠字眼; 死抠书本.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>吝啬。～门儿。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Stingy. 抠门儿.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

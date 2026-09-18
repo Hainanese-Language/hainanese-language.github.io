@@ -15,16 +15,22 @@
 <span class="rbig">hheng¹</span>
 <button class="play" onclick="play('hheng1.mp3')">&#9654;</button></div>
 <p class="rb-py">xīng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">兴盛；旺盛。～旺、复～、～衰、生意～隆。</span><span class="en">Thriving; flourishing. 兴旺 prosperous; 复兴 to revive; 兴衰 rise and fall; 生意兴隆 business is booming.</span></span></li><li><span class="num">②</span><span><span class="zh">使盛行；创办。～办、～建、～修水利。</span><span class="en">To promote; to set up. 兴办 to establish; 兴建 to build; 兴修水利 to undertake water conservancy works.</span></span></li><li><span class="num">③</span><span><span class="zh">流行。现在～这种式样。</span><span class="en">To be in fashion. 现在兴这种式样 this style is in fashion now.</span></span></li><li><span class="num">④</span><span><span class="zh">〈方〉准许。不～胡说。</span><span class="en">〈dial.〉 To permit. 不兴胡说 you're not to talk nonsense.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">兴盛；旺盛。～旺、复～、～衰、生意～隆。</span><span class="en">Thriving; flourishing. 兴旺 prosperous; 复兴 to revive; 兴衰 rise and fall; 生意兴隆 business is booming.</span></span></li><li><span class="num">②</span><span><span class="zh">使盛行；创办。～办、～建、～修水利。</span><span class="en">To promote; to set up. 兴办 to establish; 兴建 to build; 兴修水利 to undertake water conservancy works.</span></span></li><li><span class="num">③</span><span><span class="zh">流行。现在～这种式样。</span><span class="en">To be in fashion. 现在兴这种式样 this style is in fashion now.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>准许。不～胡说。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To permit. 不兴胡说 you're not to talk nonsense.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hheng⁴</span>
 <button class="play" onclick="play('hheng4.mp3')">&#9654;</button></div>
 <p class="rb-py">xìng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">兴趣；高兴的情绪。～趣、高～、～致、扫～、诗～大发。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">兴趣；高兴的情绪。～趣、高～、～致、扫～、诗～大发。</span><span class="en">Interest; high spirits. 兴趣 interest; 高兴 glad; 兴致 zest; 扫兴 to have one's spirits dampened; 诗兴大发 to be seized by poetic inspiration.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

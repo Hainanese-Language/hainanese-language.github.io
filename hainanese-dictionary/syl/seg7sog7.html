@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/seg7sog7.html">seg⁷ sog⁷</a></div><a class="hrow" href="/hainanese-dictionary/char/u5f73-u4e8d.html">
 <div class="ch">彳亍</div><div class="body">
 <span class="py">chìchù</span>
-<div class="gl zh">〈书〉慢慢地走；走走停停。</div></div></a><footer>
+<div class="gl zh">慢慢地走；走走停停。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

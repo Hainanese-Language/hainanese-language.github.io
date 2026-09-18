@@ -15,12 +15,18 @@
 <span class="rbig">li³</span>
 <button class="play" onclick="play('li3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/li3.html">同音字 12</a></div>
 <p class="rb-py">lǐ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">李树，落叶乔木，果实近球形，可食；也指这种果实。～树、～子、桃～满天下。也用于姓氏。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">李树，落叶乔木，果实近球形，可食；也指这种果实。～树、～子、桃～满天下。也用于姓氏。</span><span class="en">plum, a deciduous tree with roundish edible fruit; also the fruit itself. Also used as a surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

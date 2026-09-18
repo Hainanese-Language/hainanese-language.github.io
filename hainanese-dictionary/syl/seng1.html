@@ -24,7 +24,7 @@
 <div class="gl zh">液体、气体纯净不混浊(跟"浊"相对)。～水、～澈、天朗气～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77a0.html">
 <div class="ch">瞠</div><div class="body">
 <span class="py">chēng</span>
-<div class="gl zh">〈书〉瞪着眼睛看。～目结舌、～乎其后。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79f0.html">
+<div class="gl zh">瞪着眼睛看。～目结舌、～乎其后。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79f0.html">
 <div class="ch">称</div><div class="body">
 <span class="py">chēng · chèn · chèng</span>
 <div class="gl zh">叫；叫作。～呼、～号、～为。</div><div class="also">另读 <i>sin⁴</i> · <i>seng⁴</i> · <i>sin⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u86cf.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

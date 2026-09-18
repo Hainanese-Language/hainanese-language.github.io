@@ -18,7 +18,7 @@
 <div class="gl zh">手指聚拢拿取。～一把糖、～住绳子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u631d.html">
 <div class="ch">挝</div><div class="body">
 <span class="py">zhuā · wō</span>
-<div class="gl zh">〈书〉敲打。～鼓。  wō 用于国名。老～。</div><div class="also">另读 <i>o¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c99.html">
+<div class="gl zh">敲打。～鼓。  wō 用于国名。老～。</div><div class="also">另读 <i>o¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c99.html">
 <div class="ch">沙</div><div class="body">
 <span class="py">shā · shà</span>
 <div class="gl zh">细小的石粒。～土、～滩、风～、～漠。</div><div class="also">另读 <i>sa¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ca8.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

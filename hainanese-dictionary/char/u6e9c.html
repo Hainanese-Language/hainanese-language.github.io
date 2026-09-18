@@ -15,12 +15,18 @@
 <span class="rbig">liu⁶</span>
 <button class="play" onclick="play('liu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu6.html">同音字 7</a></div>
 <p class="rb-py">liū</p>
-<ul class="senses"><li><span class="pyhead">〔liū〕</span></li><li><span class="num">①</span><span><span class="zh">滑行；很快地滑过。～冰、～下山坡。</span><span class="en">To slide; to glide over quickly. 溜冰; 溜下山坡.</span></span></li><li><span class="num">②</span><span><span class="zh">偷偷地走开。～走、～之大吉。</span><span class="en">To slip away. 溜走; 溜之大吉.</span></span></li><li><span class="num">③</span><span><span class="zh">顺着；沿着。～边走、～墙根。</span><span class="en">Along; keeping close to. 溜边走; 溜墙根.</span></span></li><li><span class="num">④</span><span><span class="zh">一种烹调方法，勾芡快炒。～肝尖、醋～白菜。</span><span class="en">A way of cooking: to stir-fry quickly with a thickened sauce. 溜肝尖; 醋溜白菜.</span></span></li><li><span class="pyhead">〔liù〕</span></li><li><span class="num">⑤</span><span><span class="zh">屋檐流下的雨水；檐沟。檐～、承～。</span><span class="en">Rainwater running off the eaves; a gutter. 檐溜; 承溜.</span></span></li><li><span class="num">⑥</span><span><span class="zh">量词，用于成行成排的东西。一～平房。</span><span class="en">Measure word for things in a row. 一溜平房.</span></span></li><li><span class="num">⑦</span><span><span class="zh">〈方〉练习；温习。～嗓子。</span><span class="en">〈dial.〉 To practise; to warm up. 溜嗓子.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔liū〕</span></li><li><span class="num">①</span><span><span class="zh">滑行；很快地滑过。～冰、～下山坡。</span><span class="en">To slide; to glide over quickly. 溜冰; 溜下山坡.</span></span></li><li><span class="num">②</span><span><span class="zh">偷偷地走开。～走、～之大吉。</span><span class="en">To slip away. 溜走; 溜之大吉.</span></span></li><li><span class="num">③</span><span><span class="zh">顺着；沿着。～边走、～墙根。</span><span class="en">Along; keeping close to. 溜边走; 溜墙根.</span></span></li><li><span class="num">④</span><span><span class="zh">一种烹调方法，勾芡快炒。～肝尖、醋～白菜。</span><span class="en">A way of cooking: to stir-fry quickly with a thickened sauce. 溜肝尖; 醋溜白菜.</span></span></li><li><span class="pyhead">〔liù〕</span></li><li><span class="num">⑤</span><span><span class="zh">屋檐流下的雨水；檐沟。檐～、承～。</span><span class="en">Rainwater running off the eaves; a gutter. 檐溜; 承溜.</span></span></li><li><span class="num">⑥</span><span><span class="zh">量词，用于成行成排的东西。一～平房。</span><span class="en">Measure word for things in a row. 一溜平房.</span></span></li><li><span class="num">⑦</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>练习；温习。～嗓子。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To practise; to warm up. 溜嗓子.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

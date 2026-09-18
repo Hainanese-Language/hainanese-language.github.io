@@ -15,12 +15,18 @@
 <span class="rbig">giao¹</span>
 <button class="play" onclick="play('kiau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/giao1.html">同音字 9</a></div>
 <p class="rb-py">jiāo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">把液体洒在物体上。～水、～花、～了一身。</span><span class="en">To sprinkle liquid on something; to water. 浇水; 浇花; 浇了一身.</span></span></li><li><span class="num">②</span><span><span class="zh">把液体倒入模子使成型。～铸、～版。</span><span class="en">To pour liquid into a mould to cast. 浇铸; 浇版.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉浮薄；不厚道。～薄、世风～漓。</span><span class="en">〈lit.〉 Frivolous; unkind. 浇薄; 世风浇漓.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">把液体洒在物体上。～水、～花、～了一身。</span><span class="en">To sprinkle liquid on something; to water. 浇水; 浇花; 浇了一身.</span></span></li><li><span class="num">②</span><span><span class="zh">把液体倒入模子使成型。～铸、～版。</span><span class="en">To pour liquid into a mould to cast. 浇铸; 浇版.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>浮薄；不厚道。～薄、世风～漓。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Frivolous; unkind. 浇薄; 世风浇漓.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>倩 · 海南话字典</title><meta name="description" content="倩 的海南话读音 sin⁶，普通话 qiàn。〈书〉美好。～影、～装。">
+<title>倩 · 海南话字典</title><meta name="description" content="倩 的海南话读音 sin⁶，普通话 qiàn。美好。～影、～装。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">sin⁶</span>
 <button class="play" onclick="play('sien6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sin6.html">同音字 2</a></div>
 <p class="rb-py">qiàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉美好。～影、～装。</span><span class="en">〈lit.〉 Beautiful. 倩影 a lovely figure; 倩装 fine attire.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉请人代做。～人代笔。</span><span class="en">〈lit.〉 To ask someone to do something for one. 倩人代笔 to have someone write it for one.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>美好。～影、～装。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Beautiful. 倩影 a lovely figure; 倩装 fine attire.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>请人代做。～人代笔。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To ask someone to do something for one. 倩人代笔 to have someone write it for one.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

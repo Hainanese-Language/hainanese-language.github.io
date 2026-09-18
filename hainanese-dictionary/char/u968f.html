@@ -15,12 +15,18 @@
 <span class="rbig">sui²</span>
 <button class="play" onclick="play('sui2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sui2.html">同音字 7</a></div>
 <p class="rb-py">suí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">跟着。～从、跟～、～行、～声附和。</span><span class="en">To follow. 随从 an attendant; 跟随 to follow; 随行 to travel with; 随声附和 to echo whatever is said.</span></span></li><li><span class="num">②</span><span><span class="zh">顺从；任凭。～意、～和、～你便。</span><span class="en">To comply; to let be. 随意 as one pleases; 随和 easy-going; 随你便 suit yourself.</span></span></li><li><span class="num">③</span><span><span class="zh">顺便；就着。～手关门、～口说说。</span><span class="en">Along with something else. 随手关门 to close the door on the way out; 随口说说 to say something offhand.</span></span></li><li><span class="num">④</span><span><span class="zh">〈方〉像。他长得～他父亲。</span><span class="en">〈dial.〉 To take after. 他长得随他父亲 he takes after his father.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">跟着。～从、跟～、～行、～声附和。</span><span class="en">To follow. 随从 an attendant; 跟随 to follow; 随行 to travel with; 随声附和 to echo whatever is said.</span></span></li><li><span class="num">②</span><span><span class="zh">顺从；任凭。～意、～和、～你便。</span><span class="en">To comply; to let be. 随意 as one pleases; 随和 easy-going; 随你便 suit yourself.</span></span></li><li><span class="num">③</span><span><span class="zh">顺便；就着。～手关门、～口说说。</span><span class="en">Along with something else. 随手关门 to close the door on the way out; 随口说说 to say something offhand.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>像。他长得～他父亲。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To take after. 他长得随他父亲 he takes after his father.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

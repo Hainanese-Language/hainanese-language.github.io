@@ -15,12 +15,18 @@
 <span class="rbig">se¹</span>
 <button class="play" onclick="play('se1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se1.html">同音字 26</a></div>
 <p class="rb-py">zī</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">生长；增添。～生、～长、～事。</span><span class="en">To grow; to add to. 滋生; 滋长; 滋事.</span></span></li><li><span class="num">②</span><span><span class="zh">滋润；补养。～养、～补、～润。</span><span class="en">To moisten; to nourish. 滋养; 滋补; 滋润.</span></span></li><li><span class="num">③</span><span><span class="zh">味道。～味。</span><span class="en">Taste; flavour. 滋味.</span></span></li><li><span class="num">④</span><span><span class="zh">〈方〉喷射。往外～水。</span><span class="en">〈dial.〉 To squirt. 往外滋水.</span></span></li></ul><div class="alt"><span class="r2">se³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('se3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">生长；增添。～生、～长、～事。</span><span class="en">To grow; to add to. 滋生; 滋长; 滋事.</span></span></li><li><span class="num">②</span><span><span class="zh">滋润；补养。～养、～补、～润。</span><span class="en">To moisten; to nourish. 滋养; 滋补; 滋润.</span></span></li><li><span class="num">③</span><span><span class="zh">味道。～味。</span><span class="en">Taste; flavour. 滋味.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>喷射。往外～水。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To squirt. 往外滋水.</span></span></li></ul><div class="alt"><span class="r2">se³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('se3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

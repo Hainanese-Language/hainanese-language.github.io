@@ -15,12 +15,18 @@
 <span class="rbig">hab⁷</span>
 <button class="play" onclick="play('hab7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hab7.html">同音字 10</a></div>
 <p class="rb-py">āo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">周围高、中间低，跟"凸"相对。～陷、～透镜、地面～下去了。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">周围高、中间低，跟"凸"相对。～陷、～透镜、地面～下去了。</span><span class="en">Concave; sunken in the middle — the opposite of 凸. 凹陷 to cave in; 凹透镜 a concave lens.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

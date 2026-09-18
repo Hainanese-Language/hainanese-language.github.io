@@ -24,10 +24,10 @@
 <div class="gl zh">四周拦挡起来。～墙、包～、～起来。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5729.html">
 <div class="ch">圩</div><div class="body">
 <span class="py">wéi · xū</span>
-<div class="gl zh">低洼地区防水的堤。～田、～堤、筑～。  xū 〈方〉集市。赶～、～日、～场。</div><div class="also">另读 <i>hhi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e0f.html">
+<div class="gl zh">低洼地区防水的堤。～田、～堤、筑～。  xū 集市。赶～、～日、～场。</div><div class="also">另读 <i>hhi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e0f.html">
 <div class="ch">帏</div><div class="body">
 <span class="py">wéi</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e37.html">
+<div class="gl zh">帐子。～幕。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5e37.html">
 <div class="ch">帷</div><div class="body">
 <span class="py">wéi</span>
 <div class="gl zh">围在四周的布幕。～幕、运筹～幄。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7eac.html">
@@ -51,6 +51,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">高兴；快乐(跟"忧""悲"相对)。欢～、～悦、～出望外。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79a7.html">
 <div class="ch">禧</div><div class="body">
 <span class="py">xǐ</span>
-<div class="gl zh">〈书〉幸福；吉祥。年～、新～、恭贺新～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8be9.html">
+<div class="gl zh">幸福；吉祥。年～、新～、恭贺新～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8be9.html">
 <div class="ch">诩</div><div class="body">
 <span class="py">xǔ</span>
 <div class="gl zh">夸耀；说大话。自～。</div><div class="also">另读 <i>hhu³</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

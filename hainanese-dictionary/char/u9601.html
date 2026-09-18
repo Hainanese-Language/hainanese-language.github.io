@@ -15,12 +15,18 @@
 <span class="rbig">gog⁷</span>
 <button class="play" onclick="play('kog7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gog7.html">同音字 13</a></div>
 <p class="rb-py">gé</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">一种两层以上的建筑物。楼～、亭台楼～、藏经～。</span><span class="en">A pavilion of two or more storeys. 楼阁; 亭台楼阁; 藏经阁.</span></span></li><li><span class="num">②</span><span><span class="zh">内阁。～员、组～、入～。</span><span class="en">A cabinet of ministers. 阁员; 组阁; 入阁.</span></span></li><li><span class="num">③</span><span><span class="zh">〈旧〉女子的卧房。出～(指女子出嫁)。</span><span class="en">〈former〉 A woman's chamber. 出阁 (of a woman, to marry).</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">一种两层以上的建筑物。楼～、亭台楼～、藏经～。</span><span class="en">A pavilion of two or more storeys. 楼阁; 亭台楼阁; 藏经阁.</span></span></li><li><span class="num">②</span><span><span class="zh">内阁。～员、组～、入～。</span><span class="en">A cabinet of ministers. 阁员; 组阁; 入阁.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>女子的卧房。出～(指女子出嫁)。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A woman's chamber. 出阁 (of a woman, to marry).</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

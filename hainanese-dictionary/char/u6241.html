@@ -15,16 +15,22 @@
 <span class="rbig">bin³</span>
 <button class="play" onclick="play('pien3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/bin3.html">同音字 3</a></div>
 <p class="rb-py">biǎn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体厚度小而面积较大。～盒、压～、鸭子嘴～。</span><span class="en">flat; thin and broad.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉看不起。别把人看～了。</span><span class="en">〈dial.〉 to look down on.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">物体厚度小而面积较大。～盒、压～、鸭子嘴～。</span><span class="en">flat; thin and broad.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>看不起。别把人看～了。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> to look down on.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">pin¹</span>
 <button class="play" onclick="play('phien1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pin1.html">同音字 5</a></div>
 <p class="rb-py">piān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"扁舟"，指小船。一叶～舟。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"扁舟"，指小船。一叶～舟。</span><span class="en">Only in 扁舟: a small boat.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

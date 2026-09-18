@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>擢 · 海南话字典</title><meta name="description" content="擢 的海南话读音 duag⁷，普通话 zhuó。〈书〉">
+<title>擢 · 海南话字典</title><meta name="description" content="擢 的海南话读音 duag⁷，普通话 zhuó。拔；抽出。～发难数。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">duag⁷</span>
 <button class="play" onclick="play('tuag7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/duag7.html">同音字 9</a></div>
 <p class="rb-py">zhuó</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉</span></span></li><li><span class="num">①</span><span><span class="zh">拔；抽出。～发难数。</span><span class="en">To pull out. 擢发难数 (too many to count).</span></span></li><li><span class="num">②</span><span><span class="zh">提拔。～升、～用、～拔。</span><span class="en">To promote. 擢升; 擢用; 擢拔.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span></span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span></span></span></li><li><span class="num">①</span><span><span class="zh">拔；抽出。～发难数。</span><span class="en">To pull out. 擢发难数 (too many to count).</span></span></li><li><span class="num">②</span><span><span class="zh">提拔。～升、～用、～拔。</span><span class="en">To promote. 擢升; 擢用; 擢拔.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

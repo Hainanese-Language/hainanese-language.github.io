@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>士 · 海南话字典</title><meta name="description" content="士 的海南话读音 se⁶，普通话 shì。〈古〉介于大夫和庶民之间的阶层。～农工商。">
+<title>士 · 海南话字典</title><meta name="description" content="士 的海南话读音 se⁶，普通话 shì。介于大夫和庶民之间的阶层。～农工商。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">se⁶</span>
 <button class="play" onclick="play('se6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se6.html">同音字 7</a></div>
 <p class="rb-py">shì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈古〉介于大夫和庶民之间的阶层。～农工商。</span><span class="en">〈arch.〉 The class between officials and commoners. 士农工商.</span></span></li><li><span class="num">②</span><span><span class="zh">读书人；知识分子。学～、～人、名～。</span><span class="en">A scholar. 学士; 士人; 名士.</span></span></li><li><span class="num">③</span><span><span class="zh">军人；军衔的一级。战～、～兵、上～。</span><span class="en">A soldier; a rank of non-commissioned officer. 战士; 士兵; 上士.</span></span></li><li><span class="num">④</span><span><span class="zh">对人的美称。烈～、女～、志～、勇～。</span><span class="en">A respectful term for a person. 烈士; 女士; 志士; 勇士.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>介于大夫和庶民之间的阶层。～农工商。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> The class between officials and commoners. 士农工商.</span></span></li><li><span class="num">②</span><span><span class="zh">读书人；知识分子。学～、～人、名～。</span><span class="en">A scholar. 学士; 士人; 名士.</span></span></li><li><span class="num">③</span><span><span class="zh">军人；军衔的一级。战～、～兵、上～。</span><span class="en">A soldier; a rank of non-commissioned officer. 战士; 士兵; 上士.</span></span></li><li><span class="num">④</span><span><span class="zh">对人的美称。烈～、女～、志～、勇～。</span><span class="en">A respectful term for a person. 烈士; 女士; 志士; 勇士.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

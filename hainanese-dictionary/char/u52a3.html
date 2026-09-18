@@ -15,12 +15,18 @@
 <span class="rbig">luad⁷</span>
 <button class="play" onclick="play('luat7.mp3')">&#9654;</button></div>
 <p class="rb-py">liè</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">坏；不好；跟"优"相对。～质、恶～、～势、优～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">坏；不好；跟"优"相对。～质、恶～、～势、优～。</span><span class="en">Bad; poor; the opposite of 优. 劣质 of inferior quality; 恶劣 vile; 劣势 an unfavourable position; 优劣 merits and demerits.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,19 @@
 <span class="rbig">hi³</span>
 <button class="play" onclick="play('hi3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hi3.html">同音字 6</a></div>
 <p class="rb-py">chǐ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">牙。牙～、～科、唇～相依。</span><span class="en">A tooth.</span></span></li><li><span class="num">②</span><span><span class="zh">排列像牙齿的东西。～轮、锯～。</span><span class="en">Something toothed, such as a gear or a saw.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉年龄。年～、马～徒增。</span><span class="en">〈lit.〉 Age; years.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉说到；提起。不足～数、～及。</span><span class="en">〈lit.〉 To mention; to speak of.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">si²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">牙。牙～、～科、唇～相依。</span><span class="en">A tooth.</span></span></li><li><span class="num">②</span><span><span class="zh">排列像牙齿的东西。～轮、锯～。</span><span class="en">Something toothed, such as a gear or a saw.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>年龄。年～、马～徒增。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Age; years.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>说到；提起。不足～数、～及。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To mention; to speak of.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">si²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('si2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

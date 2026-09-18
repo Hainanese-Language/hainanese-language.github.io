@@ -18,7 +18,7 @@
 <div class="gl zh">欲望。食～、～念、求知～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6ebd.html">
 <div class="ch">溽</div><div class="body">
 <span class="py">rù</span>
-<div class="gl zh">〈书〉湿热。～暑、～热。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72f1.html">
+<div class="gl zh">湿热。～暑、～热。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72f1.html">
 <div class="ch">狱</div><div class="body">
 <span class="py">yù</span>
 <div class="gl zh">监禁犯人的地方。监～、～卒、入～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f1b.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

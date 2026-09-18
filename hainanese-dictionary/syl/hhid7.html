@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/hhid7.html">hhid⁷</a><a class="chip" href="/hainanese-dictionary/syl/hhid8.html">hhid⁸</a></div><a class="hrow" href="/hainanese-dictionary/char/u64b7.html">
 <div class="ch">撷</div><div class="body">
 <span class="py">xié</span>
-<div class="gl zh">〈书〉摘取。采～、～英。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u874e.html">
+<div class="gl zh">摘取。采～、～英。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u874e.html">
 <div class="ch">蝎</div><div class="body">
 <span class="py">xiē</span>
 <div class="gl zh">节肢动物，尾部有毒钩，能蜇人。～子、蛇～心肠。</div></div></a><footer>
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

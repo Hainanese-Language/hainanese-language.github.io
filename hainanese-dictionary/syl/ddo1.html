@@ -15,7 +15,7 @@
 <div class="gl zh">用来切、割、砍的工具。菜～、～刃、～片、剪～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54c6-u55e6.html">
 <div class="ch">哆嗦</div><div class="body">
 <span class="py">duōsuo</span>
-<div class="gl zh">身体不由自主地颤动。冷得直～、吓得浑身～。</div><div class="also">另读 <i>so¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u591a.html">
+<div class="gl zh">身体不由自主地颤动。冷得直～、吓得浑身～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u591a.html">
 <div class="ch">多</div><div class="body">
 <span class="py">duō</span>
 <div class="gl zh">数量大；跟"少"相对。～数、许～、人～。</div><div class="also">主读 <i>doi¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f53.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

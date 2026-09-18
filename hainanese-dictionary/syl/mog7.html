@@ -15,7 +15,7 @@
 <div class="gl zh">仅用于"寂～"，指孤单冷清。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6c90.html">
 <div class="ch">沐</div><div class="body">
 <span class="py">mù</span>
-<div class="gl zh">〈书〉洗头发；泛指洗涤。～浴、栉风～雨。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7267.html">
+<div class="gl zh">洗头发；泛指洗涤。～浴、栉风～雨。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7267.html">
 <div class="ch">牧</div><div class="body">
 <span class="py">mù</span>
 <div class="gl zh">放养牲畜。放～、～场、游～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u83ab.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

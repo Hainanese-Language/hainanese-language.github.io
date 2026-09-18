@@ -27,7 +27,7 @@
 <div class="gl zh">周代诸侯国名，在今山东。～州。也用于姓氏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u743c.html">
 <div class="ch">琼</div><div class="body">
 <span class="py">qióng</span>
-<div class="gl zh">〈书〉美玉。～浆、～楼玉宇。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75bc.html">
+<div class="gl zh">美玉。～浆、～楼玉宇。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75bc.html">
 <div class="ch">疼</div><div class="body">
 <span class="py">téng</span>
 <div class="gl zh">疼痛。头～、伤口很～、～得厉害。</div><div class="also">另读 <i>ddong⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u817e.html">
@@ -36,7 +36,7 @@
 <div class="gl zh">上升；升起。～空、飞～、～云驾雾。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8315.html">
 <div class="ch">茕</div><div class="body">
 <span class="py">qióng</span>
-<div class="gl zh">〈书〉孤独无依。～独、～～孑立。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8713.html">
+<div class="gl zh">孤独无依。～独、～～孑立。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8713.html">
 <div class="ch">蜓</div><div class="body">
 <span class="py">tíng</span>
 <div class="gl zh">仅用于"蜻蜓"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8a8a.html">
@@ -45,7 +45,7 @@
 <div class="gl zh">照原稿抄写。～写、～清、～录。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9706.html">
 <div class="ch">霆</div><div class="body">
 <span class="py">tíng</span>
-<div class="gl zh">〈书〉响声很大的雷。雷～万钧。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9877.html">
+<div class="gl zh">响声很大的雷。雷～万钧。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9877.html">
 <div class="ch">顷</div><div class="body">
 <span class="py">qǐng</span>
 <div class="gl zh">地积单位，一～合一百亩。碧波万～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ead.html">
@@ -60,6 +60,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

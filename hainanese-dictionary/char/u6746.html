@@ -15,7 +15,7 @@
 <span class="rbig">gan⁶</span>
 <button class="play" onclick="play('kan6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gan6.html">同音字 2</a></div>
 <p class="rb-py">gān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">较长的直立木棍或类似的东西。旗～、电线～、栏～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">较长的直立木棍或类似的东西。旗～、电线～、栏～。</span><span class="en">a long upright pole or something similar.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">gan³</span>
 <button class="play" onclick="play('kan3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gan3.html">同音字 7</a></div>
 <p class="rb-py">gǎn</p>
@@ -25,6 +25,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

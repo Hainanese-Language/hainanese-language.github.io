@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/puan1.html">puan¹</a><a class="chip on" href="/hainanese-dictionary/syl/puan2.html">puan²</a><a class="chip" href="/hainanese-dictionary/syl/puan3.html">puan³</a><a class="chip" href="/hainanese-dictionary/syl/puan4.html">puan⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u69c3.html">
 <div class="ch">槃</div><div class="body">
 <span class="py">pán</span>
-<div class="gl zh">〈书〉同"盘"。杯～、～根错节。</div><div class="also">主读 <i>bua²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76d8.html">
+<div class="gl zh">同"盘"。杯～、～根错节。</div><div class="also">主读 <i>bua²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u76d8.html">
 <div class="ch">盘</div><div class="body">
 <span class="py">pán</span>
 <div class="gl zh">盛放东西的浅底器具。～子、茶～、托～。</div><div class="also">主读 <i>bua²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u78d0.html">
@@ -21,12 +21,18 @@
 <div class="gl zh">厚而大的石头。～石、稳如～石。</div><div class="also">主读 <i>pan²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u87e0.html">
 <div class="ch">蟠</div><div class="body">
 <span class="py">pán</span>
-<div class="gl zh">〈书〉盘曲；环绕。～龙、～踞。</div><div class="also">主读 <i>pan²</i></div></div></a><footer>
+<div class="gl zh">盘曲；环绕。～龙、～踞。</div><div class="also">主读 <i>pan²</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

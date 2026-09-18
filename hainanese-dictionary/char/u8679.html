@@ -16,7 +16,9 @@
 <button class="play" onclick="play('hhong2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhong2.html">同音字 12</a></div>
 <p class="rb-py">hóng</p>
 <ul class="senses"><li><span class="num"></span><span><span class="zh">雨后天空出现的彩色圆弧。彩～、～霓。
-，用于口语。天上出～了。</span></span></li></ul><div class="alt"><span class="pill">白读</span><span class="r2">hiang⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hiang5.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+，用于口语。天上出～了。</span><span class="en">A rainbow, the coloured arc seen after rain.
+, used in speech.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">hiang⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hiang5.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">hiang⁵</span>
 <button class="play" onclick="play('hiang5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hiang5.html">同音字 2</a></div>
 <p class="rb-py">jiàng</p>
@@ -26,6 +28,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

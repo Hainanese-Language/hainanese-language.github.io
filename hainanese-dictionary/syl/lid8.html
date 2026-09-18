@@ -21,7 +21,7 @@
 <div class="gl zh">象声词，形容清脆的鸟叫声。～～莺声。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u67a5.html">
 <div class="ch">枥</div><div class="body">
 <span class="py">lì</span>
-<div class="gl zh">〈书〉马槽。老骥伏～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70c8.html">
+<div class="gl zh">马槽。老骥伏～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70c8.html">
 <div class="ch">烈</div><div class="body">
 <span class="py">liè</span>
 <div class="gl zh">猛；强烈。猛～、～火、～酒。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75ac.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

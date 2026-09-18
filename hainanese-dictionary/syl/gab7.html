@@ -15,7 +15,7 @@
 <div class="gl zh">软体动物，有两片圆形或椭圆形的壳，肉可以吃。～蜊、文～。  há 用于"蛤蟆"，青蛙和蟾蜍的统称。</div><div class="also">另读 <i>hha²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u988c.html">
 <div class="ch">颌</div><div class="body">
 <span class="py">gé · hé</span>
-<div class="gl zh">构成口腔上下部分的骨骼和肌肉组织。上～、下～。  hé 〈书〉嘴。</div><div class="also">另读 <i>hhab⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e3d.html">
+<div class="gl zh">构成口腔上下部分的骨骼和肌肉组织。上～、下～。  hé 嘴。</div><div class="also">另读 <i>hhab⁸</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e3d.html">
 <div class="ch">鸽</div><div class="body">
 <span class="py">gē</span>
 <div class="gl zh">鸟名，善飞，有的能传递书信。～子、信～、家～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5408.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

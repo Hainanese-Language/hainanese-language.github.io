@@ -15,12 +15,18 @@
 <div class="gl zh">量词，用于个体事物。一～事、两～衣服、三～行李。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ec5.html">
 <div class="ch">仅</div><div class="body">
 <span class="py">jǐn · jìn</span>
-<div class="gl zh">只；才。～有、～此一次、绝无～有。  jìn 〈古〉将近；几乎。士卒～万人。</div><div class="also">主读 <i>gin³</i></div></div></a><footer>
+<div class="gl zh">只；才。～有、～此一次、绝无～有。  jìn 将近；几乎。士卒～万人。</div><div class="also">主读 <i>gin³</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

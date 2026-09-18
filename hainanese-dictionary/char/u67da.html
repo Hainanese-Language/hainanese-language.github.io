@@ -15,16 +15,22 @@
 <span class="rbig">iu²</span>
 <button class="play" onclick="play('iu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/iu2.html">同音字 3</a></div>
 <p class="rb-py">yóu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"柚木"，一种落叶乔木，木材贵重。～木。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"柚木"，一种落叶乔木，木材贵重。～木。</span><span class="en">Only in 柚木: teak, a deciduous tree yielding valuable timber.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">iu¹</span>
 <button class="play" onclick="play('iu1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/iu1.html">同音字 5</a></div>
 <p class="rb-py">yòu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">柚子，常绿乔木，果实大，皮厚，味酸甜；也指这种果实。～子、沙田～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">柚子，常绿乔木，果实大，皮厚，味酸甜；也指这种果实。～子、沙田～。</span><span class="en">pomelo, an evergreen tree bearing large thick-skinned sweet-sour fruit; also the fruit itself.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

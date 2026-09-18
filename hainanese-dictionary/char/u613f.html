@@ -15,12 +15,18 @@
 <span class="rbig">yuan⁵</span>
 <button class="play" onclick="play('juan5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yuan5.html">同音字 2</a></div>
 <p class="rb-py">yuàn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">乐意；肯。情～、自～、心甘情～。</span><span class="en">willing; ready to.</span></span></li><li><span class="num">②</span><span><span class="zh">希望。但～如此、～你早日康复。</span><span class="en">to hope.</span></span></li><li><span class="num">③</span><span><span class="zh">心愿；也指对神佛许下的心愿。志～、如～以偿、许～、还～。</span><span class="en">a wish; also a vow made to a deity.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉老实谨慎。谨～。</span><span class="en">〈lit.〉 honest and prudent.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">乐意；肯。情～、自～、心甘情～。</span><span class="en">willing; ready to.</span></span></li><li><span class="num">②</span><span><span class="zh">希望。但～如此、～你早日康复。</span><span class="en">to hope.</span></span></li><li><span class="num">③</span><span><span class="zh">心愿；也指对神佛许下的心愿。志～、如～以偿、许～、还～。</span><span class="en">a wish; also a vow made to a deity.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>老实谨慎。谨～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> honest and prudent.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

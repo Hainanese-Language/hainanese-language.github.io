@@ -15,10 +15,10 @@
 <div class="gl zh">用于"奕奕"，形容精神焕发。神采～～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f08.html">
 <div class="ch">弈</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉下棋；也指围棋。对～、～棋。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f0b.html">
+<div class="gl zh">下棋；也指围棋。对～、～棋。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f0b.html">
 <div class="ch">弋</div><div class="body">
 <span class="py">yì</span>
-<div class="gl zh">〈书〉用系着绳的箭射鸟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u66f3.html">
+<div class="gl zh">用系着绳的箭射鸟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u66f3.html">
 <div class="ch">曳</div><div class="body">
 <span class="py">yè</span>
 <div class="gl zh">拉；拖。～光弹、拖～、摇～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bd1.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

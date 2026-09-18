@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/hhuan1.html">hhuan¹</a><a class="chip" href="/hainanese-dictionary/syl/hhuan2.html">hhuan²</a><a class="chip" href="/hainanese-dictionary/syl/hhuan3.html">hhuan³</a><a class="chip" href="/hainanese-dictionary/syl/hhuan4.html">hhuan⁴</a><a class="chip" href="/hainanese-dictionary/syl/hhuan5.html">hhuan⁵</a><a class="chip" href="/hainanese-dictionary/syl/hhuan6.html">hhuan⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u6684.html">
 <div class="ch">暄</div><div class="body">
 <span class="py">xuān</span>
-<div class="gl zh">〈书〉温暖（多指阳光）。寒～、～和。</div><div class="also">另读 <i>hhin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6b22.html">
+<div class="gl zh">温暖（多指阳光）。寒～、～和。</div><div class="also">另读 <i>hhin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6b22.html">
 <div class="ch">欢</div><div class="body">
 <span class="py">huān</span>
 <div class="gl zh">快乐；高兴。～喜、～乐、～天喜地。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u737e.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

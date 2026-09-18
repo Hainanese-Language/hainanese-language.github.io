@@ -15,16 +15,22 @@
 <span class="rbig">se¹</span>
 <button class="play" onclick="play('se1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se1.html">同音字 26</a></div>
 <p class="rb-py">sì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">观察；等待时机。窥～、～机而动。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">观察；等待时机。窥～、～机而动。</span><span class="en">To watch; to await one's chance. 窥伺 to lie in wait; 伺机而动 to bide one's time.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">se⁴</span>
 <button class="play" onclick="play('se4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/se4.html">同音字 5</a></div>
 <p class="rb-py">cì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"伺候"，指在人身边照料、服侍。～候病人。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"伺候"，指在人身边照料、服侍。～候病人。</span><span class="en">Used in 伺候: to wait on someone. 伺候病人 to look after a patient.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

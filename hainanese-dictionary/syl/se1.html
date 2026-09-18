@@ -12,13 +12,13 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/se1.html">se¹</a><a class="chip" href="/hainanese-dictionary/syl/se2.html">se²</a><a class="chip" href="/hainanese-dictionary/syl/se3.html">se³</a><a class="chip" href="/hainanese-dictionary/syl/se4.html">se⁴</a><a class="chip" href="/hainanese-dictionary/syl/se5.html">se⁵</a><a class="chip" href="/hainanese-dictionary/syl/se6.html">se⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u4e4b.html">
 <div class="ch">之</div><div class="body">
 <span class="py">zhī</span>
-<div class="gl zh">〈书〉助词，相当于"的"。三分～一、光荣～家。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f3a.html">
+<div class="gl zh">助词，相当于"的"。三分～一、光荣～家。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f3a.html">
 <div class="ch">伺</div><div class="body">
 <span class="py">sì · cì</span>
 <div class="gl zh">观察；等待时机。窥～、～机而动。  cì 用于"伺候"，指在人身边照料、服侍。～候病人。</div><div class="also">另读 <i>se⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5179.html">
 <div class="ch">兹</div><div class="body">
 <span class="py">zī · cí</span>
-<div class="gl zh">〈书〉这；这个。～事体大、念～在～。</div><div class="also">另读 <i>se³</i> · <i>se²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53ae.html">
+<div class="gl zh">这；这个。～事体大、念～在～。</div><div class="also">另读 <i>se³</i> · <i>se²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53ae.html">
 <div class="ch">厮</div><div class="body">
 <span class="py">sī</span>
 <div class="gl zh">旧时指干粗活的男仆。小～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u53f8.html">
@@ -54,7 +54,7 @@
 <div class="gl zh">用手把东西拉开或使断裂。～开、～碎、～破、～下一页。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u65af.html">
 <div class="ch">斯</div><div class="body">
 <span class="py">sī</span>
-<div class="gl zh">〈书〉这；此。～人、～时。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u661f.html">
+<div class="gl zh">这；此。～人、～时。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u661f.html">
 <div class="ch">星</div><div class="body">
 <span class="py">xīng</span>
 <div class="gl zh">夜空中发光或反射光的天体。～星、恒～、～空。</div><div class="also">另读 <i>deng¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6ecb.html">
@@ -93,6 +93,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

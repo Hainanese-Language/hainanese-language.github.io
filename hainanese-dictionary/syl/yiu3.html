@@ -24,7 +24,7 @@
 <div class="gl zh">皮肤上长的小疙瘩，俗称瘊子。～赘、寻常～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7cc5.html">
 <div class="ch">糅</div><div class="body">
 <span class="py">róu</span>
-<div class="gl zh">〈书〉混合；掺杂。杂～、～合。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u90ae.html">
+<div class="gl zh">混合；掺杂。杂～、～合。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u90ae.html">
 <div class="ch">邮</div><div class="body">
 <span class="py">yóu</span>
 <div class="gl zh">传递信件、包裹等。～寄、～递、～购。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u97a3.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

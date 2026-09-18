@@ -15,12 +15,19 @@
 <span class="rbig">lid⁸</span>
 <button class="play" onclick="play('liet8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lid8.html">同音字 6</a></div>
 <p class="rb-py">lì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">经过。经～、～程、～尽艰辛。</span><span class="en">To go through. 经历 to experience; 历程 a course; 历尽艰辛 to have gone through every hardship.</span></span></li><li><span class="num">②</span><span><span class="zh">经历过的。～年、～代、～史。</span><span class="en">Past; successive. 历年 over the years; 历代 successive dynasties; 历史 history.</span></span></li><li><span class="num">③</span><span><span class="zh">一个一个地。～数、～～在目。</span><span class="en">One by one. 历数 to enumerate; 历历在目 vivid before one's eyes.</span></span></li><li><span class="num">④</span><span><span class="zh">推算年月日的方法；记录年月日的书表。～法、日～、阳～。</span><span class="en">A calendar; the reckoning of dates. 历法 the calendar system; 日历 a daily calendar; 阳历 the solar calendar.</span></span></li></ul><div class="alt"><span class="r2">leg⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('leg8.mp3')">&#9654;</button></div><div class="alt"><span class="pill">又读</span><span class="r2">le⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('le5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">经过。经～、～程、～尽艰辛。</span><span class="en">To go through. 经历 to experience; 历程 a course; 历尽艰辛 to have gone through every hardship.</span></span></li><li><span class="num">②</span><span><span class="zh">经历过的。～年、～代、～史。</span><span class="en">Past; successive. 历年 over the years; 历代 successive dynasties; 历史 history.</span></span></li><li><span class="num">③</span><span><span class="zh">一个一个地。～数、～～在目。</span><span class="en">One by one. 历数 to enumerate; 历历在目 vivid before one's eyes.</span></span></li><li><span class="num">④</span><span><span class="zh">推算年月日的方法；记录年月日的书表。～法、日～、阳～。</span><span class="en">A calendar; the reckoning of dates. 历法 the calendar system; 日历 a daily calendar; 阳历 the solar calendar.</span></span></li></ul><div class="alt"><span class="r2">leg⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('leg8.mp3')">&#9654;</button></div><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">le⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('le5.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❶ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

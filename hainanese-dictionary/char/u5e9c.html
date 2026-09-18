@@ -15,12 +15,18 @@
 <span class="rbig">pu³</span>
 <button class="play" onclick="play('phu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pu3.html">同音字 3</a></div>
 <p class="rb-py">fǔ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">国家行政机关。政～、官～。</span><span class="en">A government office. 政府; 官府.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉行政区划名，在县以上。～城、知～、开封～。</span><span class="en">〈former〉 A prefecture, ranking above a county. 府城; 知府; 开封府.</span></span></li><li><span class="num">③</span><span><span class="zh">官员、贵族的住宅；也敬称对方的家。王～、贵～、～上。</span><span class="en">The residence of an official or noble; also a polite word for another's home. 王府; 贵府; 府上.</span></span></li><li><span class="num">④</span><span><span class="zh">储藏文书或财物的地方。～库、天～之国。</span><span class="en">A repository for documents or valuables. 府库; 天府之国.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">国家行政机关。政～、官～。</span><span class="en">A government office. 政府; 官府.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>行政区划名，在县以上。～城、知～、开封～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A prefecture, ranking above a county. 府城; 知府; 开封府.</span></span></li><li><span class="num">③</span><span><span class="zh">官员、贵族的住宅；也敬称对方的家。王～、贵～、～上。</span><span class="en">The residence of an official or noble; also a polite word for another's home. 王府; 贵府; 府上.</span></span></li><li><span class="num">④</span><span><span class="zh">储藏文书或财物的地方。～库、天～之国。</span><span class="en">A repository for documents or valuables. 府库; 天府之国.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

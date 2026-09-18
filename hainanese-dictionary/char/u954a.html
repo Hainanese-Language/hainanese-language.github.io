@@ -15,12 +15,18 @@
 <span class="rbig">niab⁷</span>
 <button class="play" onclick="play('niab7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/niab7.html">同音字 3</a></div>
 <p class="rb-py">niè</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">拔取毛发或夹取细小东西的工具；用镊子夹取。～子、～住。</span></span></li></ul><div class="alt"><span class="r2">nib⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('niab7.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">拔取毛发或夹取细小东西的工具；用镊子夹取。～子、～住。</span><span class="en">Tweezers; to pick something up with tweezers.</span></span></li></ul><div class="alt"><span class="r2">nib⁷</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('niab7.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -33,7 +33,7 @@
 <div class="gl zh">总合；聚在一起。～合、～述、错～复杂。  zèng 织布机上使经线上下分开以受纬线的装置。～片。</div><div class="also">另读 <i>dang⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u87bd.html">
 <div class="ch">螽</div><div class="body">
 <span class="py">zhōng</span>
-<div class="gl zh">〈书〉蝗虫一类的昆虫。～斯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8877.html">
+<div class="gl zh">蝗虫一类的昆虫。～斯。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8877.html">
 <div class="ch">衷</div><div class="body">
 <span class="py">zhōng</span>
 <div class="gl zh">内心。～心、由～、苦～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8e2a.html">
@@ -45,7 +45,7 @@
 <div class="gl zh">计时的器具。时～、闹～、～表。</div><div class="also">另读 <i>ziang¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5fea.html">
 <div class="ch">忪</div><div class="body">
 <span class="py">sōng · zhōng</span>
-<div class="gl zh">多用于"惺～"，形容刚睡醒时眼睛模糊。睡眼惺～。  zhōng 〈书〉惊恐；心跳不安。怔～。</div><div class="also">主读 <i>song¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u679e.html">
+<div class="gl zh">多用于"惺～"，形容刚睡醒时眼睛模糊。睡眼惺～。  zhōng 惊恐；心跳不安。怔～。</div><div class="also">主读 <i>song¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u679e.html">
 <div class="ch">枞</div><div class="body">
 <span class="py">cōng · zōng</span>
 <div class="gl zh">冷杉，常绿乔木，木材可做建筑材料。～树。  zōng 用于地名，枞阳，在安徽。～阳。</div><div class="also">主读 <i>song¹</i></div></div></a><footer>
@@ -54,6 +54,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

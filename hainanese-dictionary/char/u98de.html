@@ -15,12 +15,19 @@
 <span class="rbig">bue¹</span>
 <button class="play" onclick="play('pue1.mp3')">&#9654;</button></div>
 <p class="rb-py">fēi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">鸟虫等在空中活动。～鸟、～翔、～蛾扑火。</span><span class="en">To fly, of birds and insects. 飞鸟 a bird on the wing; 飞蛾扑火 a moth to the flame.</span></span></li><li><span class="num">②</span><span><span class="zh">利用动力在空中行动。～机、～船、～行员。</span><span class="en">To fly under power. 飞机 an aeroplane; 飞行员 a pilot.</span></span></li><li><span class="num">③</span><span><span class="zh">在空中飘浮。～雪、～沙走石。</span><span class="en">To drift in the air. 飞雪 driving snow; 飞沙走石 sand flying and stones rolling.</span></span></li><li><span class="num">④</span><span><span class="zh">形容极快。～奔、～驰、～涨。</span><span class="en">Very fast. 飞奔 to run at full speed; 飞涨 to soar.</span></span></li><li><span class="num">⑤</span><span><span class="zh">意外的；无根据的。～灾、～来横祸、流言～语。</span><span class="en">Unforeseen; groundless. 飞来横祸 a bolt from the blue; 流言飞语 rumour and hearsay.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pui¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phui1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">鸟虫等在空中活动。～鸟、～翔、～蛾扑火。</span><span class="en">To fly, of birds and insects. 飞鸟 a bird on the wing; 飞蛾扑火 a moth to the flame.</span></span></li><li><span class="num">②</span><span><span class="zh">利用动力在空中行动。～机、～船、～行员。</span><span class="en">To fly under power. 飞机 an aeroplane; 飞行员 a pilot.</span></span></li><li><span class="num">③</span><span><span class="zh">在空中飘浮。～雪、～沙走石。</span><span class="en">To drift in the air. 飞雪 driving snow; 飞沙走石 sand flying and stones rolling.</span></span></li><li><span class="num">④</span><span><span class="zh">形容极快。～奔、～驰、～涨。</span><span class="en">Very fast. 飞奔 to run at full speed; 飞涨 to soar.</span></span></li><li><span class="num">⑤</span><span><span class="zh">意外的；无根据的。～灾、～来横祸、流言～语。</span><span class="en">Unforeseen; groundless. 飞来横祸 a bolt from the blue; 流言飞语 rumour and hearsay.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pui¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phui1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

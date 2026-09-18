@@ -21,15 +21,21 @@
 <div class="gl zh">液体洒落在物体上；被水浇。～浴、～雨、日晒雨～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7433.html">
 <div class="ch">琳</div><div class="body">
 <span class="py">lín</span>
-<div class="gl zh">〈书〉美玉。～琅满目、～宫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9716.html">
+<div class="gl zh">美玉。～琅满目、～宫。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9716.html">
 <div class="ch">霖</div><div class="body">
 <span class="py">lín</span>
-<div class="gl zh">〈书〉连下几天的雨。甘～、～雨。</div></div></a><footer>
+<div class="gl zh">连下几天的雨。甘～、～雨。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

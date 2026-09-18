@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/sun1.html">sun¹</a><a class="chip" href="/hainanese-dictionary/syl/sun2.html">sun²</a><a class="chip on" href="/hainanese-dictionary/syl/sun3.html">sun³</a><a class="chip" href="/hainanese-dictionary/syl/sun4.html">sun⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u5fd6.html">
 <div class="ch">忖</div><div class="body">
 <span class="py">cǔn</span>
-<div class="gl zh">〈书〉揣度；思量。～度、思～、自～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8822.html">
+<div class="gl zh">揣度；思量。～度、思～、自～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8822.html">
 <div class="ch">蠢</div><div class="body">
 <span class="py">chǔn</span>
 <div class="gl zh">笨；不聪明。愚～、～材、～事。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e11.html">
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

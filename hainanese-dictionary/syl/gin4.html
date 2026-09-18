@@ -27,7 +27,7 @@
 <div class="gl zh">连接肌肉和骨骼的结缔组织。～鞘、跟～、牛～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u89d0.html">
 <div class="ch">觐</div><div class="body">
 <span class="py">jìn</span>
-<div class="gl zh">〈书〉朝见君主或朝拜圣地。～见、朝～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u952e.html">
+<div class="gl zh">朝见君主或朝拜圣地。～见、朝～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u952e.html">
 <div class="ch">键</div><div class="body">
 <span class="py">jiàn</span>
 <div class="gl zh">使轴与齿轮固定在一起的零件。～槽。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5708.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

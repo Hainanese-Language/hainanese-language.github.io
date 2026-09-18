@@ -21,7 +21,7 @@
 <div class="gl zh">空虚的；不真实的。～想、～觉、虚～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u64d0.html">
 <div class="ch">擐</div><div class="body">
 <span class="py">huàn</span>
-<div class="gl zh">〈书〉穿；套。～甲执兵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da3.html">
+<div class="gl zh">穿；套。～甲执兵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6da3.html">
 <div class="ch">涣</div><div class="body">
 <span class="py">huàn</span>
 <div class="gl zh">散开；消散。～散、～然冰释。</div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,7 +15,7 @@
 <div class="gl zh">用于水名、地名。～河、～阳(在河南)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6f09.html">
 <div class="ch">漉</div><div class="body">
 <span class="py">lù</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70d9.html">
+<div class="gl zh">过滤。～酒。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u70d9.html">
 <div class="ch">烙</div><div class="body">
 <span class="py">lào · luò</span>
 <div class="gl zh">用烧热的金属器物烫，使留下痕迹。～印、～铁。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73de.html">
@@ -24,7 +24,7 @@
 <div class="gl zh">用于"璎珞"，指用珠玉串成的装饰品。璎～。也用于民族名。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u784c.html">
 <div class="ch">硌</div><div class="body">
 <span class="py">luò · gè</span>
-<div class="gl zh">〈书〉山上的大石。  gè 凸起的硬东西碰着身体，使不舒服或受伤。～脚、～牙。</div><div class="also">另读 <i>go⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7edc.html">
+<div class="gl zh">山上的大石。  gè 凸起的硬东西碰着身体，使不舒服或受伤。～脚、～牙。</div><div class="also">另读 <i>go⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7edc.html">
 <div class="ch">络</div><div class="body">
 <span class="py">luò · lào</span>
 <div class="gl zh">像网子的东西。橘～、网～、脉～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u916a.html">
@@ -57,6 +57,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,16 +15,23 @@
 <span class="rbig">nang³</span>
 <button class="play" onclick="play('nang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/nang3.html">同音字 3</a></div>
 <p class="rb-py">nǎng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">拼命地往嘴里塞食物。～了一嘴饭。</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">niang⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('niang5.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">拼命地往嘴里塞食物。～了一嘴饭。</span><span class="en">To cram food into the mouth. 馕了一嘴饭 to stuff one's mouth with rice.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">niang⁵</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('niang5.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">nang²</span>
 <button class="play" onclick="play('nang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/nang2.html">同音字 2</a></div>
 <p class="rb-py">náng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">一种烤制的面饼，是维吾尔、哈萨克等民族的主食。打～、～坑。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">一种烤制的面饼，是维吾尔、哈萨克等民族的主食。打～、～坑。</span><span class="en">Naan, a baked flatbread that is a staple food of the Uyghur, Kazakh and other peoples. 打馕 to bake naan; 馕坑 a naan oven.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

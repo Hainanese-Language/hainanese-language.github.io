@@ -15,16 +15,22 @@
 <span class="rbig">dan³</span>
 <button class="play" onclick="play('tan3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dan3.html">同音字 3</a></div>
 <p class="rb-py">zǎn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">积聚；储蓄。积～、～钱、～粮食。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">积聚；储蓄。积～、～钱、～粮食。</span><span class="en">To save up; to accumulate. 积攒; 攒钱; 攒粮食.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">suan²</span>
 <button class="play" onclick="play('suan2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/suan2.html">同音字 9</a></div>
 <p class="rb-py">cuán</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">聚拢；凑集。～动、～聚、人头～动。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">聚拢；凑集。～动、～聚、人头～动。</span><span class="en">To gather; to crowd together. 攒动; 攒聚; 人头攒动.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

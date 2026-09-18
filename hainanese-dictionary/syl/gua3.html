@@ -24,7 +24,7 @@
 <div class="gl zh">追。追～、～上前面的人。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5471.html">
 <div class="ch">呱</div><div class="body">
 <span class="py">guā · gū · guǎ</span>
-<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 〈方〉用于"拉呱儿"，指闲谈。</div><div class="also">主读 <i>gua¹</i> · <i>gu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u679c.html">
+<div class="gl zh">象声词，形容鸭子、青蛙等的叫声。～～叫。  gū 用于"呱呱"，形容婴儿的哭声。～～坠地。  guǎ 用于"拉呱儿"，指闲谈。</div><div class="also">主读 <i>gua¹</i> · <i>gu¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u679c.html">
 <div class="ch">果</div><div class="body">
 <span class="py">guǒ</span>
 <div class="gl zh">果实。水～、～树、～园。</div><div class="also">主读 <i>gue³</i></div></div></a><footer>
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

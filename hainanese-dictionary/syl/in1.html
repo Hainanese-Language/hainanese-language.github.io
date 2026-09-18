@@ -54,7 +54,7 @@
 <div class="gl zh">埋没；消失。～灭、～没无闻。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7109.html">
 <div class="ch">焉</div><div class="body">
 <span class="py">yān</span>
-<div class="gl zh">〈书〉代词，相当于"于此""于是"。心不在～、不复出～。</div><div class="also">主读 <i>yin³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71d5.html">
+<div class="gl zh">代词，相当于"于此""于是"。心不在～、不复出～。</div><div class="also">主读 <i>yin³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71d5.html">
 <div class="ch">燕</div><div class="body">
 <span class="py">yàn · yān</span>
 <div class="gl zh">一种候鸟，翅膀尖长，尾巴分叉像剪刀。～子、～窝、劳～分飞。  yān</div><div class="also">主读 <i>in⁴</i> · <i>hhin⁶</i></div></div></a><footer>
@@ -63,6 +63,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

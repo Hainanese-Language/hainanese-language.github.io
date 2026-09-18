@@ -15,12 +15,18 @@
 <span class="rbig">seng²</span>
 <button class="play" onclick="play('seng2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/seng2.html">同音字 14</a></div>
 <p class="rb-py">chéng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">真心；不虚假。～实、真～、～心～意。</span><span class="en">Sincere. 诚实 honest; 真诚 genuine; 诚心诚意 in all sincerity.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉确实；的确。～然、～如所言。</span><span class="en">〈lit.〉 Indeed. 诚然 truly; 诚如所言 it is just as you say.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">真心；不虚假。～实、真～、～心～意。</span><span class="en">Sincere. 诚实 honest; 真诚 genuine; 诚心诚意 in all sincerity.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>确实；的确。～然、～如所言。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Indeed. 诚然 truly; 诚如所言 it is just as you say.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

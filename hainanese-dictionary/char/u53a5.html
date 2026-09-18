@@ -15,12 +15,18 @@
 <span class="rbig">hid⁷</span>
 <button class="play" onclick="play('hiet7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hid7.html">同音字 17</a></div>
 <p class="rb-py">jué</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">昏倒；失去知觉。昏～、～逆。</span><span class="en">To faint. 昏厥 to lose consciousness; 厥逆 a fainting fit.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉他的；那个。～后、大放～词。</span><span class="en">〈lit.〉 His; that. 厥后 thereafter; 大放厥词 to hold forth at length.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">昏倒；失去知觉。昏～、～逆。</span><span class="en">To faint. 昏厥 to lose consciousness; 厥逆 a fainting fit.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>他的；那个。～后、大放～词。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> His; that. 厥后 thereafter; 大放厥词 to hold forth at length.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,20 +15,26 @@
 <span class="rbig">suai³</span>
 <button class="play" onclick="play('suai3.mp3')">&#9654;</button></div>
 <p class="rb-py">chuǎi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">估量；推测。～测、～摩、～度。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">估量；推测。～测、～摩、～度。</span><span class="en">To estimate; to guess. 揣测; 揣摩; 揣度.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">suai¹</span>
 <button class="play" onclick="play('suai1.mp3')">&#9654;</button></div>
 <p class="rb-py">chuāi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">藏在衣服里。～在怀里、～着手。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">藏在衣服里。～在怀里、～着手。</span><span class="en">To tuck inside one's clothes. 揣在怀里; 揣着手.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">suai⁶</span>
 <button class="play" onclick="play('suai6.mp3')">&#9654;</button></div>
 <p class="rb-py">chuài</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"挣～"，指挣扎。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"挣～"，指挣扎。</span><span class="en">Used in 挣揣: to struggle.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

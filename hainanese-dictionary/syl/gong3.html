@@ -15,7 +15,7 @@
 <div class="gl zh">使坚固。～固。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u73d9.html">
 <div class="ch">珙</div><div class="body">
 <span class="py">gǒng</span>
-<div class="gl zh">〈书〉大璧，一种玉器。～璧。也用于地名。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bb2.html">
+<div class="gl zh">大璧，一种玉器。～璧。也用于地名。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bb2.html">
 <div class="ch">讲</div><div class="body">
 <span class="py">jiǎng</span>
 <div class="gl zh">说；谈。～话、演～、～故事。</div><div class="also">另读 <i>giang³</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

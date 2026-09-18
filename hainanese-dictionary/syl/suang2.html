@@ -12,12 +12,18 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/suang1.html">suang¹</a><a class="chip on" href="/hainanese-dictionary/syl/suang2.html">suang²</a><a class="chip" href="/hainanese-dictionary/syl/suang3.html">suang³</a><a class="chip" href="/hainanese-dictionary/syl/suang5.html">suang⁵</a><a class="chip" href="/hainanese-dictionary/syl/suang6.html">suang⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u5e62.html">
 <div class="ch">幢</div><div class="body">
 <span class="py">chuáng · zhuàng</span>
-<div class="gl zh">〈书〉古代刻着经文的石柱。经～、石～。  zhuàng 量词，用于房屋。一～楼房。</div><div class="also">另读 <i>duang⁶</i></div></div></a><footer>
+<div class="gl zh">古代刻着经文的石柱。经～、石～。  zhuàng 量词，用于房屋。一～楼房。</div><div class="also">另读 <i>duang⁶</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">nu³</span>
 <button class="play" onclick="play('nu3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/nu3.html">同音字 2</a></div>
 <p class="rb-py">nǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用机械力量射箭的弓。～箭、剑拔～张。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用机械力量射箭的弓。～箭、剑拔～张。</span><span class="en">A crossbow. 弩箭 a crossbow bolt; 剑拔弩张 swords drawn and bows bent — on the brink of a clash.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

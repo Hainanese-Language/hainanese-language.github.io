@@ -18,7 +18,7 @@
 <div class="gl zh">打(人)。～他一顿、挨～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u64de.html">
 <div class="ch">擞</div><div class="body">
 <span class="py">sòu · sǒu</span>
-<div class="gl zh">〈方〉用通条插进炉子抖动，使炉灰落下。～炉子。  sǒu 用于"抖～"，指振作。精神抖～。</div><div class="also">另读 <i>dou²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9aa4.html">
+<div class="gl zh">用通条插进炉子抖动，使炉灰落下。～炉子。  sǒu 用于"抖～"，指振作。精神抖～。</div><div class="also">另读 <i>dou²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9aa4.html">
 <div class="ch">骤</div><div class="body">
 <span class="py">zhòu</span>
 <div class="gl zh">快；急速。～然、暴风～雨。</div><div class="also">另读 <i>sou⁶</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

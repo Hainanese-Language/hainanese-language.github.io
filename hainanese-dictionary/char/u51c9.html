@@ -15,16 +15,23 @@
 <span class="rbig">lio²</span>
 <button class="play" onclick="play('lio2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lio2.html">同音字 4</a></div>
 <p class="rb-py">liáng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">温度低；冷，多指天气。～水、～爽、天～了。</span><span class="en">Cool, chiefly of the weather. 凉水 cold water; 凉爽 pleasantly cool; 天凉了 it has turned cool.</span></span></li><li><span class="num">②</span><span><span class="zh">灰心；失望。听到这消息，他心里就～了。</span><span class="en">Disheartened. 听到这消息，他心里就凉了 the news left him cold at heart.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">liang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('liang2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">温度低；冷，多指天气。～水、～爽、天～了。</span><span class="en">Cool, chiefly of the weather. 凉水 cold water; 凉爽 pleasantly cool; 天凉了 it has turned cool.</span></span></li><li><span class="num">②</span><span><span class="zh">灰心；失望。听到这消息，他心里就～了。</span><span class="en">Disheartened. 听到这消息，他心里就凉了 the news left him cold at heart.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">liang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('liang2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">liang⁶</span>
 <button class="play" onclick="play('liang6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liang6.html">同音字 4</a></div>
 <p class="rb-py">liàng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">把热的东西放一会儿使温度降低。把开水～一～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">把热的东西放一会儿使温度降低。把开水～一～。</span><span class="en">To let something hot cool down. 把开水凉一凉 let the boiled water cool.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

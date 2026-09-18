@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>篼 · 海南话字典</title><meta name="description" content="篼 的海南话读音 ddou¹，普通话 dōu。〈方〉竹、藤等编成的盛物或背负用具。背～、～子。">
+<title>篼 · 海南话字典</title><meta name="description" content="篼 的海南话读音 ddou¹，普通话 dōu。竹、藤等编成的盛物或背负用具。背～、～子。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">ddou¹</span>
 <button class="play" onclick="play('dou1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddou1.html">同音字 3</a></div>
 <p class="rb-py">dōu</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉竹、藤等编成的盛物或背负用具。背～、～子。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>竹、藤等编成的盛物或背负用具。背～、～子。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> A carrier or basket woven from bamboo or rattan.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -24,7 +24,7 @@
 <div class="gl zh">轻视；看不起。～视、～视一切。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9088.html">
 <div class="ch">邈</div><div class="body">
 <span class="py">miǎo</span>
-<div class="gl zh">〈书〉遥远。～远、～不可及。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6773.html">
+<div class="gl zh">遥远。～远、～不可及。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6773.html">
 <div class="ch">杳</div><div class="body">
 <span class="py">yǎo</span>
 <div class="gl zh">远得不见踪影；毫无消息。～无音信、～无踪迹、音信～然。</div><div class="also">主读 <i>iao³</i></div></div></a><footer>
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -12,15 +12,23 @@
 <div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">yeg⁸</span> <span class="r">muad⁸</span></div></div>
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">yì</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
-<span class="rbig">yeg⁸</span><span class="pill">文读</span>
+<span class="rbig">yeg⁸</span><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span>
 <button class="play" onclick="play('jeg8.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yeg8.html">同音字 12</a></div>
 <p class="rb-py">yì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">流行性的传染病。～情、防～、瘟～。</span></span></li></ul><div class="alt"><span class="pill">俗读</span><span class="r2">muad⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muat8.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">流行性的传染病。～情、防～、瘟～。</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span><span class="r2">muad⁸</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muat8.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

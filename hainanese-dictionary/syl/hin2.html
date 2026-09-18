@@ -21,7 +21,7 @@
 <div class="gl zh">屈指卷握的手。～头、握～、挥～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u63ae.html">
 <div class="ch">掮</div><div class="body">
 <span class="py">qián</span>
-<div class="gl zh">〈方〉用肩扛。～行李、～客。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6743.html">
+<div class="gl zh">用肩扛。～行李、～客。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6743.html">
 <div class="ch">权</div><div class="body">
 <span class="py">quán</span>
 <div class="gl zh">权力。～势、当～、大～在握。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u72ac.html">
@@ -42,7 +42,7 @@
 <div class="gl zh">眼睛下面、两腮上面突出的部分。～骨。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4f43.html">
 <div class="ch">佃</div><div class="body">
 <span class="py">diàn · tián</span>
-<div class="gl zh">租种土地。～户、～农、～田、租～。  tián 〈古〉耕作。</div><div class="also">主读 <i>ddin⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u728d.html">
+<div class="gl zh">租种土地。～户、～农、～田、租～。  tián 耕作。</div><div class="also">主读 <i>ddin⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u728d.html">
 <div class="ch">犍</div><div class="body">
 <span class="py">jiān · qián</span>
 <div class="gl zh">阉割过的公牛。～牛。  qián 用于地名，犍为，在四川。～为。</div><div class="also">主读 <i>gin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7530.html">
@@ -57,6 +57,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

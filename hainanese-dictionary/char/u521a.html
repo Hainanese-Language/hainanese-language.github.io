@@ -15,12 +15,19 @@
 <span class="rbig">gang¹</span>
 <button class="play" onclick="play('kang1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gang1.html">同音字 8</a></div>
 <p class="rb-py">gāng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">才；表示行为发生在不久以前。他～走、～来就要回去。</span><span class="en">Just; indicating something happened a moment ago. 刚走 just left; 刚来就要回去 to want to leave right after arriving.</span></span></li><li><span class="num">②</span><span><span class="zh">恰好；勉强达到。～好、大小～合适、这点钱～够。</span><span class="en">Exactly; barely. 刚好 just right; 大小刚合适 exactly the right size; 这点钱刚够 this money is just barely enough.</span></span></li><li><span class="num">③</span><span><span class="zh">硬；坚强；跟"柔"相对。～强、～直、～正不阿。</span><span class="en">Hard; firm; the opposite of 柔. 刚强 staunch; 刚直 upright; 刚正不阿 upright and unyielding.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">giang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kiang1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">才；表示行为发生在不久以前。他～走、～来就要回去。</span><span class="en">Just; indicating something happened a moment ago. 刚走 just left; 刚来就要回去 to want to leave right after arriving.</span></span></li><li><span class="num">②</span><span><span class="zh">恰好；勉强达到。～好、大小～合适、这点钱～够。</span><span class="en">Exactly; barely. 刚好 just right; 大小刚合适 exactly the right size; 这点钱刚够 this money is just barely enough.</span></span></li><li><span class="num">③</span><span><span class="zh">硬；坚强；跟"柔"相对。～强、～直、～正不阿。</span><span class="en">Hard; firm; the opposite of 柔. 刚强 staunch; 刚直 upright; 刚正不阿 upright and unyielding.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">giang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('kiang1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

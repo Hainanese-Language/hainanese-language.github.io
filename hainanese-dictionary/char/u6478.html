@@ -19,12 +19,18 @@
 <span class="rbig">mu²</span>
 <button class="play" onclick="play('mu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mu2.html">同音字 7</a></div>
 <p class="rb-py">mó</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉同"摹"，描画；仿效。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>同"摹"，描画；仿效。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Same as 摹: to trace; to imitate.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

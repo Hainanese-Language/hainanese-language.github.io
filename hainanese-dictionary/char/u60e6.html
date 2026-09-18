@@ -15,12 +15,18 @@
 <span class="rbig">ddiam⁴</span>
 <button class="play" onclick="play('diam4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddiam4.html">同音字 3</a></div>
 <p class="rb-py">diàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">心里记挂。～记、～念、别～着我。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">心里记挂。～记、～念、别～着我。</span><span class="en">To keep thinking about; to worry over. 惦记; 惦念; 别惦着我.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

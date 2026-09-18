@@ -15,7 +15,7 @@
 <div class="gl zh">用木头、泥土等做成的人像。木～、～像。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8026.html">
 <div class="ch">耦</div><div class="body">
 <span class="py">ǒu</span>
-<div class="gl zh">〈书〉两人并肩耕地；也指双数、成对。～耕。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85d5.html">
+<div class="gl zh">两人并肩耕地；也指双数、成对。～耕。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85d5.html">
 <div class="ch">藕</div><div class="body">
 <span class="py">ǒu</span>
 <div class="gl zh">莲的地下茎，肥大有孔，可做菜。～粉、～断丝连。</div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

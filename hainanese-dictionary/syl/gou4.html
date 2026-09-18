@@ -15,16 +15,16 @@
 <div class="gl zh">污秽；脏东西。污～、油～、牙～、蓬头～面。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5abe.html">
 <div class="ch">媾</div><div class="body">
 <span class="py">gòu</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f40.html">
+<div class="gl zh">结成婚姻。婚～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5f40.html">
 <div class="ch">彀</div><div class="body">
 <span class="py">gòu</span>
-<div class="gl zh">〈书〉把弓拉满；也指圈套。入我～中。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6784.html">
+<div class="gl zh">把弓拉满；也指圈套。入我～中。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6784.html">
 <div class="ch">构</div><div class="body">
 <span class="py">gòu</span>
 <div class="gl zh">组合；结合。～成、～词、结～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8bdf.html">
 <div class="ch">诟</div><div class="body">
 <span class="py">gòu</span>
-<div class="gl zh">〈书〉耻辱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2d.html">
+<div class="gl zh">耻辱。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8d2d.html">
 <div class="ch">购</div><div class="body">
 <span class="py">gòu</span>
 <div class="gl zh">买。～买、采～、～置。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96c7.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

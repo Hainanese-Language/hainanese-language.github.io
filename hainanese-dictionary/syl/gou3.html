@@ -15,7 +15,7 @@
 <div class="gl zh">过去的时代，跟"今"相对。～代、～老、厚今薄～。</div><div class="also">另读 <i>gu³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u726f.html">
 <div class="ch">牯</div><div class="body">
 <span class="py">gǔ</span>
-<div class="gl zh">〈方〉母牛；也指公牛。～牛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f13.html">
+<div class="gl zh">母牛；也指公牛。～牛。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f13.html">
 <div class="ch">鼓</div><div class="body">
 <span class="py">gǔ</span>
 <div class="gl zh">打击乐器，多为圆桶形，两面或一面蒙皮。～手、腰～、锣～、擂～。</div><div class="also">另读 <i>gu³</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6708.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

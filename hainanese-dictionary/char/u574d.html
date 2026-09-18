@@ -15,12 +15,18 @@
 <span class="rbig">han¹</span>
 <button class="play" onclick="play('han1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/han1.html">同音字 7</a></div>
 <p class="rb-py">tān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">建筑物、堤岸等倒塌。～塌、～方、河岸～了。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">建筑物、堤岸等倒塌。～塌、～方、河岸～了。</span><span class="en">For a structure or bank to collapse. 坍塌; 坍方; 河岸坍了.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

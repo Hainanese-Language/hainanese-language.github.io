@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/pui1.html">pui¹</a><a class="chip" href="/hainanese-dictionary/syl/pui2.html">pui²</a><a class="chip" href="/hainanese-dictionary/syl/pui3.html">pui³</a><a class="chip" href="/hainanese-dictionary/syl/pui4.html">pui⁴</a><a class="chip" href="/hainanese-dictionary/syl/pui6.html">pui⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u4e15.html">
 <div class="ch">丕</div><div class="body">
 <span class="py">pī</span>
-<div class="gl zh">〈书〉大。～业、～变。</div><div class="also">另读 <i>pi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5983.html">
+<div class="gl zh">大。～业、～变。</div><div class="also">另读 <i>pi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5983.html">
 <div class="ch">妃</div><div class="body">
 <span class="py">fēi</span>
 <div class="gl zh">皇帝的妾；也指太子、王侯的妻。～子、贵～、王～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6249.html">
@@ -33,7 +33,7 @@
 <div class="gl zh">同"飞"。～声、流言～语。  fěi 用于"蜚蠊"，即蟑螂。</div><div class="also">另读 <i>pui²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u970f.html">
 <div class="ch">霏</div><div class="body">
 <span class="py">fēi</span>
-<div class="gl zh">〈书〉形容雨雪很密。～～、烟～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u975e.html">
+<div class="gl zh">形容雨雪很密。～～、烟～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u975e.html">
 <div class="ch">非</div><div class="body">
 <span class="py">fēi</span>
 <div class="gl zh">不对；错误，跟"是"相对。是～、明辨是～、痛改前～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98de.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,16 +15,22 @@
 <span class="rbig">ziao³</span>
 <button class="play" onclick="play('ciau3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ziao3.html">同音字 4</a></div>
 <p class="rb-py">jiǎo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">讨伐；消灭。～灭、围～、清～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">讨伐；消灭。～灭、围～、清～。</span><span class="en">To suppress by force; to wipe out. 剿灭 to exterminate; 围剿 to encircle and annihilate; 清剿 to mop up.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">sao¹</span>
 <button class="play" onclick="play('sau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sao1.html">同音字 9</a></div>
 <p class="rb-py">chāo</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"剿说"，指抄袭别人的言论。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"剿说"，指抄袭别人的言论。</span><span class="en">Only in 剿说: to pass off another's words as one's own.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

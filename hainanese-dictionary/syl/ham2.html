@@ -18,7 +18,7 @@
 <div class="gl zh">气管或支气管分泌的黏液。吐～、～盂、化～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8983.html">
 <div class="ch">覃</div><div class="body">
 <span class="py">tán · qín</span>
-<div class="gl zh">〈书〉深；延长。～思。</div><div class="also">另读 <i>dim²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c08.html">
+<div class="gl zh">深；延长。～思。</div><div class="also">另读 <i>dim²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c08.html">
 <div class="ch">谈</div><div class="body">
 <span class="py">tán</span>
 <div class="gl zh">说话；讨论。～话、交～、～判。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8c2d.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

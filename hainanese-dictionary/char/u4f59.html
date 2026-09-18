@@ -15,12 +15,18 @@
 <span class="rbig">yi²</span>
 <button class="play" onclick="play('ji2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi2.html">同音字 44</a></div>
 <p class="rb-py">yú</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">剩下的。～数、～额、剩～、～粮。</span><span class="en">Left over. 余数 a remainder; 余额 a balance; 剩余 a surplus; 余粮 surplus grain.</span></span></li><li><span class="num">②</span><span><span class="zh">某一时间或事情以外的。业～、课～、工作之～。</span><span class="en">Outside a given time or activity. 业余 amateur; 课余 after class; 工作之余 outside working hours.</span></span></li><li><span class="num">③</span><span><span class="zh">表示整数后的零头。十～年、三百～人。</span><span class="en">Odd; and more. 十余年 over ten years; 三百余人 more than three hundred people.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉我。</span><span class="en">〈lit.〉 I.</span></span></li><li><span class="num">⑤</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">剩下的。～数、～额、剩～、～粮。</span><span class="en">Left over. 余数 a remainder; 余额 a balance; 剩余 a surplus; 余粮 surplus grain.</span></span></li><li><span class="num">②</span><span><span class="zh">某一时间或事情以外的。业～、课～、工作之～。</span><span class="en">Outside a given time or activity. 业余 amateur; 课余 after class; 工作之余 outside working hours.</span></span></li><li><span class="num">③</span><span><span class="zh">表示整数后的零头。十～年、三百～人。</span><span class="en">Odd; and more. 十余年 over ten years; 三百余人 more than three hundred people.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>我。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> I.</span></span></li><li><span class="num">⑤</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

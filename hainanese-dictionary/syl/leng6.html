@@ -18,7 +18,7 @@
 <div class="gl zh">发呆；失神。发～、～住了、～了半天。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62ce.html">
 <div class="ch">拎</div><div class="body">
 <span class="py">līng</span>
-<div class="gl zh">〈方〉提；用手提着。～水桶、～着包。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ee4.html">
+<div class="gl zh">提；用手提着。～水桶、～着包。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4ee4.html">
 <div class="ch">令</div><div class="body">
 <span class="py">lìng · líng</span>
 <div class="gl zh">上级对下级的指示；发布指示。命～、下～、责～改正。</div><div class="also">主读 <i>leng⁵</i></div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

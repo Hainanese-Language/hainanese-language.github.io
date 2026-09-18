@@ -15,12 +15,18 @@
 <span class="rbig">di⁵</span>
 <button class="play" onclick="play('ti5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/di5.html">同音字 6</a></div>
 <p class="rb-py">shì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">表示判断，联系两种事物。他～老师、这～真的。</span><span class="en">to be, linking two things in a judgement.</span></span></li><li><span class="num">②</span><span><span class="zh">对；正确；跟"非"相对。～非、实事求～、自以为～。</span><span class="en">right; correct, as opposed to wrong.</span></span></li><li><span class="num">③</span><span><span class="zh">表示肯定或强调。他～去过、这本书～好。</span><span class="en">used for affirmation or emphasis.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉这；此。～日、～可忍，孰不可忍。</span><span class="en">〈lit.〉 this.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">表示判断，联系两种事物。他～老师、这～真的。</span><span class="en">to be, linking two things in a judgement.</span></span></li><li><span class="num">②</span><span><span class="zh">对；正确；跟"非"相对。～非、实事求～、自以为～。</span><span class="en">right; correct, as opposed to wrong.</span></span></li><li><span class="num">③</span><span><span class="zh">表示肯定或强调。他～去过、这本书～好。</span><span class="en">used for affirmation or emphasis.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>这；此。～日、～可忍，孰不可忍。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> this.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

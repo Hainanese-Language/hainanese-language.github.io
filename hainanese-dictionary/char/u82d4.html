@@ -15,16 +15,22 @@
 <span class="rbig">hai²</span>
 <button class="play" onclick="play('hai2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hai2.html">同音字 8</a></div>
 <p class="rb-py">tái</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">苔藓植物，长在阴湿的地方。青～、～藓、～痕。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">苔藓植物，长在阴湿的地方。青～、～藓、～痕。</span><span class="en">Moss, growing in damp shaded places. 青苔; 苔藓; 苔痕.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hai¹</span>
 <button class="play" onclick="play('hai1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hai1.html">同音字 6</a></div>
 <p class="rb-py">tāi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"舌～"，指舌面上的垢腻。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"舌～"，指舌面上的垢腻。</span><span class="en">Used in 舌苔: the coating on the tongue.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

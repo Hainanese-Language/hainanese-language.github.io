@@ -18,10 +18,10 @@
 <div class="gl zh">面向南时靠西的一边；跟"左"相对。～手、～边、向～转。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u56ff.html">
 <div class="ch">囿</div><div class="body">
 <span class="py">yòu</span>
-<div class="gl zh">〈书〉养禽兽的园子。鹿～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5ba5.html">
+<div class="gl zh">养禽兽的园子。鹿～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5ba5.html">
 <div class="ch">宥</div><div class="body">
 <span class="py">yòu</span>
-<div class="gl zh">〈书〉宽恕；原谅。宽～、原～、尚希见～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91c9.html">
+<div class="gl zh">宽恕；原谅。宽～、原～、尚希见～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91c9.html">
 <div class="ch">釉</div><div class="body">
 <span class="py">yòu</span>
 <div class="gl zh">涂在陶瓷表面的玻璃质薄层。～面、～彩、上～。</div></div></a><footer>
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

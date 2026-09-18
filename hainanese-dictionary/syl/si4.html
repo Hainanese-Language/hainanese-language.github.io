@@ -36,10 +36,10 @@
 <div class="gl zh">意味；使人愉快的特性。兴～、乐～、～味。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5395.html">
 <div class="ch">厕</div><div class="body">
 <span class="py">cè · sì</span>
-<div class="gl zh">厕所。公～、男～。  sì 〈书〉参与；混杂在里面。～身其间。</div><div class="also">主读 <i>seg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59bb.html">
+<div class="gl zh">厕所。公～、男～。  sì 参与；混杂在里面。～身其间。</div><div class="also">主读 <i>seg⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u59bb.html">
 <div class="ch">妻</div><div class="body">
 <span class="py">qī · qì</span>
-<div class="gl zh">男子的配偶；跟"夫"相对。～子、夫～、娶～。  qì 〈书〉把女儿嫁给某人。</div><div class="also">主读 <i>si¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7fc5.html">
+<div class="gl zh">男子的配偶；跟"夫"相对。～子、夫～、娶～。  qì 把女儿嫁给某人。</div><div class="also">主读 <i>si¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7fc5.html">
 <div class="ch">翅</div><div class="body">
 <span class="py">chì</span>
 <div class="gl zh">鸟、虫等的飞行器官。～膀、展～、～翼。</div><div class="also">主读 <i>did⁸</i> · <i>hi⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u98df.html">
@@ -51,6 +51,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

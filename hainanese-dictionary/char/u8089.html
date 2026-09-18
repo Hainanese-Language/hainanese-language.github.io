@@ -15,12 +15,18 @@
 <span class="rbig">hhiog⁸</span>
 <button class="play" onclick="play('yiog8.mp3')">&#9654;</button></div>
 <p class="rb-py">ròu</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">人或动物体内红色柔软的组织。肌～、猪～、～食。</span><span class="en">The soft red tissue of a human or animal body. 肌肉 muscle; 猪肉 pork; 肉食 a meat diet.</span></span></li><li><span class="num">②</span><span><span class="zh">某些瓜果里可以吃的部分。果～、桂圆～。</span><span class="en">The edible part of certain fruits. 果肉 pulp; 桂圆肉 dried longan flesh.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉不脆；性子慢。这西瓜～、～脾气。</span><span class="en">〈dial.〉 Not crisp; slow in temperament. 这西瓜肉 this melon is mushy; 肉脾气 a sluggish nature.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">人或动物体内红色柔软的组织。肌～、猪～、～食。</span><span class="en">The soft red tissue of a human or animal body. 肌肉 muscle; 猪肉 pork; 肉食 a meat diet.</span></span></li><li><span class="num">②</span><span><span class="zh">某些瓜果里可以吃的部分。果～、桂圆～。</span><span class="en">The edible part of certain fruits. 果肉 pulp; 桂圆肉 dried longan flesh.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>不脆；性子慢。这西瓜～、～脾气。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Not crisp; slow in temperament. 这西瓜肉 this melon is mushy; 肉脾气 a sluggish nature.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

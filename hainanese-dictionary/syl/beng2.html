@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip" href="/hainanese-dictionary/syl/beng1.html">beng¹</a><a class="chip on" href="/hainanese-dictionary/syl/beng2.html">beng²</a><a class="chip" href="/hainanese-dictionary/syl/beng3.html">beng³</a><a class="chip" href="/hainanese-dictionary/syl/beng4.html">beng⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u79c9.html">
 <div class="ch">秉</div><div class="body">
 <span class="py">bǐng</span>
-<div class="gl zh">〈书〉拿着；握着。～烛夜游。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c4f.html">
+<div class="gl zh">拿着；握着。～烛夜游。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5c4f.html">
 <div class="ch">屏</div><div class="body">
 <span class="py">píng · bǐng</span>
 <div class="gl zh">遮挡用的器具。～风、～障、围～。</div><div class="also">主读 <i>peng²</i> · <i>beng³</i></div></div></a><footer>
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

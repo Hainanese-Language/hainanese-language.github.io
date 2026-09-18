@@ -15,7 +15,7 @@
 <div class="gl zh">用鼻子辨别气味。～觉、～出味道来。</div><div class="also">另读 <i>hhiu⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5cab.html">
 <div class="ch">岫</div><div class="body">
 <span class="py">xiù</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8896.html">
+<div class="gl zh">山洞。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8896.html">
 <div class="ch">袖</div><div class="body">
 <span class="py">xiù</span>
 <div class="gl zh">衣服套在胳膊上的部分。～子、～口、领～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u62bd.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

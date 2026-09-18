@@ -15,20 +15,26 @@
 <span class="rbig">in¹</span>
 <button class="play" onclick="play('ien1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/in1.html">同音字 16</a></div>
 <p class="rb-py">yān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">消化道和呼吸道相连的部分。～喉、～炎。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">消化道和呼吸道相连的部分。～喉、～炎。</span><span class="en">The pharynx. 咽喉 the throat; 咽炎 pharyngitis.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">in⁴</span>
 <button class="play" onclick="play('ien4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/in4.html">同音字 5</a></div>
 <p class="rb-py">yàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">使食物等通过咽头进入食道。～下去、狼吞虎～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">使食物等通过咽头进入食道。～下去、狼吞虎～。</span><span class="en">To swallow. 咽下去 to gulp down; 狼吞虎咽 to bolt one's food.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">id⁷</span>
 <button class="play" onclick="play('iet7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/id7.html">同音字 6</a></div>
 <p class="rb-py">yè</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">声音因悲伤而阻塞。哽～、呜～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">声音因悲伤而阻塞。哽～、呜～。</span><span class="en">(of the voice) To choke with grief. 哽咽 to sob; 呜咽 to whimper.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

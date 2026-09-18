@@ -33,7 +33,7 @@
 <div class="gl zh">中医指结核病，多指肺结核。肺～、～病。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u91aa.html">
 <div class="ch">醪</div><div class="body">
 <span class="py">láo</span>
-<div class="gl zh">〈书〉浊酒；带糟的酒。～糟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5218.html">
+<div class="gl zh">浊酒；带糟的酒。～糟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5218.html">
 <div class="ch">刘</div><div class="body">
 <span class="py">liú</span>
 <div class="gl zh">姓。</div><div class="also">主读 <i>liu²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6d41.html">
@@ -45,6 +45,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

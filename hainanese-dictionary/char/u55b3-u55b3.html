@@ -15,16 +15,22 @@
 <span class="rbig">za⁶za⁶</span>
 <button class="play" onclick="play('ca6.mp3|ca6.mp3')">&#9654;</button></div>
 <p class="rb-py">zhāzhā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词，形容杂乱细碎的声音。叽叽～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词，形容杂乱细碎的声音。叽叽～。</span><span class="en">A confusion of small chattering sounds. 叽叽喳喳 twittering; jabbering.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">sa⁶sa⁶</span>
 <button class="play" onclick="play('sa6.mp3|sa6.mp3')">&#9654;</button></div>
 <p class="rb-py">chācha</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">低声说话。打～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">低声说话。打～。</span><span class="en">To speak in a low voice. 打喳喳 to whisper together.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

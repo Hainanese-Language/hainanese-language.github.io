@@ -15,7 +15,7 @@
 <div class="gl zh">许多人同时发出声音。～堂大笑、～传。</div><div class="also">另读 <i>hhuang³</i> · <i>hhong⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8a07.html">
 <div class="ch">訇</div><div class="body">
 <span class="py">hōng</span>
-<div class="gl zh">〈书〉形容大声。～然、～的一声。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f70.html">
+<div class="gl zh">形容大声。～然、～的一声。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8f70.html">
 <div class="ch">轰</div><div class="body">
 <span class="py">hōng</span>
 <div class="gl zh">拟声词，形容雷鸣、爆炸等巨响。～的一声、～鸣。</div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

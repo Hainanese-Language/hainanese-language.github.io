@@ -15,12 +15,18 @@
 <span class="rbig">du²</span>
 <button class="play" onclick="play('tu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/du2.html">同音字 4</a></div>
 <p class="rb-py">shǔ</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">甘薯、马铃薯等作物的统称。红～、木～、～类。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">甘薯、马铃薯等作物的统称。红～、木～、～类。</span><span class="en">A general term for tuber crops such as sweet potato and potato. 红薯 sweet potato; 木薯 cassava.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

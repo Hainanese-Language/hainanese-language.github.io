@@ -27,7 +27,7 @@
 <div class="gl zh">大波浪。波～、力挽狂～、推波助～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9611.html">
 <div class="ch">阑</div><div class="body">
 <span class="py">lán</span>
-<div class="gl zh">〈书〉</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cde.html">
+<div class="gl zh">将尽；晚。夜～人静、酒～人散。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cde.html">
 <div class="ch">鳞</div><div class="body">
 <span class="py">lín</span>
 <div class="gl zh">鱼、蛇等身体表面的角质小薄片。鱼～、～片、～甲。</div><div class="also">另读 <i>lin²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u94c3.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

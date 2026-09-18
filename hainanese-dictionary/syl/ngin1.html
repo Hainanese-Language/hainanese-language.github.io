@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/ngin1.html">ngin¹</a><a class="chip" href="/hainanese-dictionary/syl/ngin2.html">ngin²</a><a class="chip" href="/hainanese-dictionary/syl/ngin4.html">ngin⁴</a></div><a class="hrow" href="/hainanese-dictionary/char/u598d.html">
 <div class="ch">妍</div><div class="body">
 <span class="py">yán</span>
-<div class="gl zh">〈书〉美丽。～丽、百花争～。</div><div class="also">另读 <i>nin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7814.html">
+<div class="gl zh">美丽。～丽、百花争～。</div><div class="also">另读 <i>nin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7814.html">
 <div class="ch">研</div><div class="body">
 <span class="py">yán</span>
 <div class="gl zh">细磨。～磨、～成粉末。</div><div class="also">另读 <i>nin¹</i></div></div></a><footer>
@@ -21,6 +21,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

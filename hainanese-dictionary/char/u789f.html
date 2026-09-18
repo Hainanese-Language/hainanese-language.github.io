@@ -15,12 +15,18 @@
 <span class="rbig">ddi⁵</span>
 <button class="play" onclick="play('di5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddi5.html">同音字 2</a></div>
 <p class="rb-py">dié</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">盛菜或调味品的浅底器皿，比盘子小。～子、菜～、一～花生。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">盛菜或调味品的浅底器皿，比盘子小。～子、菜～、一～花生。</span><span class="en">A small shallow dish for food or condiments, smaller than a plate.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

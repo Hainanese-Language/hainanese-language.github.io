@@ -15,7 +15,7 @@
 <div class="gl zh">象声词，形容哀号的声音。～～待哺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6556.html">
 <div class="ch">敖</div><div class="body">
 <span class="py">áo</span>
-<div class="gl zh">〈书〉出游；闲游。～游。也用于姓氏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71ac.html">
+<div class="gl zh">出游；闲游。～游。也用于姓氏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71ac.html">
 <div class="ch">熬</div><div class="body">
 <span class="py">áo · āo</span>
 <div class="gl zh">用小火慢煮。～粥、～药。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7352.html">
@@ -36,7 +36,7 @@
 <div class="gl zh">游玩；漫游。～游。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u93d6.html">
 <div class="ch">鏖</div><div class="body">
 <span class="py">áo</span>
-<div class="gl zh">〈书〉激烈地战斗。～战、赤壁～兵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ccc.html">
+<div class="gl zh">激烈地战斗。～战、赤壁～兵。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9ccc.html">
 <div class="ch">鳌</div><div class="body">
 <span class="py">áo</span>
 <div class="gl zh">传说中海里的大龟。～头、独占～头。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u71ac.html">
@@ -48,6 +48,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

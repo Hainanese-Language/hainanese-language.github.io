@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>焉 · 海南话字典</title><meta name="description" content="焉 的海南话读音 yin³、in¹，普通话 yān。〈书〉代词，相当于"于此""于是"。心不在～、不复出～。">
+<title>焉 · 海南话字典</title><meta name="description" content="焉 的海南话读音 yin³、in¹，普通话 yān。代词，相当于"于此""于是"。心不在～、不复出～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">yin³</span>
 <button class="play" onclick="play('jien3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yin3.html">同音字 3</a></div>
 <p class="rb-py">yān</p><p class="scope">用于第 ❶ 义</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉代词，相当于"于此""于是"。心不在～、不复出～。</span><span class="en">〈lit.〉 Pronoun: in this; from this. 心不在焉 absent-minded; 不复出焉 never came out from there again.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉疑问代词，哪里；怎么。～能如此、～知非福。</span><span class="en">〈lit.〉 Interrogative pronoun: where; how. 焉能如此 how can it be so; 焉知非福 who knows but it may be a blessing.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉助词，用在句末。因以为号～。</span><span class="en">〈lit.〉 Final particle. 因以为号焉 and so took it as his style.</span></span></li></ul><div class="alt"><span class="r2">in¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ien1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❸ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>代词，相当于"于此""于是"。心不在～、不复出～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Pronoun: in this; from this. 心不在焉 absent-minded; 不复出焉 never came out from there again.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>疑问代词，哪里；怎么。～能如此、～知非福。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Interrogative pronoun: where; how. 焉能如此 how can it be so; 焉知非福 who knows but it may be a blessing.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>助词，用在句末。因以为号～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Final particle. 因以为号焉 and so took it as his style.</span></span></li></ul><div class="alt"><span class="r2">in¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ien1.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❷❸ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

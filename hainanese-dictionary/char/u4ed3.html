@@ -13,14 +13,21 @@
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">cāng</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">so¹</span>
-<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 13</a></div>
+<button class="play" onclick="play('so1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/so1.html">同音字 12</a></div>
 <p class="rb-py">cāng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">储藏粮食或其他物资的房屋。～库、粮～、～储、清～。</span><span class="en">A building for storing grain or other goods. 仓库 a warehouse; 粮仓 a granary; 仓储 storage; 清仓 to take stock.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉匆忙。～促、～皇。</span><span class="en">〈lit.〉 Hurried. 仓促 hasty; 仓皇 in a flurry.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">sang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sang1.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">储藏粮食或其他物资的房屋。～库、粮～、～储、清～。</span><span class="en">A building for storing grain or other goods. 仓库 a warehouse; 粮仓 a granary; 仓储 storage; 清仓 to take stock.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>匆忙。～促、～皇。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Hurried. 仓促 hasty; 仓皇 in a flurry.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">sang¹</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('sang1.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

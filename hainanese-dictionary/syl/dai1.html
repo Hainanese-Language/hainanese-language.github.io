@@ -15,10 +15,10 @@
 <div class="gl zh">时间或次序在前的；跟"后"相对。～后、～来后到、～进。</div><div class="also">另读 <i>din¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u54c9.html">
 <div class="ch">哉</div><div class="body">
 <span class="py">zāi</span>
-<div class="gl zh">〈书〉语气词，表示感叹或疑问。呜呼哀～、何足道～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u658b.html">
+<div class="gl zh">语气词，表示感叹或疑问。呜呼哀～、何足道～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u658b.html">
 <div class="ch">斋</div><div class="body">
 <span class="py">zhāi</span>
-<div class="gl zh">〈旧〉祭祀前整洁身心，表示虔敬。～戒、～沐。</div><div class="also">另读 <i>ze¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u683d.html">
+<div class="gl zh">祭祀前整洁身心，表示虔敬。～戒、～沐。</div><div class="also">另读 <i>ze¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u683d.html">
 <div class="ch">栽</div><div class="body">
 <span class="py">zāi</span>
 <div class="gl zh">种植。～树、～花、～培。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u707e.html">
@@ -42,6 +42,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

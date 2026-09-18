@@ -15,12 +15,19 @@
 <span class="rbig">ddin³</span>
 <button class="play" onclick="play('dien3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddin3.html">同音字 2</a></div>
 <p class="rb-py">diǎn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">可以作为标准或依据的书籍。词～、字～、经～、引经据～。</span><span class="en">A book that serves as a standard or authority. 词典 a dictionary; 字典 a character dictionary; 经典 a classic; 引经据典 to cite the classics.</span></span></li><li><span class="num">②</span><span><span class="zh">标准；法则。～范、～型、～章。</span><span class="en">A standard; a rule. 典范 a model; 典型 a typical case; 典章 institutions and statutes.</span></span></li><li><span class="num">③</span><span><span class="zh">隆重的仪式。盛～、开国大～、～礼。</span><span class="en">A solemn ceremony. 盛典 a grand ceremony; 开国大典 a founding ceremony; 典礼 a ceremony.</span></span></li><li><span class="num">④</span><span><span class="zh">诗文中引用的古书里的故事或词句。用～、～故。</span><span class="en">A story or phrase from an old book quoted in writing. 用典 to use allusions; 典故 a literary allusion.</span></span></li><li><span class="num">⑤</span><span><span class="zh">旧时把财物抵押给人借钱。～当、～押、～卖。</span><span class="en">Formerly, to pawn property for a loan. 典当 to pawn; 典押 to mortgage; 典卖 to sell with a right of redemption.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dai3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">可以作为标准或依据的书籍。词～、字～、经～、引经据～。</span><span class="en">A book that serves as a standard or authority. 词典 a dictionary; 字典 a character dictionary; 经典 a classic; 引经据典 to cite the classics.</span></span></li><li><span class="num">②</span><span><span class="zh">标准；法则。～范、～型、～章。</span><span class="en">A standard; a rule. 典范 a model; 典型 a typical case; 典章 institutions and statutes.</span></span></li><li><span class="num">③</span><span><span class="zh">隆重的仪式。盛～、开国大～、～礼。</span><span class="en">A solemn ceremony. 盛典 a grand ceremony; 开国大典 a founding ceremony; 典礼 a ceremony.</span></span></li><li><span class="num">④</span><span><span class="zh">诗文中引用的古书里的故事或词句。用～、～故。</span><span class="en">A story or phrase from an old book quoted in writing. 用典 to use allusions; 典故 a literary allusion.</span></span></li><li><span class="num">⑤</span><span><span class="zh">旧时把财物抵押给人借钱。～当、～押、～卖。</span><span class="en">Formerly, to pawn property for a loan. 典当 to pawn; 典押 to mortgage; 典卖 to sell with a right of redemption.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dai3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

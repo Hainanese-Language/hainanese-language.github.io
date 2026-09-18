@@ -15,12 +15,18 @@
 <span class="rbig">liam²</span>
 <button class="play" onclick="play('liam2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liam2.html">同音字 6</a></div>
 <p class="rb-py">lián</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">遮蔽门窗的用具。窗～、门～、竹～。</span><span class="en">A curtain or blind. 窗帘 a window curtain; 门帘 a door curtain; 竹帘 a bamboo blind.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉店铺做标志的旗子。酒～。</span><span class="en">〈former〉 A shop's sign-flag. 酒帘 a tavern banner.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">遮蔽门窗的用具。窗～、门～、竹～。</span><span class="en">A curtain or blind. 窗帘 a window curtain; 门帘 a door curtain; 竹帘 a bamboo blind.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>店铺做标志的旗子。酒～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A shop's sign-flag. 酒帘 a tavern banner.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

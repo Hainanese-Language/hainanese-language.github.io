@@ -15,12 +15,18 @@
 <span class="rbig">di⁶</span>
 <button class="play" onclick="play('ti6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/di6.html">同音字 12</a></div>
 <p class="rb-py">shì</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">古代帝王、贵族、大臣等死后，依其生平事迹给予的称号。～号、追～。</span></span></li></ul><div class="alt"><span class="r2">i⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('i6.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">古代帝王、贵族、大臣等死后，依其生平事迹给予的称号。～号、追～。</span><span class="en">A posthumous title conferred on a ruler, noble or minister according to his life's record. 谥号 a posthumous title; 追谥 to confer a title after death.</span></span></li></ul><div class="alt"><span class="r2">i⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('i6.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

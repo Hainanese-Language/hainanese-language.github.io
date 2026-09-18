@@ -15,7 +15,7 @@
 <div class="gl zh">祝贺；值得祝贺的事。～祝、～贺、国～、～典。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f44.html">
 <div class="ch">罄</div><div class="body">
 <span class="py">qìng</span>
-<div class="gl zh">〈书〉用尽；空。～尽、～竹难书。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u542c.html">
+<div class="gl zh">用尽；空。～尽、～竹难书。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u542c.html">
 <div class="ch">听</div><div class="body">
 <span class="py">tīng</span>
 <div class="gl zh">用耳朵接受声音。～广播、～见、倾～。</div><div class="also">主读 <i>hia¹</i> · <i>din⁶</i></div></div></a><footer>
@@ -24,6 +24,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

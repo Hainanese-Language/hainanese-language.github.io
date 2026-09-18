@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>饷 · 海南话字典</title><meta name="description" content="饷 的海南话读音 hhiang³，普通话 xiǎng。〈旧〉军警的薪金。军～、发～。">
+<title>饷 · 海南话字典</title><meta name="description" content="饷 的海南话读音 hhiang³，普通话 xiǎng。军警的薪金。军～、发～。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">hhiang³</span>
 <button class="play" onclick="play('yiang3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhiang3.html">同音字 5</a></div>
 <p class="rb-py">xiǎng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈旧〉军警的薪金。军～、发～。</span><span class="en">〈former〉 The pay of soldiers and police. 军饷 military pay; 发饷 to issue pay.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉用酒食款待。</span><span class="en">〈lit.〉 To entertain with food and drink.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>军警的薪金。军～、发～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> The pay of soldiers and police. 军饷 military pay; 发饷 to issue pay.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>用酒食款待。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To entertain with food and drink.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

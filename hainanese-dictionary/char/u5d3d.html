@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>崽 · 海南话字典</title><meta name="description" content="崽 的海南话读音 zai³、dai³，普通话 zǎi。〈方〉儿子；小孩儿。">
+<title>崽 · 海南话字典</title><meta name="description" content="崽 的海南话读音 zai³、dai³，普通话 zǎi。儿子；小孩儿。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">zai³</span>
 <button class="play" onclick="play('cai3.mp3')">&#9654;</button></div>
 <p class="rb-py">zǎi</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈方〉儿子；小孩儿。</span><span class="en">〈dial.〉 A son; a young child.</span></span></li><li><span class="num">②</span><span><span class="zh">幼小的动物。猪～、狗～、～子。</span><span class="en">The young of an animal. 猪崽 a piglet; 崽子 a cub; a whelp.</span></span></li></ul><div class="alt"><span class="r2">dai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tai3.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>儿子；小孩儿。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> A son; a young child.</span></span></li><li><span class="num">②</span><span><span class="zh">幼小的动物。猪～、狗～、～子。</span><span class="en">The young of an animal. 猪崽 a piglet; 崽子 a cub; a whelp.</span></span></li></ul><div class="alt"><span class="r2">dai³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('tai3.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

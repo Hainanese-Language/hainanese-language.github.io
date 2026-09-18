@@ -15,12 +15,19 @@
 <span class="rbig">ddeng³</span>
 <button class="play" onclick="play('deng3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddeng3.html">同音字 5</a></div>
 <p class="rb-py">děng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">级别；程度。～级、上～、同～。</span><span class="en">A grade; a degree.</span></span></li><li><span class="num">②</span><span><span class="zh">种类。这～事、此～人。</span><span class="en">A kind; a sort.</span></span></li><li><span class="num">③</span><span><span class="zh">相同。相～、～于、～量齐观。</span><span class="en">Equal; the same.</span></span></li><li><span class="num">④</span><span><span class="zh">表示列举未尽或列举后煞尾。北京、上海～城市。</span><span class="en">Marking an incomplete list, or closing one.</span></span></li><li><span class="num">⑤</span><span><span class="zh">待。～候、～车、～一会儿。</span><span class="en">To wait.</span></span></li></ul><div class="alt"><span class="pill">又读</span><span class="r2">ddan³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">级别；程度。～级、上～、同～。</span><span class="en">A grade; a degree.</span></span></li><li><span class="num">②</span><span><span class="zh">种类。这～事、此～人。</span><span class="en">A kind; a sort.</span></span></li><li><span class="num">③</span><span><span class="zh">相同。相～、～于、～量齐观。</span><span class="en">Equal; the same.</span></span></li><li><span class="num">④</span><span><span class="zh">表示列举未尽或列举后煞尾。北京、上海～城市。</span><span class="en">Marking an incomplete list, or closing one.</span></span></li><li><span class="num">⑤</span><span><span class="zh">待。～候、～车、～一会儿。</span><span class="en">To wait.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="另一种读法，与主读并存。
+An alternative reading used alongside the main one.">又读</span><span class="r2">ddan³</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('dan3.mp3')">&#9654;</button><span style="font-size:12.5px;color:var(--faint)">第 ❺ 义</span></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

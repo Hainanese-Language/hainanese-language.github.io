@@ -15,12 +15,19 @@
 <span class="rbig">lan²</span>
 <button class="play" onclick="play('lan2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/lan2.html">同音字 9</a></div>
 <p class="rb-py">lín</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">鱼、蛇等身体表面的角质小薄片。鱼～、～片、～甲。</span><span class="en">A scale on a fish or snake.</span></span></li><li><span class="num">②</span><span><span class="zh">像鳞的东西。～次栉比。</span><span class="en">Something scale-like.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">lin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lien2.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">鱼、蛇等身体表面的角质小薄片。鱼～、～片、～甲。</span><span class="en">A scale on a fish or snake.</span></span></li><li><span class="num">②</span><span><span class="zh">像鳞的东西。～次栉比。</span><span class="en">Something scale-like.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">lin²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('lien2.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

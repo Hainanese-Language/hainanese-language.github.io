@@ -15,16 +15,22 @@
 <span class="rbig">dui¹</span>
 <button class="play" onclick="play('tui1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dui1.html">同音字 9</a></div>
 <p class="rb-py">zhuī</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">构成脊柱的短骨。脊～、颈～、～间盘。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">构成脊柱的短骨。脊～、颈～、～间盘。</span><span class="en">a vertebra, one of the short bones forming the spine.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hui²</span>
 <button class="play" onclick="play('hui2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hui2.html">同音字 7</a></div>
 <p class="rb-py">chuí</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉敲打用的器具，同"槌"。铁～。</span><span class="en">〈lit.〉 a mallet; same as 槌.</span></span></li><li><span class="num">②</span><span><span class="zh">敲；捶打。～心泣血。</span><span class="en">to beat; pound.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>敲打用的器具，同"槌"。铁～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> a mallet; same as 槌.</span></span></li><li><span class="num">②</span><span><span class="zh">敲；捶打。～心泣血。</span><span class="en">to beat; pound.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

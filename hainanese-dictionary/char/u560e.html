@@ -15,20 +15,26 @@
 <span class="rbig">ga¹</span>
 <button class="play" onclick="play('ka1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ga1.html">同音字 5</a></div>
 <p class="rb-py">gā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词。形容鸭子叫、笑声或物体摩擦等短促响亮的声音。～嘎、～吱。</span></span></li></ul><div class="alt"><span class="r2">ga⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">象声词。形容鸭子叫、笑声或物体摩擦等短促响亮的声音。～嘎、～吱。</span><span class="en">Onomatopoeia for a short, loud sound, such as a duck quacking, laughter, or creaking. 嘎嘎.</span></span></li></ul><div class="alt"><span class="r2">ga⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ka4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">ga⁴</span>
 <button class="play" onclick="play('ka4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ga4.html">同音字 3</a></div>
 <p class="rb-py">gá</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">同"尜"，用于"尜尜"等词。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">同"尜"，用于"尜尜"等词。</span><span class="en">Same as 尜, used in words such as 尜尜.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">ga³</span>
 <button class="play" onclick="play('ka3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ga3.html">同音字 3</a></div>
 <p class="rb-py">gǎ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈方〉调皮。～小子。</span><span class="en">〈dial.〉 Mischievous. 嘎小子 a naughty lad.</span></span></li><li><span class="num">②</span><span><span class="zh">〈方〉性情怪僻。～脾气。</span><span class="en">〈dial.〉 Odd in temperament. 嘎脾气 a cranky disposition.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>调皮。～小子。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Mischievous. 嘎小子 a naughty lad.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>性情怪僻。～脾气。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> Odd in temperament. 嘎脾气 a cranky disposition.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

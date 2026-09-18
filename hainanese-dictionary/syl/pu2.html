@@ -30,7 +30,7 @@
 <div class="gl zh">用于地名。黄～(在广东)。  bù 用于地名。大～(在广东)。</div><div class="also">另读 <i>bu⁶</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5b5a.html">
 <div class="ch">孚</div><div class="body">
 <span class="py">fú</span>
-<div class="gl zh">〈书〉使人信服。深～众望、不～众望。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u629a.html">
+<div class="gl zh">使人信服。深～众望、不～众望。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u629a.html">
 <div class="ch">抚</div><div class="body">
 <span class="py">fǔ</span>
 <div class="gl zh">安慰；安顿。～慰、安～、～恤。</div><div class="also">另读 <i>vu²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u666e.html">
@@ -48,7 +48,7 @@
 <div class="gl zh">古代传达命令、调兵用的凭证。虎～、兵～。</div><div class="also">另读 <i>bou²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f66.html">
 <div class="ch">罦</div><div class="body">
 <span class="py">fú</span>
-<div class="gl zh">〈古〉捕鸟兽的网。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8150.html">
+<div class="gl zh">捕鸟兽的网。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8150.html">
 <div class="ch">腐</div><div class="body">
 <span class="py">fǔ</span>
 <div class="gl zh">变质；败坏。～烂、～败、～朽、防～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8299.html">
@@ -84,6 +84,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

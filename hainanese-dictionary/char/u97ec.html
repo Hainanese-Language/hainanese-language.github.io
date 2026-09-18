@@ -15,12 +15,18 @@
 <span class="rbig">hao¹</span>
 <button class="play" onclick="play('hau1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hao1.html">同音字 7</a></div>
 <p class="rb-py">tāo</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">隐藏；不外露。～光养晦、～晦。</span><span class="en">to conceal; keep out of sight.</span></span></li><li><span class="num">②</span><span><span class="zh">用兵的谋略。～略、六～三略。</span><span class="en">military strategy.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉弓或剑的套子。剑～。</span><span class="en">〈lit.〉 a sheath for a bow or sword.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">隐藏；不外露。～光养晦、～晦。</span><span class="en">to conceal; keep out of sight.</span></span></li><li><span class="num">②</span><span><span class="zh">用兵的谋略。～略、六～三略。</span><span class="en">military strategy.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>弓或剑的套子。剑～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> a sheath for a bow or sword.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

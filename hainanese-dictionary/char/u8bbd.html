@@ -15,12 +15,19 @@
 <span class="rbig">pong¹</span>
 <button class="play" onclick="play('phong1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pong1.html">同音字 10</a></div>
 <p class="rb-py">fěng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">用含蓄的话指责或劝告。～刺、～喻、嘲～。</span><span class="en">To criticise or admonish obliquely. 讽刺 to satirise; 讽喻 an allegory; 嘲讽 to mock.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉不看着书本念；背诵。～诵。</span><span class="en">〈lit.〉 To recite from memory. 讽诵 to intone from memory.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">pong⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phong4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">用含蓄的话指责或劝告。～刺、～喻、嘲～。</span><span class="en">To criticise or admonish obliquely. 讽刺 to satirise; 讽喻 an allegory; 嘲讽 to mock.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>不看着书本念；背诵。～诵。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To recite from memory. 讽诵 to intone from memory.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">pong⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('phong4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

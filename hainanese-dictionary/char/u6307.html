@@ -15,12 +15,18 @@
 <span class="rbig">zi³</span>
 <button class="play" onclick="play('ci3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zi3.html">同音字 18</a></div>
 <p class="rb-py">zhǐ</p>
-<ul class="senses"><li><span class="pyhead">〔zhǐ〕</span></li><li><span class="num">①</span><span><span class="zh">手指头。～甲、十～、屈～可数。</span><span class="en">A finger. 指甲; 十指; 屈指可数.</span></span></li><li><span class="num">②</span><span><span class="zh">用手指或物体向着目标。～示、～路、～南针。</span><span class="en">To point at with a finger or object. 指示; 指路; 指南针.</span></span></li><li><span class="num">③</span><span><span class="zh">点明；告知。～点、～导、～教、～出错误。</span><span class="en">To point out; to instruct. 指点; 指导; 指教; 指出错误.</span></span></li><li><span class="num">④</span><span><span class="zh">意思上针对。～的是他、～桑骂槐。</span><span class="en">To refer to. 指的是他; 指桑骂槐.</span></span></li><li><span class="num">⑤</span><span><span class="zh">依靠；仰仗。～望、单～着这点收入。</span><span class="en">To depend on. 指望; 单指着这点收入.</span></span></li><li><span class="num">⑥</span><span><span class="zh">头发竖起。令人发～。</span><span class="en">For the hair to stand on end. 令人发指.</span></span></li><li><span class="pyhead">〔zhī〕</span></li><li><span class="num">⑦</span><span><span class="zh">用于口语"～甲"。</span><span class="en">Used in the colloquial reading of 指甲.</span></span></li><li><span class="pyhead">〔zhí〕</span></li><li><span class="num">⑧</span><span><span class="zh">〈古〉通"直"。</span><span class="en">〈arch.〉 Same as 直.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="pyhead">〔zhǐ〕</span></li><li><span class="num">①</span><span><span class="zh">手指头。～甲、十～、屈～可数。</span><span class="en">A finger. 指甲; 十指; 屈指可数.</span></span></li><li><span class="num">②</span><span><span class="zh">用手指或物体向着目标。～示、～路、～南针。</span><span class="en">To point at with a finger or object. 指示; 指路; 指南针.</span></span></li><li><span class="num">③</span><span><span class="zh">点明；告知。～点、～导、～教、～出错误。</span><span class="en">To point out; to instruct. 指点; 指导; 指教; 指出错误.</span></span></li><li><span class="num">④</span><span><span class="zh">意思上针对。～的是他、～桑骂槐。</span><span class="en">To refer to. 指的是他; 指桑骂槐.</span></span></li><li><span class="num">⑤</span><span><span class="zh">依靠；仰仗。～望、单～着这点收入。</span><span class="en">To depend on. 指望; 单指着这点收入.</span></span></li><li><span class="num">⑥</span><span><span class="zh">头发竖起。令人发～。</span><span class="en">For the hair to stand on end. 令人发指.</span></span></li><li><span class="pyhead">〔zhī〕</span></li><li><span class="num">⑦</span><span><span class="zh">用于口语"～甲"。</span><span class="en">Used in the colloquial reading of 指甲.</span></span></li><li><span class="pyhead">〔zhí〕</span></li><li><span class="num">⑧</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>通"直"。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> Same as 直.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

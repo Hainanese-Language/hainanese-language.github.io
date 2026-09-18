@@ -15,12 +15,18 @@
 <span class="rbig">yi³</span>
 <button class="play" onclick="play('ji3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi3.html">同音字 10</a></div>
 <p class="rb-py">yǐ</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">介词，用；拿。～理服人、～身作则、～卵击石。</span><span class="en">With; by means of. 以理服人 to convince by reasoning; 以身作则 to set an example oneself; 以卵击石 to throw an egg against a rock.</span></span></li><li><span class="num">②</span><span><span class="zh">介词，因为。不～人废言、～功受赏。</span><span class="en">Because of. 不以人废言 not to reject a view because of who said it; 以功受赏 to be rewarded for merit.</span></span></li><li><span class="num">③</span><span><span class="zh">介词，表示时间、方位、数量的界限。三日～内、长江～南、五十人～上。</span><span class="en">Marking a limit of time, place or quantity. 三日以内 within three days; 长江以南 south of the Yangtze; 五十人以上 fifty people or more.</span></span></li><li><span class="num">④</span><span><span class="zh">连词，表示目的或结果。～免误会、～便查考、～致失败。</span><span class="en">So as to; with the result that. 以免误会 so as to avoid misunderstanding; 以便查考 for ease of reference; 以致失败 resulting in failure.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈书〉认为。～为、不～为然。</span><span class="en">〈lit.〉 To consider. 以为 to think; 不以为然 to disapprove.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">介词，用；拿。～理服人、～身作则、～卵击石。</span><span class="en">With; by means of. 以理服人 to convince by reasoning; 以身作则 to set an example oneself; 以卵击石 to throw an egg against a rock.</span></span></li><li><span class="num">②</span><span><span class="zh">介词，因为。不～人废言、～功受赏。</span><span class="en">Because of. 不以人废言 not to reject a view because of who said it; 以功受赏 to be rewarded for merit.</span></span></li><li><span class="num">③</span><span><span class="zh">介词，表示时间、方位、数量的界限。三日～内、长江～南、五十人～上。</span><span class="en">Marking a limit of time, place or quantity. 三日以内 within three days; 长江以南 south of the Yangtze; 五十人以上 fifty people or more.</span></span></li><li><span class="num">④</span><span><span class="zh">连词，表示目的或结果。～免误会、～便查考、～致失败。</span><span class="en">So as to; with the result that. 以免误会 so as to avoid misunderstanding; 以便查考 for ease of reference; 以致失败 resulting in failure.</span></span></li><li><span class="num">⑤</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>认为。～为、不～为然。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To consider. 以为 to think; 不以为然 to disapprove.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

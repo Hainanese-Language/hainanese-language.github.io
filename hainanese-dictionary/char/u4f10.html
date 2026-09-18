@@ -15,12 +15,18 @@
 <span class="rbig">pad⁷</span>
 <button class="play" onclick="play('phat7.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/pad7.html">同音字 8</a></div>
 <p class="rb-py">fá</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">砍。砍～、～木、采～。</span><span class="en">To fell. 砍伐 to cut down; 伐木 to log; 采伐 to fell timber.</span></span></li><li><span class="num">②</span><span><span class="zh">攻打。讨～、征～、口诛笔～。</span><span class="en">To attack. 讨伐 to send a punitive expedition; 征伐 to go to war against; 口诛笔伐 to condemn in speech and writing.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉自夸。～善、不矜不～。</span><span class="en">〈lit.〉 To boast. 伐善 to parade one's virtues; 不矜不伐 modest and unassuming.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">砍。砍～、～木、采～。</span><span class="en">To fell. 砍伐 to cut down; 伐木 to log; 采伐 to fell timber.</span></span></li><li><span class="num">②</span><span><span class="zh">攻打。讨～、征～、口诛笔～。</span><span class="en">To attack. 讨伐 to send a punitive expedition; 征伐 to go to war against; 口诛笔伐 to condemn in speech and writing.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>自夸。～善、不矜不～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To boast. 伐善 to parade one's virtues; 不矜不伐 modest and unassuming.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

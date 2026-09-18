@@ -15,16 +15,22 @@
 <span class="rbig">gio²</span>
 <button class="play" onclick="play('kio2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gio2.html">同音字 3</a></div>
 <p class="rb-py">qié</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">茄子，一种蔬菜。～子、番～。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">茄子，一种蔬菜。～子、番～。</span><span class="en">The aubergine. 茄子; 番茄 (tomato).</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">gia¹</span>
 <button class="play" onclick="play('kia1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gia1.html">同音字 10</a></div>
 <p class="rb-py">jiā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"雪～"，指一种卷烟。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"雪～"，指一种卷烟。</span><span class="en">Used in 雪茄: a cigar.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

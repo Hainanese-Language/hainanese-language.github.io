@@ -15,7 +15,7 @@
 <div class="gl zh">君主；皇帝。～王、称～、～制。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u68e3.html">
 <div class="ch">棣</div><div class="body">
 <span class="py">dì</span>
-<div class="gl zh">〈书〉常棣，一种植物。常～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6234.html">
+<div class="gl zh">常棣，一种植物。常～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6234.html">
 <div class="ch">戴</div><div class="body">
 <span class="py">dài</span>
 <div class="gl zh">把东西放在头、面、胸、臂等处。～帽子、～眼镜、～手表。</div><div class="also">主读 <i>dai⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b2c.html">
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

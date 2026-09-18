@@ -18,7 +18,7 @@
 <div class="gl zh">灾祸。遭～、灾～、城门失火，～及池鱼。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6cf1.html">
 <div class="ch">泱</div><div class="body">
 <span class="py">yāng</span>
-<div class="gl zh">〈书〉多用于"～～"，形容水面广阔，也形容气魄宏大。～～大国。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79e7.html">
+<div class="gl zh">多用于"～～"，形容水面广阔，也形容气魄宏大。～～大国。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u79e7.html">
 <div class="ch">秧</div><div class="body">
 <span class="py">yāng</span>
 <div class="gl zh">植物的幼苗，特指稻苗。～苗、插～、育～。</div><div class="also">另读 <i>o¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9e2f.html">
@@ -30,6 +30,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

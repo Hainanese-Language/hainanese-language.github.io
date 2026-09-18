@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>喑 · 海南话字典</title><meta name="description" content="喑 的海南话读音 im¹，普通话 yīn。〈书〉">
+<title>喑 · 海南话字典</title><meta name="description" content="喑 的海南话读音 im¹，普通话 yīn。嗓子哑，发不出声。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">im¹</span>
 <button class="play" onclick="play('iom1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/im1.html">同音字 4</a></div>
 <p class="rb-py">yīn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈书〉</span></span></li><li><span class="num">①</span><span><span class="zh">嗓子哑，发不出声。</span><span class="en">Hoarse; unable to make a sound.</span></span></li><li><span class="num">②</span><span><span class="zh">缄默不语。万马齐～。</span><span class="en">Silent. 万马齐喑 all ten thousand horses are mute — an oppressive silence.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span></span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span></span></span></li><li><span class="num">①</span><span><span class="zh">嗓子哑，发不出声。</span><span class="en">Hoarse; unable to make a sound.</span></span></li><li><span class="num">②</span><span><span class="zh">缄默不语。万马齐～。</span><span class="en">Silent. 万马齐喑 all ten thousand horses are mute — an oppressive silence.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

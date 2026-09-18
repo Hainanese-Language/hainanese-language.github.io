@@ -15,7 +15,7 @@
 <div class="gl zh">彼此。～相、～助、～通有无。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6019.html">
 <div class="ch">怙</div><div class="body">
 <span class="py">hù</span>
-<div class="gl zh">〈书〉依靠；仗恃。～恶不悛、失～(指丧父)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6237.html">
+<div class="gl zh">依靠；仗恃。～恶不悛、失～(指丧父)。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6237.html">
 <div class="ch">户</div><div class="body">
 <span class="py">hù</span>
 <div class="gl zh">门。门～、夜不闭～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u74e0.html">
@@ -24,12 +24,18 @@
 <div class="gl zh">一年生草本植物，果实长圆形，可做蔬菜。～子、～瓜。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u795c.html">
 <div class="ch">祜</div><div class="body">
 <span class="py">hù</span>
-<div class="gl zh">〈书〉福；福气。受天之～。</div></div></a><footer>
+<div class="gl zh">福；福气。受天之～。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -48,7 +48,7 @@
 <div class="gl zh">清楚；分明。清～、明～、条分缕～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6809.html">
 <div class="ch">栉</div><div class="body">
 <span class="py">zhì</span>
-<div class="gl zh">〈书〉梳子和篦子的总称。～发、鳞次～比。</div><div class="also">另读 <i>zid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u684e.html">
+<div class="gl zh">梳子和篦子的总称。～发、鳞次～比。</div><div class="also">另读 <i>zid⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u684e.html">
 <div class="ch">桎</div><div class="body">
 <span class="py">zhì</span>
 <div class="gl zh">仅用于"桎梏"，指脚镣和手铐，也指束缚。～梏、挣脱～梏。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u690d.html">
@@ -78,13 +78,13 @@
 <div class="gl zh">病。～病、～苦、积劳成～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7699.html">
 <div class="ch">皙</div><div class="body">
 <span class="py">xī</span>
-<div class="gl zh">〈书〉皮肤白。白～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77fd.html">
+<div class="gl zh">皮肤白。白～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u77fd.html">
 <div class="ch">矽</div><div class="body">
 <span class="py">xī</span>
 <div class="gl zh">硅的旧称。～肺。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7a37.html">
 <div class="ch">稷</div><div class="body">
 <span class="py">jì</span>
-<div class="gl zh">〈书〉谷子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u804c.html">
+<div class="gl zh">谷子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u804c.html">
 <div class="ch">职</div><div class="body">
 <span class="py">zhí</span>
 <div class="gl zh">职务；工作岗位。～位、～业、任～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8707.html">
@@ -117,7 +117,7 @@
 <div class="gl zh">横的距离小；跟"宽"相对。狭～、～路、路很～。</div><div class="also">主读 <i>oi⁵</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b2e.html">
 <div class="ch">笮</div><div class="body">
 <span class="py">zuó · zé</span>
-<div class="gl zh">〈书〉竹索。  zé 〈书〉狭窄。</div><div class="also">主读 <i>dag⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85c9.html">
+<div class="gl zh">竹索。  zé 狭窄。</div><div class="also">主读 <i>dag⁷</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u85c9.html">
 <div class="ch">藉</div><div class="body">
 <span class="py">jiè · jí</span>
 <div class="gl zh">垫；衬在下面。枕～。</div><div class="also">主读 <i>ze⁴</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8707.html">
@@ -129,6 +129,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

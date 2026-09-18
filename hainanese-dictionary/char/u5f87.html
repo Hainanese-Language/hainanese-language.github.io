@@ -15,12 +15,18 @@
 <span class="rbig">dun²</span>
 <button class="play" onclick="play('ton2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dun2.html">同音字 15</a></div>
 <p class="rb-py">xùn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">曲从；偏私。～私舞弊、～情。</span><span class="en">To give way improperly; show favouritism. 徇私舞弊 to bend the rules for private ends; 徇情 to act out of personal feeling.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉当众宣示。</span><span class="en">〈lit.〉 To proclaim before the public.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">曲从；偏私。～私舞弊、～情。</span><span class="en">To give way improperly; show favouritism. 徇私舞弊 to bend the rules for private ends; 徇情 to act out of personal feeling.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>当众宣示。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To proclaim before the public.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

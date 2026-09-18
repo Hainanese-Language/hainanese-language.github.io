@@ -15,16 +15,22 @@
 <span class="rbig">da⁶</span>
 <button class="play" onclick="play('ta6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/da6.html">同音字 18</a></div>
 <p class="rb-py">zhà</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用竹木铁条等做成的阻拦物。～栏、木～、～门。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用竹木铁条等做成的阻拦物。～栏、木～、～门。</span><span class="en">a fence or barrier made of bamboo, wood or iron bars.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">dan¹</span>
 <button class="play" onclick="play('tan1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dan1.html">同音字 9</a></div>
 <p class="rb-py">shān</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"栅极"，电子管中的一种电极。～极。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"栅极"，电子管中的一种电极。～极。</span><span class="en">used in 栅极, the grid of a vacuum tube.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">gi⁶</span>
 <button class="play" onclick="play('ki6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/gi6.html">同音字 19</a></div>
 <p class="rb-py">jì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">以卖淫为业的女子。～女、娼～。</span><span class="en">A prostitute. 妓女 a prostitute; 娼妓 harlots.</span></span></li><li><span class="num">②</span><span><span class="zh">〈古〉以歌舞为业的女子。歌～。</span><span class="en">〈arch.〉 A female singer or dancer by profession. 歌妓 a singing girl.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">以卖淫为业的女子。～女、娼～。</span><span class="en">A prostitute. 妓女 a prostitute; 娼妓 harlots.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="古义。见于古书，现代汉语已不通行。">古</span>以歌舞为业的女子。歌～。</span><span class="en"><span class="pill tip" data-tip="Archaic. Found in old texts; not current in modern Chinese.">arch.</span> A female singer or dancer by profession. 歌妓 a singing girl.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

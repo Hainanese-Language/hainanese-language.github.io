@@ -15,12 +15,18 @@
 <span class="rbig">liang²</span>
 <button class="play" onclick="play('liang2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liang2.html">同音字 8</a></div>
 <p class="rb-py">liáng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">好；善。～好、优～、～药苦口。</span><span class="en">Good; fine. 良好 good; 良药苦口 good medicine tastes bitter.</span></span></li><li><span class="num">②</span><span><span class="zh">善良的人。除暴安～。</span><span class="en">Good people. 除暴安良 to root out the wicked and protect the good.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉很；甚。～久、获益～多。</span><span class="en">〈lit.〉 Very; greatly. 良久 for a long while; 获益良多 to benefit greatly.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">好；善。～好、优～、～药苦口。</span><span class="en">Good; fine. 良好 good; 良药苦口 good medicine tastes bitter.</span></span></li><li><span class="num">②</span><span><span class="zh">善良的人。除暴安～。</span><span class="en">Good people. 除暴安良 to root out the wicked and protect the good.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>很；甚。～久、获益～多。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Very; greatly. 良久 for a long while; 获益良多 to benefit greatly.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

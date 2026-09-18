@@ -27,24 +27,30 @@
 <div class="gl zh">已经。～经、～故、事～至此。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8339.html">
 <div class="ch">茹</div><div class="body">
 <span class="py">rú</span>
-<div class="gl zh">〈书〉吃。～素、～毛饮血、含辛～苦。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fe4.html">
+<div class="gl zh">吃。～素、～毛饮血、含辛～苦。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8fe4.html">
 <div class="ch">迤</div><div class="body">
 <span class="py">yǐ · yí</span>
-<div class="gl zh">〈书〉向；往。～东、～北。</div><div class="also">另读 <i>yi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f89.html">
+<div class="gl zh">向；往。～东、～北。</div><div class="also">另读 <i>yi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9f89.html">
 <div class="ch">龉</div><div class="body">
 <span class="py">yǔ</span>
 <div class="gl zh">仅用于"龃龉"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u4e88.html">
 <div class="ch">予</div><div class="body">
 <span class="py">yǔ · yú</span>
-<div class="gl zh">给。给～、～以照顾、免～处分。  yú 〈书〉我。～取～求。</div><div class="also">主读 <i>yi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96e8.html">
+<div class="gl zh">给。给～、～以照顾、免～处分。  yú 我。～取～求。</div><div class="also">主读 <i>yi²</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u96e8.html">
 <div class="ch">雨</div><div class="body">
 <span class="py">yǔ · yù</span>
-<div class="gl zh">从云层中降落的水滴。下～、～水、暴～。  yù 〈书〉降下（雨、雪等）。～雪。</div><div class="also">主读 <i>hhou⁵</i> · <i>yi⁴</i></div></div></a><footer>
+<div class="gl zh">从云层中降落的水滴。下～、～水、暴～。  yù 降下（雨、雪等）。～雪。</div><div class="also">主读 <i>hhou⁵</i> · <i>yi⁴</i></div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

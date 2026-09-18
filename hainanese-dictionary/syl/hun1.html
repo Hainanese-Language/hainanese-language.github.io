@@ -18,18 +18,24 @@
 <div class="gl zh">八卦之一，代表地。乾～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6606.html">
 <div class="ch">昆</div><div class="body">
 <span class="py">kūn</span>
-<div class="gl zh">〈书〉哥哥。～仲、～弟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9968.html">
+<div class="gl zh">哥哥。～仲、～弟。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9968.html">
 <div class="ch">饨</div><div class="body">
 <span class="py">tún</span>
 <div class="gl zh">用于"馄饨"。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9cb2.html">
 <div class="ch">鲲</div><div class="body">
 <span class="py">kūn</span>
-<div class="gl zh">〈书〉传说中的一种大鱼。～鹏。</div></div></a><footer>
+<div class="gl zh">传说中的一种大鱼。～鹏。</div></div></a><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

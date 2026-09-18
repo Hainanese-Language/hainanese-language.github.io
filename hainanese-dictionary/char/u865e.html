@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>虞 · 海南话字典</title><meta name="description" content="虞 的海南话读音 yi²，普通话 yú。〈书〉预料；猜测。不～之事。">
+<title>虞 · 海南话字典</title><meta name="description" content="虞 的海南话读音 yi²，普通话 yú。预料；猜测。不～之事。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,12 +15,18 @@
 <span class="rbig">yi²</span>
 <button class="play" onclick="play('ji2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/yi2.html">同音字 44</a></div>
 <p class="rb-py">yú</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">〈书〉预料；猜测。不～之事。</span><span class="en">〈lit.〉 To expect; to anticipate.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉忧虑。无冻馁之～。</span><span class="en">〈lit.〉 Worry; anxiety.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉欺骗。尔～我诈。</span><span class="en">〈lit.〉 To deceive.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>预料；猜测。不～之事。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To expect; to anticipate.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>忧虑。无冻馁之～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> Worry; anxiety.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>欺骗。尔～我诈。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To deceive.</span></span></li><li><span class="num">④</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>拆 · 海南话字典</title><meta name="description" content="拆 的海南话读音 hia⁶、sa⁶，普通话 chāi · cā。把合在一起的弄开；卸下。～开、～信、～房子、～台。  cā 〈方〉排泄。～烂污。">
+<title>拆 · 海南话字典</title><meta name="description" content="拆 的海南话读音 hia⁶、sa⁶，普通话 chāi · cā。把合在一起的弄开；卸下。～开、～信、～房子、～台。  cā 排泄。～烂污。">
 <link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
 <body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
 <label class="field"><span class="mag">&#8981;</span>
@@ -15,16 +15,22 @@
 <span class="rbig">hia⁶</span>
 <button class="play" onclick="play('hia6.mp3')">&#9654;</button></div>
 <p class="rb-py">chāi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">把合在一起的弄开；卸下。～开、～信、～房子、～台。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">把合在一起的弄开；卸下。～开、～信、～房子、～台。</span><span class="en">To take apart; to dismantle. 拆开; 拆信; 拆房子; 拆台.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">sa⁶</span>
 <button class="play" onclick="play('sa6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sa6.html">同音字 7</a></div>
 <p class="rb-py">cā</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">〈方〉排泄。～烂污。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>排泄。～烂污。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> To void the bowels. 拆烂污.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

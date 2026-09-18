@@ -18,7 +18,7 @@
 <div class="gl zh">用竹片、树枝等编成的片状物。竹～、～斗、篱～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7c91.html">
 <div class="ch">粑</div><div class="body">
 <span class="py">bā</span>
-<div class="gl zh">〈方〉饼类食品。糍～、糖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82ad.html">
+<div class="gl zh">饼类食品。糍～、糖～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u82ad.html">
 <div class="ch">芭</div><div class="body">
 <span class="py">bā</span>
 <div class="gl zh">用于"～蕉"，一种多年生草本植物。</div></div></a><footer>
@@ -27,6 +27,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

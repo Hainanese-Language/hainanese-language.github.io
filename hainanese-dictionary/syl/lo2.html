@@ -12,7 +12,7 @@
 </div><div class="tonebar"><a class="chip on" href="/hainanese-dictionary/syl/lo2.html">lo²</a><a class="chip" href="/hainanese-dictionary/syl/lo3.html">lo³</a><a class="chip" href="/hainanese-dictionary/syl/lo5.html">lo⁵</a><a class="chip" href="/hainanese-dictionary/syl/lo6.html">lo⁶</a></div><a class="hrow" href="/hainanese-dictionary/char/u7321.html">
 <div class="ch">猡</div><div class="body">
 <span class="py">luó</span>
-<div class="gl zh">用于"猪猡"，〈方〉指猪。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ba9.html">
+<div class="gl zh">用于"猪猡"，指猪。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7ba9.html">
 <div class="ch">箩</div><div class="body">
 <span class="py">luó</span>
 <div class="gl zh">用竹篾编成的方底圆口的盛器。～筐、稻～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f57.html">
@@ -36,6 +36,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

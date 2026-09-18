@@ -15,16 +15,22 @@
 <span class="rbig">man⁶</span>
 <button class="play" onclick="play('man6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/man6.html">同音字 6</a></div>
 <p class="rb-py">wàn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">细长能缠绕的茎。瓜～、顺～摸瓜、压～。</span></span></li></ul><div class="alt"><span class="r2">muan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muan4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">细长能缠绕的茎。瓜～、顺～摸瓜、压～。</span><span class="en">A slender twining stem; a vine. 瓜蔓 melon vine; 顺蔓摸瓜 to track something down step by step.</span></span></li></ul><div class="alt"><span class="r2">muan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muan4.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
 <span class="rbig">man⁶</span>
 <button class="play" onclick="play('man6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/man6.html">同音字 6</a></div>
 <p class="rb-py">mán</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"蔓菁"，即芜菁，一种蔬菜。</span></span></li></ul><div class="alt"><span class="r2">muan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muan4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">用于"蔓菁"，即芜菁，一种蔬菜。</span><span class="en">Used in 蔓菁 (turnip), a vegetable.</span></span></li></ul><div class="alt"><span class="r2">muan⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('muan4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

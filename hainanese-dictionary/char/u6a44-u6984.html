@@ -15,12 +15,18 @@
 <span class="rbig">gam³lam³</span>
 <button class="play" onclick="play('kam3.mp3|lam3.mp3')">&#9654;</button></div>
 <p class="rb-py">gǎnlǎn</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">常绿乔木，果实椭圆形，可食，也可榨油。～树、～油、～球。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">常绿乔木，果实椭圆形，可食，也可榨油。～树、～油、～球。</span><span class="en">olive, an evergreen tree with oval edible fruit that also yields oil.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

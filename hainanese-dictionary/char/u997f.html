@@ -15,12 +15,18 @@
 <span class="rbig">ngo¹</span>
 <button class="play" onclick="play('ngo1.mp3')">&#9654;</button></div>
 <p class="rb-py">è</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">肚子空，想吃东西；跟"饱"相对。挨～、～肚子。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">肚子空，想吃东西；跟"饱"相对。挨～、～肚子。</span><span class="en">Hungry; the opposite of 饱. 挨饿 to go hungry; 饿肚子 to have an empty stomach.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

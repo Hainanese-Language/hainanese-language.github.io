@@ -15,12 +15,18 @@
 <span class="rbig">hhe⁶</span>
 <button class="play" onclick="play('hhe6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhe6.html">同音字 5</a></div>
 <p class="rb-py">xiē</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">休息。～息、～脚、～会儿。</span><span class="en">to rest.</span></span></li><li><span class="num">②</span><span><span class="zh">停止。～业、～工、～手。</span><span class="en">to stop; cease.</span></span></li><li><span class="num">③</span><span><span class="zh">〈方〉睡。～午觉、～下了。</span><span class="en">〈dial.〉 to sleep.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">休息。～息、～脚、～会儿。</span><span class="en">to rest.</span></span></li><li><span class="num">②</span><span><span class="zh">停止。～业、～工、～手。</span><span class="en">to stop; cease.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="方言。限于某些方言地区使用。">方</span>睡。～午觉、～下了。</span><span class="en"><span class="pill tip" data-tip="Dialectal. Used only in certain dialect areas.">dial.</span> to sleep.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

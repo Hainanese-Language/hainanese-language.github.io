@@ -15,12 +15,18 @@
 <span class="rbig">li⁶</span>
 <button class="play" onclick="play('li6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/li6.html">同音字 7</a></div>
 <p class="rb-py">lì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">凶暴；残忍。～气、暴～。</span><span class="en">Cruel; violent. 戾气 a violent temper; 暴戾 brutal.</span></span></li><li><span class="num">②</span><span><span class="zh">〈书〉违背；乖张。～于、乖～。</span><span class="en">〈lit.〉 To go against; perverse. 戾于 to violate; 乖戾 perverse and unreasonable.</span></span></li><li><span class="num">③</span><span><span class="zh">〈书〉罪过。罪～。</span><span class="en">〈lit.〉 A sin; an offence. 罪戾 guilt.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">凶暴；残忍。～气、暴～。</span><span class="en">Cruel; violent. 戾气 a violent temper; 暴戾 brutal.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>违背；乖张。～于、乖～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To go against; perverse. 戾于 to violate; 乖戾 perverse and unreasonable.</span></span></li><li><span class="num">③</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>罪过。罪～。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> A sin; an offence. 罪戾 guilt.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -18,7 +18,7 @@
 <div class="gl zh">仅用于"蘑菇"，一类可食用的菌。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u998d.html">
 <div class="ch">馍</div><div class="body">
 <span class="py">mó</span>
-<div class="gl zh">〈方〉馒头。～～、蒸～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9b54.html">
+<div class="gl zh">馒头。～～、蒸～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u9b54.html">
 <div class="ch">魔</div><div class="body">
 <span class="py">mó</span>
 <div class="gl zh">宗教或神话中害人性命、迷惑人的鬼怪。～鬼、恶～、～王。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6bdb.html">
@@ -33,6 +33,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

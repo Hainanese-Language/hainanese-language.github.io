@@ -15,12 +15,18 @@
 <span class="rbig">dim³</span>
 <button class="play" onclick="play('tiom3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/dim3.html">同音字 3</a></div>
 <p class="rb-py">shěn</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">详细；周密。～慎、精～。</span><span class="en">Careful; thorough. 审慎; 精审.</span></span></li><li><span class="num">②</span><span><span class="zh">仔细考察；核对。～查、～核、～阅、评～。</span><span class="en">To examine; to check over. 审查; 审核; 审阅; 评审.</span></span></li><li><span class="num">③</span><span><span class="zh">讯问案件。～讯、～判、公～、～案。</span><span class="en">To try a case; to interrogate. 审讯; 审判; 公审; 审案.</span></span></li><li><span class="num">④</span><span><span class="zh">〈书〉知道；明白。～悉、不～近况如何。</span><span class="en">〈lit.〉 To know; to be aware of. 审悉; 不审近况如何.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">详细；周密。～慎、精～。</span><span class="en">Careful; thorough. 审慎; 精审.</span></span></li><li><span class="num">②</span><span><span class="zh">仔细考察；核对。～查、～核、～阅、评～。</span><span class="en">To examine; to check over. 审查; 审核; 审阅; 评审.</span></span></li><li><span class="num">③</span><span><span class="zh">讯问案件。～讯、～判、公～、～案。</span><span class="en">To try a case; to interrogate. 审讯; 审判; 公审; 审案.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="书面语。多见于书面或文言，口语少用。">书</span>知道；明白。～悉、不～近况如何。</span><span class="en"><span class="pill tip" data-tip="Literary. Chiefly written or classical style; rare in speech.">lit.</span> To know; to be aware of. 审悉; 不审近况如何.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

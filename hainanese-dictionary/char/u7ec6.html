@@ -12,15 +12,24 @@
 <div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">iu⁴</span> <span class="r">di⁶</span> <span class="r">doi⁴</span></div></div>
 <div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">xì</span></div></div>
 </div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
-<span class="rbig">iu⁴</span><span class="pill">俗读</span>
+<span class="rbig">iu⁴</span><span class="pill tip" data-tip="通俗读法。口头常这样读，不算标准音。
+Informal reading, common in speech but not standard.">俗读</span>
 <button class="play" onclick="play('iu4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/iu4.html">同音字 2</a></div>
 <p class="rb-py">xì</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">条状物横剖面小；跟"粗"相对。～线、～沙、～腰。</span><span class="en">Thin; slender — the opposite of 粗. 细线 fine thread; 细沙 fine sand; 细腰 a slim waist.</span></span></li><li><span class="num">②</span><span><span class="zh">颗粒小。～盐、～面。</span><span class="en">Fine-grained. 细盐 fine salt; 细面 fine flour.</span></span></li><li><span class="num">③</span><span><span class="zh">音量小。嗓音～、～声～气。</span><span class="en">(of sound) Soft; thin. 嗓音细 a thin voice; 细声细气 in a small soft voice.</span></span></li><li><span class="num">④</span><span><span class="zh">精致。～瓷、精～、～工。</span><span class="en">Finely made. 细瓷 fine porcelain; 精细 exquisite; 细工 fine workmanship.</span></span></li><li><span class="num">⑤</span><span><span class="zh">仔细；周密。～心、～看、～致。</span><span class="en">Careful; thorough. 细心 attentive; 细看 to look closely; 细致 meticulous.</span></span></li><li><span class="num">⑥</span><span><span class="zh">微小的；不重要的。～节、～枝末节、事无巨～。</span><span class="en">Minor; trifling. 细节 a detail; 细枝末节 minor matters; 事无巨细 no matter how large or small.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">di⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ti6.mp3')">&#9654;</button></div><div class="alt"><span class="pill">白读</span><span class="r2">doi⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('toi4.mp3')">&#9654;</button></div></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">条状物横剖面小；跟"粗"相对。～线、～沙、～腰。</span><span class="en">Thin; slender — the opposite of 粗. 细线 fine thread; 细沙 fine sand; 细腰 a slim waist.</span></span></li><li><span class="num">②</span><span><span class="zh">颗粒小。～盐、～面。</span><span class="en">Fine-grained. 细盐 fine salt; 细面 fine flour.</span></span></li><li><span class="num">③</span><span><span class="zh">音量小。嗓音～、～声～气。</span><span class="en">(of sound) Soft; thin. 嗓音细 a thin voice; 细声细气 in a small soft voice.</span></span></li><li><span class="num">④</span><span><span class="zh">精致。～瓷、精～、～工。</span><span class="en">Finely made. 细瓷 fine porcelain; 精细 exquisite; 细工 fine workmanship.</span></span></li><li><span class="num">⑤</span><span><span class="zh">仔细；周密。～心、～看、～致。</span><span class="en">Careful; thorough. 细心 attentive; 细看 to look closely; 细致 meticulous.</span></span></li><li><span class="num">⑥</span><span><span class="zh">微小的；不重要的。～节、～枝末节、事无巨～。</span><span class="en">Minor; trifling. 细节 a detail; 细枝末节 minor matters; 事无巨细 no matter how large or small.</span></span></li></ul><div class="alt"><span class="pill tip" data-tip="读书音。多用于书面语、成语、人名地名。
+Literary reading, used in formal or written contexts.">文读</span><span class="r2">di⁶</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('ti6.mp3')">&#9654;</button></div><div class="alt"><span class="pill tip" data-tip="口语音。日常说话时的读法。
+Colloquial reading, used in everyday speech.">白读</span><span class="r2">doi⁴</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('toi4.mp3')">&#9654;</button></div></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

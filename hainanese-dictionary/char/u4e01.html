@@ -15,16 +15,22 @@
 <span class="rbig">ddeng¹</span>
 <button class="play" onclick="play('deng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ddeng1.html">同音字 10</a></div>
 <p class="rb-py">dīng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">天干的第四位；也表示第四。～等。</span><span class="en">The fourth of the Ten Heavenly Stems; also fourth in order. 丁等 grade D.</span></span></li><li><span class="num">②</span><span><span class="zh">成年男子；人口。壮～、人～、～口。</span><span class="en">An adult male; population. 壮丁 an able-bodied man; 人丁 members of a household.</span></span></li><li><span class="num">③</span><span><span class="zh">从事某种劳役的人。园～、家～。</span><span class="en">A person engaged in a particular service. 园丁 a gardener; 家丁 a household servant.</span></span></li><li><span class="num">④</span><span><span class="zh">切成小块的食物。肉～、鸡～。</span><span class="en">Food cut into small cubes. 肉丁 diced meat; 鸡丁 diced chicken.</span></span></li><li><span class="num">⑤</span><span><span class="zh">遭遇。～忧（旧指遭父母之丧）。</span><span class="en">To meet with. 丁忧 〈former〉 to be in mourning for a parent.</span></span></li><li><span class="num">⑥</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">天干的第四位；也表示第四。～等。</span><span class="en">The fourth of the Ten Heavenly Stems; also fourth in order. 丁等 grade D.</span></span></li><li><span class="num">②</span><span><span class="zh">成年男子；人口。壮～、人～、～口。</span><span class="en">An adult male; population. 壮丁 an able-bodied man; 人丁 members of a household.</span></span></li><li><span class="num">③</span><span><span class="zh">从事某种劳役的人。园～、家～。</span><span class="en">A person engaged in a particular service. 园丁 a gardener; 家丁 a household servant.</span></span></li><li><span class="num">④</span><span><span class="zh">切成小块的食物。肉～、鸡～。</span><span class="en">Food cut into small cubes. 肉丁 diced meat; 鸡丁 diced chicken.</span></span></li><li><span class="num">⑤</span><span><span class="zh">遭遇。～忧（旧指遭父母之丧）。</span><span class="en">To meet with. 丁忧 <span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> to be in mourning for a parent.</span></span></li><li><span class="num">⑥</span><span><span class="zh">姓。</span><span class="en">A surname.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">zeng¹</span>
 <button class="play" onclick="play('ceng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/zeng1.html">同音字 20</a></div>
 <p class="rb-py">zhēng</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"丁丁"，形容伐木、下棋等声音。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">仅用于"丁丁"，形容伐木、下棋等声音。</span><span class="en">Used only in 丁丁: the sound of chopping wood or of chess pieces being set down.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

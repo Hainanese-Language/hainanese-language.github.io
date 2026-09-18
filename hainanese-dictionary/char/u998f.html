@@ -15,16 +15,22 @@
 <span class="rbig">liu⁶</span>
 <button class="play" onclick="play('liu6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu6.html">同音字 7</a></div>
 <p class="rb-py">liù</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">把凉了的熟食再蒸热。～馒头。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">把凉了的熟食再蒸热。～馒头。</span><span class="en">To resteam cooked food that has gone cold. 馏馒头 to warm up steamed buns.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">liu²</span>
 <button class="play" onclick="play('liu2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/liu2.html">同音字 7</a></div>
 <p class="rb-py">liú</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">加热使液体变成蒸气，再凝成纯净的液体。蒸～、干～。</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">加热使液体变成蒸气，再凝成纯净的液体。蒸～、干～。</span><span class="en">To distil. 蒸馏 distillation; 干馏 dry distillation.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -15,12 +15,18 @@
 <span class="rbig">mu⁴</span>
 <button class="play" onclick="play('mu4.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/mu4.html">同音字 3</a></div>
 <p class="rb-py">mù</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">覆盖在上面的帐篷。～天席地、帐～。</span><span class="en">A tent spread overhead. 幕天席地 with the sky for a roof and the earth for a mat.</span></span></li><li><span class="num">②</span><span><span class="zh">挂着的大块布，用来遮挡或作背景。银～、～布、开～。</span><span class="en">A large hanging cloth used as a screen or backdrop. 银幕 a cinema screen; 开幕 to raise the curtain.</span></span></li><li><span class="num">③</span><span><span class="zh">戏剧中较完整的段落。第一～、独～剧。</span><span class="en">An act of a play. 第一幕 act one; 独幕剧 a one-act play.</span></span></li><li><span class="num">④</span><span><span class="zh">〈旧〉将帅办公的地方。～府、～僚。</span><span class="en">〈former〉 A commander's headquarters. 幕府 a shogunate; 幕僚 an aide.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">覆盖在上面的帐篷。～天席地、帐～。</span><span class="en">A tent spread overhead. 幕天席地 with the sky for a roof and the earth for a mat.</span></span></li><li><span class="num">②</span><span><span class="zh">挂着的大块布，用来遮挡或作背景。银～、～布、开～。</span><span class="en">A large hanging cloth used as a screen or backdrop. 银幕 a cinema screen; 开幕 to raise the curtain.</span></span></li><li><span class="num">③</span><span><span class="zh">戏剧中较完整的段落。第一～、独～剧。</span><span class="en">An act of a play. 第一幕 act one; 独幕剧 a one-act play.</span></span></li><li><span class="num">④</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>将帅办公的地方。～府、～僚。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A commander's headquarters. 幕府 a shogunate; 幕僚 an aide.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

@@ -18,10 +18,10 @@
 <div class="gl zh">摇动；挥动。～臂高呼、～翅。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u640c.html">
 <div class="ch">搌</div><div class="body">
 <span class="py">zhǎn</span>
-<div class="gl zh">〈方〉用布等轻轻按压吸去液体。～布、把水～干。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e85.html">
+<div class="gl zh">用布等轻轻按压吸去液体。～布、把水～干。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6e85.html">
 <div class="ch">溅</div><div class="body">
 <span class="py">jiàn · jiān</span>
-<div class="gl zh">液体受冲击向四外飞射。～水、水花四～、油～了一身。  jiān 〈书〉多用于"～～"，形容水急流的声音。</div><div class="also">另读 <i>zin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75b9.html">
+<div class="gl zh">液体受冲击向四外飞射。～水、水花四～、油～了一身。  jiān 多用于"～～"，形容水急流的声音。</div><div class="also">另读 <i>zin¹</i></div></div></a><a class="hrow" href="/hainanese-dictionary/char/u75b9.html">
 <div class="ch">疹</div><div class="body">
 <span class="py">zhěn</span>
 <div class="gl zh">皮肤上出现的小红点。～子、湿～、麻～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7f1c.html">
@@ -48,6 +48,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

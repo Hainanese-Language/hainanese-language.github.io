@@ -15,16 +15,22 @@
 <span class="rbig">hhai⁶</span>
 <button class="play" onclick="play('hhai6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhai6.html">同音字 6</a></div>
 <p class="rb-py">hāi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示惋惜或提醒。～，别提了。</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示惋惜或提醒。～，别提了。</span><span class="en">An exclamation of regret or warning. 嗨，别提了 oh, don't ask.</span></span></li></ul></div><div class="rb"><div class="rb-head">
 <span class="rbig">hhe⁶</span>
 <button class="play" onclick="play('hhe6.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/hhe6.html">同音字 5</a></div>
 <p class="rb-py">hēi</p>
-<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示招呼或得意。～，你看！</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num"></span><span><span class="zh">叹词，表示招呼或得意。～，你看！</span><span class="en">An exclamation used to hail someone, or in satisfaction. 嗨，你看 hey, look at that!</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

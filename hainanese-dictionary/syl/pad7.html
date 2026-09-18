@@ -15,7 +15,7 @@
 <div class="gl zh">砍。砍～、～木、采～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u57a1.html">
 <div class="ch">垡</div><div class="body">
 <span class="py">fá</span>
-<div class="gl zh">〈方〉翻土；翻起来的土块。耕～、～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6cd5.html">
+<div class="gl zh">翻土；翻起来的土块。耕～、～子。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u6cd5.html">
 <div class="ch">法</div><div class="body">
 <span class="py">fǎ</span>
 <div class="gl zh">法律；法令。～规、宪～、犯～、守～。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u7b4f.html">
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

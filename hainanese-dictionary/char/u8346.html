@@ -15,12 +15,18 @@
 <span class="rbig">geng¹</span>
 <button class="play" onclick="play('keng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/geng1.html">同音字 12</a></div>
 <p class="rb-py">jīng</p>
-<ul class="senses"><li><span class="num">①</span><span><span class="zh">一种落叶灌木，枝条可以编筐。～条、～棘、负～请罪。</span><span class="en">A shrub whose twigs are woven into baskets. 荆条; 荆棘; 负荆请罪.</span></span></li><li><span class="num">②</span><span><span class="zh">〈旧〉谦辞，称自己的妻子。拙～。</span><span class="en">〈former〉 A humble word for one's own wife. 拙荆.</span></span></li></ul></div><footer>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">一种落叶灌木，枝条可以编筐。～条、～棘、负～请罪。</span><span class="en">A shrub whose twigs are woven into baskets. 荆条; 荆棘; 负荆请罪.</span></span></li><li><span class="num">②</span><span><span class="zh"><span class="pill tip" data-tip="旧时用法。今已少用或不用。">旧</span>谦辞，称自己的妻子。拙～。</span><span class="en"><span class="pill tip" data-tip="Former usage. Little or no longer used today.">former</span> A humble word for one's own wife. 拙荆.</span></span></li></ul></div><footer>
 <a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
 <a href="/submit/">补充词条</a><br>
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){

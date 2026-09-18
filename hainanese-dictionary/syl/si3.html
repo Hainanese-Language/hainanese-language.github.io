@@ -30,7 +30,7 @@
 <div class="gl zh">羞愧的感觉。羞～、无～、不～下问。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u8478.html">
 <div class="ch">葸</div><div class="body">
 <span class="py">xǐ</span>
-<div class="gl zh">〈书〉害怕；畏惧。畏～不前。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5904.html">
+<div class="gl zh">害怕；畏惧。畏～不前。</div></div></a><a class="hrow" href="/hainanese-dictionary/char/u5904.html">
 <div class="ch">处</div><div class="body">
 <span class="py">chù · chǔ</span>
 <div class="gl zh">地方。～所、住～、到～。</div><div class="also">主读 <i>dde⁴</i> · <i>si¹</i> · <i>si²</i></div></div></a><footer>
@@ -39,6 +39,12 @@
 <span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
 </footer></div>
 <script>var AUDIO="/hainanese-dictionary/audio";
+document.addEventListener('click',function(ev){
+  document.querySelectorAll('.tip.open').forEach(function(t){
+    if(!t.contains(ev.target)) t.classList.remove('open');});
+  var t=ev.target.closest('.tip');
+  if(t){ t.classList.toggle('open'); }
+});
 function play(name){
   var list=name.split('|'), i=0;
   function next(){
