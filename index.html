@@ -1,40 +1,215 @@
-<!DOCTYPE html>
-<html lang="zh"><head><meta charset="utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>海南话字典 · Hainanese Dictionary</title>
+<title>海南话字典 — Hainanese Dictionary</title>
 <style>
   :root{
-    --paper:#FBFAF7; --ink:#17201F; --ink-soft:#5A625E;
-    --rule:#E2DED4; --rule-strong:#B9B2A3;
-    --hai:#0E5A53; --hai-deep:#083C37;
-    --serif:Georgia,"Songti SC","Noto Serif CJK SC",serif;
-    --sans:"Helvetica Neue",Arial,"PingFang SC","Noto Sans CJK SC",sans-serif;
+    --paper:#F7F6F2; --card:#FFFDFA; --ink:#1C1A17; --muted:#6A645E; --faint:#98928A;
+    --teal:#0F6A63; --teal-deep:#0A4B46; --teal-tint:#E9F2F0;
+    --zhu:#B23B2E; --zhu-deep:#8E2E23; --zhu-tint:#FAEDE9;
+    --sand:#F5EEDF; --gold:#A9762B;
+    --rule:#DCD7CD; --hair:#EBE7DF;
+    --cn:'Songti SC','Noto Serif SC','SimSun',serif;
+    --rom:'Iowan Old Style','Palatino Linotype','Palatino','Georgia',serif;
+    --ui:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65}
-  .wrap{max-width:640px;margin:0 auto;padding:64px 20px 80px}
-  h1{font-size:34px;color:var(--hai);margin:0 0 4px;letter-spacing:.5px}
-  .sub{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-       color:var(--ink-soft);margin:0 0 32px}
-  .lede{color:var(--ink-soft);font-size:15px;margin:0 0 34px}
-  a.card{display:block;text-decoration:none;color:inherit;background:#fff;
-         border:1px solid var(--rule-strong);padding:18px 20px;margin-bottom:14px}
-  a.card:hover{border-color:var(--hai);box-shadow:0 1px 0 var(--hai)}
-  a.card b{display:block;font-size:20px;color:var(--hai)}
-  a.card span{display:block;font-family:var(--sans);font-size:13px;color:var(--ink-soft);margin-top:4px}
-  footer{border-top:1px solid var(--rule);margin-top:40px;padding-top:14px;
-         font-family:var(--sans);font-size:12px;color:var(--ink-soft)}
-</style></head>
-<body><div class="wrap">
-<h1>海南话字典</h1>
-<p class="sub">Hainanese Dictionary</p>
-<p class="lede">共 4975 个字头、5839 条读音、517 个音节，附录音。按海南话读音排列。</p>
+  html,body{margin:0;background:#E4E2DB}
+  body{font-family:var(--ui);color:var(--ink);-webkit-text-size-adjust:100%;line-height:1.7}
+  .page{max-width:620px;margin:0 auto;background:var(--paper);min-height:100vh;
+        box-shadow:0 0 0 1px var(--rule);padding-bottom:56px}
 
-<a class="card" href="/hainanese-dictionary/"><b>查字典 · Browse the dictionary</b>
-<span>按音节浏览，搜字、海南话拼音或普通话拼音</span></a>
+  /* ---- hero ---- */
+  .hero{padding:60px 28px 38px;text-align:center;position:relative;
+        background:linear-gradient(180deg,#EDF4F2 0%,#FFFDFA 100%);
+        border-bottom:1px solid var(--rule)}
+  .hero::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;
+        background:linear-gradient(90deg,var(--teal-deep) 0%,var(--teal) 55%,var(--gold) 100%)}
+  .hero h1{font-family:var(--cn);font-size:clamp(38px,10vw,52px);font-weight:600;
+           letter-spacing:.1em;margin:0 0 6px;text-indent:.1em;color:var(--teal-deep)}
+  .seal{display:inline-block;background:var(--zhu);color:#FFF;font-family:var(--cn);
+        font-size:11px;letter-spacing:.18em;padding:3px 9px 4px;border-radius:2px;
+        vertical-align:12px;margin-left:6px;text-indent:.18em}
+  .hero .sub{font-family:var(--cn);color:var(--muted);font-size:15px;margin:12px 0 0}
+  .hero .sub b{color:var(--teal);font-weight:600}
+  .hero .sub-en{font-family:var(--rom);color:var(--faint);font-size:14px;
+                font-style:italic;margin:6px 0 0}
 
-<a class="card" href="/submit/"><b>词语征集 · Submit a word</b>
-<span>提交你知道的海南话词语</span></a>
+  /* ---- prose blocks ---- */
+  .block{margin:26px 20px 0;padding:22px 22px 20px;border:1px solid var(--hair);
+         border-left:4px solid var(--rule);background:var(--card)}
+  .block h2{font-family:var(--cn);font-size:15px;font-weight:600;letter-spacing:.14em;
+            margin:0 0 12px;display:flex;align-items:center;gap:9px}
+  .block h2::before{content:'';width:9px;height:9px;flex:none;background:var(--zhu);border-radius:1px}
+  .zh{font-family:var(--cn);font-size:16px;line-height:2;margin:0 0 14px;color:var(--ink)}
+  .zh:last-child{margin-bottom:0}
+  .work{color:var(--zhu-deep);border-bottom:1px solid #E4C6C0;padding-bottom:1px}
+  .en{font-size:14px;line-height:1.75;color:var(--muted);margin:0}
+  .en em{font-style:italic}
 
-<footer>hainanese-language.github.io</footer>
-</div></body></html>
+  .b-thanks{border-left-color:var(--gold);background:linear-gradient(180deg,var(--sand) 0%,#FFFDFA 62%)}
+  .b-use{border-left-color:var(--teal);background:linear-gradient(180deg,var(--teal-tint) 0%,#FFFDFA 62%)}
+  .b-fix{border-left-color:var(--zhu);background:linear-gradient(180deg,var(--zhu-tint) 0%,#FFFDFA 62%)}
+  .b-audio{border-left-color:var(--gold);background:#FBF8F1}
+  .b-audio h2::before{background:var(--gold)}
+  .b-audio .tag-prov{display:inline-block;font-family:var(--cn);font-size:11px;letter-spacing:.14em;
+        color:#7A5416;background:#F0E3C8;border:1px solid #E0CCA4;border-radius:2px;
+        padding:2px 8px 3px;margin-left:2px;vertical-align:2px}
+  .b-audio .contact{font-family:var(--cn);color:var(--gold);border-bottom:1px solid #E0CCA4;
+        padding-bottom:1px}
+
+  /* ---- search entry ---- */
+  .searchwrap{padding:26px 20px 4px}
+  .searchbar{display:flex;gap:9px;align-items:stretch}
+  .field{flex:1;display:flex;align-items:center;gap:10px;background:#FFF;
+         border:2px solid var(--teal);border-radius:8px;padding:0 14px;min-width:0}
+  .field .mag{color:var(--teal);font-size:19px;flex:none;line-height:1}
+  .field input{border:0;outline:0;background:none;flex:1;min-width:0;
+               font-family:var(--cn);font-size:17px;color:var(--ink);padding:14px 0}
+  .field input::placeholder{font-family:var(--ui);font-size:14px;color:var(--faint)}
+  .gobtn{flex:none;background:var(--teal-deep);color:#FFF;border:0;border-radius:8px;
+         font-family:var(--cn);font-size:16px;letter-spacing:.08em;padding:0 22px;
+         cursor:pointer;box-shadow:0 2px 0 0 #073B37}
+  .gobtn:hover{background:var(--teal)}
+  .gobtn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .searchnote{padding:11px 4px 0;font-size:13px;color:var(--faint);line-height:1.9}
+  .searchnote code{font-family:var(--rom);font-size:14px;color:var(--teal)}
+
+  /* ---- secondary actions ---- */
+  .actions{padding:24px 20px 0;display:flex;flex-direction:column;gap:9px}
+  .act{display:flex;gap:14px;align-items:baseline;background:var(--card);
+       border:1px solid var(--hair);border-left:3px solid var(--teal);padding:13px 16px;
+       text-decoration:none;color:inherit;transition:background .15s}
+  .act:hover{background:#FFF;border-left-color:var(--zhu)}
+  .act .k{font-family:var(--cn);font-size:15px;color:var(--teal-deep);flex:none;width:76px}
+  .act .v{font-size:13px;color:var(--muted);line-height:1.6}
+
+  /* ---- next stage ---- */
+  .next{margin:34px 20px 0;border:1px solid #E0C8C2;background:var(--zhu-tint);padding:22px}
+  .next h2{font-family:var(--cn);font-size:16px;font-weight:600;letter-spacing:.1em;
+           margin:0 0 12px;color:var(--zhu-deep)}
+  .next .zh{margin-bottom:12px}
+  .next .en{margin-bottom:18px}
+  .next-cta{display:inline-flex;align-items:center;gap:10px;background:var(--zhu);color:#FFF;
+            text-decoration:none;font-family:var(--cn);font-size:15px;letter-spacing:.06em;
+            padding:12px 20px;box-shadow:0 2px 0 0 var(--zhu-deep)}
+  .next-cta:hover{background:var(--zhu-deep);box-shadow:0 2px 0 0 #6F231A}
+  .next-cta small{font-family:var(--ui);font-size:12px;color:#F0C9C2;letter-spacing:0}
+  .next-url{margin:12px 0 0;font-family:var(--rom);font-size:13px;color:var(--zhu-deep);
+            word-break:break-all}
+
+  /* ---- footer ---- */
+  footer{margin:40px 22px 0;padding-top:18px;border-top:1px solid var(--rule);
+         font-size:12px;color:var(--faint);line-height:1.9}
+  footer .cn{font-family:var(--cn)}
+  footer .tag{color:var(--teal)}
+</style>
+
+<div class="page">
+
+  <div class="hero">
+    <h1>海南话字典<span class="seal">在线版</span></h1>
+    <p class="sub">文昌 · 海口话　　收字 <b>4,975</b>　读音 <b>5,839</b></p>
+    <p class="sub-en">A Hainanese–Mandarin dictionary, free to use</p>
+  </div>
+
+  <div class="searchwrap">
+    <div class="searchbar">
+      <label class="field">
+        <span class="mag">⌕</span>
+        <input id="q" placeholder="输入汉字、拼音或英文" autocomplete="off">
+      </label>
+      <button class="gobtn" onclick="doSearch()">搜索</button>
+    </div>
+    <p class="searchnote">可以输入汉字、海南话拼音（如 <code>ddo</code>）、
+      普通话拼音（如 <code>chang</code>），或英文。声调可不打。</p>
+  </div>
+
+  <div class="block b-thanks">
+    <h2>缘起与致谢</h2>
+    <p class="zh">这部字典的编写，得益于<span class="work">《海南音字典》</span>（广东人民出版社出版）。
+      那本书把海南话的读音一个一个记录下来、整理成册，为后来的人打下了基础。
+      没有前人的这份功夫，今天这个网站无从谈起。谨此致谢。</p>
+    <p class="zh">编写过程中，几位老师与专家给予指导，令这部字典少走了很多弯路，一并致谢。</p>
+    <p class="en">This dictionary owes its foundation to <em>《海南音字典》</em>, published by
+      Guangdong People's Publishing House. That book set down the readings of Hainanese
+      character by character and gave everyone who came after it something to build on.
+      Our thanks also to the several teachers and specialists whose guidance along the way
+      saved this dictionary a great deal of trouble.</p>
+  </div>
+
+  <div class="block b-audio">
+    <h2>关于发音录音<span class="tag-prov">暂用</span></h2>
+    <p class="zh">因为录音条件和能力的限制，目前的发音录音是临时的，作为参考之用。
+      我们正在寻找愿意重新录制的志愿者，来录制发音更准确的录音。
+      如果您有兴趣，请通过<span class="contact">武吉知马海南联谊会</span>联系我们。</p>
+    <p class="en">Because of limits in our recording conditions and ability, the audio on this
+      site is provisional and should be treated as a rough guide only. We are looking for
+      volunteers willing to re-record the pronunciations more accurately. If you would like to
+      help, please get in touch through the Bukit Timah Hainanese Club.</p>
+  </div>
+
+  <div class="block b-use">
+    <h2>一起来用它</h2>
+    <p class="zh">海南话讲的人越来越少。字典放着不用，就只是一堆字。
+      查得到、听得懂、说得出，这门话才留得住。
+      请多用它，也把它转给家人朋友 —— 尤其是家里还讲海南话的长辈，和想学却没处学的后生。</p>
+    <p class="en">Fewer people speak Hainanese each year. A dictionary that sits unused is just
+      a pile of characters. Please use it, and pass it on — to the elders at home who still
+      speak it, and to the younger ones who want to learn but have nowhere to start.</p>
+  </div>
+
+  <div class="block b-fix">
+    <h2>发现错处，请告诉我们</h2>
+    <p class="zh">读音、释义、例词，难免有错漏。
+      您若发现哪里不对，或者您家乡的讲法跟这里不一样，欢迎指出来。
+      也欢迎补充字典里没收的词 —— 老话、俗语、口头禅都算。每一条都会有人看。</p>
+    <p class="en">Readings, definitions and examples will contain mistakes. If something looks
+      wrong, or if your home village says it differently, tell us. You can also add words we
+      have missed — old sayings, everyday phrases, anything. Every submission is read.</p>
+  </div>
+
+  <div class="actions">
+    <a class="act" href="/submit/">
+      <span class="k">补充词条</span>
+      <span class="v">收录新词、老话、俗语　·　Submit a word we've missed</span>
+    </a>
+    <a class="act" href="/submit/?type=correction">
+      <span class="k">指正错误</span>
+      <span class="v">读音或释义有误，请在此说明　·　Report a mistake</span>
+    </a>
+    <a class="act" href="#">
+      <span class="k">语音提交</span>
+      <span class="v">不方便打字，可用 WhatsApp 录音　·　Send a voice note instead</span>
+    </a>
+  </div>
+
+  <div class="next">
+    <h2>下一步：编《海南话词典》</h2>
+    <p class="zh">字典收的是单字，词典收的是词 —— 老话、俗语、口头禅、日常说法，
+      那些真正在嘴边讲的东西。这一部分，字典帮不上忙，只能靠讲这门话的人。
+      您想到什么词，就交上来，哪怕只是一句听阿公阿婆讲过的话。人多一句，词典就厚一分。</p>
+    <p class="en">The next stage is a dictionary of <em>words</em>, not single characters —
+      sayings, idioms, everyday turns of phrase. No book can supply those; only speakers can.
+      Send in whatever comes to mind, even a single line you remember your grandparents saying.</p>
+    <a class="next-cta" href="/submit/">提交词条　<small>Submit a word</small></a>
+    <p class="next-url">hainanhua.org/submit/</p>
+  </div>
+
+  <footer>
+    <span class="cn">本字典的释义为独立编写，非《海南音字典》之转载或改编。</span><br>
+    Definitions are independently written and are not a reproduction or adaptation of
+    <em>《海南音字典》</em>.<br><br>
+    <span class="cn tag">免费使用　·　非牟利　·　欢迎转发</span>
+  </footer>
+
+</div>
+
+<script>
+function doSearch(){
+  var v = document.getElementById('q').value.trim();
+  if(v) location.href = '/hainanese-dictionary/?q=' + encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') doSearch();
+});
+</script>
