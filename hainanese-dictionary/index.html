@@ -29,7 +29,11 @@ function play(name){
 var SITE="/hainanese-dictionary";
 var DATA=[],READY=false;
 fetch(SITE+'/search-index.json').then(r=>r.json()).then(d=>{DATA=d;READY=true;run();});
-function strip(s){return (s||'').replace(/[¹²³⁴⁵⁶⁷⁸]/g,'').toLowerCase();}
+function strip(s){
+  return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'')
+         .replace(/[¹²³⁴⁵⁶⁷⁸]/g,'').toLowerCase();
+}
+function words(s){return strip(s).split(/[^a-z]+/).filter(Boolean);}
 function run(){
   var q=document.getElementById('q').value.trim();
   var out=document.getElementById('out');
@@ -41,17 +45,19 @@ function run(){
     if(d.c===q) score=0;
     else if(d.c.indexOf(q)>=0) score=1;
     else if(d.r.some(function(x){return strip(x)===ql;})) score=2;
-    else if(d.r.some(function(x){return strip(x).indexOf(ql)===0;})) score=3;
-    else if(strip(d.p).indexOf(ql)===0) score=4;
-    else if((d.e||'').toLowerCase().indexOf(ql)>=0) score=5;
-    else if((d.g||'').indexOf(q)>=0) score=6;
+    else if(words(d.p).indexOf(ql)>=0) score=3;
+    else if(d.r.some(function(x){return strip(x).indexOf(ql)===0;})) score=4;
+    else if(words(d.p).some(function(x){return x.indexOf(ql)===0;})) score=5;
+    else if(words(d.e).indexOf(ql)>=0) score=6;
+    else if((d.g||'').indexOf(q)>=0) score=7;
+    else if((d.e||'').toLowerCase().indexOf(ql)>=0) score=8;
     if(score>=0) hits.push([score,d]);
   }
   hits.sort(function(a,b){return a[0]-b[0];});
   if(!hits.length){out.innerHTML='<div class="rgroup">没有找到 · No match</div>';return;}
   var h='<div class="rgroup">'+hits.length+' 条结果</div>';
   hits.forEach(function(p){var d=p[1];
-    h+='<a class="res" href="'+SITE+'/char/'+encodeURIComponent(d.c)+'.html">'+
+    h+='<a class="res" href="'+SITE+'/char/'+d.u+'.html">'+
        '<span class="ch">'+d.c+'</span><span class="rd">'+d.r.join(' ')+'</span>'+
        '<span class="gl">'+(d.g||d.e||'')+'</span></a>';});
   out.innerHTML=h;

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>传 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>传</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">suan²</span> <span class="r">duan⁵</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">chuán · zhuàn</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">suan²</span>
+<button class="play" onclick="play('suan2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/suan2.html">同音字 9</a></div>
+<p class="rb-py">chuán</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">由一方交给另一方；由上代交给下代。～递、～授、～代、言～身教。</span><span class="en">To pass from one to another, or from one generation to the next. 传递 to hand on; 传授 to impart; 传代 to pass down; 言传身教 to teach by word and example.</span></span></li><li><span class="num">②</span><span><span class="zh">散布；使广泛知道。～播、～说、宣～、～开了。</span><span class="en">To spread; to make widely known. 传播 to disseminate; 传说 it is said; 宣传 to publicize; 传开了 word got around.</span></span></li><li><span class="num">③</span><span><span class="zh">命人前来。～讯、～唤。</span><span class="en">To summon. 传讯 to summon for questioning; 传唤 to serve a summons.</span></span></li><li><span class="num">④</span><span><span class="zh">导。～热、～电、～导。</span><span class="en">To conduct. 传热 to conduct heat; 传电 to conduct electricity; 传导 conduction.</span></span></li><li><span class="num">⑤</span><span><span class="zh">疾病感染。～染、～上感冒。</span><span class="en">To pass on a disease. 传染 to infect; 传上感冒 to catch a cold from someone.</span></span></li></ul></div><div class="rb"><div class="rb-head">
+<span class="rbig">duan⁵</span>
+<button class="play" onclick="play('tuan5.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/duan5.html">同音字 4</a></div>
+<p class="rb-py">zhuàn</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">叙述人物生平的文字。～记、自～、小～。</span><span class="en">A written account of a person's life. 传记 a biography; 自传 an autobiography; 小传 a short biography.</span></span></li><li><span class="num">②</span><span><span class="zh">解释经义的文字。经～、《左～》。</span><span class="en">A commentary expounding a classic. 经传 the classics and their commentaries, 《左传》 the Zuo Commentary.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

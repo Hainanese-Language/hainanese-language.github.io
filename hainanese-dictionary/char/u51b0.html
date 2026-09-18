@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>冰 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>冰</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">beng¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">bīng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">beng¹</span>
+<button class="play" onclick="play('peng1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/beng1.html">同音字 3</a></div>
+<p class="rb-py">bīng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">水在零摄氏度以下凝结成的固体。结～、～块、～天雪地。</span><span class="en">Ice, water frozen below zero. 结冰 to freeze over; 冰天雪地 a world of ice and snow.</span></span></li><li><span class="num">②</span><span><span class="zh">使接触到冷的东西。把汽水～上、～镇。</span><span class="en">To chill. 把汽水冰上 to put the soda on ice; 冰镇 iced.</span></span></li><li><span class="num">③</span><span><span class="zh">感到寒冷。这水～手。</span><span class="en">To feel cold to the touch. 这水冰手 this water is freezing to the hand.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

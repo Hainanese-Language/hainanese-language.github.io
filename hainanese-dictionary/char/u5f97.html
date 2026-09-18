@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>得 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>得</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">ddid⁷</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">dé · děi · de</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">ddid⁷</span>
+<button class="play" onclick="play('diet7.mp3')">&#9654;</button></div>
+<p class="rb-py">dé</p>
+<ul class="senses"><li><span class="pyhead">〔dé〕</span></li><li><span class="num">①</span><span><span class="zh">得到；获得。取～、～奖、～病。</span><span class="en">To get; obtain. 取得 to acquire; 得奖 to win a prize; 得病 to fall ill.</span></span></li><li><span class="num">②</span><span><span class="zh">演算所得的结果。二三～六。</span><span class="en">The result of a calculation. 二三得六 two threes are six.</span></span></li><li><span class="num">③</span><span><span class="zh">适合。～体、～当、～法。</span><span class="en">Fitting; apt. 得体 in good taste; 得当 appropriate; 得法 done the right way.</span></span></li><li><span class="num">④</span><span><span class="zh">满意。～意、洋洋自～。</span><span class="en">Pleased with oneself. 得意 complacent; 洋洋自得 thoroughly self-satisfied.</span></span></li><li><span class="num">⑤</span><span><span class="zh">完成。饭～了。</span><span class="en">Done; ready. 饭得了 the meal is ready.</span></span></li><li><span class="num">⑥</span><span><span class="zh">表示禁止或同意。～了，别说了。</span><span class="en">Marking prohibition or assent. 得了，别说了 all right, that's enough.</span></span></li><li><span class="pyhead">〔děi〕</span></li><li><span class="num">⑦</span><span><span class="zh">需要。这活儿～三天。</span><span class="en">To need. 这活儿得三天 this job will take three days.</span></span></li><li><span class="num">⑧</span><span><span class="zh">必须；一定要。你～去一趟。</span><span class="en">Must; have to. 你得去一趟 you'll have to make a trip.</span></span></li><li><span class="pyhead">〔de〕</span></li><li><span class="num">⑨</span><span><span class="zh">助词，用在动词后表示可能。拿～动、去～了。</span><span class="en">Particle after a verb marking possibility. 拿得动 able to lift it; 去得了 able to go.</span></span></li><li><span class="num">⑩</span><span><span class="zh">助词，用在动词、形容词后连接补语。跑～快、好～很。</span><span class="en">Particle linking a verb or adjective to its complement. 跑得快 runs fast; 好得很 very good indeed.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

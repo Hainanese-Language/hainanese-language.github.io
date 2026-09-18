@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>家 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>家</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">ge¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">jiā · ·jie</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">ge¹</span>
+<button class="play" onclick="play('ke1.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/ge1.html">同音字 3</a></div>
+<p class="rb-py">jiā</p>
+<ul class="senses"><li><span class="pyhead">〔jiā〕</span></li><li><span class="num">①</span><span><span class="zh">家庭；人家。～庭、～里、全～、～务。</span><span class="en">A family; a household. 家庭; 家里; 全家; 家务.</span></span></li><li><span class="num">②</span><span><span class="zh">住所。回～、搬～、～门口。</span><span class="en">A home; a dwelling. 回家; 搬家; 家门口.</span></span></li><li><span class="num">③</span><span><span class="zh">掌握某种专门知识或从事某种活动的人。作～、专～、科学～、政治～。</span><span class="en">A specialist; someone engaged in a field. 作家; 专家; 科学家; 政治家.</span></span></li><li><span class="num">④</span><span><span class="zh">学术流派。儒～、百～争鸣、一～之言。</span><span class="en">A school of thought. 儒家; 百家争鸣; 一家之言.</span></span></li><li><span class="num">⑤</span><span><span class="zh">谦辞，称自己的长辈或年长亲属。～父、～兄。</span><span class="en">A humble form used of one's own elder relatives. 家父; 家兄.</span></span></li><li><span class="num">⑥</span><span><span class="zh">饲养的(跟"野"相对)。～禽、～畜、～兔。</span><span class="en">Domesticated (opposite of 野). 家禽; 家畜; 家兔.</span></span></li><li><span class="num">⑦</span><span><span class="zh">量词，用于家庭或企业。三～人、几～商店。</span><span class="en">Measure word for households and businesses. 三家人; 几家商店.</span></span></li><li><span class="pyhead">〔jie〕</span></li><li><span class="num">⑧</span><span><span class="zh">后缀，用在某些名词后。姑娘～、孩子～。</span><span class="en">A suffix added to certain nouns. 姑娘家; 孩子家.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

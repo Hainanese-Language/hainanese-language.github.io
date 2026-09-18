@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>彩 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>彩</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">sai³</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">cǎi</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">sai³</span>
+<button class="play" onclick="play('sai3.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/sai3.html">同音字 4</a></div>
+<p class="rb-py">cǎi</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">各种颜色。～虹、～色、五～缤纷。</span><span class="en">Colour. 彩虹 a rainbow; 彩色 coloured; 五彩缤纷 a blaze of colour.</span></span></li><li><span class="num">②</span><span><span class="zh">彩色的丝绸。剪～、张灯结～。</span><span class="en">Coloured silk. 剪彩 to cut the ribbon; 张灯结彩 hung with lanterns and streamers.</span></span></li><li><span class="num">③</span><span><span class="zh">称赞的欢呼声。喝～、～声。</span><span class="en">A cheer of approval. 喝彩 to applaud; 彩声 cheers.</span></span></li><li><span class="num">④</span><span><span class="zh">赌博或竞赛中赢得的东西。～票、中～。</span><span class="en">Winnings in a game or lottery. 彩票 a lottery ticket; 中彩 to win a prize.</span></span></li><li><span class="num">⑤</span><span><span class="zh">负伤流的血。挂～。</span><span class="en">Blood from a wound. 挂彩 to be wounded in action.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

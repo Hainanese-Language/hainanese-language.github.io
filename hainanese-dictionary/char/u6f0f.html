@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>漏 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>漏</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">lao¹</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">lòu</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">lao¹</span>
+<button class="play" onclick="play('lau1.mp3')">&#9654;</button></div>
+<p class="rb-py">lòu</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">东西从孔隙中滴下、掉出或透出。～水、屋顶～雨、～气。</span><span class="en">To leak; for something to drip or escape through a gap. 漏水; 屋顶漏雨; 漏气.</span></span></li><li><span class="num">②</span><span><span class="zh">有孔隙；不严密。锅～了、～洞。</span><span class="en">Having gaps; not tight. 锅漏了; 漏洞.</span></span></li><li><span class="num">③</span><span><span class="zh">遗落；疏忽。遗～、～题、挂一～万。</span><span class="en">To leave out; to overlook. 遗漏; 漏题; 挂一漏万.</span></span></li><li><span class="num">④</span><span><span class="zh">泄露。走～消息、～底。</span><span class="en">To let out a secret. 走漏消息; 漏底.</span></span></li><li><span class="num">⑤</span><span><span class="zh">〈古〉计时器；也指时刻。～壶、更深～残。</span><span class="en">〈arch.〉 A water clock; also, the hour. 漏壶; 更深漏残.</span></span></li></ul></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>

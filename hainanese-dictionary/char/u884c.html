@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>行 · 海南话字典</title>
+<link rel="stylesheet" href="/hainanese-dictionary/style.css"></head>
+<body><div class="page"><div class="bar"><div class="bar-row"><a class="back" href="/">&lsaquo;</a>
+<label class="field"><span class="mag">&#8981;</span>
+<input id="q" value="" placeholder="输入汉字、拼音或英文" autocomplete="off"></label>
+<button class="gobtn" onclick="doSearch()">搜索</button></div></div><div class="head">
+<div class="tzg"><span>行</span></div>
+<div class="meta">
+<div class="mrow"><div class="mlab">海南话</div><div class="mval"><span class="r">gia²</span> <span class="r">hheng²</span> <span class="r">o²</span> <span class="r">hhang²</span></div></div>
+<div class="mrow"><div class="mlab">普通话</div><div class="mval"><span class="py">xíng · háng</span></div></div>
+</div></div><div class="sec"><h2>字义解释</h2><div class="rule"></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">gia²</span>
+<button class="play" onclick="play('kia2.mp3')">&#9654;</button></div>
+<p class="rb-py">xíng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">走。步～、～走、日～千里。</span><span class="en">To walk; go. 步行 to go on foot; 日行千里 to cover a thousand li a day.</span></span></li><li><span class="num">②</span><span><span class="zh">出外时用的。～装、～李。</span><span class="en">For use when travelling. 行装 luggage; 行李 baggage.</span></span></li><li><span class="num">③</span><span><span class="zh">流通；推行。发～、～销、～之有效。</span><span class="en">To circulate; put into effect. 发行 to issue; 行之有效 proved effective in practice.</span></span></li><li><span class="num">④</span><span><span class="zh">做；办。～礼、～医、～不通。</span><span class="en">To do; carry out. 行礼 to salute; 行医 to practise medicine; 行不通 it won't work.</span></span></li><li><span class="num">⑤</span><span><span class="zh">可以。这样也～、～不～？</span><span class="en">All right; will do. 这样也行 that will do too.</span></span></li><li><span class="num">⑥</span><span><span class="zh">能干。你真～。</span><span class="en">Capable. 你真行 you're really good.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hheng²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hheng2.mp3')">&#9654;</button></div></div><div class="rb"><div class="rb-head">
+<span class="rbig">o²</span>
+<button class="play" onclick="play('o2.mp3')">&#9654;</button><a class="homo" href="/hainanese-dictionary/syl/o2.html">同音字 2</a></div>
+<p class="rb-py">háng</p>
+<ul class="senses"><li><span class="num">①</span><span><span class="zh">行列。排～、单～、字里～间。</span><span class="en">A row; a line. 排行 order of seniority; 字里行间 between the lines.</span></span></li><li><span class="num">②</span><span><span class="zh">行业。同～、内～、各～各业。</span><span class="en">A trade; a line of business. 同行 of the same trade; 各行各业 all walks of life.</span></span></li><li><span class="num">③</span><span><span class="zh">某些营业机构。银～、商～、车～。</span><span class="en">A firm; a business house. 银行 a bank; 商行 a trading firm.</span></span></li><li><span class="num">④</span><span><span class="zh">兄弟姐妹的次序。～二、排～。</span><span class="en">Order of birth among siblings. 行二 the second child.</span></span></li><li><span class="num">⑤</span><span><span class="zh">量词，用于成行的东西。一～字、几～树。</span><span class="en">Measure word for things in a row. 一行字 a line of writing; 几行树 several rows of trees.</span></span></li></ul><div class="alt"><span class="pill">文读</span><span class="r2">hhang²</span><button class="play" style="width:26px;height:26px;font-size:10px" onclick="play('hhang2.mp3')">&#9654;</button></div></div><footer>
+<a href="/">首页</a> · <a href="/hainanese-dictionary/browse.html">按音节浏览</a> ·
+<a href="/submit/">补充词条</a><br>
+<span class="cn">发音录音为临时版本，欢迎志愿者重录。</span>
+</footer></div>
+<script>var AUDIO="/hainanese-dictionary/audio";
+function play(name){
+  var list=name.split('|'), i=0;
+  function next(){
+    if(i>=list.length) return;
+    var a=new Audio(AUDIO+'/'+list[i++]);
+    a.onended=next;
+    a.play().catch(function(){
+      alert('这个读音的录音还没上传。\nRecording not uploaded yet.');});
+  }
+  next();
+}
+var SITE="/hainanese-dictionary";
+function doSearch(){
+  var v=document.getElementById('q').value.trim();
+  if(v) location.href=SITE+'/?q='+encodeURIComponent(v);
+}
+document.getElementById('q').addEventListener('keydown',function(e){
+  if(e.key==='Enter') doSearch();
+});
+</script>
+</body></html>
