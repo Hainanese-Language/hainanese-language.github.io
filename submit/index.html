@@ -38,11 +38,6 @@
   .intro p{margin:0 0 11px;font-size:16.5px;color:var(--ink-2)}
   .intro p:last-child{margin-bottom:0}
 
-  .walink{display:flex;align-items:center;justify-content:center;gap:9px;
-    margin:14px 0 0;padding:14px;border-radius:12px;text-decoration:none;
-    background:#fff;border:1.5px solid var(--wa);color:var(--wa);
-    font:700 16.5px/1 var(--font-ui)}
-  .walink svg{width:21px;height:21px;flex:none}
 
   .skipnote{margin:18px 0 0;padding:11px 14px;background:var(--teal-w);
     border-left:3px solid var(--teal);border-radius:0 8px 8px 0;
@@ -177,20 +172,7 @@
     <p class="t zh">欢迎把您所知道的海南词汇告诉我们，知道多少就提供多少，不会写汉字也没关系。您可以打字、录音、写同音字，或用自己习惯的拼法。</p>
     <p class="t en">Tell us any Hainanese words you know — as many or as few as you like. It doesn't matter if you can't write the characters. You can type, record your voice, write a similar-sounding character, or spell it your own way.</p>
     <p class="t ms">Silakan bagikan kata-kata bahasa Hainan yang Anda ketahui. Berapa pun jumlahnya akan sangat membantu. Tidak tahu cara menuliskannya dalam aksara Mandarin juga tidak masalah. Anda dapat mengetik, mengirim rekaman suara, menulis dengan aksara Mandarin yang bunyinya mirip, atau menggunakan ejaan yang biasa Anda gunakan.</p>
-
-    <p class="t zh">不方便填表？也可以直接通过 WhatsApp 发文字或语音给我们。</p>
-    <p class="t en">Can't manage the form? Send us text or a voice note on WhatsApp instead.</p>
-    <p class="t ms">Tidak nyaman mengisi formulir? Anda juga dapat langsung mengirimkan teks atau pesan suara kepada kami melalui WhatsApp.</p>
   </div>
-
-  <a class="walink wa" href="https://wa.me/6594587052">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3.1 5 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4C8.7 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.6 8.4-8 8.4z"/></svg>
-    <span>
-      <span class="t i zh">用 WhatsApp 提交</span>
-      <span class="t i en">Send by WhatsApp</span>
-      <span class="t i ms">Kirim melalui WhatsApp</span>
-    </span>
-  </a>
 
   <div class="skipnote">
     <p class="t zh">不确定也没关系，可以跳过。</p>
@@ -293,23 +275,6 @@
     <div class="err" id="eMean"></div>
   </section>
 
-  <!-- ===== 3. PRONUNCIATION — optional ===== -->
-  <section class="card opt">
-    <span class="badge b-opt">
-      <span class="t i zh">可不填</span><span class="t i en">Optional</span><span class="t i ms">Boleh dikosongkan</span>
-    </span>
-    <p class="q">
-      <span class="t zh">怎么念</span><span class="t en">How it sounds</span><span class="t ms">Cara pengucapan</span>
-    </p>
-    <p class="hint">
-      <span class="t zh">写同音字，或用自己习惯的拼法。已经录了音的话，这里可以跳过。</span>
-      <span class="t en">A similar-sounding character, or your own spelling. If you recorded your voice, you can skip this.</span>
-      <span class="t ms">Anda dapat menulis dengan aksara Mandarin yang bunyinya mirip atau menggunakan ejaan yang biasa Anda gunakan. Jika sudah mengirim rekaman suara, bagian ini boleh dilewati.</span>
-    </p>
-    <input type="text" id="pron" maxlength="60" autocomplete="off"
-      data-ph-zh="比如：同乡 或 Soo Kee" data-ph-en="for example: 同乡 或 Soo Kee" data-ph-ms="contoh: 同乡 或 Soo Kee">
-  </section>
-
   <!-- ===== 4. DIALECT AREA — optional ===== -->
   <section class="card opt">
     <span class="badge b-opt">
@@ -401,13 +366,6 @@
   </button>
 </section>
 
-<footer>
-  <p>
-    <span class="t zh">也可以用 <a class="wa" href="https://wa.me/6594587052">WhatsApp</a> 发文字或语音给我们。</span>
-    <span class="t en">You can also send text or a voice note by <a class="wa" href="https://wa.me/6594587052">WhatsApp</a>.</span>
-    <span class="t ms">Anda juga dapat mengirimkan teks atau pesan suara melalui <a class="wa" href="https://wa.me/6594587052">WhatsApp</a>.</span>
-  </p>
-</footer>
 
 </div>
 
@@ -416,16 +374,6 @@
    SET THIS to your Apps Script Web App URL (ends in /exec)
    ============================================================ */
 const ENDPOINT = "https://script.google.com/macros/s/AKfycbxLF6Utu8xks5-AwEr-BorI1yfIMNmwPj4HtIzqr2fAKf--ZmGUQeG9clebnpArWRHpZw/exec";
-
-/* WhatsApp: number in full international form, no + and no spaces.
-   The prefill puts an empty template in the contributor's message box. */
-const WA_NUM = "6594587052";
-const WA_PREFILL = {
-  zh: "海南话词语\n词：\n意思：\n例句：\n口音：",
-  en: "Hainanese word\nWord:\nMeaning:\nExample:\nDialect area:",
-  ms: "Kosakata bahasa Hainan\nKata:\nArti:\nContoh kalimat:\nDaerah:"
-};
-function waHref(l){ return "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(WA_PREFILL[l] || WA_PREFILL.zh); }
 const MAX_SEC  = { word: 20, meaning: 60 };
 
 const AREAS = [
@@ -472,7 +420,6 @@ function setLang(l){
   document.documentElement.setAttribute("lang", l === "zh" ? "zh" : (l === "ms" ? "ms" : "en"));
   $$(".langbar button").forEach(b => b.setAttribute("aria-pressed", b.dataset.set === l));
   $$("[data-ph-zh]").forEach(i => i.placeholder = i.dataset["ph" + l[0].toUpperCase() + l.slice(1)] || "");
-  $$("a.wa").forEach(a => a.href = waHref(l));
   buildChips();
   save();
 }
@@ -574,7 +521,7 @@ $$(".rec").forEach(root => {
 });
 
 /* ---------- autosave (text only) ---------- */
-const FIELDS = ["word","meaning","pron","creditName","contact"];
+const FIELDS = ["word","meaning","creditName","contact"];
 function save(){
   const d = {lang, sel};
   FIELDS.forEach(f => d[f] = $("#"+f).value);
@@ -622,7 +569,6 @@ $("#send").onclick = async () => {
     lang, ts: new Date().toISOString(),
     word:       $("#word").value.trim(),
     meaning:    $("#meaning").value.trim(),
-    pron:       $("#pron").value.trim(),
     area:       sel.area,
     age:        sel.age,
     credit:     sel.credit,
@@ -651,7 +597,7 @@ $("#send").onclick = async () => {
 
 /* ---------- another ---------- */
 $("#again").onclick = () => {
-  ["word","meaning","pron"].forEach(f => $("#"+f).value = "");
+  ["word","meaning"].forEach(f => $("#"+f).value = "");
   $$(".rec .redo").forEach(b => b.click());
   fitWord();
   const s = $("#send");
