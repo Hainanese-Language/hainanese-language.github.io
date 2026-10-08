@@ -142,6 +142,11 @@
   .say-fine{margin:10px 0 0;font-size:12px;color:var(--faint);line-height:1.7}
   .say-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
+  .con-wrap{margin-top:14px;background:var(--card);border:1px solid var(--hair);padding:12px 12px 10px}
+  .con-wrap iframe{width:100%;height:760px;border:0;display:block;background:#FFF}
+  .con-wrap .say-fine{margin:8px 2px 0}
+  .con-wrap a{color:var(--teal)}
+
   /* ---- published comments ---- */
   .cmts{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair)}
   .cmts-h{font-family:var(--cn);font-size:13px;font-weight:600;letter-spacing:.14em;
@@ -232,10 +237,10 @@
         <span class="k">留言</span>
         <span class="v">经审核后会显示在本页　·　Leave a comment, shown on this page once reviewed</span>
       </button>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMZS57SYwDaujWCu39hPedbQ5izAL6zB_WbZvOSqcn_9dPnA/viewform?usp=dialog" target="_blank" rel="noopener">
+      <button type="button" id="conBtn">
         <span class="k">联系我们</span>
         <span class="v">私下联系，不会公开　·　Contact us privately</span>
-      </a>
+      </button>
     </div>
 
     <div class="say-form" id="sayForm" hidden>
@@ -257,6 +262,14 @@
       <p class="say-fine">留言经我们看过之后，才会显示在本页。只显示称呼与留言内容，联系方式不会公开。<br>
         Comments appear on this page only after we have read them. Only your name and message are
         shown; your contact details are never published.</p>
+    </div>
+
+    <div class="con-wrap" id="conWrap" hidden>
+      <div id="conHost"></div>
+      <p class="say-fine" id="conFall" hidden>表格打不开？<a href="https://forms.gle/pDUcqZL4DgegB2Jk7"
+        target="_blank" rel="noopener">在新窗口打开</a><br>
+        Form not loading? <a href="https://forms.gle/pDUcqZL4DgegB2Jk7"
+        target="_blank" rel="noopener">Open it in a new tab</a>.</p>
     </div>
 
     <div class="cmts" id="cmts" hidden>
@@ -339,6 +352,33 @@ document.getElementById('q').addEventListener('keydown', function(e){
       send.disabled = false;
       send.textContent = '送出留言　Send';
     });
+  });
+
+  /* contact form, opened inside the page */
+  var FORM_URL = "https://forms.gle/pDUcqZL4DgegB2Jk7";
+  var conBtn = document.getElementById('conBtn'),
+      conWrap = document.getElementById('conWrap'),
+      conHost = document.getElementById('conHost');
+
+  conBtn.addEventListener('click', function(){
+    conWrap.hidden = !conWrap.hidden;
+    if(!conWrap.hidden && !conHost.firstChild){
+      var src = FORM_URL;
+      if(src.indexOf('/viewform') > -1 && src.indexOf('embedded=') === -1){
+        src += (src.indexOf('?') > -1 ? '&' : '?') + 'embedded=true';
+      }
+      var f = document.createElement('iframe');
+      var loaded = false;
+      f.addEventListener('load', function(){ loaded = true; });
+      f.src = src;
+      f.title = '联系我们 Contact Us';
+      conHost.appendChild(f);
+      // only offer the new-tab link if the form really did not come up
+      setTimeout(function(){
+        if(!loaded){ document.getElementById('conFall').hidden = false; }
+      }, 6000);
+    }
+    if(!conWrap.hidden){ conWrap.scrollIntoView({ behavior:'smooth', block:'start' }); }
   });
 
   /* show the comments we have approved */
