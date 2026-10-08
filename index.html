@@ -103,6 +103,57 @@
   .next-url{margin:12px 0 0;font-family:var(--rom);font-size:13px;color:var(--zhu-deep);
             word-break:break-all}
 
+  /* ---- ask: comment + contact ---- */
+  .ask{margin:26px 20px 0;border:1px solid var(--hair);border-left:4px solid var(--teal);
+       background:linear-gradient(180deg,var(--teal-tint) 0%,#FFFDFA 58%);padding:22px 20px 20px}
+  .ask h2{font-family:var(--cn);font-size:15px;font-weight:600;letter-spacing:.14em;
+          margin:0 0 10px;display:flex;align-items:center;gap:9px}
+  .ask h2::before{content:'';width:9px;height:9px;flex:none;background:var(--teal);border-radius:1px}
+  .ask .zh{margin-bottom:12px}
+  .ask-en-h{font-family:var(--rom);font-size:15px;font-weight:600;color:var(--teal-deep);
+            margin:18px 0 7px;letter-spacing:.01em}
+  .ask .en + .en{margin-top:10px}
+  .ask .pick{margin-top:20px}
+
+  .pick{display:flex;flex-direction:column;gap:9px}
+  .pick > *{display:flex;gap:14px;align-items:baseline;background:var(--card);
+            border:1px solid var(--hair);border-left:3px solid var(--teal);padding:13px 16px;
+            text-decoration:none;color:inherit;text-align:left;width:100%;
+            font:inherit;cursor:pointer;transition:background .15s}
+  .pick > *:hover{background:#FFF;border-left-color:var(--zhu)}
+  .pick .k{font-family:var(--cn);font-size:15px;color:var(--teal-deep);flex:none;width:76px}
+  .pick .v{font-size:13px;color:var(--muted);line-height:1.6}
+
+  .say-form{margin-top:14px;background:var(--card);border:1px solid var(--hair);padding:16px 16px 14px}
+  .say-form label{display:block;margin-bottom:13px}
+  .say-lab{display:block;font-family:var(--cn);font-size:13px;color:var(--muted);margin-bottom:5px}
+  .say-form input,.say-form textarea{width:100%;font-family:var(--cn);font-size:16px;color:var(--ink);
+       background:#FFF;border:1.5px solid var(--rule);border-radius:6px;padding:11px 12px}
+  .say-form textarea{min-height:112px;resize:vertical;line-height:1.8}
+  .say-form input:focus,.say-form textarea:focus{outline:0;border-color:var(--teal)}
+  .say-send{background:var(--teal-deep);color:#FFF;border:0;border-radius:8px;font-family:var(--cn);
+            font-size:15px;letter-spacing:.08em;padding:12px 26px;cursor:pointer;
+            box-shadow:0 2px 0 0 #073B37}
+  .say-send:hover{background:var(--teal)}
+  .say-send:disabled{background:#A9B5B3;box-shadow:none;cursor:not-allowed}
+  .say-msg{margin:12px 0 0;font-size:14px;line-height:1.75}
+  .say-msg.bad{color:var(--zhu-deep)}
+  .say-msg.good{font-family:var(--cn);font-size:16px;color:var(--teal-deep)}
+  .say-fine{margin:10px 0 0;font-size:12px;color:var(--faint);line-height:1.7}
+  .say-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* ---- published comments ---- */
+  .cmts{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair)}
+  .cmts-h{font-family:var(--cn);font-size:13px;font-weight:600;letter-spacing:.14em;
+          color:var(--muted);margin:0 0 12px}
+  .cmt{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--gold);
+       padding:12px 14px;margin-bottom:9px}
+  .cmt-who{display:flex;gap:10px;align-items:baseline;margin-bottom:5px}
+  .cmt-who b{font-family:var(--cn);font-size:14px;font-weight:600;color:var(--teal-deep)}
+  .cmt-who span{font-family:var(--rom);font-size:12px;color:var(--faint)}
+  .cmt-body{font-family:var(--cn);font-size:15px;line-height:1.85;margin:0;
+            color:var(--ink);white-space:pre-wrap;word-break:break-word}
+
   /* ---- footer ---- */
   footer{margin:40px 22px 0;padding-top:18px;border-top:1px solid var(--rule);
          font-size:12px;color:var(--faint);line-height:1.9}
@@ -164,29 +215,54 @@
       speak it, and to the younger ones who want to learn but have nowhere to start.</p>
   </div>
 
-  <div class="block b-fix">
-    <h2>发现错处，请告诉我们</h2>
-    <p class="zh">读音、释义、例词，难免有错漏。
-      您若发现哪里不对，或者您家乡的讲法跟这里不一样，欢迎指出来。
-      也欢迎补充字典里没收的词 —— 老话、俗语、口头禅都算。每一条都会有人看。</p>
-    <p class="en">Readings, definitions and examples will contain mistakes. If something looks
-      wrong, or if your home village says it differently, tell us. You can also add words we
-      have missed — old sayings, everyday phrases, anything. Every submission is read.</p>
-  </div>
+  <div class="ask">
+    <h2>留言或联系我们</h2>
+    <p class="zh">读音、释义和例词难免会有错漏。若您发现错误，欢迎指正；如果发现字典中尚未收录的高频字，也欢迎补充。</p>
+    <p class="zh">您可以通过留言或私下联系我们。感谢您的帮助，让这本字典不断完善。</p>
 
-  <div class="actions">
-    <a class="act" href="/submit/">
-      <span class="k">补充词条</span>
-      <span class="v">收录新词、老话、俗语　·　Submit a word we've missed</span>
-    </a>
-    <a class="act" href="/submit/?type=correction">
-      <span class="k">指正错误</span>
-      <span class="v">读音或释义有误，请在此说明　·　Report a mistake</span>
-    </a>
-    <a class="act" href="#">
-      <span class="k">语音提交</span>
-      <span class="v">不方便打字，可用 WhatsApp 录音　·　Send a voice note instead</span>
-    </a>
+    <p class="ask-en-h">Help Us Improve the Dictionary</p>
+    <p class="en">Pronunciations, definitions, and example words may occasionally contain errors or
+      omissions. If you spot a mistake, please let us know. We also welcome suggestions for
+      frequently used characters that are not yet included in the dictionary.</p>
+    <p class="en">You may leave us a message or contact us privately. Thank you for helping us
+      improve and expand this dictionary.</p>
+
+    <div class="pick">
+      <button type="button" id="sayBtn">
+        <span class="k">留言</span>
+        <span class="v">经审核后会显示在本页　·　Leave a comment, shown on this page once reviewed</span>
+      </button>
+      <a href="CONTACT_FORM_LINK_HERE" target="_blank" rel="noopener">
+        <span class="k">联系我们</span>
+        <span class="v">私下联系，不会公开　·　Contact us privately</span>
+      </a>
+    </div>
+
+    <div class="say-form" id="sayForm" hidden>
+      <label>
+        <span class="say-lab">称呼（可不填）　Your name (optional)</span>
+        <input type="text" id="sayName" maxlength="60" autocomplete="name">
+      </label>
+      <label>
+        <span class="say-lab">留言　Your message</span>
+        <textarea id="sayText" rows="4"></textarea>
+      </label>
+      <label>
+        <span class="say-lab">联系方式（可不填，想收到回复才填）　Contact, only if you'd like a reply</span>
+        <input type="text" id="sayContact" maxlength="80" autocomplete="off">
+      </label>
+      <div class="say-hp"><label>Leave blank<input type="text" id="sayHp" tabindex="-1" autocomplete="off"></label></div>
+      <button type="button" class="say-send" id="saySend">送出留言　Send</button>
+      <p class="say-msg" id="sayMsg"></p>
+      <p class="say-fine">留言经我们看过之后，才会显示在本页。只显示称呼与留言内容，联系方式不会公开。<br>
+        Comments appear on this page only after we have read them. Only your name and message are
+        shown; your contact details are never published.</p>
+    </div>
+
+    <div class="cmts" id="cmts" hidden>
+      <p class="cmts-h">大家的留言　COMMENTS</p>
+      <div id="cmtList"></div>
+    </div>
   </div>
 
   <div class="next">
@@ -218,5 +294,73 @@ function doSearch(){
 document.getElementById('q').addEventListener('keydown', function(e){
   if(e.key === 'Enter') doSearch();
 });
+</script>
+<script>
+(function(){
+  var EP = "https://script.google.com/macros/s/AKfycbxLF6Utu8xks5-AwEr-BorI1yfIMNmwPj4HtIzqr2fAKf--ZmGUQeG9clebnpArWRHpZw/exec";
+  var btn  = document.getElementById('sayBtn'),
+      form = document.getElementById('sayForm'),
+      send = document.getElementById('saySend'),
+      msg  = document.getElementById('sayMsg');
+
+  function show(t, cls){ msg.textContent = t; msg.className = 'say-msg ' + cls; }
+
+  btn.addEventListener('click', function(){
+    form.hidden = !form.hidden;
+    if(!form.hidden){ document.getElementById('sayText').focus(); }
+  });
+
+  send.addEventListener('click', function(){
+    if(document.getElementById('sayHp').value) return;
+    var text = document.getElementById('sayText').value.trim();
+    if(!text){ show('请先写下您的留言。　Please write your message first.', 'bad'); return; }
+
+    show('', '');
+    send.disabled = true;
+    send.textContent = '正在送出…';
+
+    fetch(EP, { method:'POST', body: JSON.stringify({
+      type:    'comment',
+      name:    document.getElementById('sayName').value.trim(),
+      message: text,
+      contact: document.getElementById('sayContact').value.trim(),
+      page:    location.href,
+      ua:      navigator.userAgent.slice(0,120)
+    })})
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(!j || !j.ok) throw new Error('bad');
+      form.innerHTML = '<p class="say-msg good">收到了，谢谢您的留言。</p>' +
+        '<p class="say-fine">我们看过之后会显示在本页。　Received — thank you. ' +
+        'It will appear here once we have read it.　' + (j.ref || '') + '</p>';
+    })
+    .catch(function(){
+      show('送不出去，请检查网络后再试一次。　Could not send — check your connection and try again.', 'bad');
+      send.disabled = false;
+      send.textContent = '送出留言　Send';
+    });
+  });
+
+  /* show the comments we have approved */
+  fetch(EP + '?list=comments')
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(!j || !j.ok || !j.items || !j.items.length) return;
+      var wrap = document.getElementById('cmtList');
+      j.items.forEach(function(c){
+        var box  = document.createElement('div'); box.className = 'cmt';
+        var who  = document.createElement('div'); who.className = 'cmt-who';
+        var nm   = document.createElement('b');   nm.textContent = c.name || '匿名';
+        var dt   = document.createElement('span'); dt.textContent = c.date || '';
+        var body = document.createElement('p');   body.className = 'cmt-body';
+        body.textContent = c.message || '';
+        who.appendChild(nm); who.appendChild(dt);
+        box.appendChild(who); box.appendChild(body);
+        wrap.appendChild(box);
+      });
+      document.getElementById('cmts').hidden = false;
+    })
+    .catch(function(){ /* comments are optional; stay quiet if they cannot load */ });
+})();
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "bf4e3c46518d4a6983f3f0fee06af0f0"}'></script>
